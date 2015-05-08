@@ -1,0 +1,638 @@
+/*
+ * reset style
+ */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  overflow-y: scroll;
+  background-color: #e6eaeb;
+}
+
+html.login {
+  background: #fff;
+}
+
+body {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 13px;
+  color: #666;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+select, input, button, textarea {
+  display: block;
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+embed, object {
+  position: absolute;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+/*
+ * common layout style of popup
+ */
+/*
+ * common module style
+ */
+.scroll-area {
+  border: 1px solid #c2cbcb;
+  border-radius: 3px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.chart-view {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  line-height: 25px;
+  text-indent: -99999em;
+  border: 0;
+  background: url(../images/icon_chart.png) no-repeat 0 -40px;
+}
+.chart-view.on {
+  background-position: 0 0;
+}
+.chart-delete {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  line-height: 25px;
+  text-indent: -99999em;
+  border: 0;
+  background: url(../images/icon_btn_delete.png) no-repeat 0 0;
+}
+
+.ui-datepicker {
+  display: none;
+  margin-top: 2px;
+  padding: 10px;
+  border: 2px solid #ee6247;
+  background: #ffffff;
+}
+.ui-datepicker-header {
+  position: relative;
+  padding: 10px 0;
+  background: #f5f8f8;
+  border-radius: 2px;
+}
+.ui-datepicker-prev, .ui-datepicker-next {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #c2cbcb;
+  text-indent: -9999px;
+  background: #ffffff url(../images/sprite_pagination.png) no-repeat;
+  cursor: pointer;
+}
+.ui-datepicker-prev {
+  left: 10px;
+  background-position: -28px 0;
+}
+.ui-datepicker-next {
+  right: 10px;
+  background-position: -56px 0;
+}
+.ui-datepicker-title {
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+.ui-datepicker-calendar {
+  width: 259px;
+}
+.ui-datepicker-calendar th,
+.ui-datepicker-calendar td {
+  width: 37px;
+  height: 37px;
+}
+.ui-datepicker-calendar th {
+  font-weight: bold;
+}
+.ui-datepicker-calendar span,
+.ui-datepicker-calendar a {
+  position: relative;
+  display: block;
+  height: 100%;
+  line-height: 37px;
+  text-align: center;
+  color: #333;
+}
+.ui-datepicker-calendar th span[title="Saturday"],
+.ui-datepicker-calendar .ui-datepicker-sat a {
+  color: #479dee;
+}
+.ui-datepicker-calendar th span[title="Sunday"],
+.ui-datepicker-calendar .ui-datepicker-sun a {
+  color: #e70000;
+}
+.ui-datepicker .ui-state-highlight {
+  color: #ffffff;
+  font-weight: bold;
+}
+.ui-datepicker .ui-state-highlight:after {
+  width: 29px;
+  height: 29px;
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  display: block;
+  border-radius: 100%;
+  background: #ee6247;
+  z-index: -1;
+}
+.ui-datepicker .ui-state-active:after {
+  width: 28px;
+  height: 28px;
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  display: block;
+  border: 1px solid #ee6247;
+  border-radius: 100%;
+}
+
+/*
+ * common form style
+ */
+.selectric-mini {
+  width: 50px;
+}
+.selectric-small {
+  width: 60px;
+}
+.selectric-med {
+  width: 80px;
+}
+.selectric-default {
+  width: 120px;
+}
+.selectric .label {
+  color: #666;
+  font-size: 11px;
+  font-weight: bold;
+}
+.selectric-items li {
+  padding: 4px 6px;
+  font-size: 11px;
+  color: #666;
+}
+.selectric-left-float {
+  float: left;
+}
+.selectric-left-float-left {
+  float: left;
+  margin-right: 10px;
+}
+
+.input {
+  height: 30px;
+  padding-left: 5px;
+  font-weight: bold;
+  font-size: 11px;
+  color: #333;
+  border: 1px solid #c2cbcb;
+  border-radius: 2px;
+}
+.input.mini {
+  width: 50px;
+}
+.input.small {
+  width: 60px;
+}
+.input.med {
+  width: 80px;
+}
+.input.default {
+  width: 120px;
+}
+
+.btn-fill-orange {
+  width: 120px;
+  height: 30px;
+  line-height: 25px;
+  color: #ffffff;
+  background: #ee6247;
+  border: 0;
+  border-radius: 2px;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.btn-fill-green-med {
+  width: 80px;
+  height: 30px;
+  line-height: 25px;
+  color: #ffffff;
+  background: #0bc17a;
+  border: 0;
+  border-radius: 2px;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 11px;
+}
+.btn-fill-blue {
+  width: 120px;
+  height: 30px;
+  line-height: 25px;
+  color: #ffffff;
+  background: #479dee;
+  border: 0;
+  border-radius: 2px;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.btn-fill-blue:disabled {
+  width: 120px;
+  height: 30px;
+  line-height: 25px;
+  color: #afbdbd;
+  background: #ffffff;
+  border: 1px solid #afbdbd;
+  border-radius: 2px;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  cursor: default;
+}
+.btn-stroke-light {
+  width: 120px;
+  height: 30px;
+  line-height: 25px;
+  color: #afbdbd;
+  background: #ffffff;
+  border: 1px solid #afbdbd;
+  border-radius: 2px;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.btn-stroke-light:disabled {
+  cursor: default;
+}
+.btn-stroke-light-gray {
+  width: 120px;
+  height: 30px;
+  line-height: 25px;
+  color: #666;
+  background: #ffffff;
+  border: 1px solid #c2cbcb;
+  border-radius: 2px;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.btn-stroke-light-gray-med {
+  width: 80px;
+  height: 30px;
+  line-height: 25px;
+  color: #666;
+  background: #ffffff;
+  border: 1px solid #c2cbcb;
+  border-radius: 2px;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 11px;
+}
+.btn-stroke-dark {
+  width: 120px;
+  height: 30px;
+  line-height: 25px;
+  color: #333;
+  background: #ffffff;
+  border: 1px solid #333;
+  border-radius: 2px;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.btn-stroke-orange {
+  width: 120px;
+  height: 30px;
+  line-height: 25px;
+  color: #ee6247;
+  background: #ffffff;
+  border: 1px solid #ee6247;
+  border-radius: 2px;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.btn-calendar {
+  width: 14px;
+  height: 30px;
+  text-indent: -99999em;
+  border: 0;
+  background: url(../images/icon_btn_calendar.gif) no-repeat;
+}
+.btn-table-setting {
+  width: 23px;
+  height: 22px;
+  float: right;
+  text-indent: -99999em;
+  border: 0;
+  background: url(../images/btn_tb_setting.png);
+}
+
+.check-wrap {
+  position: relative;
+}
+.check-wrap.center {
+  display: inline-block;
+}
+.check-box {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  margin: 0;
+}
+.check-box:checked + .check-label:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 10;
+  top: 7px;
+  left: 6px;
+  width: 12px;
+  height: 10px;
+  background: url(../images/icon_checked.png) no-repeat 0 0;
+}
+.check-box.small:checked + .check-label:before {
+  top: 3px;
+  left: 2px;
+  background: url(../images/icon_checked.png) no-repeat -1px -20px;
+}
+.check-box.small.partial:checked + .check-label:after {
+  background: #c2cbcb;
+}
+.check-box:disabled + .check-label:after {
+  background-color: #c2cbcb;
+}
+.check-label {
+  display: block;
+  height: 25px;
+  line-height: 23px;
+  padding-left: 30px;
+}
+.check-label.small {
+  height: 15px;
+  line-height: 15px;
+  padding-left: 15px;
+}
+.check-label.blind {
+  width: 0;
+  text-indent: -99999em;
+  overflow: hidden;
+}
+.check-label:after {
+  content: "";
+  display: block;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #c2cbcb;
+  border-radius: 2px;
+  background: #ffffff;
+}
+.check-label.small:after {
+  width: 13px;
+  height: 13px;
+  margin: 0;
+}
+.check-label-blank {
+  width: 0;
+  padding-left: 20px;
+  text-indent: -9999px;
+}
+
+.radio {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  margin: 0;
+}
+.radio-wrap {
+  position: relative;
+}
+.radio-wrap.center {
+  display: inline-block;
+}
+.radio-label {
+  display: block;
+  height: 15px;
+  line-height: 15px;
+  padding-left: 15px;
+}
+.radio-label.blind {
+  width: 0;
+  text-indent: -99999em;
+  overflow: hidden;
+}
+.radio-label:after {
+  content: "";
+  display: block;
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #c2cbcb;
+  border-radius: 50%;
+  background: #ffffff;
+}
+.radio-label-blank {
+  width: 0;
+  padding-left: 20px;
+  text-indent: -9999px;
+}
+.radio:checked + .radio-label:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  z-index: 10;
+  top: 4px;
+  left: 4px;
+  border-radius: 50%;
+  background: #333;
+}
+.radio:disabled + .radio-label:after {
+  background: #c2cbcb;
+}
+
+.form-label {
+  height: 30px;
+  line-height: 27px;
+  color: #666;
+}
+
+/*
+ * specific style
+ */
+.left-float {
+  float: left;
+}
+.left-float.left {
+  margin-right: 10px;
+}
+.left-float.left.group {
+  margin-right: 20px;
+}
+.left-float.left.half {
+  margin-right: 5px;
+}
+.left-float.right {
+  margin-left: 10px;
+}
+.left-float.right.group {
+  margin-left: 20px;
+}
+.left-float.right.half {
+  margin-left: 5px;
+}
+
+.right-float {
+  float: right;
+}
+.right-float.left {
+  margin-right: 10px;
+}
+.right-float.left.group {
+  margin-right: 20px;
+}
+.right-float.left.half {
+  margin-right: 5px;
+}
+.right-float.right {
+  margin-left: 10px;
+}
+.right-float.right.group {
+  margin-left: 20px;
+}
+.right-float.right.half {
+  margin-left: 5px;
+}
+
+.hide {
+  display: none;
+}
+
+.em-dark {
+  color: #333;
+  font-weight: bold;
+}
+
+.small-font {
+  font-size: 12px;
+}
+
+.mini-font {
+  font-size: 11px;
+}
+
+.status-blue {
+  font-weight: bold;
+  color: #479dee;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*
+ * specific style of each browser vendor
+ */
+html.ie10 .radio {
+  margin: -4px;
+}
+html.ie10 .check-box {
+  margin: -4px;
+}
+
+/*# sourceMappingURL=popup.css.map */

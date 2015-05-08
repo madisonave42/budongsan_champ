@@ -1,0 +1,68 @@
+// element width, height
+@mixin size($width: auto, $height: $width) {
+	@if (type_of($width) == 'number') and (unit($width) == '') {
+		$width: $width + px;
+	}
+	@if (type_of($height) == 'number') and (unit($height) == '') {
+		$height: $height + px;
+	}
+	@if ($width == 'auto') {
+		height: $height;
+	} @else if ($height == 'auto') {
+		width: $width;
+	} @else {
+		width: $width;
+		height: $height;
+	}
+}
+
+// btn style
+@mixin btn( $width, $height, $line-height, $border, $color, $background, $border-radius) {
+
+	@include size($width, $height);
+
+	line-height: $line-height - 5px;
+	color:$color;
+	background:$background;
+	border:$border;
+	border-radius:$border-radius;
+	font-weight:bold;
+	text-align:center;
+	box-sizing: border-box;
+	cursor:pointer;
+}
+
+// set form frame
+@mixin form-frame($width, $height, $border-width, $border-style, $border-color, $border-radius) {
+	width:$width;
+	height:$height;
+	padding-top: ( ( $height - 21px ) / 2 - 2px );
+	border:$border-width $border-style $border-color;
+	border-radius:$border-radius;
+	box-sizing:border-box;
+	text-align:center;
+	background:$white;
+	cursor:pointer;
+}
+
+// set position horizontal center
+@mixin center() {
+	display:block;
+	margin:0 auto;
+}
+
+// inline block
+@mixin inline-block(){
+	display:inline-block;
+}
+
+// clear float
+@mixin clear() {
+	&:after {
+		content:".";
+		display:block;
+		height:0;
+		overflow:hidden;
+		clear:both;
+	}
+}
