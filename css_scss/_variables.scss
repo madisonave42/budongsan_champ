@@ -1,21 +1,40 @@
 // font family stack by weight
 $font-stack:'Nanum Gothic', 'dotum', sans-serif;
-$font-size-base:13px;
-$font-size-small:12px;
-$font-size-mini:11px;
+$font-size-base:13;
+$font-size-small:12;
+$font-size-mini:11;
 
 // box size
 $box-default-width:120px;
 $box-default-height:30px;
 
-// color
-$dark:#333;
+// base color
+$dark:#222;
 $dark-gray:#666;
-$light-gray:#c2cbcb;
-$white-gray:#afbdbd;
-$clean-gray:#e8e8e8;
-$white-bg-gray:#f5f8f8;
+$gray:#999;
 $white: #ffffff;
+
+// gnb color
+$gnb-dark-gray:#555;
+$gnb-gray:#888;
+
+// line color
+$line-dark:#282828;
+$line-gray:#d8d8d8;
+
+// background color
+$bg-gray:#ddd;
+$bg-light-gray:#ededed;
+$bg-white-gray:#f9f9f9;
+
+// blue color
+$main-blue:#25aae1;
+$dark-blue:#3e8aad;
+$gray-blue:#a1b0b6;
+
+//////////////////////////////////////////////////////////////
+$light-gray:#ddd;
+$white-gray:#afbdbd;
 $orange:#ee6247;
 $white-orange:#f6d4cd;
 $blue:#479dee;
@@ -31,3 +50,6 @@ $critical:#ff7575;
 $major:#d59b72;
 $minor:#eedb73;
 $normal:#00b9b0;
+
+$clean-gray:#e8e8e8;
+$white-bg-gray:#f5f8f8;

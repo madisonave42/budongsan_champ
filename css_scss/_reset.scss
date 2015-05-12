@@ -30,17 +30,12 @@ footer, header, hgroup, menu, nav, section {
 }
 html{
   overflow-y:scroll;
-  background-color:#e6eaeb;
+  //background-color:#e6eaeb;
 }
 
-html.login{
-  background:#fff;
-}
 body {
   // global font style
-  font-family:$font-stack;
-  font-size:$font-size-base;
-  color:$dark-gray;
+  @include font(13, normal, $dark-gray);
 }
 ol, ul {
   list-style: none;
@@ -63,9 +58,8 @@ a{
 }
 select, input, button, textarea {
   display:block;
-  font-family:$font-stack;
-  font-size:$font-size-base;
   box-sizing:border-box;
+  @include font(13, normal, $dark-gray);
 }
 
 embed, object{

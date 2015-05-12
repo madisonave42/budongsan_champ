@@ -16,6 +16,14 @@
 	}
 }
 
+// font style
+@mixin font( $size: $font-size-base, $weight: normal, $color: $dark ){
+	font-family:$font-stack;
+	font-size:$size + px;
+	font-weight:$weight;
+	color:$color;
+}
+
 // btn style
 @mixin btn( $width, $height, $line-height, $border, $color, $background, $border-radius) {
 

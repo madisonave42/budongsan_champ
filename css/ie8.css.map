@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAMM,0BAAU;EACR,YAAY,EAAC,IAAI",
+"sources": ["../css_scss/ie8.scss"],
+"names": [],
+"file": "ie8.css"
+}

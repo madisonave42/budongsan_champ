@@ -9,92 +9,92 @@ module.exports = function(grunt) {
 
     includes: {
     	test: {
-    		cwd:'pub_src/test',
+    		cwd:'html_src/test',
     		src: ['*.html'],
-    		dest: 'pub/test',
+    		dest: 'html/test',
     		options: {
     			flatten:true,
-    			includePath: 'pub_src/_include'
+    			includePath: 'html_src/_include'
     		}
     	},
 
 			common: {
-				cwd:'pub_src/common',
+				cwd:'html_src/common',
 				src: ['*.html'],
-				dest: 'pub/common',
+				dest: 'html/common',
 				options: {
 					flatten:true,
-					includePath: 'pub_src/_include'
+					includePath: 'html_src/_include'
 				}
 			},
 
 			member: {
-				cwd:'pub_src/member',
+				cwd:'html_src/member',
 				src: ['*.html'],
-				dest: 'pub/member',
+				dest: 'html/member',
 				options: {
 					flatten:true,
-					includePath: 'pub_src/_include'
+					includePath: 'html_src/_include'
 				}
 			}
 /*
 			admin: {
-				cwd:'pub_src/admin',
+				cwd:'html_src/admin',
 				src: ['*.html'],
-				dest: 'pub/admin',
+				dest: 'html/admin',
 				options: {
 					flatten:true,
-					includePath: 'pub_src/_include'
+					includePath: 'html_src/_include'
 				}
 			},
 
       log: {
-        cwd:'pub_src/log',
+        cwd:'html_src/log',
         src: ['*.html'],
-        dest: 'pub/log',
+        dest: 'html/log',
         options: {
           flatten:true,
-          includePath: 'pub_src/_include'
+          includePath: 'html_src/_include'
         }
       },
 
       monitoring: {
-        cwd:'pub_src/monitoring',
+        cwd:'html_src/monitoring',
         src: ['*.html'],
-        dest: 'pub/monitoring',
+        dest: 'html/monitoring',
         options: {
           flatten:true,
-          includePath: 'pub_src/_include'
+          includePath: 'html_src/_include'
         }
       },
 
       setting: {
-        cwd:'pub_src/setting',
+        cwd:'html_src/setting',
         src: ['*.html'],
-        dest: 'pub/setting',
+        dest: 'html/setting',
         options: {
           flatten:true,
-          includePath: 'pub_src/_include'
+          includePath: 'html_src/_include'
         }
       },
 
       stats: {
-        cwd:'pub_src/stats',
+        cwd:'html_src/stats',
         src: ['*.html'],
-        dest: 'pub/stats',
+        dest: 'html/stats',
         options: {
           flatten:true,
-          includePath: 'pub_src/_include'
+          includePath: 'html_src/_include'
         }
       },
 
       vnfManagement: {
-        cwd:'pub_src/vnf_management',
+        cwd:'html_src/vnf_management',
         src: ['*.html'],
-        dest: 'pub/vnf_management',
+        dest: 'html/vnf_management',
         options: {
           flatten:true,
-          includePath: 'pub_src/_include'
+          includePath: 'html_src/_include'
         }
       }
 */
@@ -161,9 +161,9 @@ module.exports = function(grunt) {
     	html: {
 				files:[{
 					expand: true,
-					cwd: 'pub/',
+					cwd: 'html/',
 					src: ['**', '!**/@tmp.*'],
-					dest: '_output/pub/'
+					dest: '_output/html/'
 				}]
     	},
 
@@ -204,7 +204,7 @@ module.exports = function(grunt) {
     	},
 
     	html: {
-    		files: ['pub_src/**'],
+    		files: ['html_src/**'],
     		tasks: ['includes', 'reload'],
     		options: {
       		livereload : true

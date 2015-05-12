@@ -27,11 +27,11 @@
 @import "specific";
 
 /*
- * specific style of each browser vendor
- */
-@import "vendor";
-
-/*
  * specific style of each page
  */
 @import "member";
+
+/*
+ * specific style of each browser vendor
+ */
+@import "vendor";

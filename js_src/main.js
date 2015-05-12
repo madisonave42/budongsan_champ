@@ -23,53 +23,46 @@ $(function(){
 	 * Common
 	 */
 
-	// Set height of main-content
 	(function(){
-		var mainHeight = $(window).outerHeight() - HEADER_HEIGHT;
-		$('.main-content .wrapper.fix-height').css({height: mainHeight});
-	})();
 
-	// React about event of user-menu in header
-	(function(){
-		$('.header-user-path').data('open', 'false').on('click', function(e){
-			e.preventDefault();
+		// Set height of main-content
+		(function(){
+			var winHeight = $(window).outerHeight();
+			var $contents = $('.contents');
+			var contentsHeight = $contents.outerHeight();
+			if( winHeight >= contentsHeight ) {
+				$contents.css({height: winHeight - HEADER_FOOTER});
+			}
+		})();
+
+		// React about mouse-over event of GNB menu
+		$('.js-main-link').on('mouseenter', function(){
+			$('.js-main-link').removeClass('on');
+			$('.gnb-sub-wrap').removeClass('on');
+			$(this).addClass('on').next('.gnb-sub-wrap').addClass('on');
+		});
+
+		$('.js-gnb').on('mouseleave', function(){
+			$('.js-main-link').removeClass('on');
+			$('.gnb-sub-wrap').removeClass('on');
+		});
+
+		// React about mouse-over event of MY CHAMP menu
+		$('.js-my').data('open', 'false').on('click', function(){
 			if( $(this).data('open') == 'false' ) {
-				$(this).data('open', 'true').addClass('on').next().addClass('on');
+				$('.header-my-sub').addClass('on');
+				$(this).data('open', 'true');
 			} else {
-				$(this).data('open', 'false').removeClass('on').next().removeClass('on');
-			}
-		});
-	})();
-
-	// Apply selectric library
-	$('.select').selectric();
-
-	// calendar
-	(function(){
-		// calendar - initialize
-		$('.js-cal-start, .js-cal-end').datepicker({
-			dateFormat: 'yy-mm-dd',
-			beforeShowDay: function(date) {
-				var className = '';
-				if (date.getDay() == 6) {
-					className = 'ui-datepicker-sat';
-				}
-				if (date.getDay() == 0) {
-					className = 'ui-datepicker-sun';
-				}
-				return [true, className];
+				$('.header-my-sub').removeClass('on');
+				$(this).data('open', 'false');
 			}
 		});
 
-		// calendar - start date
-		$('.js-btn-cal-start').on('click', function(e) {
-			$('.js-cal-start').datepicker('show');
+		$('.header-my').on('mouseleave', function(){
+			$('.header-my-sub').removeClass('on');
+			$('.js-my').data('open', 'false');
 		});
 
-		// calendar - end date
-		$('.js-btn-cal-end').on('click', function(e) {
-			$('.js-cal-end').datepicker('show');
-		});
 	})();
 
 	/*

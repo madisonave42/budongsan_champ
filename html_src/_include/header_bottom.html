@@ -1,22 +1,24 @@
-<title>부동산 챔프</title>
-
-<link rel="stylesheet" href="../../css/lib/selectric.css">
-<link rel="stylesheet" href="../../css/common.css" />
 <script src="../../js/lib/jquery-1.11.0.min.js"></script>
 <script src="../../js/lib/jquery-ui.min.js"></script>
-<script src="../../js/lib/jquery.selectric.min.js"></script>
 <script src="../../js/function.js"></script>
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="../../css/ie8.css" />
+<script src="../../js/lib/html5shiv.js"></script>
+<script src="../../js/custom-form.js"></script>
+<![endif]-->
+
 </head>
 <body>
 <header class="header">
 
   <div class="wrapper">
 
-    <h1 class="header-logo"><img src="../../images/logo.png" alt="부동산챔프"></h1>
+    <h1 class="header-logo"><a href="#"><img src="../../images/logo.png" alt="부동산챔프"></a></h1>
 
-    <ul class="header-gnb">
+    <ul class="header-gnb js-gnb">
       <li class="gnb-item">
-        <a href="#" class="gnb-main-link">매물</a>
+        <a href="#" class="gnb-main-link js-main-link">매물</a>
 
         <ul class="gnb-sub-wrap">
           <li class="gnb-sub-item">
@@ -40,31 +42,30 @@
           <li class="gnb-sub-item">
             <a href="#" class="gnb-sub-link">공장/창고</a>
           </li>
-          <li class="gnb-sub-item">
+          <li class="gnb-sub-item last">
             <a href="#" class="gnb-sub-link">토지/기타</a>
           </li>
         </ul>
-
       </li>
 
       <li class="gnb-item">
-        <a href="#" class="gnb-main-link">분양</a>
+        <a href="#" class="gnb-main-link js-main-link">분양</a>
 
-        <ul class="gnb-sub-wrap">
+        <ul class="gnb-sub-wrap narrow">
           <li class="gnb-sub-item">
             <a href="#" class="gnb-sub-link">주거용</a>
           </li>
           <li class="gnb-sub-item">
             <a href="#" class="gnb-sub-link">상업용</a>
           </li>
-          <li class="gnb-sub-item">
+          <li class="gnb-sub-item last">
             <a href="#" class="gnb-sub-link">업무용</a>
           </li>
         </ul>
       </li>
 
       <li class="gnb-item">
-        <a href="#" class="gnb-main-link">금융/대출</a>
+        <a href="#" class="gnb-main-link js-main-link">금융/대출</a>
 
         <ul class="gnb-sub-wrap">
           <li class="gnb-sub-item">
@@ -73,14 +74,14 @@
           <li class="gnb-sub-item">
             <a href="#" class="gnb-sub-link">매매VS임대비교</a>
           </li>
-          <li class="gnb-sub-item">
+          <li class="gnb-sub-item last">
             <a href="#" class="gnb-sub-link">대출금계산기</a>
           </li>
         </ul>
       </li>
 
       <li class="gnb-item">
-        <a href="#" class="gnb-main-link">스마트매칭</a>
+        <a href="#" class="gnb-main-link js-main-link">스마트매칭</a>
 
         <ul class="gnb-sub-wrap">
           <li class="gnb-sub-item">
@@ -89,7 +90,7 @@
           <li class="gnb-sub-item">
             <a href="#" class="gnb-sub-link">구해주세요</a>
           </li>
-          <li class="gnb-sub-item">
+          <li class="gnb-sub-item last">
             <a href="#" class="gnb-sub-link">내 스마트매칭</a>
           </li>
         </ul>
@@ -103,10 +104,44 @@
       <li class="util-item"><a href="#" class="util-link">부동산플래닛</a></li>
       <li class="util-item"><a href="#" class="util-link">외국인서비스</a></li>
       <li class="util-item"><a href="#" class="util-link">중개회원</a></li>
-      <li class="util-item"><a href="#" class="util-link">고객센터</a></li>
+      <li class="util-item last"><a href="#" class="util-link">고객센터</a></li>
     </ul>
 
-    <div class="header-my">MY챔프</div>
+    <dl class="header-my">
+
+      <dt><a href="#" class="header-my-title js-my"><span class="typo">MY챔프</span></a></dt>
+
+      <dd class="header-my-sub">
+
+        <div class="header-my-member">
+          <div class="member-name"><span class="em-blue">부동산챔프</span>님</div>
+          <!-- note 1) for Dev -->
+          <button type="button" class="member logout">로그아웃</button>
+          <!--<div class="member login">로그인</div>-->
+          <!--/ note 1) for Dev -->
+        </div>
+
+        <ul class="header-my-info">
+          <li class="info-list"><a href="#" class="info-link info-modify">회원정보수정</a></li>
+          <li class="info-list"><a href="#" class="info-link info-goods">상품/이용권정보</a></li>
+          <li class="info-list"><a href="#" class="info-link info-payment">결제정보</a></li>
+          <li class="info-list last"><a href="#" class="info-link info-usage">이용안내</a></li>
+        </ul>
+
+        <ul class="header-my-history">
+          <li class="history-list odd"><a href="#" class="history-link notice">알림판</a></li>
+          <li class="history-list"><a href="#" class="history-link for-sale">매물</a></li>
+          <li class="history-list odd"><a href="#" class="history-link for-sale-current">최근 본 매물</a></li>
+          <li class="history-list"><a href="#" class="history-link for-sale-favorite">관심매물</a></li>
+          <li class="history-list odd"><a href="#" class="history-link search-current">최근검색</a></li>
+          <li class="history-list"><a href="#" class="history-link search-call">검색 불러오기</a></li>
+          <li class="history-list odd"><a href="#" class="history-link mediation">중개의뢰</a></li>
+          <li class="history-list"><a href="#" class="history-link inquiry">문의내역</a></li>
+        </ul>
+
+      </dd>
+
+    </dl>
 
   </div>
 

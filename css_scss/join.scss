@@ -1,0 +1,78 @@
+@import "variables";
+@import "mixins";
+
+.join{
+
+  &-title{
+    @include font(30, bold, $main-blue);
+    padding:145px 0 10px;
+    text-align:center;
+
+    &-desc{
+      @include font(14, normal, $dark-gray);
+      line-height:1.4;
+      text-align:center;
+      padding-bottom:50px;
+    }
+  }
+
+  &-type{
+    @include size(233, 260);
+
+    float:left;
+    margin-right:20px;
+    border:1px solid $line-gray;
+
+    &.last{
+      margin:0;
+    }
+
+    &-title{
+      @include size(auto, 45);
+      @include font(20, bold, $dark);
+
+      position:relative;
+      padding-bottom:72px;
+      margin-top:28px;
+      text-align:center;
+
+     &:after{
+       content:"";
+       display:block;
+       width:106px;
+       height:72px;
+
+       position:absolute;
+       bottom:0;
+       left:50%;
+       margin-left:-53px;
+
+       background:url(../images/icon_join.png) no-repeat;
+     }
+
+      &.mediation:after{
+        background-position:0 -78px;
+      }
+
+      &.company:after{
+        background-position:0 -156px;
+      }
+
+      &.premium:after{
+        background-position:0 -234px;
+      }
+
+      .sub-title{
+        display:block;
+        font-size:13px;
+      }
+    }
+
+    &-desc{
+      @include font(13, normal, $dark-gray);
+      margin:20px 0 9px;
+      line-height:1.4;
+      text-align:center;
+    }
+  }
+}
