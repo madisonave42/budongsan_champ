@@ -1,15 +1,131 @@
-.header{
+@import "variables";
+@import "mixins";
 
-  &-my{
+/* reset */
+body{
+  @include font(13-1, normal, $dark-gray);
+}
 
-    &-info{
+select, input, button, textarea {
+  @include font(13-1, normal, $dark-gray);
+}
 
-      .info-list{
-        margin-right:33px;
+/* header */
+.header {
+
+  &-gnb {
+
+    .gnb {
+
+      &-main-link{
+        @include font(16-1, bold, $gnb-dark-gray);
+      }
+
+      &-sub{
+
+        &-link{
+          @include font(13-1, bold, $gnb-dark-gray);
+        }
+
       }
 
     }
 
   }
 
+  &-my{
+    &-title{
+      @include font(16-1, bold, $white);
+    }
+
+    &-member{
+
+      .member{
+
+        &-name{
+          @include font(18-1, bold, $dark);
+        }
+
+        &.login,
+        &.logout{
+          @include font(13-1, bold, $dark-gray);
+        }
+
+      }
+
+    }
+
+    &-info{
+
+      .info{
+
+        &-link{
+          @include font(13-1, 700, $dark);
+        }
+
+      }
+
+    }
+
+    &-history{
+
+      .history{
+
+        &-link{
+          @include font(13-1, bold, $dark);
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+/* footer */
+.footer{
+
+  &-menu{
+
+    .menu{
+
+      &-link{
+        @include font(13-1, bold, $gnb-dark-gray);
+      }
+
+    }
+
+  }
+
+  &-address{
+    @include font(12, normal, $gnb-gray);
+  }
+
+  &-copyright{
+    @include font(12-1, bold, $gnb-gray);
+  }
+
+}
+
+/* join */
+.join{
+  &-title{
+    @include font(30-1, bold, $main-blue);
+
+    &-desc{
+      @include font(14-1, normal, $dark-gray);
+    }
+  }
+
+  &-type{
+
+    &-title{
+      @include font(20-1, bold, $dark);
+    }
+
+    &-desc{
+      @include font(13-1, normal, $dark-gray);
+    }
+  }
 }

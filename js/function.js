@@ -39,6 +39,16 @@ $(function(){
 			if( winHeight >= contentsHeight ) {
 				$contents.css({height: winHeight - HEADER_FOOTER});
 			}
+
+			$(window).on('resize', function(){
+				var winHeight = $(window).outerHeight();
+				var $contents = $('.contents');
+				var contentsHeight = $contents.outerHeight();
+				if( winHeight >= contentsHeight ) {
+					$contents.css({height: winHeight - HEADER_FOOTER});
+				}
+			});
+
 		})();
 
 		// React about mouse-over event of GNB menu

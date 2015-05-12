@@ -476,6 +476,7 @@ img {
 /* contents */
 .contents {
   min-width: 1000px;
+  min-height: 600px;
 }
 .contents.top-border {
   border-top: 2px solid #25aae1;
