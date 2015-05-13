@@ -32,51 +32,100 @@ $(function(){
 	(function(){
 
 		// Set height of main-content
-		(function(){
+		$(window).on('load resize', function(){
 			var winHeight = $(window).outerHeight();
+			var docHeight = $(document).outerHeight();
 			var $contents = $('.contents');
-			var contentsHeight = $contents.outerHeight();
-			if( winHeight >= contentsHeight ) {
+
+			if( winHeight >= docHeight ) {
 				$contents.css({height: winHeight - HEADER_FOOTER});
 			}
+		});
 
-			$(window).on('resize', function(){
-				var winHeight = $(window).outerHeight();
-				var $contents = $('.contents');
-				var contentsHeight = $contents.outerHeight();
-				if( winHeight >= contentsHeight ) {
-					$contents.css({height: winHeight - HEADER_FOOTER});
+		// React about mouse-over event of GNB menu
+		(function(){
+			$('.js-main-link').on('mouseenter', function(){
+				$('.js-main-link').removeClass('on');
+				$('.gnb-sub-wrap').removeClass('on');
+				$(this).addClass('on').next('.gnb-sub-wrap').addClass('on');
+			});
+
+			$('.js-gnb').on('mouseleave', function(){
+				$('.js-main-link').removeClass('on');
+				$('.gnb-sub-wrap').removeClass('on');
+			});
+		})();
+
+		// React about mouse-over event of MY CHAMP menu
+		(function(){
+			$('.js-my').data('open', 'false').on('click', function(){
+				if( $(this).data('open') == 'false' ) {
+					$('.header-my-sub').addClass('on');
+					$(this).data('open', 'true');
+				} else {
+					$('.header-my-sub').removeClass('on');
+					$(this).data('open', 'false');
 				}
+			});
+
+			$('.header-my').on('mouseleave', function(){
+				$('.header-my-sub').removeClass('on');
+				$('.js-my').data('open', 'false');
+			});
+		})();
+
+		// React about mouse event of select box
+		(function(){
+
+			$('.select').data('open', 'false').on('click', function(){
+
+				$('.select').data('open', 'false').next('.select-items').removeClass('on');
+
+				if( $(this).data('open') == 'false' ) {
+					$(this).data('open', 'true').next('.select-items').addClass('on');
+				} else {
+					$(this).data('open', 'false').next('.select-items').removeClass('on');
+				}
+			});
+
+			$(document).on('click', function(e){
+				if( $(e.target).closest('.select-wrapper').length > 0 ){
+					return false;
+				} else {
+					$('.select').data('open', 'false').next('.select-items').removeClass('on');
+				}
+			});
+
+			// select list
+			$('.select-items li').on('click', function(){
+
+				var selectedItem = $(this).text();
+				var $selectLabel = $(this).parents('.select-items').prev('.select').find('.label');
+
+				$(this).addClass('selected')
+					.siblings().removeClass('selected')
+					.parents('.select-items').removeClass('on')
+					.prev('.select').data('open', 'false');
+
+				$selectLabel.html(selectedItem);
+
 			});
 
 		})();
 
-		// React about mouse-over event of GNB menu
-		$('.js-main-link').on('mouseenter', function(){
-			$('.js-main-link').removeClass('on');
-			$('.gnb-sub-wrap').removeClass('on');
-			$(this).addClass('on').next('.gnb-sub-wrap').addClass('on');
-		});
+		// Focus in password input
+		$('.pwd, .pwd-confirm').data('focus', 'false').on({
+			focusin: function() {
+				$(this).data('focus', 'true').addClass('focus');
+			},
 
-		$('.js-gnb').on('mouseleave', function(){
-			$('.js-main-link').removeClass('on');
-			$('.gnb-sub-wrap').removeClass('on');
-		});
-
-		// React about mouse-over event of MY CHAMP menu
-		$('.js-my').data('open', 'false').on('click', function(){
-			if( $(this).data('open') == 'false' ) {
-				$('.header-my-sub').addClass('on');
-				$(this).data('open', 'true');
-			} else {
-				$('.header-my-sub').removeClass('on');
-				$(this).data('open', 'false');
+			focusout: function() {
+				if( $(this).val().length > 0 ) {
+					return false;
+				} else {
+					$(this).data('focus', 'false').removeClass('focus');
+				}
 			}
-		});
-
-		$('.header-my').on('mouseleave', function(){
-			$('.header-my-sub').removeClass('on');
-			$('.js-my').data('open', 'false');
 		});
 
 	})();

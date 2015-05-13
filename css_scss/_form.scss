@@ -1,13 +1,11 @@
 .input{
-  height:30px;
+  width:$box-default-width;
+  height:$box-default-height;
   padding-left:5px;
 
-  font-weight:bold;
-  font-size:11px;
-  color:$dark;
-
-  border:1px solid $light-gray;
-  border-radius:2px;
+  color:$dark-gray;
+  border:1px solid $form-gray;
+  box-sizing:border-box;
 
   &.mini{
     width:50px;
@@ -21,27 +19,162 @@
     width:80px;
   }
 
-  &.default{
-    width:$box-default-width;
+  &.pwd{
+    background:url(../images/msg_form_pwd.png) no-repeat 5px 11px;
+
+    &.focus{
+      background:none;
+    }
+
+    &-confirm{
+      background:url(../images/msg_form_pwd.png) no-repeat 5px -48px;
+
+      &.focus{
+        background:none;
+      }
+    }
   }
+
+}
+
+.select {
+  border: 1px solid #CDCDCD;
+  background: #FFFFFF;
+  position: relative;
+
+  &-wrapper{
+    width:$box-default-width;
+    position: relative;
+    cursor: pointer;
+
+    &.half-width{
+      width:115px;
+    }
+  }
+
+  .label {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 35px 0 10px;
+    font-size: 12px;
+    line-height: 35px;
+    color: #666666;
+    height: 35px;
+  }
+
+  .button {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 38px;
+    height: 38px;
+    color: #999999;
+    text-align: center;
+    font: 0/0 a;
+    *font: 38px/38px Lucida Sans Unicode, Arial Unicode MS, Arial;
+  }
+  .button:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border: 4px solid transparent;
+    border-top-color: #999999;
+    border-bottom: none;
+  }
+
+  /* Items box */
+  &-items {
+    display: none;
+    width:100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border: 1px solid #C4C4C4;
+    z-index: 90;
+    box-shadow: 0 0 10px -6px;
+    box-sizing:border-box;
+
+    &.on{
+      display:block;
+    }
+  }
+  &-items &-scroll {
+    height: 100%;
+    overflow: auto;
+  }
+  &-above &-items {
+    top: auto;
+    bottom: 100%;
+  }
+  &-items ul, &-items li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    line-height: 20px;
+    min-height: 20px;
+  }
+  &-items li {
+    display: block;
+    padding: 8px;
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #EEE;
+    color: #666;
+    cursor: pointer;
+  }
+  &-items li.selected {
+    background: #EFEFEF;
+    color: #444;
+  }
+  &-items li:hover {
+    background: #F0F0F0;
+    color: #444;
+  }
+  &-items .disabled {
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    cursor: default !important;
+    background: none !important;
+    color: #666 !important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
 }
 
 .btn{
+  &-fill{
+    @include btn(195, 40, 16, $white, 40, 0, $dark-gray);
+    @include inline-block();
+
+    &.blue{
+      background:$main-blue;
+    }
+  }
 
   &-join{
-
-    @include size(126, 28);
-    @include font(14, bold, $dark-gray);
+    @include btn(126, 28, 14, $dark-gray, 25, 1px solid $dark-gray, $white);
     @include center();
-    border:1px solid $gnb-gray;
-    background:$white;
 
     &:hover{
       color:$white;
       border-color:$main-blue;
       background:$main-blue;
     }
-
   }
 
   &-calendar{
@@ -183,10 +316,12 @@
   &-label{
     display:block;
 
-    height:15px;
-    line-height:15px;
+    height:20px;
+    line-height:20px;
 
-    padding-left:15px;
+    padding-left:30px;
+
+    color:$dark-gray;
 
     &.blind{
       width:0;
@@ -198,16 +333,17 @@
       content:"";
       display:block;
 
-      width:13px;
-      height:13px;
+      width:20px;
+      height:20px;
 
       position:absolute;
       top:0;
       left:0;
 
-      border:1px solid $light-gray;
+      border:1px solid $form-gray;
       border-radius: 50%;
       background:$white;
+      box-sizing:border-box;
     }
   }
 
@@ -221,12 +357,12 @@
     content:"";
     display:block;
     position:absolute;
-    width:7px;
-    height:7px;
+    width:8px;
+    height:8px;
 
     z-index:10;
-    top:4px;
-    left:4px;
+    top:6px;
+    left:6px;
 
     border-radius:50%;
     background:$dark;

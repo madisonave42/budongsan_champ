@@ -1,14 +1,6 @@
 @import "variables";
 @import "mixins";
 
-.t1grid .blind {
-	display: none;
-}
-
-.t1grid .gridList {
-	width:100%;
-}
-
 .vt-table {
 	width: 100%;
 	border-top: 2px solid $light-gray;
@@ -97,25 +89,45 @@
 }
 
 .hr-table{
-	border-top: 2px solid $light-gray;
+	width:100%;
+
+	border:{
+		top: 2px solid $dark;
+		bottom:1px solid $dark;
+	}
 
 	th{
-		height:39px;
+		height:57px;
 		text-align:left;
 		padding-left:10px;
-		border-bottom: 1px solid $clean-gray;
-		background:$white-bg-gray;
+		font-weight:bold;
+		color:$dark;
+		border-bottom: 1px solid $line-gray;
+		background:$bg-white-gray;
+
+		&.last{
+			border:0;
+		}
 	}
 
 	td{
-		height:39px;
+		height:57px;
 		padding-left:10px;
 
 		font-weight:bold;
-		border-bottom: 1px solid $clean-gray;
+		color:$dark;
+		border:{
+			left: 1px solid $line-gray;
+			bottom: 1px solid $line-gray;
+		}
+
+		&.last{
+			border-bottom:0;
+		}
 	}
 }
 
+/*
 .tb-form {
 
 	&-btn {
@@ -169,3 +181,4 @@
 	color:$dark-gray;
 	text-decoration:underline;
 }
+*/

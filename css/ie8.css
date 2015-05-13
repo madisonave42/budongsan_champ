@@ -57,6 +57,20 @@ select, input, button, textarea {
   color: #222;
 }
 
+/* contents */
+.contents-title {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 29px;
+  font-weight: bold;
+  color: #222;
+}
+.contents-part-title {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  color: #222;
+}
+
 /* footer */
 .footer-menu .menu-link {
   font-family: "Nanum Gothic", "dotum", sans-serif;
@@ -75,6 +89,28 @@ select, input, button, textarea {
   font-size: 11px;
   font-weight: bold;
   color: #888;
+}
+
+/* form */
+.input {
+  line-height: 35px;
+}
+
+.btn-fill {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.btn-join {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #666;
+}
+
+.radio-label:after {
+  display: none;
 }
 
 /* join */
@@ -101,6 +137,20 @@ select, input, button, textarea {
   font-size: 12px;
   font-weight: normal;
   color: #666;
+}
+
+.step-mark {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #25aae1;
+}
+.step-title {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  color: #222;
+  margin-top: 3px;
 }
 
 /*# sourceMappingURL=ie8.css.map */

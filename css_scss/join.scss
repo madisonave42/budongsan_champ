@@ -76,3 +76,71 @@
     }
   }
 }
+
+.step{
+
+  &-list{
+    @include size(1000, 79);
+    @include clear();
+    background:url(../images/bg_step.png) no-repeat;
+
+    // override each step
+    &.step1{
+      background-position:0 0px;
+      .first {
+        .step {
+          &-mark, &-title {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    &.step2{
+      background-position:0 -80px;
+      .second {
+        .step {
+          &-mark, &-title {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    &.step3{
+      background-position:0 -161px;
+      .third {
+        .step {
+          &-mark, &-title {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &-item{
+    float:left;
+    margin-top:20px;
+
+    &.first{
+      margin-left:26px;
+    }
+    &.second{
+      margin-left:280px;
+    }
+    &.third{
+      margin-left:220px;
+    }
+  }
+
+  &-mark{
+    @include font(13, normal, $main-blue);
+  }
+
+  &-title{
+    @include font(18, bold, $dark);
+    margin-top:3px;
+  }
+
+}

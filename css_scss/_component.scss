@@ -1,3 +1,38 @@
+.list{
+
+  &-description{
+
+    padding:25px;
+    border:{
+      top:1px solid $line-gray;
+      bottom:1px solid $line-gray;
+    }
+    background: $bg-white-gray;
+
+    .list-item{
+      position:relative;
+      padding-left:10px;
+
+      line-height:1.6;
+
+      &:after{
+        content:"";
+        display:block;
+        width:2px;
+        height:2px;
+
+        position:absolute;
+        top:9px;
+        left:0;
+
+        background:$dark-gray;
+      }
+    }
+  }
+}
+
+
+
 .scroll-area{
   border:1px solid $light-gray;
   border-radius:3px;

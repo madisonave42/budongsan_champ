@@ -4,6 +4,13 @@
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+
+<title>회원가입 유형 선택 | 회원가입 | 부동산 챔프</title>
+
+<link rel="stylesheet" href="../../css/common.css" />
+<!-- 회원가입 style -->
+<link rel="stylesheet" href="../../css/join.css" />
+
 <script src="../../js/lib/jquery-1.11.0.min.js"></script>
 <script src="../../js/lib/jquery-ui.min.js"></script>
 <script src="../../js/function.js"></script>
@@ -152,7 +159,186 @@
   </div>
 
 </header>
-<h1>Temporary File</h1>
+
+<section class="contents top-border">
+  <div class="wrapper">
+
+    <div class="contents-top">
+      <h2 class="contents-title">개인회원</h2>
+    </div>
+
+    <div class="contents-mid">
+
+      <ul class="step-list step2">
+
+        <li class="step-item first">
+          <div class="step-mark">STEP1</div>
+          <div class="step-title">이메일 입력</div>
+        </li>
+
+        <li class="step-item second">
+          <div class="step-mark">STEP2</div>
+          <div class="step-title">기본정보 입력</div>
+        </li>
+
+        <li class="step-item third">
+          <div class="step-mark">STEP3</div>
+          <div class="step-title">가입완료</div>
+        </li>
+
+      </ul>
+
+      <section class="contents-part">
+
+        <div class="part-top">
+          <h3 class="part-title">기본정보입력</h3>
+          <ul class="list-description">
+            <li class="list-item">이름, 생년월일, 성별, 이메일은 아이디/비밀번호 분실 등 본인여부 확인이 필요한 경우 사용됩니다.</li>
+            <li class="list-item">허위정보를 입력하면 본인확인을 할 수 없어 민원발생 시 도움을 드릴 수 없습니다.</li>
+            <li class="list-item">이름, 생년월일, 성별은 가입 후 임의 수정할 수 없습니다.</li>
+          </ul>
+        </div>
+
+        <div class="part-mid">
+
+          <table class="hr-table">
+
+            <caption class="hide">기본정보입력</caption>
+
+            <colgroup>
+              <col style="width:185px;" />
+              <col style="width:auto;" />
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <label for="id">아이디 (이메일)</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <input id="id" type="text" class="input"/>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="pwd">비밀번호</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <input id="pwd" type="password" class="input pwd"/>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="pwd-confirm">비밀번호 확인</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <input id="pwd-confirm" type="password" class="input pwd-confirm"/>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="name">이름</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <input id="name" type="text" class="input"/>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label>성별</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+
+                  <div class="radio-wrap left-float left">
+                    <input id="radio-1" type="radio" class="radio" name="gender" />
+                    <label for="radio-1" class="radio-label">여자</label>
+                  </div>
+
+                  <div class="radio-wrap left-float">
+                    <input id="radio-2" type="radio" class="radio" name="gender" />
+                    <label for="radio-2" class="radio-label">남자</label>
+                  </div>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label>생년월일</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">1990년</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">1990년</li>
+                      <li>1991년</li>
+                      <li>1992년</li>
+                    </ul>
+                  </div>
+
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">1월</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">1월</li>
+                      <li>2월</li>
+                      <li>3월</li>
+                    </ul>
+                  </div>
+
+                  <div class="select-wrapper half-width left-float">
+                    <div class="select">
+                      <p class="label">1일</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">1일</li>
+                      <li>2일</li>
+                      <li>3일</li>
+                    </ul>
+                  </div>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="last">
+                  <label>뉴스레터</label> <span class="em-blue">*</span>
+                </th>
+                <td class="last">
+
+                  <div class="radio-wrap left-float left">
+                    <input id="radio-3" type="radio" class="radio" name="receive" />
+                    <label for="radio-3" class="radio-label">수신합니다</label>
+                  </div>
+
+                  <div class="radio-wrap left-float">
+                    <input id="radio-4" type="radio" class="radio" name="receive" />
+                    <label for="radio-4" class="radio-label">수신하지 않습니다</label>
+                  </div>
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="part-bottom">
+          <button type="button" class="btn-fill blue">확인</button>
+        </div>
+
+      </section>
+
+    </div>
+
+  </div>
+</section>
+
 
 <footer class="footer">
   <div class="wrapper">

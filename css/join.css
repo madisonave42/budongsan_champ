@@ -70,4 +70,61 @@
   text-align: center;
 }
 
+.step-list {
+  width: 1000px;
+  height: 79px;
+  background: url(../images/bg_step.png) no-repeat;
+}
+.step-list:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.step-list.step1 {
+  background-position: 0 0px;
+}
+.step-list.step1 .first .step-mark, .step-list.step1 .first .step-title {
+  color: #ffffff;
+}
+.step-list.step2 {
+  background-position: 0 -80px;
+}
+.step-list.step2 .second .step-mark, .step-list.step2 .second .step-title {
+  color: #ffffff;
+}
+.step-list.step3 {
+  background-position: 0 -161px;
+}
+.step-list.step3 .third .step-mark, .step-list.step3 .third .step-title {
+  color: #ffffff;
+}
+.step-item {
+  float: left;
+  margin-top: 20px;
+}
+.step-item.first {
+  margin-left: 26px;
+}
+.step-item.second {
+  margin-left: 280px;
+}
+.step-item.third {
+  margin-left: 220px;
+}
+.step-mark {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  color: #25aae1;
+}
+.step-title {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+  margin-top: 3px;
+}
+
 /*# sourceMappingURL=join.css.map */
