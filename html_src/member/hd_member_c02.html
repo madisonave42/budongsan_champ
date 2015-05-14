@@ -1,0 +1,174 @@
+include "header_top.html"
+
+<title>중개회원 가입방식 선택 | 회원가입 | 부동산 챔프</title>
+
+<link rel="stylesheet" href="../../css/common.css" />
+<!-- 회원가입 style -->
+<link rel="stylesheet" href="../../css/join.css" />
+<link rel="stylesheet" href="../../css/popup.css" />
+
+include "header_bottom.html"
+
+<section class="contents top-border">
+  <div class="wrapper">
+
+    <div class="contents-top">
+      <h2 class="join-title">중개회원 가입방식 선택</h2>
+      <p class="join-title-desc mediation">
+        개인회원으로 가입 후 중개회원 인증절차를 통해 중개회원 가입이 가능합니다.<br />대표공인중개사만 회원가입이 가능하며, 소속공인중개사 및 중개보조인은 회원가입 후 직원추가 가능합니다.<br /><br />회원님께서 원하시는 가입방식을 선택하여 주세요.
+      </p>
+    </div>
+
+    <div class="contents-mid">
+
+      <div class="join-type">
+        <h3 class="join-type-title email">이메일 가입</h3>
+        <button type="button" class="btn-join js-open-popup" data-href="#join-email">가입하기</button>
+      </div>
+
+      <div class="join-type">
+        <h3 class="join-type-title facebook">페이스북 가입</h3>
+        <button type="button" class="btn-join js-open-popup" data-href="#join-facebook">가입하기</button>
+      </div>
+
+      <div class="join-type">
+        <h3 class="join-type-title naver">네이버 가입</h3>
+        <button type="button" class="btn-join js-open-popup" data-href="#join-naver">가입하기</button>
+      </div>
+
+      <div class="join-type last">
+        <h3 class="join-type-title kakao">카카오톡 가입</h3>
+        <button type="button" class="btn-join js-open-popup" data-href="#join-kakao">가입하기</button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- [D] 팝업 배경 -->
+<div class="dimmed on"></div>
+
+<!-- [D] 팝업 : S -->
+<section id="join-email" class="popup popup-small-width on">
+  <div class="popup-top">
+    <h1 class="popup-join-title email">
+      <span class="em-blue">부동산 챔프</span>가 여러분의<br />매물홍보를 책임집니다!
+    </h1>
+  </div>
+  <div class="popup-mid">
+    <div class="popup-join-form">
+      <div class="popup-join-form-wrap email">
+        <label for="email" class="popup-join-form-label">이메일을 입력하세요!</label>
+        <input id="email" type="text" class="popup-join-form-input" />
+      </div>
+
+      <input type="submit" value="등록하기" class="btn-fill blue popup-join-form-submit" />
+
+      <div class="popup-join-agree">
+        <input type="checkbox" id="agree-terms" class="popup-join-agree-chk left-float" />
+        <label for="agree-terms" class="popup-join-agree-label left-float">이용약관, 개인정보 취급방침 및 운영원칙  동의</label>
+        <a href="#" class="popup-join-agree-view right-float">보기</a>
+      </div>
+    </div>
+  </div>
+  <div class="popup-bottom">
+    <p class="popup-join-login">
+      이미 부동산 챔프 회원이신가요? <a href="#" class="em-blue">로그인</a>
+    </p>
+  </div>
+  <button type="button" class="popup-close js-close-popup">이메일 입력 팝업 닫기</button>
+</section>
+
+<section id="join-facebook" class="popup popup-small-width">
+  <div class="popup-top">
+    <h1 class="popup-join-title email">
+      <span class="em-blue">부동산 챔프</span>가 여러분의<br />매물홍보를 책임집니다!
+    </h1>
+  </div>
+  <div class="popup-mid">
+    <div class="popup-join-form">
+      <div class="popup-join-form-wrap email">
+        <label for="email1" class="popup-join-form-label">이메일을 입력하세요!</label>
+        <input id="email1" type="text" class="popup-join-form-input" />
+      </div>
+
+      <input type="submit" value="등록하기" class="btn-fill blue popup-join-form-submit" />
+
+      <div class="popup-join-agree">
+        <input type="checkbox" id="agree-terms1" class="popup-join-agree-chk left-float" />
+        <label for="agree-terms1" class="popup-join-agree-label left-float">이용약관, 개인정보 취급방침 및 운영원칙  동의</label>
+        <a href="#" class="popup-join-agree-view right-float">보기</a>
+      </div>
+    </div>
+  </div>
+  <div class="popup-bottom">
+    <p class="popup-join-login">
+      이미 부동산 챔프 회원이신가요? <a href="#" class="em-blue">로그인</a>
+    </p>
+  </div>
+  <button type="button" class="popup-close js-close-popup">이메일 입력 팝업 닫기</button>
+</section>
+
+<section id="join-naver" class="popup popup-small-width">
+  <div class="popup-top">
+    <h1 class="popup-join-title email">
+      <span class="em-blue">부동산 챔프</span>가 여러분의<br />매물홍보를 책임집니다!
+    </h1>
+  </div>
+  <div class="popup-mid">
+    <div class="popup-join-form">
+      <div class="popup-join-form-wrap email">
+        <label for="email2" class="popup-join-form-label">이메일을 입력하세요!</label>
+        <input id="email2" type="text" class="popup-join-form-input" />
+      </div>
+
+      <input type="submit" value="등록하기" class="btn-fill blue popup-join-form-submit" />
+
+      <div class="popup-join-agree">
+        <input type="checkbox" id="agree-terms2" class="popup-join-agree-chk left-float" />
+        <label for="agree-terms2" class="popup-join-agree-label left-float">이용약관, 개인정보 취급방침 및 운영원칙  동의</label>
+        <a href="#" class="popup-join-agree-view right-float">보기</a>
+      </div>
+    </div>
+  </div>
+  <div class="popup-bottom">
+    <p class="popup-join-login">
+      이미 부동산 챔프 회원이신가요? <a href="#" class="em-blue">로그인</a>
+    </p>
+  </div>
+  <button type="button" class="popup-close js-close-popup">이메일 입력 팝업 닫기</button>
+</section>
+
+<section id="join-kakao" class="popup popup-small-width">
+  <div class="popup-top">
+    <h1 class="popup-join-title email">
+      <span class="em-blue">부동산 챔프</span>가 여러분의<br />매물홍보를 책임집니다!
+    </h1>
+  </div>
+  <div class="popup-mid">
+    <div class="popup-join-form">
+      <div class="popup-join-form-wrap email">
+        <label for="email3" class="popup-join-form-label">이메일을 입력하세요!</label>
+        <input id="email3" type="text" class="popup-join-form-input" />
+      </div>
+
+      <input type="submit" value="등록하기" class="btn-fill blue popup-join-form-submit" />
+
+      <div class="popup-join-agree">
+        <input type="checkbox" id="agree-terms3" class="popup-join-agree-chk left-float" />
+        <label for="agree-terms3" class="popup-join-agree-label left-float">이용약관, 개인정보 취급방침 및 운영원칙  동의</label>
+        <a href="#" class="popup-join-agree-view right-float">보기</a>
+      </div>
+    </div>
+  </div>
+  <div class="popup-bottom">
+    <p class="popup-join-login">
+      이미 부동산 챔프 회원이신가요? <a href="#" class="em-blue">로그인</a>
+    </p>
+  </div>
+  <button type="button" class="popup-close js-close-popup">이메일 입력 팝업 닫기</button>
+</section>
+<!-- [D] 팝업 : E -->
+
+include "footer.html"

@@ -15,6 +15,8 @@ if( navigator.userAgent.indexOf('Safari') > 0 ){
 	$('html').addClass('ie11');
 } else if( navigator.userAgent.indexOf('MSIE 10.0') > 0 ){
 	$('html').addClass('ie10');
+} else if( navigator.userAgent.indexOf('Windows NT 5.1') > 0 ){
+	$('html').addClass('os-xp');
 }
 
 $(function(){
@@ -28,9 +30,8 @@ $(function(){
 		// Set height of main-content
 		$(window).on('load resize', function(){
 			var winHeight = $(window).outerHeight();
-			var docHeight = $(document).outerHeight();
+			var docHeight = $('body').outerHeight();
 			var $contents = $('.contents');
-
 			if( winHeight >= docHeight ) {
 				$contents.css({height: winHeight - HEADER_FOOTER});
 			}
@@ -125,6 +126,16 @@ $(function(){
 	})();
 
 	/*
+	 * join
+	 */
+
+	// focus on input
+	(function() {
+		toggleLabel( $('.js-label-toggle') );
+	})();
+
+
+	 /*
 	 * popup
 	 */
 
@@ -133,8 +144,12 @@ $(function(){
 
 		// Open general popup
 		$('.js-open-popup').on('click', function(e) {
-			$('.dimmed').addClass('on');
-			$('.popup').addClass('on');
+			var targetPop = $( $(this).attr('data-href') );
+			if (targetPop.length > 0) {
+				$('.dimmed').addClass('on');
+				$('.popup').removeClass('on');
+				targetPop.addClass('on');
+			}
 			e.preventDefault();
 		});
 
@@ -159,6 +174,11 @@ $(function(){
 			e.preventDefault();
 		});
 
+	})();
+
+	// focus on input
+	(function() {
+		toggleLabel( $('.popup-join-form-input') );
 	})();
 
 });
