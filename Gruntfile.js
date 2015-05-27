@@ -8,6 +8,13 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     includes: {
+
+			list:{
+				cwd:'html_src',
+				src: ['*.html'],
+				dest: 'html',
+			},
+
     	test: {
     		cwd:'html_src/test',
     		src: ['*.html'],
