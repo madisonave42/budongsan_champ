@@ -338,6 +338,8 @@ img {
   z-index: 90;
   box-shadow: 0 0 10px -6px;
   box-sizing: border-box;
+  overflow: auto;
+  max-height: 192px;
 }
 .select-items.on {
   display: block;
@@ -571,9 +573,14 @@ img {
 }
 
 .form-label {
-  height: 30px;
-  line-height: 27px;
+  height: 37px;
+  line-height: 37px;
   color: #666;
+}
+.form-label-em {
+  height: 37px;
+  line-height: 37px;
+  color: #25aae1;
 }
 
 /*
