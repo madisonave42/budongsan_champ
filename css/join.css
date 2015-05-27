@@ -15,6 +15,18 @@
   text-align: center;
   padding-bottom: 50px;
 }
+.join-title-desc.private {
+  padding-bottom: 70px;
+}
+.join-title-desc.mediation {
+  padding-bottom: 40px;
+}
+.join-title-desc.company {
+  padding-bottom: 40px;
+}
+.join-title-desc.premium {
+  padding-bottom: 40px;
+}
 .join-type {
   width: 233px;
   height: 260px;
@@ -60,6 +72,33 @@
   display: block;
   font-size: 13px;
 }
+.join-type-title.email, .join-type-title.facebook, .join-type-title.naver, .join-type-title.kakao {
+  padding-bottom: 160px;
+  height: 19px;
+}
+.join-type-title.email:after, .join-type-title.facebook:after, .join-type-title.naver:after, .join-type-title.kakao:after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 60px;
+  position: absolute;
+  bottom: 56px;
+  left: 50%;
+  margin-left: -37px;
+  background: url(../images/icon_join.png) no-repeat;
+}
+.join-type-title.email:after {
+  background-position: 0 -330px;
+}
+.join-type-title.facebook:after {
+  background-position: 0 -400px;
+}
+.join-type-title.naver:after {
+  background-position: 0 -470px;
+}
+.join-type-title.kakao:after {
+  background-position: 0 -540px;
+}
 .join-type-desc {
   font-family: "Nanum Gothic", "dotum", sans-serif;
   font-size: 13px;
@@ -68,6 +107,47 @@
   margin: 20px 0 9px;
   line-height: 1.4;
   text-align: center;
+}
+.join-complete {
+  margin-top: 30px;
+  height: 457px;
+  border-top: 2px solid #282828;
+  border-bottom: 1px solid #282828;
+}
+.join-complete-title {
+  position: relative;
+  padding-top: 257px;
+  text-align: center;
+  color: #222;
+  font-size: 24px;
+  font-weight: bold;
+}
+.join-complete-title:after {
+  content: "";
+  display: block;
+  width: 139px;
+  height: 102px;
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  margin-left: -69px;
+  background: url(../images/icon_join_complete.png) no-repeat;
+}
+.join-complete-title.mediation:after {
+  background-position: 0 -110px;
+}
+.join-complete-title.company:after {
+  background-position: 0 -220px;
+}
+.join-complete-title.premium:after {
+  background-position: 0 -330px;
+}
+.join-complete-msg {
+  margin-top: 20px;
+  line-height: 1.4;
+  text-align: center;
+  color: #222;
+  font-size: 16px;
 }
 
 .step-list {
@@ -106,12 +186,13 @@
 }
 .step-item.first {
   margin-left: 26px;
+  width: 365px;
 }
 .step-item.second {
-  margin-left: 280px;
+  width: 322px;
 }
 .step-item.third {
-  margin-left: 220px;
+  width: 267px;
 }
 .step-mark {
   font-family: "Nanum Gothic", "dotum", sans-serif;
@@ -122,6 +203,54 @@
 .step-title {
   font-family: "Nanum Gothic", "dotum", sans-serif;
   font-size: 18px;
+  font-weight: bold;
+  color: #222;
+  margin-top: 3px;
+}
+
+.step-list.premium {
+  background: url(../images/bg_step_premium.png) no-repeat;
+}
+.step-list.premium.step1 {
+  background-position: 0 0px;
+}
+.step-list.premium.step1 .first .step-mark, .step-list.premium.step1 .first .step-title {
+  color: #ffffff;
+}
+.step-list.premium.step2 {
+  background-position: 0 -79px;
+}
+.step-list.premium.step2 .second .step-mark, .step-list.premium.step2 .second .step-title {
+  color: #ffffff;
+}
+.step-list.premium.step3 {
+  background-position: 0 -158px;
+}
+.step-list.premium.step3 .third .step-mark, .step-list.premium.step3 .third .step-title {
+  color: #ffffff;
+}
+.step-list.premium.step4 {
+  background-position: 0 -237px;
+}
+.step-list.premium.step4 .fourth .step-mark, .step-list.premium.step4 .fourth .step-title {
+  color: #ffffff;
+}
+.step-list.premium .step-item.first {
+  margin-left: 26px;
+  width: 270px;
+}
+.step-list.premium .step-item.second {
+  width: 250px;
+}
+.step-list.premium .step-item.third {
+  width: 235px;
+}
+.step-list.premium .step-item.fourth {
+  margin-top: 13px;
+}
+.step-list.premium .step-title {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 14px;
   font-weight: bold;
   color: #222;
   margin-top: 3px;

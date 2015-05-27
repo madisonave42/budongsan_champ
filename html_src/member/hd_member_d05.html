@@ -1,0 +1,213 @@
+include "header_top.html"
+
+<title>프리미엄 기업회원 기본정보 입력 | 회원가입 | 부동산 챔프</title>
+
+<link rel="stylesheet" href="../../css/common.css" />
+<!-- 회원가입 style -->
+<link rel="stylesheet" href="../../css/join.css" />
+<link rel="stylesheet" href="../../css/popup.css" />
+
+include "header_bottom.html"
+
+<section class="contents top-border">
+  <div class="wrapper">
+
+    <div class="contents-top">
+      <h2 class="contents-title">프리미엄 기업회원 (부동산플래닛)</h2>
+    </div>
+
+    <div class="contents-mid">
+
+      <ul class="step-list premium step3">
+
+        <li class="step-item first">
+          <div class="step-mark">STEP1</div>
+          <div class="step-title">기본정보 입력</div>
+        </li>
+
+        <li class="step-item second">
+          <div class="step-mark">STEP2</div>
+          <div class="step-title">추가정보 및 기업정보 입력</div>
+        </li>
+
+        <li class="step-item third">
+          <div class="step-mark">STEP3</div>
+          <div class="step-title">담당자정보 입력</div>
+        </li>
+
+        <li class="step-item fourth">
+          <div class="step-mark">STEP4</div>
+          <div class="step-title">프리미엄 기업회원 (부동산플래닛)<br />신청 완료</div>
+        </li>
+
+      </ul>
+
+      <section class="contents-part">
+
+        <div class="part-top">
+          <h3 class="part-title">담당자정보 입력</h3>
+          <ul class="list-description">
+            <li class="list-item">프리미엄 기업회원으로 가입하시면, 부동산플래닛 사이트의 서비스를 일정기간 이용하실 수 있습니다.</li>
+            <li class="list-item">사용기간이 끝나면 회원정보->상품/이용권 정보에서 재연장 하실 수 있습니다.</li>
+            <li class="list-item"><strong class="em-blue">부동산관련업 종사자(건설, 시행, 분양, 인테리어, AMC, PMC, 컨설팅 등) 는 프리미엄 기업회원으로 가입하실 수 없습니다.</strong></li>
+          </ul>
+        </div>
+
+        <div class="part-mid">
+
+          <table class="hr-table">
+
+            <caption class="hide">담당자정보 입력</caption>
+
+            <colgroup>
+              <col style="width:185px;" />
+              <col style="width:auto;" />
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <label for="part">담당부서</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <input id="part" type="text" class="input" />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="position">직책/직급</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <input id="position" type="text" class="input" />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="job">담당업무</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <input id="job" type="text" class="input"/>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="place">근무처</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <input id="place" type="text" class="input" value="ex. 본사(서울)" />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="phone">사무실 직통번호</label>
+                </th>
+                <td>
+
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">02</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">02</li>
+                      <li>02</li>
+                      <li>02</li>
+                    </ul>
+                  </div>
+
+                  <input type="text" class="input half-width left-float left" title="직통번호 가운데자리" />
+
+                  <input type="text" class="input half-width left-float left" title="직통번호 끝자리" />
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="email">이메일 추가</label>
+                </th>
+                <td>
+                  <input id="email" type="text" class="input left-float left" />
+                  <p class="form-msg left-float">기업에서 사용하시는 이메일(회사 도메인)을 추가하실 수 있습니다.</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="phone">가입목적</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+
+                  <div class="check-wrap left middle">
+                    <input id="check-1" type="checkbox" class="check-box" />
+                    <label for="check-1" class="check-label">주변임대시세 확인</label>
+                  </div>
+
+                  <div class="check-wrap left middle">
+                    <input id="check-2" type="checkbox" class="check-box" />
+                    <label for="check-2" class="check-label">사무실 이전 이슈</label>
+                  </div>
+
+                  <div class="check-wrap left middle">
+                    <input id="check-3" type="checkbox" class="check-box" />
+                    <label for="check-3" class="check-label">빌딩 매입 이슈</label>
+                  </div>
+
+                  <div class="check-wrap left middle">
+                    <input id="check-4" type="checkbox" class="check-box" />
+                    <label for="check-4" class="check-label">기타</label>
+                  </div>
+
+                  <div class="input-wrap middle">
+                    <label for="reason" class="label-on-input">기타를 선택 하신 분은 가입목적을 직접 입력해 주세요.</label>
+                    <input id="reason" type="text" class="input join-reason js-label-toggle" />
+                  </div>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="last">
+                  <label for="email">서비스 이용기간</label> <span class="em-blue">*</span>
+                </th>
+                <td class="td-padding last">
+
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">02</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">02</li>
+                      <li>02</li>
+                      <li>02</li>
+                    </ul>
+                  </div>
+
+                  <div class="form-msg left-float left group">개월</div>
+
+                  <input type="text" class="input half-width left-float left" title="서비스 이용시작 날짜" />
+
+                  <div class="form-msg left-float left">~</div>
+
+                  <input type="text" class="input half-width left-float" title="서비스 이용종료 날짜" />
+
+                  <p class="form-info-msg">서비스 최대 이용 기간은 6개월 이며, 이용기간 이후 서비스를  계속 이용하시길  원하시면 회원정보->상품/이용권정보에서 재연장 하세요.</p>
+
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="part-bottom">
+          <button type="button" class="btn-fill blue">확인</button>
+        </div>
+
+      </section>
+
+    </div>
+
+  </div>
+</section>
+
+include "footer.html"

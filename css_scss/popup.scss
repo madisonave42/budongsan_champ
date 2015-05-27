@@ -7,11 +7,6 @@
 @import "reset";
 
 /*
- * common layout style of popup
- */
-@import "layout-popup";
-
-/*
  * common module style
  */
 @import "component";
@@ -31,3 +26,7 @@
  */
 @import "vendor";
 
+/*
+ * common layout style of popup
+ */
+@import "layout-popup";
