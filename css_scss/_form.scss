@@ -388,17 +388,18 @@
 
 }
 
-<<<<<<< HEAD
-.form-label{
-  height:37px;
-  line-height:37px;
-  color:$dark-gray;
+.form-label {
+  height: 37px;
+  line-height: 37px;
+  color: $dark-gray;
 
-  &-em{
-    height:37px;
-    line-height:37px;
-    color:$main-blue;
-=======
+  &-em {
+    height: 37px;
+    line-height: 37px;
+    color: $main-blue;
+  }
+}
+
 .form {
 
   &-label{
@@ -460,6 +461,5 @@
 
   &.left {
     margin-right:6px;
->>>>>>> 4f958ce5fdbf265203bc79ebb4366f3176266592
   }
 }

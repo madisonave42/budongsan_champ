@@ -1263,6 +1263,17 @@ strong {
   height: 37px;
   line-height: 37px;
   color: #666;
+}
+.form-label-em {
+  height: 37px;
+  line-height: 37px;
+  color: #25aae1;
+}
+
+.form-label {
+  height: 30px;
+  line-height: 27px;
+  color: #666;
   font-weight: normal;
 }
 .form-msg {
@@ -1310,11 +1321,6 @@ strong {
 }
 .middle.left {
   margin-right: 6px;
-}
-.form-label-em {
-  height: 37px;
-  line-height: 37px;
-  color: #25aae1;
 }
 
 /*

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+<title>기업회원 가입방식 선택 | 회원가입 | 부동산 챔프</title>
+
+<link rel="stylesheet" href="../../css/common.css" />
+<!-- 회원가입 style -->
+<link rel="stylesheet" href="../../css/join.css" />
+<link rel="stylesheet" href="../../css/popup.css" />
+
+<script src="../../js/lib/jquery-1.11.0.min.js"></script>
+<script src="../../js/lib/jquery-ui.min.js"></script>
+<script src="../../js/function.js"></script>
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="../../css/ie8.css" />
+<script src="../../js/lib/html5shiv.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<header class="header">
+
+  <div class="wrapper">
+
+    <h1 class="header-logo"><a href="#"><img src="../../images/logo.png" alt="부동산챔프"></a></h1>
+
+    <ul class="header-gnb js-gnb">
+      <li class="gnb-item">
+        <a href="#" class="gnb-main-link js-main-link">매물</a>
+
+        <ul class="gnb-sub-wrap">
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">주거전체</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">아파트 (단지)</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">오피스텔 (단지)</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">사무실</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">상가.점포</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">빌딩/건물</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">공장/창고</a>
+          </li>
+          <li class="gnb-sub-item last">
+            <a href="#" class="gnb-sub-link">토지/기타</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="gnb-item">
+        <a href="#" class="gnb-main-link js-main-link">분양</a>
+
+        <ul class="gnb-sub-wrap narrow">
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">주거용</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">상업용</a>
+          </li>
+          <li class="gnb-sub-item last">
+            <a href="#" class="gnb-sub-link">업무용</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="gnb-item">
+        <a href="#" class="gnb-main-link js-main-link">실거래가</a>
+
+        <ul class="gnb-sub-wrap">
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">대출금리비교</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">매매VS임대비교</a>
+          </li>
+          <li class="gnb-sub-item last">
+            <a href="#" class="gnb-sub-link">대출금계산기</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="gnb-item">
+        <a href="#" class="gnb-main-link js-main-link">프리미엄전용관</a>
+
+        <ul class="gnb-sub-wrap">
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">홈페이지 관리</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">공동중개 의뢰</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">자동 매칭</a>
+          </li>
+          <li class="gnb-sub-item last">
+            <a href="#" class="gnb-sub-link">수동 매칭</a>
+          </li>
+        </ul>
+      </li>
+
+    </ul>
+
+    <ul class="header-util">
+      <li class="util-item"><a href="#" class="util-link">회원가입</a></li>
+      <li class="util-item"><a href="#" class="util-link">로그인</a></li>
+      <li class="util-item"><a href="#" class="util-link">인테리어</a></li>
+      <li class="util-item"><a href="#" class="util-link">중개회원</a></li>
+      <li class="util-item last"><a href="#" class="util-link">고객센터</a></li>
+    </ul>
+
+    <dl class="header-my">
+
+      <dt><a href="#" class="header-my-title js-my"><span class="typo">MY챔프</span></a></dt>
+
+      <dd class="header-my-sub">
+
+        <div class="header-my-member">
+          <div class="member-name"><span class="em-blue">부동산챔프</span>님</div>
+          <!-- note 1) for Dev -->
+          <button type="button" class="member logout">로그아웃</button>
+          <!--<div class="member login">로그인</div>-->
+          <!--/ note 1) for Dev -->
+        </div>
+
+        <ul class="header-my-info">
+          <li class="info-list"><a href="#" class="info-link info-modify">회원정보수정</a></li>
+          <li class="info-list"><a href="#" class="info-link info-goods">상품/이용권정보</a></li>
+          <li class="info-list"><a href="#" class="info-link info-payment">결제정보</a></li>
+          <li class="info-list last"><a href="#" class="info-link info-usage">이용안내</a></li>
+        </ul>
+
+        <ul class="header-my-history">
+          <li class="history-list odd"><a href="#" class="history-link notice">알림판</a></li>
+          <li class="history-list"><a href="#" class="history-link for-sale">매물</a></li>
+          <li class="history-list odd"><a href="#" class="history-link for-sale-current">최근 본 매물</a></li>
+          <li class="history-list"><a href="#" class="history-link for-sale-favorite">관심매물</a></li>
+          <li class="history-list odd"><a href="#" class="history-link search-current">최근검색</a></li>
+          <li class="history-list"><a href="#" class="history-link search-call">검색 불러오기</a></li>
+          <li class="history-list odd"><a href="#" class="history-link mediation">중개의뢰</a></li>
+          <li class="history-list"><a href="#" class="history-link inquiry">문의내역</a></li>
+        </ul>
+
+      </dd>
+
+    </dl>
+
+  </div>
+
+</header>
+
+<section class="contents top-border">
+  <div class="wrapper">
+
+    <div class="contents-top">
+      <h2 class="join-title">기업회원 가입방식 선택</h2>
+      <p class="join-title-desc company">
+        개인회원으로 가입 후 기업회원 인증절차를 통해 기업회원 가입이 가능합니다.<br />부동산중개사무소는 기업회원으로 가입하실 수 없습니다.<span class="em-red">(기업회원 가입 시 서비스중지 및 해지)</span><br /><br />회원님께서 원하시는 가입방식을 선택하여 주세요.
+      </p>
+    </div>
+
+    <div class="contents-mid">
+
+      <div class="join-type">
+        <h3 class="join-type-title email">이메일 가입</h3>
+        <button type="button" class="btn-join js-show-join-email">가입하기</button>
+      </div>
+
+      <div class="join-type">
+        <h3 class="join-type-title facebook">페이스북 가입</h3>
+        <button type="button" class="btn-join js-show-join-facebook">가입하기</button>
+      </div>
+
+      <div class="join-type">
+        <h3 class="join-type-title naver">네이버 가입</h3>
+        <button type="button" class="btn-join js-show-join-naver">가입하기</button>
+      </div>
+
+      <div class="join-type last">
+        <h3 class="join-type-title kakao">카카오톡 가입</h3>
+        <button type="button" class="btn-join js-show-join-kakao">가입하기</button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="wrapper">
+
+    <div class="footer-logo">
+      <img src="../../images/logo_footer.png" alt="부동산챔프" />
+    </div>
+
+    <div class="footer-content">
+
+      <ul class="footer-menu">
+        <li class="menu-item first"><a href="#" class="menu-link">회사소개</a></li>
+        <li class="menu-item"><a href="#" class="menu-link">광고</a></li>
+        <li class="menu-item"><a href="#" class="menu-link">제휴 약관 및 개인정보</a></li>
+        <li class="menu-item last"><a href="#" class="menu-link">취급방침</a></li>
+      </ul>
+
+      <address class="footer-address">
+        <div class="item">서울시 강남구 영동대로 702(청담동) 화천회관빌딩 4층 대표 정수민</div>
+        <div class="item">TEL. 02-752-2836</div>
+        <div class="item">FAX. 02-752-2838</div>
+        <div class="item last">MAIL. sc@ytp.co.kr</div>
+      </address>
+
+      <div class="footer-license">
+        <div class="item">사업자 등록번호 : 104-86-10347</div>
+        <div class="item">통신판매업 신고번호 : 제 0000-0000-000호</div>
+      </div>
+
+      <div class="footer-copyright">
+        @ <span class="co-name">YP Partners</span> 2001-2015
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
