@@ -207,4 +207,47 @@ $(function(){
 		toggleLabel( $('.popup-join-form-input') );
 	})();
 
+	// pop post tab
+	(function() {
+		var tabBtn = $('.pop-tab-link'),
+			tabCont = $('.pop-tab-cont');
+
+		tabBtn.on('click', function(e) {
+			tabBtn.removeClass('on');
+			tabCont.removeClass('on');
+
+			$(this).addClass('on');
+			$($(this).attr('href')).addClass('on');
+			e.preventDefault();
+		});
+	})();
+
+	/* pop post toggle input label */
+	(function() {
+		var form = $('.pop-input-holder');
+
+		$(window).on('load', function() {
+			toggleLabel(form);
+		});
+
+		function toggleLabel (el) {
+			el.each(function () {
+				var that = $(this);
+				that.on({
+					focus : function () {
+						$('label[for=' + that.attr('id') +']').hide();
+					},
+					blur : function () {
+						if (that.val() === '') {
+							$('label[for=' + that.attr('id') +']').show();
+						}
+					}
+				});
+				if (that.val() !== '') {
+					that.triggerHandler('focus');
+				}
+			});
+		}
+	})();
+
 });
