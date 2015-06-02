@@ -125,6 +125,8 @@
     z-index: 90;
     box-shadow: 0 0 10px -6px;
     box-sizing:border-box;
+    overflow:auto;
+    max-height:192px;
 
     &.on{
       display:block;
@@ -384,6 +386,18 @@
     background:$light-gray;
   }
 
+}
+
+.form-label {
+  height: 37px;
+  line-height: 37px;
+  color: $dark-gray;
+
+  &-em {
+    height: 37px;
+    line-height: 37px;
+    color: $main-blue;
+  }
 }
 
 .form {

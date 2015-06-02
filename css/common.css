@@ -118,8 +118,8 @@ strong {
   margin: 15px 0 0 0;
 }
 .header-gnb {
-  float: left;
-  margin: 31px 0 0 290px;
+  float: right;
+  margin: 31px 205px 0 0;
 }
 .header-gnb .gnb-item {
   position: relative;
@@ -1024,6 +1024,8 @@ strong {
   z-index: 90;
   box-shadow: 0 0 10px -6px;
   box-sizing: border-box;
+  overflow: auto;
+  max-height: 192px;
 }
 .select-items.on {
   display: block;
@@ -1255,6 +1257,17 @@ strong {
 }
 .radio:disabled + .radio-label:after {
   background: #ddd;
+}
+
+.form-label {
+  height: 37px;
+  line-height: 37px;
+  color: #666;
+}
+.form-label-em {
+  height: 37px;
+  line-height: 37px;
+  color: #25aae1;
 }
 
 .form-label {
