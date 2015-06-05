@@ -522,6 +522,15 @@ html.map{
 	&-item{
 		position:relative;
 		float:left;
+		margin-right:18px;
+	}
+
+	&-link{
+		@include font(13, bold, $gray-blue);
+
+		&:hover, &.on{
+			color:$main-blue;
+		}
 	}
 
 	&-util{
@@ -596,8 +605,40 @@ html.map{
 				height:20px;
 
 				position:relative;
+
+				padding-left:20px;
 				line-height:20px;
+
 				@include font(12, bold, $gnb-dark-gray);
+
+				&:after{
+					content:"";
+					display:block;
+					width:20px;
+					height:13px;
+
+					position:absolute;
+					top:4px;
+					left:0;
+					background:url(../images/icon_social.png) no-repeat;
+				}
+
+				&.search-recent:after{
+					background-position:-21px 0;
+				}
+
+				&.on{
+					color:$red;
+
+					&:after{
+						background-position:0 -14px;
+					}
+
+					&.search-recent:after{
+						background-position:-21px -14px;
+					}
+				}
+
 			}
 		}
 

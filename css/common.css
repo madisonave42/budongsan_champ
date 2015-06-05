@@ -502,6 +502,16 @@ html.map .header-logo {
 .lnb-item {
   position: relative;
   float: left;
+  margin-right: 18px;
+}
+.lnb-link {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #a1b0b6;
+}
+.lnb-link:hover, .lnb-link.on {
+  color: #25aae1;
 }
 .lnb-util {
   float: right;
@@ -567,11 +577,34 @@ html.map .header-logo {
   display: inline-block;
   height: 20px;
   position: relative;
+  padding-left: 20px;
   line-height: 20px;
   font-family: "Nanum Gothic", "dotum", sans-serif;
   font-size: 12px;
   font-weight: bold;
   color: #555;
+}
+.lnb-util .social-link:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 13px;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  background: url(../images/icon_social.png) no-repeat;
+}
+.lnb-util .social-link.search-recent:after {
+  background-position: -21px 0;
+}
+.lnb-util .social-link.on {
+  color: #e70000;
+}
+.lnb-util .social-link.on:after {
+  background-position: 0 -14px;
+}
+.lnb-util .social-link.on.search-recent:after {
+  background-position: -21px -14px;
 }
 
 /* contents */
