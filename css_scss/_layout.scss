@@ -1,3 +1,13 @@
+html.map{
+	.wrapper{
+		width:auto;
+	}
+
+	.header-logo{
+		padding-left:20px;
+	}
+}
+
 .wrapper {
 	position:relative;
 
@@ -490,6 +500,107 @@
 				}
 			}
 		}
+	}
+}
+
+/* navigation lnb */
+.lnb{
+	height:50px;
+	background:$bg-light-gray;
+
+	&-list{
+		height:50px;
+
+		float:left;
+		padding-left:20px;
+
+		line-height:50px;
+
+		@include clear();
+	}
+
+	&-item{
+		position:relative;
+		float:left;
+	}
+
+	&-util{
+
+		float:right;
+		@include clear();
+
+
+		.view{
+			height:50px;
+
+			float:left;
+			padding-right:15px;
+
+			line-height:50px;
+
+			&-item{
+				position:relative;
+				float:left;
+				margin-left:3px;
+
+				&:first-child{
+					margin-left:0;
+				}
+			}
+
+			&-link{
+				display:inline-block;
+				height:20px;
+
+				position:relative;
+				line-height:20px;
+				padding:0 10px;
+				@include font(12, bold, $gnb-dark-gray);
+
+				&:hover, &.on{
+
+					color:$red;
+					background:url(../images/bg_lnb_util.png) no-repeat;
+
+					&:after{
+						content:"";
+						display:block;
+						width:10px;
+						height:20px;
+						position:absolute;
+						top:0;
+						right:0;
+						background:url(../images/bg_lnb_util.png) no-repeat right top;
+					}
+
+				}
+			}
+		}
+
+		.social{
+			height:50px;
+
+			float:left;
+			padding-right:20px;
+
+			line-height:50px;
+
+			&-item{
+				position:relative;
+				float:left;
+				margin-right:20px;
+			}
+
+			&-link{
+				display:inline-block;
+				height:20px;
+
+				position:relative;
+				line-height:20px;
+				@include font(12, bold, $gnb-dark-gray);
+			}
+		}
+
 	}
 }
 

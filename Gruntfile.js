@@ -45,6 +45,16 @@ module.exports = function(grunt) {
         }
       },
 
+			map: {
+				cwd:'html_src/map',
+				src: ['*.html'],
+				dest: 'html/map',
+				options: {
+					flatten:true,
+					includePath: 'html_src/_include'
+				}
+			},
+
       mychamp: {
         cwd:'html_src/my_champ',
         src: ['*.html'],
