@@ -91,6 +91,13 @@ strong {
 /*
  * common layout style of page
  */
+html.map .wrapper {
+  width: auto;
+}
+html.map .header-logo {
+  padding-left: 20px;
+}
+
 .wrapper {
   position: relative;
   display: block;
@@ -472,6 +479,132 @@ strong {
 }
 .header-my-history .history-link.inquiry:hover:after {
   background-position: -20px -229px;
+}
+
+/* navigation lnb */
+.lnb {
+  height: 50px;
+  background: #ededed;
+}
+.lnb-list {
+  height: 50px;
+  float: left;
+  padding-left: 20px;
+  line-height: 50px;
+}
+.lnb-list:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.lnb-item {
+  position: relative;
+  float: left;
+  margin-right: 18px;
+}
+.lnb-link {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #a1b0b6;
+}
+.lnb-link:hover, .lnb-link.on {
+  color: #25aae1;
+}
+.lnb-util {
+  float: right;
+}
+.lnb-util:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.lnb-util .view {
+  height: 50px;
+  float: left;
+  padding-right: 15px;
+  line-height: 50px;
+}
+.lnb-util .view-item {
+  position: relative;
+  float: left;
+  margin-left: 3px;
+}
+.lnb-util .view-item:first-child {
+  margin-left: 0;
+}
+.lnb-util .view-link {
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  line-height: 20px;
+  padding: 0 10px;
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #555;
+}
+.lnb-util .view-link:hover, .lnb-util .view-link.on {
+  color: #e70000;
+  background: url(../images/bg_lnb_util.png) no-repeat;
+}
+.lnb-util .view-link:hover:after, .lnb-util .view-link.on:after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(../images/bg_lnb_util.png) no-repeat right top;
+}
+.lnb-util .social {
+  height: 50px;
+  float: left;
+  padding-right: 20px;
+  line-height: 50px;
+}
+.lnb-util .social-item {
+  position: relative;
+  float: left;
+  margin-right: 20px;
+}
+.lnb-util .social-link {
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  padding-left: 20px;
+  line-height: 20px;
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #555;
+}
+.lnb-util .social-link:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 13px;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  background: url(../images/icon_social.png) no-repeat;
+}
+.lnb-util .social-link.search-recent:after {
+  background-position: -21px 0;
+}
+.lnb-util .social-link.on {
+  color: #e70000;
+}
+.lnb-util .social-link.on:after {
+  background-position: 0 -14px;
+}
+.lnb-util .social-link.on.search-recent:after {
+  background-position: -21px -14px;
 }
 
 /* contents */
