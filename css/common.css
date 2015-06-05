@@ -1143,6 +1143,40 @@ strong {
   cursor: pointer;
   display: inline-block;
 }
+.btn-login-fb {
+  width: 134px;
+  height: 37px;
+  font-size: 13px;
+  color: #ffffff;
+  line-height: 37px;
+  border: 0;
+  background: #3c5b9b;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 0;
+  padding-left: 32px;
+  text-align: left;
+  background: #3c5b9b url(../images/icon_fb.png) no-repeat 14px 9px;
+}
+.btn-login-naver {
+  width: 134px;
+  height: 37px;
+  font-size: 13px;
+  color: #ffffff;
+  line-height: 37px;
+  border: 0;
+  background: #2db400;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 0;
+  padding-left: 46px;
+  text-align: left;
+  background: #2db400 url(../images/icon_naver.png) no-repeat 19px 11px;
+}
 
 .check-wrap {
   position: relative;

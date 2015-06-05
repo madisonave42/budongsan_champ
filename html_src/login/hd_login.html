@@ -1,0 +1,89 @@
+include "header_top.html"
+
+<title>개인회원 가입방식 선택 | 회원가입 | 부동산 챔프</title>
+
+<link rel="stylesheet" href="../../css/common.css" />
+<!-- 회원가입 style -->
+<link rel="stylesheet" href="../../css/join.css" />
+<link rel="stylesheet" href="../../css/popup.css" />
+
+include "header_bottom.html"
+
+<section class="contents top-border">
+  <div class="wrapper">
+
+    <div class="contents-top">
+      <h2 class="join-title">개인회원 가입방식 선택</h2>
+      <p class="join-title-desc private">
+        회원님께서 원하시는 가입 방식을 선택하여 주세요.
+      </p>
+    </div>
+
+    <div class="contents-mid">
+
+      <div class="join-type">
+        <h3 class="join-type-title email">이메일 가입</h3>
+        <button type="button" class="btn-join js-open-popup" data-href="#join-email">가입하기</button>
+      </div>
+
+      <div class="join-type">
+        <h3 class="join-type-title facebook">페이스북 가입</h3>
+        <button type="button" class="btn-join js-open-popup" data-href="#join-facebook">가입하기</button>
+      </div>
+
+      <div class="join-type">
+        <h3 class="join-type-title naver">네이버 가입</h3>
+        <button type="button" class="btn-join js-open-popup" data-href="#join-naver">가입하기</button>
+      </div>
+
+      <div class="join-type last">
+        <h3 class="join-type-title kakao">카카오톡 가입</h3>
+        <button type="button" class="btn-join js-open-popup" data-href="#join-kakao">가입하기</button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- [D] 팝업 배경 -->
+<div class="dimmed on"></div>
+
+<!-- [D] 팝업 : S -->
+<section id="login" class="popup popup-small-width on">
+  <div class="popup-top">
+    <h1 class="popup-login-title">LOGIN</h1>
+    <p class="popup-login-title-msg">가입된 이메일 주소와 비밀번호를 입력해 주세요.</p>
+  </div>
+  <div class="popup-mid">
+    <div class="popup-login-form">
+      <div class="popup-login-form-wrap email">
+        <label for="id" class="popup-login-form-label">이메일을 입력해 주세요.</label>
+        <input id="id" type="text" class="popup-login-form-input js-label-toggle" />
+      </div>
+      <div class="popup-login-form-wrap password">
+        <label for="pw" class="popup-login-form-label">비밀번호를 입력해 주세요.</label>
+        <input id="pw" type="password" class="popup-login-form-input js-label-toggle" />
+      </div>
+
+      <div class="popup-login-agree">
+        <input type="checkbox" id="agree-terms" class="popup-login-agree-chk left-float" />
+        <label for="agree-terms" class="popup-login-agree-label left-float">이메일저장</label>
+        <a href="#" class="popup-login-link left-float">이메일/비밀번호찾기</a>
+        <a href="#" class="popup-login-link left-float">회원가입</a>
+      </div>
+
+      <input type="submit" value="로그인" class="btn-fill blue popup-login-form-submit" />
+
+      <div class="popup-login-links">
+        <button class="btn-login-fb left-float">페이스북 로그인</button>
+        <button class="btn-login-naver right-float">네이버 로그인</button>
+      </div>
+
+    </div>
+  </div>
+  <button type="button" class="popup-close js-close-popup">이메일 입력 팝업 닫기</button>
+</section>
+<!-- [D] 팝업 : E -->
+
+include "footer.html"

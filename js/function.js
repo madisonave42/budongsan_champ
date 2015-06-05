@@ -149,17 +149,12 @@ $(function(){
 			}
 		});
 
+		// toggle label when focus on input
+		(function() {
+			toggleLabel( $('.js-label-toggle') );
+		})();
+
 	})();
-
-	/*
-	 * join
-	 */
-
-	// focus on input
-	(function() {
-		toggleLabel( $('.js-label-toggle') );
-	})();
-
 
 	 /*
 	 * popup

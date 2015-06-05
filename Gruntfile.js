@@ -36,9 +36,29 @@ module.exports = function(grunt) {
 			},
 
 			member: {
-				cwd:'html_src/member',
+        cwd:'html_src/member',
+        src: ['*.html'],
+        dest: 'html/member',
+        options: {
+          flatten:true,
+          includePath: 'html_src/_include'
+        }
+      },
+
+      mychamp: {
+        cwd:'html_src/my_champ',
+        src: ['*.html'],
+        dest: 'html/my_champ',
+        options: {
+          flatten:true,
+          includePath: 'html_src/_include'
+        }
+      },
+
+      login: {
+				cwd:'html_src/login',
 				src: ['*.html'],
-				dest: 'html/member',
+				dest: 'html/login',
 				options: {
 					flatten:true,
 					includePath: 'html_src/_include'
