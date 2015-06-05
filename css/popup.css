@@ -424,6 +424,34 @@ strong {
 .btn-fill.left {
   margin-right: 7px;
 }
+.btn-med {
+  width: 112px;
+  height: 29px;
+  font-size: 13px;
+  color: #ffffff;
+  line-height: 29px;
+  border: 0;
+  background: #666;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  border-radius: 2px;
+}
+.btn-med.gray {
+  background: #626c7d;
+}
+.btn-med.darkblue {
+  background: #006092;
+}
+.btn-med.icon-plus {
+  padding: 0;
+  padding-left: 38px;
+  text-align: left;
+  background: #626c7d url(../images/icon_plus.png) no-repeat 22px 50%;
+}
 .btn-join {
   width: 126px;
   height: 28px;

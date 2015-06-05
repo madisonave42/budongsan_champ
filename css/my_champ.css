@@ -1,0 +1,147 @@
+.user-profile {
+  position: relative;
+  margin-top: 50px;
+  border: 1px solid #d8d8d8;
+}
+.user-profile-photo {
+  position: absolute;
+  top: 15px;
+  left: 40px;
+  width: 146px;
+  height: 145px;
+}
+.user-profile-photo-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.user-profile-photo-wrap-img {
+  width: 100%;
+}
+.user-profile-photo-wrap:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/mask_user_photo.png) no-repeat;
+}
+.user-profile-photo-wrap:hover .user-profile-photo-btns {
+  display: block;
+}
+.user-profile-photo-btns {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/bg_user_photo_btns.png) 50% 50%;
+}
+.user-profile-photo-btn {
+  position: absolute;
+  left: 32px;
+  width: 82px;
+  height: 29px;
+  border: 0;
+  border-radius: 2px;
+  color: #ffffff;
+  font-weight: bold;
+}
+.user-profile-photo-btn.regist {
+  top: 59px;
+  background: #fcb040;
+}
+.user-profile-photo-btn.change {
+  top: 42px;
+  background: #006092;
+}
+.user-profile-photo-btn.del {
+  top: 76px;
+  background: #006092;
+}
+.user-profile-top {
+  padding-left: 220px;
+  height: 72px;
+  background: #25aae1;
+}
+.user-profile-top:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.user-profile-top-btns {
+  margin: 22px 40px 0 0;
+}
+.user-profile-name {
+  margin-top: 23px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1;
+}
+.user-profile-time {
+  margin: 39px 0 0 12px;
+  color: #ffffff;
+}
+.user-profile-bottom {
+  padding-left: 220px;
+  height: 105px;
+}
+.user-profile-detail {
+  margin-top: 16px;
+  width: 370px;
+}
+.user-profile-detail-item {
+  margin-top: 5px;
+  font-size: 15px;
+  color: #222;
+}
+.user-profile-my {
+  margin-top: 38px;
+  padding-left: 30px;
+  width: 370px;
+  height: 45px;
+  border-left: 1px solid #d8d8d8;
+}
+.user-profile-my-item {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 12px;
+  width: 130px;
+  height: 17px;
+  line-height: 17px;
+  color: #222;
+  font-size: 15px;
+  font-weight: bold;
+}
+.user-profile-my-item:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.user-profile-my-item.left-float.left {
+  margin-right: 45px;
+}
+.user-profile-my-item:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background: #25aae1;
+}
+.user-profile-my-link {
+  color: #25aae1;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=my_champ.css.map */

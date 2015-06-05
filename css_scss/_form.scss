@@ -193,6 +193,32 @@
 
   }
 
+  &-med {
+    @include btn(112, 29, 13, $white, 29, 0, $dark-gray);
+    @include inline-block();
+    text-align:center;
+    border-radius:2px;
+
+    &.gray {
+      background:$btn-gray;
+    }
+
+    &.darkblue {
+      background:$btn-darkblue;
+    }
+
+    &.icon {
+
+      &-plus {
+        padding:0;
+        padding-left:38px;
+        text-align:left;
+        background:$btn-gray url(../images/icon_plus.png) no-repeat 22px 50%;
+      }
+
+    }
+  }
+
   &-join{
     @include btn(126, 28, 14, $dark-gray, 25, 1px solid $dark-gray, $white);
     @include center();

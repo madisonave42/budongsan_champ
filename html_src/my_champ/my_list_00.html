@@ -9,25 +9,26 @@ include "header_top.html"
 
 include "header_bottom.html"
 
-<section class="contents top-border">
-  <div class="lnb-wrap">
-    <div class="wrapper">
-      <ul class="lnb">
-        <li class="lnb-item"><a href="#">My홈</a></li>
-        <li class="lnb-item"><a href="#">My매물</a></li>
-        <li class="lnb-item"><a href="#">My중개의뢰</a></li>
-        <li class="lnb-item"><a href="#">최근본매물</a></li>
-        <li class="lnb-item"><a href="#">관심매물</a></li>
-        <li class="lnb-item"><a href="#">최근검색</a></li>
-        <li class="lnb-item"><a href="#">검색저장</a></li>
-        <li class="lnb-item"><a href="#">1:1 Q&amp;A</a></li>
-        <li class="lnb-item"><a href="#">이용안내</a></li>
-      </ul>
-      <div class="div lnb-util">
-        <button type="button" class="btn-fill-gray icon-plus">매물등록</button>
-      </div>
+<nav class="lnb">
+  <div class="wrapper">
+    <ul class="lnb-list">
+      <li class="lnb-item"><a href="#" class="lnb-link on">My홈</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">My매물</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">My중개의뢰</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">최근본매물</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">관심매물</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">최근검색</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">검색저장</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">1:1 Q&amp;A</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">이용안내</a></li>
+    </ul>
+    <div class="lnb-util">
+      <button type="button" class="btn-med gray icon-plus">매물등록</button>
     </div>
   </div>
+</nav>
+
+<section class="contents">
   <div class="wrapper">
 
     <div class="contents-top">
@@ -35,54 +36,237 @@ include "header_bottom.html"
       <div class="user-profile">
         <div class="user-profile-photo">
           <div class="user-profile-photo-wrap">
-            <img src="../../images/img_user_photo_default.png" alt="등록된 사진이 없습니다." />
+            <!-- [D] 기본이미지 -->
+            <img src="../../images/img_user_photo_default.jpg" alt="등록된 사진이 없습니다." class="user-profile-photo-img" />
           </div>
-          <button type="button" class="user-profile-photo-setting">사진 설정하기</button>
+          <div class="user-profile-photo-btns">
+            <!-- [D] 등록된 사진이 없을경우 -->
+            <button type="button" class="user-profile-photo-btn regist">사진등록</button>
+
+            <!-- [D] 등록된 사진이 있을경우 -->
+            <!--
+            <button type="button" class="user-profile-photo-btn change">사진변경</button>
+            <button type="button" class="user-profile-photo-btn del">사진삭제</button>
+            -->
+          </div>
         </div>
         <div class="user-profile-top">
-          홍길동님
-          최종로그인 : 2015.04.20 18:51:21
-상품/이용권정보
-결제정보
-이용안내
+          <div class="user-profile-name left-float">홍길동님</div>
+          <div class="user-profile-time left-float">최종로그인 : 2015.04.20 18:51:21</div>
+          <div class="user-profile-top-btns right-float">
+            <a href="#" class="btn-med darkblue">상품/이용권정보</a>
+            <a href="#" class="btn-med darkblue">결제정보</a>
+            <a href="#" class="btn-med darkblue">이용안내</a>
+          </div>
         </div>
         <div class="user-profile-bottom">
-          lovecsm@nate.com
-010-1234-5678
-서울시 강남구 청담동 133-3 화전회관빌딩 4층 401호
-My 매물3건
-My 중개의뢰2건
-관심매물10건
-최근 본 매물2건
+          <div class="user-profile-detail left-float">
+            <div class="user-profile-detail-item">lovecsm@nate.com</div>
+            <div class="user-profile-detail-item">010-1234-5678</div>
+            <div class="user-profile-detail-item">서울시 강남구 청담동 133-3 화전회관빌딩 4층 401호</div>
+          </div>
+          <div class="user-profile-my right-float">
+            <div class="user-profile-my-item left-float left">My 매물<a href="#" class="user-profile-my-link right-float">3건</a></div>
+            <div class="user-profile-my-item left-float">관심매물<a href="#" class="user-profile-my-link right-float">10건</a></div>
+            <div class="user-profile-my-item left-float left">My 중개의뢰<a href="#" class="user-profile-my-link right-float">2건</a></div>
+            <div class="user-profile-my-item left-float">최근 본 매물<a href="#" class="user-profile-my-link right-float">2건</a></div>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="contents-mid">
 
-      <div class="join-type">
-        <h3 class="join-type-title private">개인회원</h3>
-        <p class="join-type-desc">매물을 구하거나 내놓고자<br />하는 개인</p>
-        <button type="button" class="btn-join">가입하기</button>
-      </div>
+      <section class="contents-part">
 
-      <div class="join-type">
-        <h3 class="join-type-title mediation">중개회원</h3>
-        <p class="join-type-desc">중개사무소를 개설등록을 한<br />개업공인중개사</p>
-        <button type="button" class="btn-join">가입하기</button>
-      </div>
+        <div class="part-top">
+          <div class="tab left-float">
+            <ul class="tab-list">
+              <li class="tab-list-item"><a href="#" class="tab-link on">My 매물 (100)</a></li>
+              <li class="tab-list-item"><a href="#" class="tab-link">My 중개의뢰 (100)</a></li>
+            </ul>
+          </div>
+          <div class="right-float">
+            <button type="button" class="btn-view-all">전체보기</button>
+          </div>
+        </div>
 
-      <div class="join-type">
-        <h3 class="join-type-title company">기업회원</h3>
-        <p class="join-type-desc">매물을 구하거나 내놓고자 하는<br />기업이나 단체</p>
-        <button type="button" class="btn-join">가입하기</button>
-      </div>
+        <div class="part-mid">
 
-      <div class="join-type last">
-        <h3 class="join-type-title premium">프리미엄 기업회원<br/><span class="sub-title">(부동산플레닛)</span></h3>
-        <p class="join-type-desc">사무실을 임차하거나 빌딩을<br />매입하고자 하는 기업이나 단체</p>
-        <button type="button" class="btn-join">가입하기</button>
-      </div>
+          <table class="vt-table">
+
+            <caption class="hide">My 매물 목록</caption>
+
+            <colgroup>
+              <col style="width:105px;" />
+              <col style="width:80px;" />
+              <col style="width:150px;" />
+              <col style="width:70px;" />
+              <col style="width:auto;" />
+              <col style="width:140px;" />
+              <col style="width:100px;" />
+              <col style="width:125px;" />
+            </colgroup>
+
+            <thead>
+              <th scope="col">매물번호<br />매물상태</th>
+              <th scope="col">사진</th>
+              <th scope="col">매물관리</th>
+              <th scope="col">거래종류<br />매물종류</th>
+              <th scope="col">소재지 / 상세주소 매물설명</th>
+              <th scope="col">면적</th>
+              <th scope="col">가격<br />(만원)</th>
+              <th scope="col">일자</th>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>
+                  <div class="td-inner">1234567</div>
+                  <div class="td-inner">광고진행</div>
+                  <div class="td-inner">무료</div>
+                  <div class="td-inner">
+                    <button class="btn-table-function">광고재등록</button>
+                  </div>
+                </td>
+                <td>
+                  <div class="thumb-mini">
+                    <img src="../../images/temp/list_thumb_mini.jpg" alt="" class="thumb-mini-img" />
+                  </div>
+                </td>
+                <td>
+                  <div class="td-inner">
+                    <button class="btn-table-function">거래완료</button>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-function">광고종료</button>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-function half left-float">비공개</button>
+                    <button class="btn-table-function half left-float">복사</button>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-function half left-float">수정</button>
+                    <button class="btn-table-function half left-float">삭제</button>
+                  </div>
+                </td>
+                <td>
+                  <div class="td-inner">월세</div>
+                  <div class="td-inner">아파트</div>
+                </td>
+                <td>
+                  <div class="td-inner">서울시/강남구/삼성동</div>
+                  <div class="td-inner">삼성힐스테이트 2단지(123-123번지)...</div>
+                  <div class="td-inner">10층/15층, 방2/욕실1</div>
+                </td>
+                <td>
+                  <div class="td-inner">공급 100,000.00㎡</div>
+                  <div class="td-inner">전용 100,000.00㎡</div>
+                </td>
+                <td>
+                  <div class="td-inner">1,000,000</div>
+                  <div class="td-inner">3,450</div>
+                  <div class="td-inner">
+                    <button class="btn-table-change-price">가격수정</button>
+                  </div>
+                </td>
+                <td>
+                  <div class="td-inner"><span class="em-dark">등록</span> 2015.04.01</div>
+                  <div class="td-inner"><span class="em-dark">수정</span> 2015.04.08</div>
+                  <div class="td-inner"><span class="em-dark">종료</span> <span class="em-red">1일전</span></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </section>
+
+      <section class="contents-part">
+
+        <div class="part-top">
+          <div class="tab left-float">
+            <ul class="tab-list">
+              <li class="tab-list-item"><a href="#" class="tab-link on">최근본매물</a></li>
+              <li class="tab-list-item"><a href="#" class="tab-link">관심매물</a></li>
+              <li class="tab-list-item"><a href="#" class="tab-link">최근검색</a></li>
+              <li class="tab-list-item"><a href="#" class="tab-link">검색저장</a></li>
+            </ul>
+          </div>
+          <div class="right-float">
+            <button type="button" class="btn-view-all">전체보기</button>
+          </div>
+        </div>
+
+        <div class="part-mid">
+
+          <ul class="big-list">
+            <li class="big-list-item">
+              <div class="big-list-thumb">
+                <img src="../../images/temp/list_thumb_big01.jpg" alt="" />
+              </div>
+              <div class="big-list-overview">
+                <div class="big-list-overview-item">
+                  <span class="big-list-overview-title">월세</span>
+                  3,000만원/50만원
+                </div>
+                <div class="big-list-overview-item">
+                  <span class="big-list-overview-title">아파트</span>
+                  공급 3,000.25㎡ / 전용 1,500.11㎡
+                </div>
+              </div>
+              <div class="big-list-detail">
+                <div class="big-list-detail-text">서울시/강남구/삼성동</div>
+                <div class="big-list-detail-text">삼성힐스테이트 2단지(123-123번지) 101동...</div>
+                <div class="big-list-detail-text">10층/15층, 방2/욕실1</div>
+              </div>
+            </li>
+            <li class="big-list-item">
+              <div class="big-list-thumb">
+                <img src="../../images/temp/list_thumb_big02.jpg" alt="" />
+              </div>
+              <div class="big-list-overview">
+                <div class="big-list-overview-item">
+                  <span class="big-list-overview-title">월세</span>
+                  3,000만원/50만원
+                </div>
+                <div class="big-list-overview-item">
+                  <span class="big-list-overview-title">아파트</span>
+                  공급 3,000.25㎡ / 전용 1,500.11㎡
+                </div>
+              </div>
+              <div class="big-list-detail">
+                <div class="big-list-detail-text">서울시/강남구/삼성동</div>
+                <div class="big-list-detail-text">삼성힐스테이트 2단지(123-123번지) 101동...</div>
+                <div class="big-list-detail-text">10층/15층, 방2/욕실1</div>
+              </div>
+            </li>
+            <li class="big-list-item">
+              <div class="big-list-thumb">
+                <img src="../../images/temp/list_thumb_big03.jpg" alt="" />
+              </div>
+              <div class="big-list-overview">
+                <div class="big-list-overview-item">
+                  <span class="big-list-overview-title">월세</span>
+                  3,000만원/50만원
+                </div>
+                <div class="big-list-overview-item">
+                  <span class="big-list-overview-title">아파트</span>
+                  공급 3,000.25㎡ / 전용 1,500.11㎡
+                </div>
+              </div>
+              <div class="big-list-detail">
+                <div class="big-list-detail-text">서울시/강남구/삼성동</div>
+                <div class="big-list-detail-text">삼성힐스테이트 2단지(123-123번지) 101동...</div>
+                <div class="big-list-detail-text">10층/15층, 방2/욕실1</div>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+
+      </section>
 
     </div>
 
