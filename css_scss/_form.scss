@@ -436,6 +436,7 @@
     color:$dark-gray;
 
     &.blind{
+      padding-left:18px;
       width:0;
       text-indent:-99999em;
       overflow:hidden;
@@ -617,27 +618,4 @@
   &.left {
     margin-right:6px;
   }
-}
-
-.thumb-mini {
-  margin:0 auto;
-  width:68px;
-  height:68px;
-  border:1px solid $line-gray;
-
-  &-img {
-    width:68px;
-    height:68px;
-  }
-}
-
-.price-box {
-  display:inline-block;
-  width:80px;
-  height:20px;
-  line-height:20px;
-  color:$main-blue;
-  text-align:center;
-  font-weight:bold;
-  border:1px solid $form-gray;
 }
