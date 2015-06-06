@@ -32,6 +32,7 @@
 	}
 
 	td {
+		position:relative;
 		padding:20px 0 20px 10px ;
 		border-bottom: 1px solid $line-gray;
 		color:$gray;
@@ -199,6 +200,21 @@
 			border:1px solid $main-red;
 			color:$main-red;
 		}
+
+		&.yellow {
+			border:1px solid $main-yellow;
+			color:$main-yellow;
+		}
+
+		&.purple {
+			border:1px solid $main-purple;
+			color:$main-purple;
+		}
+
+		&.green {
+			border:1px solid $main-green;
+			color:$main-green;
+		}
 	}
 
 	&-name {
@@ -274,6 +290,7 @@
 	&-btn {
 
 		&.heart {
+			padding:0;
 			width:11px;
 			height:10px;
 			text-indent:-9999px;
@@ -286,6 +303,7 @@
 		}
 
 		&.del {
+			padding:0;
 			width:14px;
 			height:11px;
 			text-indent:-9999px;

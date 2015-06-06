@@ -65,6 +65,12 @@
     text-align:right;
   }
 
+  &.sort-detail-fromto {
+    padding-right:5px;
+    width:135px;
+    text-align:right;
+  }
+
 }
 
 .select {
@@ -80,6 +86,14 @@
     &.half-width{
       width:115px;
     }
+
+    &.sort-wide {
+      width:164px;
+    }
+
+    &.sort-normal {
+      width:106px;
+    }
   }
 
   .label {
@@ -87,7 +101,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin: 0 35px 0 10px;
+    margin: 0 25px 0 10px;
     font-size: 12px;
     line-height: 35px;
     color: #666666;
@@ -101,7 +115,7 @@
     top: 0;
     bottom: 0;
     margin: auto;
-    width: 38px;
+    width: 25px;
     height: 38px;
     color: #999999;
     text-align: center;
@@ -381,6 +395,57 @@
     &.blue {
       color:$main-blue;
       border-color:$main-blue;
+    }
+
+  }
+
+  &-list {
+
+    &-compare,
+    &-unit,
+    &-loc-search,
+    &-loc-reset,
+    &-loc-close {
+      float:left;
+      margin-right:6px;
+      padding:0;
+      padding-left:27px;
+      width:88px;
+      height:27px;
+      border:0;
+      color:$white;
+      text-align:left;
+    }
+
+    &-compare {
+      background:$main-blue url(../images/icon_compare.png) no-repeat 10px 50%;
+    }
+
+    &-unit {
+      background:$main-blue url(../images/icon_unit.png) no-repeat 10px 50%;
+    }
+
+    &-loc-search {
+      display:inline-block;
+      float:none;
+      margin:0 3px;
+      padding-left:35px;
+      background:$main-yellow url(../images/icon_loc_btn.png) no-repeat 23px 8px;
+    }
+
+    &-loc-reset {
+      display:inline-block;
+      float:none;
+      margin:0 3px;
+      background:$dark-gray url(../images/icon_loc_btn.png) no-repeat 10px -27px;
+    }
+
+    &-loc-close {
+      display:inline-block;
+      float:none;
+      margin:0 3px;
+      padding-left:35px;
+      background:$dark-gray url(../images/icon_loc_btn.png) no-repeat 23px -61px;
     }
 
   }

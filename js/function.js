@@ -191,6 +191,17 @@ $(function(){
 			});
 		})();
 
+		// basic on off
+		(function() {
+			var onoffBtn = $('.js-onoff');
+
+			if (onoffBtn.length > 0) {
+				onoffBtn.on('click', function() {
+					$(this).toggleClass('on');
+				});
+			}
+		})();
+
 	})();
 
 	/*
@@ -240,6 +251,77 @@ $(function(){
 			});
 		}
 
+	})();
+
+	// list sort detail toggle option
+	(function() {
+		var detail = $('.js-detail-toggle');
+
+		if (detail.length > 0) {
+
+			detail.each(function() {
+				var self = $(this),
+					btn = self.find('.js-detail-toggle-btn');
+
+				btn.on('click', function() {
+					self.toggleClass('on');
+					$(this).toggleClass('on');
+				});
+
+			});
+		}
+
+	})();
+
+	// tag list toggle option
+	(function() {
+		var allBtn = $('.js-tag-toggle');
+
+		if (allBtn.length > 0) {
+			allBtn.on('click', function() {
+				$(this).toggleClass('on');
+				$('.sort-tag-all').toggleClass('on');
+			});
+
+		}
+	})();
+
+	// delete tag
+	(function() {
+		var tagDelBtn = $('.sort-option-btn-del');
+
+		if (tagDelBtn.length > 0) {
+			tagDelBtn.on('click', function() {
+				$(this).parents('.sort-option-tag-item').remove();
+			});
+
+		}
+	})();
+
+	// show tooltip
+	(function() {
+		var tooltipBtn = $('.js-show-tooltip');
+
+		if (tooltipBtn.length > 0) {
+			tooltipBtn.on({
+				'mouseenter': function() {
+					$(this).next('.tooltip').addClass('on');
+				},
+				'mouseleave': function() {
+					$(this).next('.tooltip').removeClass('on');
+				}
+			});
+
+			$('.tooltip').on({
+				'mouseenter': function() {
+					$(this).addClass('on');
+				},
+				'mouseleave': function() {
+					$(this).removeClass('on');
+				}
+			});
+
+		}
 	})();
 
 	// slide in list

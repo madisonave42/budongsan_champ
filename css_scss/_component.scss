@@ -434,4 +434,122 @@
   }
 }
 
+.tooltip {
+  display:none;
+  padding:20px;
+  border:1px solid $main-blue;
+  color:$dark-gray;
+  font-size:13px;
+  background:$white;
+  text-align:left;
+  z-index:30;
 
+  &.on {
+    display:block;
+  }
+
+  &-wrap {
+    margin-top:20px;
+    padding-top:20px;
+    border-top:1px solid $line-gray;
+
+    &:first-child {
+      margin:0;
+      padding:0;
+      border-top:0;
+    }
+  }
+
+  &-title {
+    margin-bottom:7px;
+    color:$dark-gray;
+    font-size:14px;
+  }
+
+  &-text {
+    margin-top:5px;
+
+    &:first-child {
+      margin-top:0;
+    }
+
+    &.gray {
+      color:$gray;
+    }
+
+    &.icon-foot,
+    &.icon-elv,
+    &.icon-sun,
+    &.icon-car,
+    &.icon-circle,
+    &.icon-house,
+    &.icon-coin {
+      padding-left:22px;
+      background:url(../images/icon_tooltip_more.png) no-repeat;
+      white-space:nowrap;
+    }
+
+    &.icon-foot {
+      background-position:0 0;
+    }
+
+    &.icon-elv {
+      background-position:0 -21px;
+    }
+
+    &.icon-sun {
+      background-position:0 -44px;
+    }
+
+    &.icon-car {
+      background-position:0 -66px;
+    }
+
+    &.icon-circle {
+      background-position:0 -88px;
+    }
+
+    &.icon-house {
+      background-position:0 -110px;
+    }
+
+    &.icon-coin  {
+      background-position:0 -131px;
+    }
+
+  }
+
+  &-price {
+    &-date {
+      color:$gray;
+    }
+
+    &-up {
+      padding-right:10px;
+      color:$main-blue;
+      background:url(../images/icon_up.png) no-repeat 100% 50%;
+    }
+
+    &-down {
+      padding-right:10px;
+      color:$main-red;
+      background:url(../images/icon_down.png) no-repeat 100% 50%;
+    }
+  }
+
+  &.price {
+    position:absolute;
+    top:95px;
+    left:-50px;
+    width:254px;
+  }
+
+  &.data {
+    position:absolute;
+    top:120px;
+    left:20px;
+    min-width:130px;
+  }
+
+
+}
