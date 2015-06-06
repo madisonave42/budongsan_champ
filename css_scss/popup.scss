@@ -2,31 +2,6 @@
 @import "mixins";
 
 /*
- * reset style
- */
-@import "reset";
-
-/*
- * common module style
- */
-@import "component";
-
-/*
- * common form style
- */
-@import "form";
-
-/*
- * specific style
- */
-@import "specific";
-
-/*
- * specific style of each browser vendor
- */
-@import "vendor";
-
-/*
  * common layout style of popup
  */
 @import "layout-popup";

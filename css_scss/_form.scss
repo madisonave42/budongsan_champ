@@ -55,6 +55,16 @@
     width:330px;
   }
 
+  &.search-option-full {
+    width:100%;
+  }
+
+  &.search-option-fromto {
+    padding-right:5px;
+    width:210px;
+    text-align:right;
+  }
+
 }
 
 .select {
@@ -270,6 +280,109 @@
     padding-left:46px;
     text-align:left;
     background:$naver-color url(../images/icon_naver.png) no-repeat 19px 11px;
+  }
+
+  &-view-all-list {
+    @include btn(88, 27, 13, $white, 25, 0, $main-blue);
+    padding:0;
+    padding-left:26px;
+    background:$main-blue url(../images/icon_all_list.png) no-repeat 10px 50%;
+  }
+
+  &-table-function {
+    display:inline-block;
+    padding:0 2px;
+    height:18px;
+    color:$dark-gray;
+    font-size:12px;
+    font-weight:bold;
+    line-height:1;
+    background-color:#fff;
+    border:1px solid $form-gray;
+    border-radius:2px;
+
+    &.wide {
+      width:112px;
+    }
+
+    &.half {
+      width:55px;
+    }
+
+    &.left-float {
+      margin-right:2px;
+    }
+
+  }
+
+  &-table-change-price {
+    display:inline-block;
+    width:80px;
+    height:16px;
+    line-height:1;
+    color:$white;
+    background:$gray;
+    font-size:12px;
+    font-weight:bold;
+    text-align:center;
+    border:0;
+  }
+
+  &-function {
+    padding:0 5px;
+    height:26px;
+    line-height:26px;
+    color:$white;
+    font-weight:bold;
+    border:0;
+    background:$gray;
+
+    &.left-float{
+
+      &.left{
+        margin-right:5px;
+      }
+
+      &.right{
+        margin-left:5px;
+      }
+
+    }
+
+    .right-float{
+
+      &.left{
+        margin-right:5px;
+      }
+
+      &.right{
+        margin-left:5px;
+      }
+
+    }
+  }
+
+  &-cal-term {
+    float:left;
+    margin-left:8px;
+    padding:0;
+    box-sizing:border-box;
+    width:64px;
+    height:37px;
+    text-align:center;
+    border:1px solid $form-gray;
+    color:$gray;
+    background:none;
+
+    &:first-child {
+      margin-left:0;
+    }
+
+    &.blue {
+      color:$main-blue;
+      border-color:$main-blue;
+    }
+
   }
 
 }
@@ -504,4 +617,27 @@
   &.left {
     margin-right:6px;
   }
+}
+
+.thumb-mini {
+  margin:0 auto;
+  width:68px;
+  height:68px;
+  border:1px solid $line-gray;
+
+  &-img {
+    width:68px;
+    height:68px;
+  }
+}
+
+.price-box {
+  display:inline-block;
+  width:80px;
+  height:20px;
+  line-height:20px;
+  color:$main-blue;
+  text-align:center;
+  font-weight:bold;
+  border:1px solid $form-gray;
 }

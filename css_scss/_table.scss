@@ -2,30 +2,23 @@
 @import "mixins";
 
 .vt-table {
-	width: 100%;
-	border-top: 2px solid $light-gray;
+	width:100%;
+	border-top:2px solid $dark;
 
 	caption{
 		display:none;
 	}
 
-	&.out-border{
-		border-top:0;
-	}
-
 	th {
-		height: 40px;
+		height:50px;
 		position:relative;
-
-		padding-left:10px;
 
 		font-weight:bold;
 		color:$dark;
 
-		text-align:left;
-		line-height:38px;
+		line-height:1.3;
 
-		border-bottom: 1px solid $light-gray;
+		border-bottom: 1px solid $dark;
 
 		&.chkbox{
 			line-height:0;
@@ -36,61 +29,29 @@
 			text-align: center;
 		}
 
-		&.first:after{
-			display:none;
-		}
-
-		.area-btn-sort{
-			margin-top:11px;
-		}
-
-		&:after{
-			content:"";
-			display:block;
-
-			width:1px;
-			height:15px;
-
-			position:absolute;
-			top:14px;
-			left:0;
-			background:$light-gray;
-		}
 	}
 
 	td {
-		height: 39px;
-		padding-left:10px;
-		border-bottom: 1px solid $clean-gray;
+		padding:24px 0 24px 10px ;
+		border-bottom: 1px solid $line-gray;
 
 		&.center {
 			padding:0;
 			text-align: center;
 		}
 
-		&.vt-border{
-			border-left:1px solid $clean-gray;
-			border-right:1px solid $clean-gray;
-		}
+	}
 
-		&.bg-stats-beige{
-			background:$beige;
-		}
+	.td-inner {
+		@include clear();
+		margin-top:2px;
+		line-height:1.4;
 
-		&.bg-stats-white{
-			background:$white;
-		}
-
-		&.td-padding {
-			padding-top:10px;
-			padding-bottom:10px;
+		&:first-child {
+			margin-top:0;
 		}
 	}
 
-	&.stats{
-		width:auto;
-		background:$white-bg-gray;
-	}
 }
 
 .hr-table{

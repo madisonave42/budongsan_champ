@@ -154,6 +154,43 @@ $(function(){
 			toggleLabel( $('.js-label-toggle') );
 		})();
 
+		// tab activation
+		(function() {
+			$('.js-tab').each(function() {
+				var self = $(this),
+					items = self.find('.js-tab-link');
+
+				items.on('click', function(e) {
+					e.preventDefault();
+					items.removeClass('on');
+					$(this).addClass('on');
+				});
+
+			});
+		})();
+
+		// condition select activation
+		(function() {
+			$('.js-condition').each(function() {
+				var self = $(this),
+					items = self.find('.js-condition-item'),
+					pannels = self.find('.js-condition-pannel');
+
+				items.on('click change', function(e) {
+
+					var crtCon = $(this).attr('data-condition'),
+						crtPannel = pannels.filter('.' + crtCon);
+
+					if (crtPannel.length > 0) {
+						pannels.removeClass('on');
+						crtPannel.addClass('on');
+					}
+
+				});
+
+			});
+		})();
+
 	})();
 
 	 /*

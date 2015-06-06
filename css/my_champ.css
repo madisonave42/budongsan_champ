@@ -1,6 +1,6 @@
 .user-profile {
   position: relative;
-  margin-top: 50px;
+  margin-top: 35px;
   border: 1px solid #d8d8d8;
 }
 .user-profile-photo {
@@ -19,17 +19,13 @@
 .user-profile-photo-wrap-img {
   width: 100%;
 }
-.user-profile-photo-wrap:after {
-  content: "";
+.user-profile-photo-mask {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: url(../images/mask_user_photo.png) no-repeat;
-}
-.user-profile-photo-wrap:hover .user-profile-photo-btns {
-  display: block;
 }
 .user-profile-photo-btns {
   display: none;
@@ -61,6 +57,9 @@
 .user-profile-photo-btn.del {
   top: 76px;
   background: #006092;
+}
+.user-profile-photo:hover .user-profile-photo-btns {
+  display: block;
 }
 .user-profile-top {
   padding-left: 220px;
@@ -142,6 +141,94 @@
   color: #25aae1;
   font-weight: normal;
   text-decoration: underline;
+}
+
+.search-option {
+  border: 1px solid #d8d8d8;
+}
+.search-option-detail {
+  padding: 0 40px 25px 40px;
+  background: #f9f9f9;
+}
+.search-option-detail:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.search-option-wrap {
+  float: left;
+  margin-top: 25px;
+  width: 100%;
+}
+.search-option-wrap:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.search-option-wrap.deal-type {
+  width: 239px;
+}
+.search-option-wrap.item-type {
+  width: 239px;
+}
+.search-option-wrap.area-type {
+  width: 440px;
+}
+.search-option-label {
+  float: left;
+  width: 75px;
+  line-height: 37px;
+  color: #222;
+  font-size: 15px;
+  font-weight: bold;
+}
+.search-option-monthly-btn {
+  padding: 0;
+  width: 69px;
+}
+.search-option-condition {
+  margin-top: 9px;
+}
+.search-option-condition:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.search-option-condition-pannel {
+  display: none;
+}
+.search-option-condition-pannel.on {
+  display: block;
+}
+.search-option-condition-input {
+  width: 508px;
+}
+.search-option-condition-unit {
+  float: left;
+  padding-left: 5px;
+  width: 25px;
+  line-height: 37px;
+}
+.search-option-bottom {
+  padding: 10px 0;
+  background: #ededed;
+  border-top: 1px solid #d8d8d8;
+  text-align: center;
+}
+.search-option-bottom .btn-fill {
+  margin: 0 8px;
+  font-size: 20px;
+}
+.search-option-bottom .btn-fill.btn-search-icon {
+  padding-left: 90px;
+  text-align: left;
+  background: #25aae1 url(../images/icon_search_white.png) no-repeat 70px 13px;
 }
 
 /*# sourceMappingURL=my_champ.css.map */

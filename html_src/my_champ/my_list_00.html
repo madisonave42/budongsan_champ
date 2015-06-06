@@ -23,7 +23,9 @@ include "header_bottom.html"
       <li class="lnb-item"><a href="#" class="lnb-link">이용안내</a></li>
     </ul>
     <div class="lnb-util">
-      <button type="button" class="btn-med gray icon-plus">매물등록</button>
+      <div class="lnb-util-btns">
+        <button type="button" class="btn-med gray icon-plus">매물등록</button>
+      </div>
     </div>
   </div>
 </nav>
@@ -32,12 +34,13 @@ include "header_bottom.html"
   <div class="wrapper">
 
     <div class="contents-top">
-      <h2 class="blind">My홈</h2>
+      <h2 class="hide">My홈</h2>
       <div class="user-profile">
         <div class="user-profile-photo">
           <div class="user-profile-photo-wrap">
             <!-- [D] 기본이미지 -->
             <img src="../../images/img_user_photo_default.jpg" alt="등록된 사진이 없습니다." class="user-profile-photo-img" />
+            <div class="user-profile-photo-mask"></div>
           </div>
           <div class="user-profile-photo-btns">
             <!-- [D] 등록된 사진이 없을경우 -->
@@ -75,19 +78,19 @@ include "header_bottom.html"
       </div>
     </div>
 
-    <div class="contents-mid">
+    <div class="contents-mid has-bottom">
 
       <section class="contents-part">
 
-        <div class="part-top">
-          <div class="tab left-float">
+        <div class="part-top no-bottom">
+          <div class="tab left-float js-tab">
             <ul class="tab-list">
-              <li class="tab-list-item"><a href="#" class="tab-link on">My 매물 (100)</a></li>
-              <li class="tab-list-item"><a href="#" class="tab-link">My 중개의뢰 (100)</a></li>
+              <li class="tab-list-item"><a href="#" class="tab-list-link js-tab-link on">My 매물 (100)</a></li>
+              <li class="tab-list-item"><a href="#" class="tab-list-link js-tab-link">My 중개의뢰 (100)</a></li>
             </ul>
           </div>
           <div class="right-float">
-            <button type="button" class="btn-view-all">전체보기</button>
+            <button type="button" class="btn-view-all-list">전체보기</button>
           </div>
         </div>
 
@@ -100,7 +103,7 @@ include "header_bottom.html"
             <colgroup>
               <col style="width:105px;" />
               <col style="width:80px;" />
-              <col style="width:150px;" />
+              <col style="width:135px;" />
               <col style="width:70px;" />
               <col style="width:auto;" />
               <col style="width:140px;" />
@@ -121,7 +124,7 @@ include "header_bottom.html"
 
             <tbody>
               <tr>
-                <td>
+                <td class="center">
                   <div class="td-inner">1234567</div>
                   <div class="td-inner">광고진행</div>
                   <div class="td-inner">무료</div>
@@ -129,17 +132,17 @@ include "header_bottom.html"
                     <button class="btn-table-function">광고재등록</button>
                   </div>
                 </td>
-                <td>
+                <td class="center">
                   <div class="thumb-mini">
                     <img src="../../images/temp/list_thumb_mini.jpg" alt="" class="thumb-mini-img" />
                   </div>
                 </td>
                 <td>
                   <div class="td-inner">
-                    <button class="btn-table-function">거래완료</button>
+                    <button class="btn-table-function wide">거래완료</button>
                   </div>
                   <div class="td-inner">
-                    <button class="btn-table-function">광고종료</button>
+                    <button class="btn-table-function wide">광고종료</button>
                   </div>
                   <div class="td-inner">
                     <button class="btn-table-function half left-float">비공개</button>
@@ -150,7 +153,7 @@ include "header_bottom.html"
                     <button class="btn-table-function half left-float">삭제</button>
                   </div>
                 </td>
-                <td>
+                <td class="center">
                   <div class="td-inner">월세</div>
                   <div class="td-inner">아파트</div>
                 </td>
@@ -163,9 +166,13 @@ include "header_bottom.html"
                   <div class="td-inner">공급 100,000.00㎡</div>
                   <div class="td-inner">전용 100,000.00㎡</div>
                 </td>
-                <td>
-                  <div class="td-inner">1,000,000</div>
-                  <div class="td-inner">3,450</div>
+                <td class="center">
+                  <div class="td-inner">
+                    <div class="price-box">1,000,000</div>
+                  </div>
+                  <div class="td-inner">
+                    <div class="price-box">3,450</div>
+                  </div>
                   <div class="td-inner">
                     <button class="btn-table-change-price">가격수정</button>
                   </div>
@@ -174,6 +181,125 @@ include "header_bottom.html"
                   <div class="td-inner"><span class="em-dark">등록</span> 2015.04.01</div>
                   <div class="td-inner"><span class="em-dark">수정</span> 2015.04.08</div>
                   <div class="td-inner"><span class="em-dark">종료</span> <span class="em-red">1일전</span></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="center">
+                  <div class="td-inner">1234567</div>
+                  <div class="td-inner">광고진행</div>
+                  <div class="td-inner">무료</div>
+                  <div class="td-inner">
+                    <button class="btn-table-function">광고재등록</button>
+                  </div>
+                </td>
+                <td class="center">
+                  <div class="thumb-mini">
+                    <img src="../../images/temp/list_thumb_mini.jpg" alt="" class="thumb-mini-img" />
+                  </div>
+                </td>
+                <td>
+                  <div class="td-inner">
+                    <button class="btn-table-function wide">거래완료</button>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-function wide">광고종료</button>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-function half left-float">비공개</button>
+                    <button class="btn-table-function half left-float">복사</button>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-function half left-float">수정</button>
+                    <button class="btn-table-function half left-float">삭제</button>
+                  </div>
+                </td>
+                <td class="center">
+                  <div class="td-inner">월세</div>
+                  <div class="td-inner">아파트</div>
+                </td>
+                <td>
+                  <div class="td-inner">서울시/강남구/삼성동</div>
+                  <div class="td-inner">삼성힐스테이트 2단지(123-123번지)...</div>
+                  <div class="td-inner">10층/15층, 방2/욕실1</div>
+                </td>
+                <td>
+                  <div class="td-inner">공급 100,000.00㎡</div>
+                  <div class="td-inner">전용 100,000.00㎡</div>
+                </td>
+                <td class="center">
+                  <div class="td-inner">
+                    <div class="price-box">1,000,000</div>
+                  </div>
+                  <div class="td-inner">
+                    <div class="price-box">3,450</div>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-change-price">가격수정</button>
+                  </div>
+                </td>
+                <td>
+                  <div class="td-inner"><span class="em-dark">등록</span> 2015.04.01</div>
+                  <div class="td-inner"><span class="em-dark">수정</span> 2015.04.08</div>
+                  <div class="td-inner"><span class="em-dark">종료</span> <span class="em-red">1일전</span></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="center">
+                  <div class="td-inner">1234567</div>
+                  <div class="td-inner">광고진행</div>
+                  <div class="td-inner">무료</div>
+                  <div class="td-inner">
+                    <button class="btn-table-function">광고재등록</button>
+                  </div>
+                </td>
+                <td class="center">
+                  <div class="thumb-mini">
+                    <img src="../../images/temp/list_thumb_mini.jpg" alt="" class="thumb-mini-img" />
+                  </div>
+                </td>
+                <td>
+                  <div class="td-inner">
+                    <button class="btn-table-function wide">거래완료</button>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-function wide">광고종료</button>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-function half left-float">비공개</button>
+                    <button class="btn-table-function half left-float">복사</button>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-function half left-float">수정</button>
+                    <button class="btn-table-function half left-float">삭제</button>
+                  </div>
+                </td>
+                <td class="center">
+                  <div class="td-inner">월세</div>
+                  <div class="td-inner">아파트</div>
+                </td>
+                <td>
+                  <div class="td-inner">서울시/강남구/삼성동</div>
+                  <div class="td-inner">삼성힐스테이트 2단지(123-123번지)...</div>
+                  <div class="td-inner">10층/15층, 방2/욕실1</div>
+                </td>
+                <td>
+                  <div class="td-inner">공급 100,000.00㎡</div>
+                  <div class="td-inner">전용 100,000.00㎡</div>
+                </td>
+                <td class="center">
+                  <div class="td-inner">
+                    <div class="price-box">1,000,000</div>
+                  </div>
+                  <div class="td-inner">
+                    <div class="price-box">3,450</div>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-change-price">가격수정</button>
+                  </div>
+                </td>
+                <td>
+                  <div class="td-inner"><span class="em-dark">등록</span> 2015.04.01</div>
+                  <div class="td-inner"><span class="em-dark">수정</span> 2015.04.08</div>
                 </td>
               </tr>
             </tbody>
@@ -185,24 +311,25 @@ include "header_bottom.html"
 
       <section class="contents-part">
 
-        <div class="part-top">
-          <div class="tab left-float">
+        <div class="part-top no-bottom">
+          <div class="tab left-float js-tab">
             <ul class="tab-list">
-              <li class="tab-list-item"><a href="#" class="tab-link on">최근본매물</a></li>
-              <li class="tab-list-item"><a href="#" class="tab-link">관심매물</a></li>
-              <li class="tab-list-item"><a href="#" class="tab-link">최근검색</a></li>
-              <li class="tab-list-item"><a href="#" class="tab-link">검색저장</a></li>
+              <li class="tab-list-item"><a href="#" class="tab-list-link js-tab-link on">최근본매물</a></li>
+              <li class="tab-list-item"><a href="#" class="tab-list-link js-tab-link">관심매물</a></li>
+              <li class="tab-list-item"><a href="#" class="tab-list-link js-tab-link">최근검색</a></li>
+              <li class="tab-list-item"><a href="#" class="tab-list-link js-tab-link">검색저장</a></li>
             </ul>
           </div>
           <div class="right-float">
-            <button type="button" class="btn-view-all">전체보기</button>
+            <button type="button" class="btn-view-all-list">전체보기</button>
           </div>
         </div>
 
         <div class="part-mid">
 
           <ul class="big-list">
-            <li class="big-list-item">
+            <!-- [D] 리스트 각행의 첫번째 항목에 first클래스, 세번째 항목에 last클래스 추가 -->
+            <li class="big-list-item first">
               <div class="big-list-thumb">
                 <img src="../../images/temp/list_thumb_big01.jpg" alt="" />
               </div>
@@ -212,7 +339,7 @@ include "header_bottom.html"
                   3,000만원/50만원
                 </div>
                 <div class="big-list-overview-item">
-                  <span class="big-list-overview-title">아파트</span>
+                  <span class="big-list-overview-title yellow">아파트</span>
                   공급 3,000.25㎡ / 전용 1,500.11㎡
                 </div>
               </div>
@@ -232,7 +359,7 @@ include "header_bottom.html"
                   3,000만원/50만원
                 </div>
                 <div class="big-list-overview-item">
-                  <span class="big-list-overview-title">아파트</span>
+                  <span class="big-list-overview-title yellow">아파트</span>
                   공급 3,000.25㎡ / 전용 1,500.11㎡
                 </div>
               </div>
@@ -242,7 +369,7 @@ include "header_bottom.html"
                 <div class="big-list-detail-text">10층/15층, 방2/욕실1</div>
               </div>
             </li>
-            <li class="big-list-item">
+            <li class="big-list-item last">
               <div class="big-list-thumb">
                 <img src="../../images/temp/list_thumb_big03.jpg" alt="" />
               </div>
@@ -252,7 +379,7 @@ include "header_bottom.html"
                   3,000만원/50만원
                 </div>
                 <div class="big-list-overview-item">
-                  <span class="big-list-overview-title">아파트</span>
+                  <span class="big-list-overview-title yellow">아파트</span>
                   공급 3,000.25㎡ / 전용 1,500.11㎡
                 </div>
               </div>

@@ -3,7 +3,7 @@
 
 .user-profile {
 	position:relative;
-	margin-top:50px;
+	margin-top:35px;
 	border:1px solid $line-gray;
 
 	&-photo {
@@ -23,19 +23,15 @@
 				width:100%;
 			}
 
-			&:after {
-				content:"";
-				position:absolute;
-				top:0;
-				left:0;
-				width:100%;
-				height:100%;
-				background:url(../images/mask_user_photo.png) no-repeat;
-			}
+		}
 
-			&:hover .user-profile-photo-btns {
-				display:block;
-			}
+		&-mask {
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			background:url(../images/mask_user_photo.png) no-repeat;
 		}
 
 		&-btns {
@@ -72,6 +68,10 @@
 				top:76px;
 				background:$btn-darkblue;
 			}
+		}
+
+		&:hover .user-profile-photo-btns {
+			display:block;
 		}
 	}
 
@@ -153,6 +153,92 @@
 			color:$main-blue;
 			font-weight:normal;
 			text-decoration:underline;
+		}
+	}
+
+}
+
+.search-option {
+	border:1px solid $line-gray;
+
+	&-detail {
+		@include clear();
+		padding:0 40px 25px 40px;
+		background:$bg-white-gray;
+	}
+
+	&-wrap {
+		@include clear();
+		float:left;
+		margin-top:25px;
+		width:100%;
+
+		&.deal-type {
+			width:239px;
+		}
+
+		&.item-type {
+			width:239px;
+		}
+
+		&.area-type {
+			width:440px;
+		}
+	}
+
+	&-label {
+		float:left;
+		width:75px;
+		line-height:37px;
+		color:$dark;
+		font-size:15px;
+		font-weight:bold;
+	}
+
+	&-monthly-btn {
+		padding:0;
+		width:69px;
+	}
+
+	&-condition {
+		@include clear();
+		margin-top:9px;
+
+		&-pannel {
+			display:none;
+
+			&.on {
+				display:block;
+			}
+		}
+
+		&-input {
+			width:508px;
+		}
+
+		&-unit {
+			float:left;
+			padding-left:5px;
+			width:25px;
+			line-height:37px;
+		}
+	}
+
+	&-bottom {
+		padding:10px 0;
+		background:$bg-light-gray;
+		border-top:1px solid $line-gray;
+		text-align:center;
+
+		.btn-fill {
+			margin:0 8px;
+			font-size:20px;
+
+			&.btn-search-icon {
+				padding-left:90px;
+				text-align:left;
+				background:$main-blue url(../images/icon_search_white.png) no-repeat 70px 13px;
+			}
 		}
 	}
 
