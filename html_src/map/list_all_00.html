@@ -1,0 +1,60 @@
+include "header_top_map.html"
+
+<title>매물 | 부동산 챔프</title>
+
+<link rel="stylesheet" href="../../css/common.css" />
+<!-- map style -->
+<link rel="stylesheet" href="../../css/map.css" />
+<link rel="stylesheet" href="../../css/popup.css" />
+<!-- 지도 API 로딩 -->
+<script type="text/javascript" src="http://apis.daum.net/maps/maps3.js?apikey=195b1ef32f1567715276a78e67930163"></script>
+
+include "header_bottom.html"
+
+<nav class="lnb">
+  <div class="wrapper">
+    <ul class="lnb-list">
+      <li class="lnb-item"><a href="#" class="lnb-link on">주거전체</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">아파트(단지)</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">오피스텔(단지)</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">사무실</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">상가.점포</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">건물</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">공장/창고</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">토지/기타</a></li>
+    </ul>
+    <div class="lnb-util">
+      <ul class="view left-float">
+        <li class="view-item"><a href="#" class="view-link on">MAP</a></li>
+        <li class="view-item"><a href="#" class="view-link">LIST</a></li>
+      </ul>
+      <ul class="social left-float">
+        <!-- [D] class on을 추가하면 상태변화 됨 : S -->
+        <li class="social-item"><a href="#" class="social-link">(1000)</a></li>
+        <li class="social-item"><a href="#" class="social-link search-recent on">(1000)</a></li>
+        <!-- [D] class on을 추가하면 상태변화 됨 : E -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="contents">
+  <div class="wrapper">
+
+    <section class="section-map">
+
+      <!-- 임시 지도 표시영역 : MAP 관련 스크립트는 function.js에 위치-->
+      <div id="map" class="map-area"></div>
+
+      <!-- 범례 -->
+
+    </section>
+
+    <section class="section-list">
+
+    </section>
+
+  </div>
+</section>
+
+include "footer.html"

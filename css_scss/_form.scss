@@ -55,6 +55,22 @@
     width:330px;
   }
 
+  &.search-option-full {
+    width:100%;
+  }
+
+  &.search-option-fromto {
+    padding-right:5px;
+    width:210px;
+    text-align:right;
+  }
+
+  &.sort-detail-fromto {
+    padding-right:5px;
+    width:135px;
+    text-align:right;
+  }
+
 }
 
 .select {
@@ -70,6 +86,14 @@
     &.half-width{
       width:115px;
     }
+
+    &.sort-wide {
+      width:164px;
+    }
+
+    &.sort-normal {
+      width:106px;
+    }
   }
 
   .label {
@@ -77,7 +101,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin: 0 35px 0 10px;
+    margin: 0 25px 0 10px;
     font-size: 12px;
     line-height: 35px;
     color: #666666;
@@ -91,7 +115,7 @@
     top: 0;
     bottom: 0;
     margin: auto;
-    width: 38px;
+    width: 25px;
     height: 38px;
     color: #999999;
     text-align: center;
@@ -193,6 +217,32 @@
 
   }
 
+  &-med {
+    @include btn(112, 29, 13, $white, 29, 0, $dark-gray);
+    @include inline-block();
+    text-align:center;
+    border-radius:2px;
+
+    &.gray {
+      background:$btn-gray;
+    }
+
+    &.darkblue {
+      background:$btn-darkblue;
+    }
+
+    &.icon {
+
+      &-plus {
+        padding:0;
+        padding-left:38px;
+        text-align:left;
+        background:$btn-gray url(../images/icon_plus.png) no-repeat 22px 50%;
+      }
+
+    }
+  }
+
   &-join{
     @include btn(126, 28, 14, $dark-gray, 25, 1px solid $dark-gray, $white);
     @include center();
@@ -246,6 +296,160 @@
     background:$naver-color url(../images/icon_naver.png) no-repeat 19px 11px;
   }
 
+  &-view-all-list {
+    @include btn(88, 27, 13, $white, 25, 0, $main-blue);
+    padding:0;
+    padding-left:26px;
+    background:$main-blue url(../images/icon_all_list.png) no-repeat 10px 50%;
+  }
+
+  &-table-function {
+    display:inline-block;
+    padding:0 2px;
+    height:18px;
+    color:$dark-gray;
+    font-size:12px;
+    font-weight:bold;
+    line-height:1;
+    background-color:#fff;
+    border:1px solid $form-gray;
+    border-radius:2px;
+
+    &.wide {
+      width:112px;
+    }
+
+    &.half {
+      width:55px;
+    }
+
+    &.left-float {
+      margin-right:2px;
+    }
+
+  }
+
+  &-table-change-price {
+    display:inline-block;
+    width:80px;
+    height:16px;
+    line-height:1;
+    color:$white;
+    background:$gray;
+    font-size:12px;
+    font-weight:bold;
+    text-align:center;
+    border:0;
+  }
+
+  &-function {
+    padding:0 5px;
+    height:26px;
+    line-height:26px;
+    color:$white;
+    font-weight:bold;
+    border:0;
+    background:$gray;
+
+    &.left-float{
+
+      &.left{
+        margin-right:5px;
+      }
+
+      &.right{
+        margin-left:5px;
+      }
+
+    }
+
+    .right-float{
+
+      &.left{
+        margin-right:5px;
+      }
+
+      &.right{
+        margin-left:5px;
+      }
+
+    }
+  }
+
+  &-cal-term {
+    float:left;
+    margin-left:8px;
+    padding:0;
+    box-sizing:border-box;
+    width:64px;
+    height:37px;
+    text-align:center;
+    border:1px solid $form-gray;
+    color:$gray;
+    background:none;
+
+    &:first-child {
+      margin-left:0;
+    }
+
+    &.blue {
+      color:$main-blue;
+      border-color:$main-blue;
+    }
+
+  }
+
+  &-list {
+
+    &-compare,
+    &-unit,
+    &-loc-search,
+    &-loc-reset,
+    &-loc-close {
+      float:left;
+      margin-right:6px;
+      padding:0;
+      padding-left:27px;
+      width:88px;
+      height:27px;
+      border:0;
+      color:$white;
+      text-align:left;
+    }
+
+    &-compare {
+      background:$main-blue url(../images/icon_compare.png) no-repeat 10px 50%;
+    }
+
+    &-unit {
+      background:$main-blue url(../images/icon_unit.png) no-repeat 10px 50%;
+    }
+
+    &-loc-search {
+      display:inline-block;
+      float:none;
+      margin:0 3px;
+      padding-left:35px;
+      background:$main-yellow url(../images/icon_loc_btn.png) no-repeat 23px 8px;
+    }
+
+    &-loc-reset {
+      display:inline-block;
+      float:none;
+      margin:0 3px;
+      background:$dark-gray url(../images/icon_loc_btn.png) no-repeat 10px -27px;
+    }
+
+    &-loc-close {
+      display:inline-block;
+      float:none;
+      margin:0 3px;
+      padding-left:35px;
+      background:$dark-gray url(../images/icon_loc_btn.png) no-repeat 23px -61px;
+    }
+
+  }
+
 }
 
 .check{
@@ -297,6 +501,7 @@
     color:$dark-gray;
 
     &.blind{
+      padding-left:18px;
       width:0;
       text-indent:-99999em;
       overflow:hidden;

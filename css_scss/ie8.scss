@@ -209,6 +209,15 @@ select, input, button, textarea {
 
 }
 
+/* list */
+.sort-input-label {
+  top:7px;
+}
+.sort-input {
+  line-height:27px;
+}
+
+
 /* popup dimmed */
 .dimmed {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";

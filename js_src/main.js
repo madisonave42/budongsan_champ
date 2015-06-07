@@ -131,6 +131,136 @@ $(function(){
 			toggleLabel( $('.js-label-toggle') );
 		})();
 
+		// tab activation
+		(function() {
+			$('.js-tab').each(function() {
+				var self = $(this),
+					items = self.find('.js-tab-link');
+
+				items.on('click', function(e) {
+					e.preventDefault();
+					items.removeClass('on');
+					$(this).addClass('on');
+				});
+
+			});
+		})();
+
+		// condition select activation
+		(function() {
+			$('.js-condition').each(function() {
+				var self = $(this),
+					items = self.find('.js-condition-item'),
+					pannels = self.find('.js-condition-pannel');
+
+				items.on('click change', function(e) {
+
+					var crtCon = $(this).attr('data-condition'),
+						crtPannel = pannels.filter('.' + crtCon);
+
+					if (crtPannel.length > 0) {
+						pannels.removeClass('on');
+						crtPannel.addClass('on');
+					}
+
+				});
+
+			});
+		})();
+
+		// basic on off
+		(function() {
+			var onoffBtn = $('.js-onoff');
+
+			if (onoffBtn.length > 0) {
+				onoffBtn.on('click', function() {
+					$(this).toggleClass('on');
+				});
+			}
+		})();
+
+	})();
+
+	/*
+	 * list
+	 */
+
+	// list sort menu toggle sub
+	(function() {
+		var sortMenu = $('.js-sort-menu');
+
+		if (sortMenu.length > 0) {
+			var menus = sortMenu.find('.sort-menu-item'),
+				btns = sortMenu.find('.sort-menu-btn');
+
+			btns.on('click', function() {
+				var par = $(this).parents('.sort-menu-item');
+
+				if (par.hasClass('on')) {
+					par.removeClass('on');
+				} else {
+					menus.removeClass('on');
+					par.addClass('on');
+				}
+			});
+
+		}
+
+	})();
+
+	// list sort menu toggle from to
+	(function() {
+		var subInput = $('.sort-menu-sub-input');
+
+		if (subInput.length > 0) {
+
+			subInput.each(function() {
+				var input = $(this).find('.sort-input');
+
+				input.on('focus', function() {
+					var type = $(this).attr('data-type'),
+						par = $(this).parents('.sort-menu-sub');
+
+					par.removeClass('from').removeClass('to');
+					par.addClass(type);
+				});
+
+			});
+		}
+
+	})();
+
+	// list sort detail toggle option
+	(function() {
+		var detail = $('.js-detail-toggle');
+
+		if (detail.length > 0) {
+
+			detail.each(function() {
+				var self = $(this),
+					btn = self.find('.js-detail-toggle-btn');
+
+				btn.on('click', function() {
+					self.toggleClass('on');
+					$(this).toggleClass('on');
+				});
+
+			});
+		}
+
+	})();
+
+	// tag list toggle option
+	(function() {
+		var allBtn = $('.js-tag-toggle');
+
+		if (allBtn.length > 0) {
+			allBtn.on('click', function() {
+				$(this).toggleClass('on');
+				$('.sort-tag-all').toggleClass('on');
+			});
+
+		}
 	})();
 
 	/*
@@ -170,6 +300,59 @@ $(function(){
 
 		var map = new daum.maps.Map(container, options);
 
+	})();
+
+	// delete tag
+	(function() {
+		var tagDelBtn = $('.sort-option-btn-del');
+
+		if (tagDelBtn.length > 0) {
+			tagDelBtn.on('click', function() {
+				$(this).parents('.sort-option-tag-item').remove();
+			});
+
+		}
+	})();
+
+	// show tooltip
+	(function() {
+		var tooltipBtn = $('.js-show-tooltip');
+
+		if (tooltipBtn.length > 0) {
+			tooltipBtn.on({
+				'mouseenter': function() {
+					$(this).next('.tooltip').addClass('on');
+				},
+				'mouseleave': function() {
+					$(this).next('.tooltip').removeClass('on');
+				}
+			});
+
+			$('.tooltip').on({
+				'mouseenter': function() {
+					$(this).addClass('on');
+				},
+				'mouseleave': function() {
+					$(this).removeClass('on');
+				}
+			});
+
+		}
+	})();
+
+	// slide in list
+	(function() {
+		$('.js-list-slide').each(function() {
+			var self = $(this);
+
+			self.slidesjs({
+		    width: 177,
+		    height: 129,
+		    pagination: {
+          active: false
+        }
+		  });
+		});
 	})();
 
 	 /*

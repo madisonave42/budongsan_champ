@@ -65,8 +65,16 @@
   font-weight:bold;
 }
 
+.em-gray{
+  color:$main-blue;
+}
+
 .em-blue{
   color:$main-blue;
+}
+
+.em-yellow{
+  color:$main-yellow;
 }
 
 .em-red{
@@ -90,4 +98,11 @@
   content:"";
   display:block;
   clear:both;
+}
+
+.div-item {
+  float:left;
+  width:20px;
+  line-height:37px;
+  text-align:center;
 }
