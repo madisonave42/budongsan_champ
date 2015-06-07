@@ -9,8 +9,10 @@
 
 <link rel="stylesheet" href="../../css/common.css" />
 <!-- 회원가입 style -->
-<link rel="stylesheet" href="../../css/join.css" />
+<link rel="stylesheet" href="../../css/map.css" />
 <link rel="stylesheet" href="../../css/popup.css" />
+<!-- 지도 API 로딩 -->
+<script type="text/javascript" src="http://apis.daum.net/maps/maps3.js?apikey=195b1ef32f1567715276a78e67930163"></script>
 
 <script src="../../js/lib/jquery-1.11.0.min.js"></script>
 <script src="../../js/lib/jquery-ui.min.js"></script>
@@ -192,42 +194,27 @@
 <section class="contents">
   <div class="wrapper">
 
-    <div class="contents-top">
-      <h2 class="join-title">회원가입</h2>
-      <p class="join-title-desc">
-        하나의 계정으로 모든 서비스를 이용하실 수 있습니다.
-        <br/>
-        단, 회원유형에 따라 인증절차가 다릅니다. 해당하는 유형을 선택하여 가입해주세요.
-      </p>
-    </div>
+    <section class="section-map">
 
-    <div class="contents-mid">
+      <!-- 임시 지도 표시영역 : MAP 관련 스크립트는 function.js에 위치-->
+      <div id="map" class="map-area"></div>
 
-      <div class="join-type">
-        <h3 class="join-type-title private">개인회원</h3>
-        <p class="join-type-desc">매물을 구하거나 내놓고자<br />하는 개인</p>
-        <button type="button" class="btn-join">가입하기</button>
-      </div>
+      <!-- 검색결과 -->
+      <dl>
+        <dt>검색결과</dt>
+        <dd>평균 면적 110㎡(최저 66㎡~최고 150 ㎡ 평균매매가 100,000만원  (최저 50,000만원~최고 130,000만원)</dd>
+        <dd>평균 면적 110㎡(최저 66㎡~최고 150 ㎡ 평균매매가 100,000만원  (최저 50,000만원~최고 130,000만원)</dd>
+        <dd>평균 면적 110㎡(최저 66㎡~최고 150 ㎡ 평균매매가 100,000만원  (최저 50,000만원~최고 130,000만원)</dd>
+      </dl>
 
-      <div class="join-type">
-        <h3 class="join-type-title mediation">중개회원</h3>
-        <p class="join-type-desc">중개사무소를 개설등록을 한<br />개업공인중개사</p>
-        <button type="button" class="btn-join">가입하기</button>
-      </div>
+      <!-- 범례 -->
 
-      <div class="join-type">
-        <h3 class="join-type-title company">기업회원</h3>
-        <p class="join-type-desc">매물을 구하거나 내놓고자 하는<br />기업이나 단체</p>
-        <button type="button" class="btn-join">가입하기</button>
-      </div>
 
-      <div class="join-type last">
-        <h3 class="join-type-title premium">프리미엄 기업회원<br/><span class="sub-title">(부동산플레닛)</span></h3>
-        <p class="join-type-desc">사무실을 임차하거나 빌딩을<br />매입하고자 하는 기업이나 단체</p>
-        <button type="button" class="btn-join">가입하기</button>
-      </div>
+    </section>
 
-    </div>
+    <section class="section-list">
+
+    </section>
 
   </div>
 </section>

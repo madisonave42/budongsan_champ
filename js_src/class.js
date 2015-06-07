@@ -4,6 +4,7 @@
 
 // Constant
 var HEADER_FOOTER = 222;
+var MAP_LIST_WIDTH = 600;
 
 /* focus action for label on input */
 var toggleLabel = function ($input) {
@@ -23,4 +24,4 @@ var toggleLabel = function ($input) {
 			self.triggerHandler('focus');
 		}
 	});
-}
+};

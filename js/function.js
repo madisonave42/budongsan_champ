@@ -4,6 +4,7 @@
 
 // Constant
 var HEADER_FOOTER = 222;
+var MAP_LIST_WIDTH = 600;
 
 /* focus action for label on input */
 var toggleLabel = function ($input) {
@@ -23,7 +24,7 @@ var toggleLabel = function ($input) {
 			self.triggerHandler('focus');
 		}
 	});
-}
+};
 /**************
  * Main Event *
  **************/
@@ -57,9 +58,12 @@ $(function(){
 		$(window).on('load resize', function(){
 			var winHeight = $(window).outerHeight();
 			var docHeight = $('body').outerHeight();
+			var headerHeight = $('.header').outerHeight();
+			var lnbHeight = $('.lnb').outerHeight();
+			var footerHeight = $('.footer').outerHeight();
 			var $contents = $('.contents');
 			if( winHeight >= docHeight ) {
-				$contents.css({height: winHeight - HEADER_FOOTER});
+				$contents.css({height: winHeight - headerHeight - lnbHeight - footerHeight});
 			}
 		});
 
@@ -153,6 +157,45 @@ $(function(){
 		(function() {
 			toggleLabel( $('.js-label-toggle') );
 		})();
+
+	})();
+
+	/*
+	 * MAP
+	 */
+
+	(function(){
+
+		var winWidth = $(window).width();
+		var winHeight = $(window).outerHeight();
+		var docHeight = $('body').outerHeight();
+		var headerHeight = $('.header').outerHeight();
+		var lnbHeight = $('.lnb').outerHeight();
+		var footerHeight = $('.footer').outerHeight();
+		var $contents = $('.contents');
+		var contHeight = winHeight - headerHeight - lnbHeight - footerHeight;
+
+		// 다음 지도 API 관련 변수 선언
+		var container = document.getElementById('map');
+		var options = {
+			center: new daum.maps.LatLng(37.5215971,127.05771319999997),
+			level: 3
+		};
+
+		if( winHeight >= docHeight ) {
+			$contents.css({height: contHeight});
+		}
+
+		if( $('html').hasClass('map') ) {
+
+			$('.section-map').css({
+				width: winWidth - MAP_LIST_WIDTH,
+				height: contHeight
+			});
+
+		}
+
+		var map = new daum.maps.Map(container, options);
 
 	})();
 

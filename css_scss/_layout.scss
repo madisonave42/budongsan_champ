@@ -1,10 +1,17 @@
 html.map{
+	overflow-y:visible;
+
 	.wrapper{
 		width:auto;
 	}
 
-	.header-logo{
+	.header-logo,
+	.footer-logo{
 		padding-left:20px;
+	}
+
+	.footer-content{
+		padding-right:20px;
 	}
 }
 
@@ -505,6 +512,7 @@ html.map{
 
 /* navigation lnb */
 .lnb{
+	min-width:1000px;
 	height:50px;
 	background:$bg-light-gray;
 
@@ -649,7 +657,9 @@ html.map{
 .contents{
 
 	min-width:1000px;
-	min-height:600px;
+	min-height:300px;
+
+	position:relative;
 
 	&.top-border{
 		border-top:2px solid $main-blue;

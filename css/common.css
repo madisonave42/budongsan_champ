@@ -91,11 +91,18 @@ strong {
 /*
  * common layout style of page
  */
+html.map {
+  overflow-y: visible;
+}
 html.map .wrapper {
   width: auto;
 }
-html.map .header-logo {
+html.map .header-logo,
+html.map .footer-logo {
   padding-left: 20px;
+}
+html.map .footer-content {
+  padding-right: 20px;
 }
 
 .wrapper {
@@ -483,6 +490,7 @@ html.map .header-logo {
 
 /* navigation lnb */
 .lnb {
+  min-width: 1000px;
   height: 50px;
   background: #ededed;
 }
@@ -610,7 +618,8 @@ html.map .header-logo {
 /* contents */
 .contents {
   min-width: 1000px;
-  min-height: 600px;
+  min-height: 300px;
+  position: relative;
 }
 .contents.top-border {
   border-top: 2px solid #25aae1;

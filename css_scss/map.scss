@@ -1,0 +1,19 @@
+@import "variables";
+@import "mixins";
+
+.section{
+
+  &-map{
+
+    .map{
+
+      &-area{
+        width:100%;
+        height:100%;
+      }
+
+    }
+
+  }
+
+}
