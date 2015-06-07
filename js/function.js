@@ -290,14 +290,14 @@ $(function(){
 		}
 	})();
 
-<<<<<<< HEAD
 	/*
 	 * MAP
 	 */
 
+	// height & map init
 	(function(){
 
-		var winWidth = $(window).width();
+		var winWidth = $(window).outerWidth();
 		var winHeight = $(window).outerHeight();
 		var docHeight = $('body').outerHeight();
 		var headerHeight = $('.header').outerHeight();
@@ -306,31 +306,107 @@ $(function(){
 		var $contents = $('.contents');
 		var contHeight = winHeight - headerHeight - lnbHeight - footerHeight;
 
-		// 다음 지도 API 관련 변수 선언
-		var container = document.getElementById('map');
-		var options = {
-			center: new daum.maps.LatLng(37.5215971,127.05771319999997),
-			level: 3
-		};
-
 		if( winHeight >= docHeight ) {
 			$contents.css({height: contHeight});
 		}
 
 		if( $('html').hasClass('map') ) {
-
 			$('.section-map').css({
 				width: winWidth - MAP_LIST_WIDTH,
 				height: contHeight
 			});
-
+			$('.section-list').css({
+				height:contHeight
+			});
+			$('.section-list-detail-popup').css({
+				height:contHeight
+			});
+			$('.sort-detail-scroll').css({
+				height:contHeight-126
+			});
+			$('.sale').css({
+				height:contHeight-119
+			});
 		}
 
-		var map = new daum.maps.Map(container, options);
+		// 다음 지도 API 관련 변수 선언
+		var container = document.getElementById('map');
+
+		if( container != null ) {
+			var options = {
+				center: new daum.maps.LatLng(37.5215971, 127.05771319999997),
+				level: 3
+			};
+			var map = new daum.maps.Map(container, options);
+		}
+
+		$(window).on('load resize', function(){
+
+			var winWidth = $(window).width();
+			var winHeight = $(window).outerHeight();
+			var docHeight = $('body').outerHeight();
+			var headerHeight = $('.header').outerHeight();
+			var lnbHeight = $('.lnb').outerHeight();
+			var footerHeight = $('.footer').outerHeight();
+			var $contents = $('.contents');
+			var contHeight = winHeight - headerHeight - lnbHeight - footerHeight;
+
+			if( winHeight >= docHeight ) {
+				$contents.css({height: contHeight});
+			}
+
+			if( $('html').hasClass('map') ) {
+				$('.section-map').css({
+					width: winWidth - MAP_LIST_WIDTH,
+					height: contHeight
+				});
+				$('.section-list').css({
+					height:contHeight
+				});
+				$('.section-list-detail-popup').css({
+					height:contHeight
+				});
+				$('.sort-detail-scroll').css({
+					height:contHeight-126
+				});
+				$('.sale').css({
+					height:contHeight-119
+				});
+			}
+		});
 
 	})();
 
-=======
+	// draggable search
+	(function(){
+
+		$('.search-area').draggable({
+			handle: '.search-drag-handle',
+			containment: '.section-map',
+			scroll: false
+		});
+
+	})();
+
+	// draggable search - tab action
+	(function(){
+
+		$('.search-tab').on('click', function(){
+
+			var index = $('.search-tab-area .search-tab').index( $(this) );
+
+			$('.search-tab').removeClass('on');
+			$('.search-area .search-form-area').removeClass('on');
+
+			$(this).addClass('on');
+			$('.search-area .search-form-area').eq(index).addClass('on');
+
+
+
+		});
+
+	})();
+
 	// delete tag
 	(function() {
 		var tagDelBtn = $('.sort-option-btn-del');
@@ -341,6 +417,18 @@ $(function(){
 			});
 
 		}
+	})();
+
+	// select view type
+	(function(){
+
+		$('.btn-view').on('click', function(){
+
+			$('.btn-view').removeClass('on');
+			$(this).addClass('on');
+
+		});
+
 	})();
 
 	// show tooltip
@@ -384,8 +472,23 @@ $(function(){
 		});
 	})();
 
+	// view & hide detail popup
+	(function(){
 
->>>>>>> f3ba660608e7833853c02872565623b496ab8dbb
+		$('.js-view-detail-popup').on('click', function(){
+			$('.section-list-detail-popup').stop().animate({
+				width:600
+			});
+		});
+
+		$('.section-list-detail-popup').on('click', function(){
+			$('.section-list-detail-popup').stop().animate({
+				width:0
+			});
+		});
+
+	})();
+
 	 /*
 	 * popup
 	 */

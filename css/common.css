@@ -1170,6 +1170,9 @@ html.map .footer-content {
 .select-wrapper.sort-normal {
   width: 106px;
 }
+.select-wrapper.search-med {
+  width: 88px;
+}
 .select .label {
   display: block;
   white-space: nowrap;
