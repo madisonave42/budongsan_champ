@@ -386,8 +386,19 @@
 	}
 
 	&-body {
+		padding:10px 0;
 		overflow:auto;
 	}
+
+	&-td {
+		text-align:center;
+
+		&.right {
+			padding-right:5px;
+			text-align:right;
+		}
+	}
+
 
 }
 /* scrollable table : E */
