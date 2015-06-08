@@ -29,9 +29,13 @@
 				color:$gray-blue;
 				background:$btn-gray url(../images/icon_pin.png) no-repeat 32px 6px;
 
+				&:hover {
+					color:$white;
+					background-position:32px -78px;
+				}
+
 				&.on {
 					color:$white;
-					background-color:$main-yellow;
 					background-position:32px -78px;
 				}
 			}
@@ -40,7 +44,12 @@
 				padding-left:45px;
 				text-align:left;
 				color:$gray-blue;
-				background:$btn-gray url(../images/icon_subway.png) no-repeat 25px 4px;
+				background:$btn-gray url(../images/icon_subway.png) no-repeat 25px 5px;
+
+				&:hover {
+					color:$white;
+					background-position:25px -78px;
+				}
 
 				&.on {
 					color:$white;

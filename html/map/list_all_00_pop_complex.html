@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko" class="map">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+<title>매물 | 부동산 챔프</title>
+
+<link rel="stylesheet" href="../../css/common.css" />
+<!-- map style -->
+<link rel="stylesheet" href="../../css/map.css" />
+<link rel="stylesheet" href="../../css/popup.css" />
+<!-- 지도 API 로딩 -->
+<script type="text/javascript" src="http://apis.daum.net/maps/maps3.js?apikey=195b1ef32f1567715276a78e67930163"></script>
+
+<script src="../../js/lib/jquery-1.11.0.min.js"></script>
+<script src="../../js/lib/jquery-ui.min.js"></script>
+<script src="../../js/lib/jquery.slides.min.js"></script>
+<script src="../../js/function.js"></script>
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="../../css/ie8.css" />
+<script src="../../js/lib/html5shiv.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<header class="header">
+
+  <div class="wrapper">
+
+    <h1 class="header-logo"><a href="#"><img src="../../images/logo.png" alt="부동산챔프"></a></h1>
+
+    <ul class="header-gnb js-gnb">
+      <li class="gnb-item">
+        <a href="#" class="gnb-main-link js-main-link">매물</a>
+
+        <ul class="gnb-sub-wrap">
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">주거전체</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">아파트 (단지)</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">오피스텔 (단지)</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">사무실</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">상가.점포</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">빌딩/건물</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">공장/창고</a>
+          </li>
+          <li class="gnb-sub-item last">
+            <a href="#" class="gnb-sub-link">토지/기타</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="gnb-item">
+        <a href="#" class="gnb-main-link js-main-link">분양</a>
+
+        <ul class="gnb-sub-wrap narrow">
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">주거용</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">상업용</a>
+          </li>
+          <li class="gnb-sub-item last">
+            <a href="#" class="gnb-sub-link">업무용</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="gnb-item">
+        <a href="#" class="gnb-main-link js-main-link">실거래가</a>
+
+        <ul class="gnb-sub-wrap">
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">대출금리비교</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">매매VS임대비교</a>
+          </li>
+          <li class="gnb-sub-item last">
+            <a href="#" class="gnb-sub-link">대출금계산기</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="gnb-item">
+        <a href="#" class="gnb-main-link js-main-link">프리미엄전용관</a>
+
+        <ul class="gnb-sub-wrap">
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">홈페이지 관리</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">공동중개 의뢰</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">자동 매칭</a>
+          </li>
+          <li class="gnb-sub-item last">
+            <a href="#" class="gnb-sub-link">수동 매칭</a>
+          </li>
+        </ul>
+      </li>
+
+    </ul>
+
+    <ul class="header-util">
+      <li class="util-item"><a href="#" class="util-link">회원가입</a></li>
+      <li class="util-item"><a href="#" class="util-link">로그인</a></li>
+      <li class="util-item"><a href="#" class="util-link">인테리어</a></li>
+      <li class="util-item"><a href="#" class="util-link">중개회원</a></li>
+      <li class="util-item last"><a href="#" class="util-link">고객센터</a></li>
+    </ul>
+
+    <dl class="header-my">
+
+      <dt><a href="#" class="header-my-title js-my"><span class="typo">MY챔프</span></a></dt>
+
+      <dd class="header-my-sub">
+
+        <div class="header-my-member">
+          <div class="member-name"><span class="em-blue">부동산챔프</span>님</div>
+          <!-- note 1) for Dev -->
+          <button type="button" class="member logout">로그아웃</button>
+          <!--<div class="member login">로그인</div>-->
+          <!--/ note 1) for Dev -->
+        </div>
+
+        <ul class="header-my-info">
+          <li class="info-list"><a href="#" class="info-link info-modify">회원정보수정</a></li>
+          <li class="info-list"><a href="#" class="info-link info-goods">상품/이용권정보</a></li>
+          <li class="info-list"><a href="#" class="info-link info-payment">결제정보</a></li>
+          <li class="info-list last"><a href="#" class="info-link info-usage">이용안내</a></li>
+        </ul>
+
+        <ul class="header-my-history">
+          <li class="history-list odd"><a href="#" class="history-link notice">알림판</a></li>
+          <li class="history-list"><a href="#" class="history-link for-sale">매물</a></li>
+          <li class="history-list odd"><a href="#" class="history-link for-sale-current">최근 본 매물</a></li>
+          <li class="history-list"><a href="#" class="history-link for-sale-favorite">관심매물</a></li>
+          <li class="history-list odd"><a href="#" class="history-link search-current">최근검색</a></li>
+          <li class="history-list"><a href="#" class="history-link search-call">검색 불러오기</a></li>
+          <li class="history-list odd"><a href="#" class="history-link mediation">중개의뢰</a></li>
+          <li class="history-list"><a href="#" class="history-link inquiry">문의내역</a></li>
+        </ul>
+
+      </dd>
+
+    </dl>
+
+  </div>
+
+</header>
+
+<nav class="lnb">
+
+</nav>
+
+<section class="contents">
+  <button type="button" class="js-open-popup">팝업열기</button>
+</section>
+
+<!-- [D] 팝업 : S -->
+<section class="complex-view">
+  <div class="complex-header">
+    <h1 class="complex-title">
+      <span class="complex-title-type red">연립/빌라</span>
+      <span class="complex-title-name">삼성힐스테이트 2단지</span>
+    </h1>
+    <div class="complex-addr">서울시 강남구 청담동 134-21(서울시 강남구 영동대로 142길 16)</div>
+  </div>
+
+  <div class="complex-body">
+    <div class="complex-overview">
+      <div class="complex-overview-imgframe">
+        <img src="../../images/temp/complex_img.jpg" alt="" class="complex-overview-img" />
+      </div>
+      <div class="complex-overview-body">
+        <dl class="complex-overview-text">
+          <dt class="complex-overview-title">규모</dt>
+          <dd class="complex-overview-data">최저층 20층 / 최고층 35층</dd>
+        </dl>
+        <dl class="complex-overview-text">
+          <dt class="complex-overview-title">총동수</dt>
+          <dd class="complex-overview-data">10개동</dd>
+        </dl>
+        <dl class="complex-overview-text">
+          <dt class="complex-overview-title">총세대수</dt>
+          <dd class="complex-overview-data">7,000세대</dd>
+        </dl>
+        <dl class="complex-overview-text">
+          <dt class="complex-overview-title">주차</dt>
+          <dd class="complex-overview-data">총 7,000대 (세대당 1.31대)</dd>
+        </dl>
+        <dl class="complex-overview-text">
+          <dt class="complex-overview-title">준공</dt>
+          <dd class="complex-overview-data">2014-06 / 삼성물산</dd>
+        </dl>
+        <dl class="complex-overview-text">
+          <dt class="complex-overview-title blue">매물</dt>
+          <dd class="complex-overview-data complex-overview-data-sale">
+            매매<span class="em-blue">5</span> / 전세<span class="em-blue">1</span> / 월세<span class="em-blue">5</span> / 단기임대<span class="em-blue">0</span></dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="scroll-table complex-table">
+      <div class="scroll-table-head">
+        <div class="scroll-table-head-item complex-table-head-item01">
+          면적
+          <button type="button" class="scroll-table-head-sort desc">정렬</button>
+        </div>
+        <div class="scroll-table-head-item complex-table-head-item02">
+          동
+          <button type="button" class="scroll-table-head-sort asce">정렬</button>
+        </div>
+        <div class="scroll-table-head-item complex-table-head-item03">층</div>
+        <div class="scroll-table-head-item complex-table-head-item04">방</div>
+        <div class="scroll-table-head-item complex-table-head-item05">욕실</div>
+        <div class="scroll-table-head-item complex-table-head-item06">가격(만원)</div>
+        <div class="scroll-table-head-item complex-table-head-item07">상세보기</div>
+      </div>
+
+      <div class="scroll-table-body complex-table-body">
+        <table class="scroll-table">
+          <colgroup>
+            <col style="width:px;" />
+            <col style="width:px;" />
+            <col style="width:px;" />
+            <col style="width:px;" />
+            <col style="width:px;" />
+            <col style="width:px;" />
+            <col style="width:px;" />
+          </colgroup>
+          <thead class="hide">
+            <tr>
+              <th scope="col">면적</th>
+              <th scope="col">동</th>
+              <th scope="col">층</th>
+              <th scope="col">방</th>
+              <th scope="col">욕실</th>
+              <th scope="col">가격(만원)</th>
+              <th scope="col">상세보기</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="scroll-table-td">200.11㎡/100.12㎡</td>
+              <td class="scroll-table-td">1001</td>
+              <td class="scroll-table-td">중/15</td>
+              <td class="scroll-table-td">4</td>
+              <td class="scroll-table-td">2</td>
+              <td class="scroll-table-td em-blue">120,000 / 30</td>
+              <td class="scroll-table-td">
+                <button type="button" class="complex-detail-view">상세보기</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</section>
+<!-- [D] 팝업 : E -->
+
+
+<footer class="footer">
+  <div class="wrapper">
+
+    <div class="footer-logo">
+      <img src="../../images/logo_footer.png" alt="부동산챔프" />
+    </div>
+
+    <div class="footer-content">
+
+      <ul class="footer-menu">
+        <li class="menu-item first"><a href="#" class="menu-link">회사소개</a></li>
+        <li class="menu-item"><a href="#" class="menu-link">광고</a></li>
+        <li class="menu-item"><a href="#" class="menu-link">제휴 약관 및 개인정보</a></li>
+        <li class="menu-item last"><a href="#" class="menu-link">취급방침</a></li>
+      </ul>
+
+      <address class="footer-address">
+        <div class="item">서울시 강남구 영동대로 702(청담동) 화천회관빌딩 4층 대표 정수민</div>
+        <div class="item">TEL. 02-752-2836</div>
+        <div class="item">FAX. 02-752-2838</div>
+        <div class="item last">MAIL. sc@ytp.co.kr</div>
+      </address>
+
+      <div class="footer-license">
+        <div class="item">사업자 등록번호 : 104-86-10347</div>
+        <div class="item">통신판매업 신고번호 : 제 0000-0000-000호</div>
+      </div>
+
+      <div class="footer-copyright">
+        @ <span class="co-name">YP Partners</span> 2001-2015
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>

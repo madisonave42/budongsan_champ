@@ -369,3 +369,25 @@
 	text-decoration:underline;
 }
 */
+
+/* scrollable table : S */
+.scroll-table {
+
+	&-head {
+		@include clear();
+		border-top:2px solid $dark;
+		border-bottom:1px solid $dark;
+
+		&-item {
+			float:left;
+
+		}
+
+	}
+
+	&-body {
+		overflow:auto;
+	}
+
+}
+/* scrollable table : E */

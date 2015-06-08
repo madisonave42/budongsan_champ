@@ -1,0 +1,126 @@
+include "header_top_map.html"
+
+<title>매물 | 부동산 챔프</title>
+
+<link rel="stylesheet" href="../../css/common.css" />
+<!-- map style -->
+<link rel="stylesheet" href="../../css/map.css" />
+<link rel="stylesheet" href="../../css/popup.css" />
+<!-- 지도 API 로딩 -->
+<script type="text/javascript" src="http://apis.daum.net/maps/maps3.js?apikey=195b1ef32f1567715276a78e67930163"></script>
+
+include "header_bottom.html"
+
+<nav class="lnb">
+
+</nav>
+
+<section class="contents">
+  <button type="button" class="js-open-popup">팝업열기</button>
+</section>
+
+<!-- [D] 팝업 : S -->
+<section class="complex-view">
+  <div class="complex-header">
+    <h1 class="complex-title">
+      <span class="complex-title-type red">연립/빌라</span>
+      <span class="complex-title-name">삼성힐스테이트 2단지</span>
+    </h1>
+    <div class="complex-addr">서울시 강남구 청담동 134-21(서울시 강남구 영동대로 142길 16)</div>
+  </div>
+
+  <div class="complex-body">
+    <div class="complex-overview">
+      <div class="complex-overview-imgframe">
+        <img src="../../images/temp/complex_img.jpg" alt="" class="complex-overview-img" />
+      </div>
+      <div class="complex-overview-body">
+        <dl class="complex-overview-text">
+          <dt class="complex-overview-title">규모</dt>
+          <dd class="complex-overview-data">최저층 20층 / 최고층 35층</dd>
+        </dl>
+        <dl class="complex-overview-text">
+          <dt class="complex-overview-title">총동수</dt>
+          <dd class="complex-overview-data">10개동</dd>
+        </dl>
+        <dl class="complex-overview-text">
+          <dt class="complex-overview-title">총세대수</dt>
+          <dd class="complex-overview-data">7,000세대</dd>
+        </dl>
+        <dl class="complex-overview-text">
+          <dt class="complex-overview-title">주차</dt>
+          <dd class="complex-overview-data">총 7,000대 (세대당 1.31대)</dd>
+        </dl>
+        <dl class="complex-overview-text">
+          <dt class="complex-overview-title">준공</dt>
+          <dd class="complex-overview-data">2014-06 / 삼성물산</dd>
+        </dl>
+        <dl class="complex-overview-text">
+          <dt class="complex-overview-title blue">매물</dt>
+          <dd class="complex-overview-data complex-overview-data-sale">
+            매매<span class="em-blue">5</span> / 전세<span class="em-blue">1</span> / 월세<span class="em-blue">5</span> / 단기임대<span class="em-blue">0</span></dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="scroll-table complex-table">
+      <div class="scroll-table-head">
+        <div class="scroll-table-head-item complex-table-head-item01">
+          면적
+          <button type="button" class="scroll-table-head-sort desc">정렬</button>
+        </div>
+        <div class="scroll-table-head-item complex-table-head-item02">
+          동
+          <button type="button" class="scroll-table-head-sort asce">정렬</button>
+        </div>
+        <div class="scroll-table-head-item complex-table-head-item03">층</div>
+        <div class="scroll-table-head-item complex-table-head-item04">방</div>
+        <div class="scroll-table-head-item complex-table-head-item05">욕실</div>
+        <div class="scroll-table-head-item complex-table-head-item06">가격(만원)</div>
+        <div class="scroll-table-head-item complex-table-head-item07">상세보기</div>
+      </div>
+
+      <div class="scroll-table-body complex-table-body">
+        <table class="scroll-table">
+          <colgroup>
+            <col style="width:px;" />
+            <col style="width:px;" />
+            <col style="width:px;" />
+            <col style="width:px;" />
+            <col style="width:px;" />
+            <col style="width:px;" />
+            <col style="width:px;" />
+          </colgroup>
+          <thead class="hide">
+            <tr>
+              <th scope="col">면적</th>
+              <th scope="col">동</th>
+              <th scope="col">층</th>
+              <th scope="col">방</th>
+              <th scope="col">욕실</th>
+              <th scope="col">가격(만원)</th>
+              <th scope="col">상세보기</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="scroll-table-td">200.11㎡/100.12㎡</td>
+              <td class="scroll-table-td">1001</td>
+              <td class="scroll-table-td">중/15</td>
+              <td class="scroll-table-td">4</td>
+              <td class="scroll-table-td">2</td>
+              <td class="scroll-table-td em-blue">120,000 / 30</td>
+              <td class="scroll-table-td">
+                <button type="button" class="complex-detail-view">상세보기</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</section>
+<!-- [D] 팝업 : E -->
+
+include "footer.html"

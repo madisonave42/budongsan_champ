@@ -1089,6 +1089,26 @@ html.map .footer-content {
 	text-decoration:underline;
 }
 */
+/* scrollable table : S */
+.scroll-table-head {
+  border-top: 2px solid #222;
+  border-bottom: 1px solid #222;
+}
+.scroll-table-head:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.scroll-table-head-item {
+  float: left;
+}
+.scroll-table-body {
+  overflow: auto;
+}
+
+/* scrollable table : E */
 /*
  * common form style
  */
@@ -2159,6 +2179,7 @@ html.map .footer-content {
   background-position: 0 -131px;
 }
 .tooltip-price-date {
+  margin-right: 5px;
   color: #999;
 }
 .tooltip-price-up {
