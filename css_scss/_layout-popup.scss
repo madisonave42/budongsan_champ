@@ -667,11 +667,10 @@
 .complex {
 
 	&-view {
-		position:fixed;
-		top:100px;
-		left:50%;
-		margin-left:-233px;
-		width:466px;
+		position:absolute;
+		top:0;
+		left:0;
+		width:500px;
 		border:2px solid $main-blue;
 	}
 
@@ -746,7 +745,7 @@
 		&-body {
 			float:left;
 			margin-left:10px;
-			width:280px;
+			width:315px;
 		}
 
 		&-text {
@@ -767,7 +766,7 @@
 			color:$white;
 			font-size:12px;
 			font-weight:bold;
-			background:$form-gray;
+			background:$gray-blue;
 			text-align:center;
 
 			&.blue {
@@ -778,6 +777,7 @@
 
 		&-data {
 			float:left;
+			width:250px;
 
 			&-sale {
 				color:$dark-gray;
@@ -791,8 +791,78 @@
 	&-table {
 		margin-top:17px;
 
+		&-head {
+
+			&-item01 {
+				width:135px;
+			}
+
+			&-item02 {
+				width:45px;
+			}
+
+			&-item03 {
+				width:45px;
+			}
+
+			&-item04 {
+				width:40px;
+			}
+
+			&-item05 {
+				width:40px;
+			}
+
+			&-item06 {
+				width:93px;
+			}
+
+			&-item07 {
+				width:60px;
+			}
+
+			&-sort {
+				display:inline;
+				padding:0;
+				width:10px;
+				height:10px;
+				border:0;
+				background:url(../images/bg_btn_toggle.png) no-repeat;
+				text-indent:-9999px;
+				vertical-align:middle;
+
+				&.asce {
+					background-position:50% 2px;
+				}
+
+				&.desc {
+					background-position:50% -73px;
+				}
+
+			}
+
+		}
+
 		&-body {
 			height:200px;
+		}
+
+		.scroll-table-tr:hover .complex-btn-detail-view {
+			background-position:0 -18px;
+		}
+
+	}
+
+	&-btn {
+
+		&-detail-view {
+			display:inline;
+			padding:0;
+			width:18px;
+			height:18px;
+			border:0;
+			background:url(../images/bg_btn_search_simple_view.png) no-repeat;
+			text-indent:-9999px;
 		}
 
 	}
