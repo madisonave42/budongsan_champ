@@ -961,6 +961,10 @@
 .btn-map-function.edu.on, .btn-map-function.edu:hover {
   background-position: -45px -105px;
 }
+.btn-map-function.edu.view-on {
+  background-position: -45px -105px;
+  z-index: 910;
+}
 .btn-map-function.mousedrag {
   top: 210px;
   background-position: 0px -150px;
@@ -970,12 +974,13 @@
 }
 
 .search-edu-popup {
+  display: none;
   width: 390px;
   height: 220px;
   position: absolute;
   top: 158px;
   right: 13px;
-  z-index: 700;
+  z-index: 900;
   border: 3px solid #e70000;
   border-radius: 27px;
   background: #ffffff;
@@ -984,6 +989,7 @@
 .search-edu-popup-top {
   padding: 15px 17px 11px;
   border-bottom: 1px solid #ededed;
+  font-weight: bold;
 }
 .search-edu-popup-bottom {
   padding: 11px 17px 15px;
@@ -994,6 +1000,9 @@
   height: 0;
   overflow: hidden;
   clear: both;
+}
+.search-edu-popup.on {
+  display: block;
 }
 
 .legend-list {
