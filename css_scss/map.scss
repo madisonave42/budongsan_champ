@@ -1134,6 +1134,11 @@
     &.on, &:hover{
       background-position:-45px -105px;
     }
+
+    &.view-on{
+      background-position:-45px -105px;
+      z-index:910;
+    }
   }
 
   &.mousedrag{
@@ -1149,6 +1154,7 @@
 
 // search education popup
 .search-edu-popup{
+  display:none;
   width:390px;
   height:220px;
 
@@ -1156,7 +1162,7 @@
   top:158px;
   right:13px;
 
-  z-index:700;
+  z-index:900;
 
   border:3px solid $red;
   border-radius:27px;
@@ -1168,12 +1174,17 @@
   &-top{
     padding:15px 17px 11px;
     border-bottom:1px solid $bg-light-gray;
+    font-weight:bold;
   }
 
   &-bottom{
     padding:11px 17px 15px;
 
     @include clear();
+  }
+
+  &.on{
+    display:block;
   }
 }
 

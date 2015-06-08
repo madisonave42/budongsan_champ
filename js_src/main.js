@@ -462,6 +462,25 @@ $(function(){
 
 	})();
 
+	// view search education
+	(function(){
+
+		$('.js-edu-view').data('view', 'false').on('click', function(){
+
+			if( $(this).data('view') == 'false' ) {
+				$(this).addClass('view-on');
+				$('.search-edu-popup').addClass('on');
+				$(this).data('view', 'true');
+			} else {
+				$(this).removeClass('view-on');
+				$('.search-edu-popup').removeClass('on');
+				$(this).data('view', 'false');
+			}
+
+		});
+
+	})();
+
 	 /*
 	 * popup
 	 */
