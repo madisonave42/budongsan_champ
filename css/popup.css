@@ -657,11 +657,10 @@
 /* popup login : E */
 /* popup complex : S */
 .complex-view {
-  position: fixed;
-  top: 100px;
-  left: 50%;
-  margin-left: -233px;
-  width: 466px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
   border: 2px solid #25aae1;
 }
 .complex-header {
@@ -725,7 +724,7 @@
 .complex-overview-body {
   float: left;
   margin-left: 10px;
-  width: 280px;
+  width: 315px;
 }
 .complex-overview-text {
   margin-top: 2px;
@@ -743,7 +742,7 @@
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
-  background: #cbcbcb;
+  background: #a1b0b6;
   text-align: center;
 }
 .complex-overview-title.blue {
@@ -751,6 +750,7 @@
 }
 .complex-overview-data {
   float: left;
+  width: 250px;
 }
 .complex-overview-data-sale {
   color: #666;
@@ -759,8 +759,57 @@
 .complex-table {
   margin-top: 17px;
 }
+.complex-table-head-item01 {
+  width: 135px;
+}
+.complex-table-head-item02 {
+  width: 45px;
+}
+.complex-table-head-item03 {
+  width: 45px;
+}
+.complex-table-head-item04 {
+  width: 40px;
+}
+.complex-table-head-item05 {
+  width: 40px;
+}
+.complex-table-head-item06 {
+  width: 93px;
+}
+.complex-table-head-item07 {
+  width: 60px;
+}
+.complex-table-head-sort {
+  display: inline;
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  border: 0;
+  background: url(../images/bg_btn_toggle.png) no-repeat;
+  text-indent: -9999px;
+  vertical-align: middle;
+}
+.complex-table-head-sort.asce {
+  background-position: 50% 2px;
+}
+.complex-table-head-sort.desc {
+  background-position: 50% -73px;
+}
 .complex-table-body {
   height: 200px;
+}
+.complex-table .scroll-table-tr:hover .complex-btn-detail-view {
+  background-position: 0 -18px;
+}
+.complex-btn-detail-view {
+  display: inline;
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  border: 0;
+  background: url(../images/bg_btn_search_simple_view.png) no-repeat;
+  text-indent: -9999px;
 }
 
 /* popup complex : E */

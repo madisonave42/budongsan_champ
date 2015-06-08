@@ -372,6 +372,7 @@
 
 /* scrollable table : S */
 .scroll-table {
+	width:100%;
 
 	&-head {
 		@include clear();
@@ -380,18 +381,34 @@
 
 		&-item {
 			float:left;
-
+			height:31px;
+			line-height:31px;
+			text-align:center;
+			color:$dark;
+			font-size:12px;
+			font-weight:bold;
 		}
 
 	}
 
 	&-body {
 		padding:10px 0;
-		overflow:auto;
+		overflow-x:hidden;
+		overflow-y:scroll;
+	}
+
+	&-tr {
+
+		&:hover {
+			background:$white-blue;
+		}
+
 	}
 
 	&-td {
+		padding:4px 0;
 		text-align:center;
+		font-size:12px;
 
 		&.right {
 			padding-right:5px;
