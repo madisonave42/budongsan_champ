@@ -1009,12 +1009,165 @@
 			height:18px;
 
 			position:absolute;
-			bottom:10px;
+			bottom:8px;
 			right:10px;
 
 			text-indent:-99999em;
 
 			background:url(../images/bg_btn_search_simple_view.png) no-repeat;
+
+			&:hover{
+				background-position:0 -19px
+			}
+		}
+
+	}
+}
+
+/* popup map simple view list type*/
+.simple-view-list{
+	position:absolute;
+	top:0;
+	left:0;
+
+	//padding:10px;
+	//min-width:420px;
+
+	border:2px solid $main-blue;
+
+	&-top{
+		padding-left:10px;
+		@include font(16, bold, $dark);
+		line-height:48px;
+		border-bottom:1px solid $line-gray;
+		background:#f3f3f3;
+	}
+
+	&-scroll{
+		min-width:460px;
+		height:365px;
+		overflow-y:auto;
+		overflow-x:visible;
+	}
+
+	&-result{
+		padding:15px 10px 5px;
+		font-weight:bold;
+	}
+
+	&-item{
+		//min-width:420px;
+		position:relative;
+		padding:10px;
+		@include clear();
+		border-top:1px solid $line-gray;
+
+		&.first{
+			border-top:0;
+		}
+	}
+
+	.list-item.image{
+		width:122px;
+		//height:94px;
+		float:left;
+
+		.thumb-image{
+			width:100%;
+		}
+	}
+
+	.right-col{
+		float:left;
+		margin-left:10px;
+	}
+
+	.list-item {
+
+		&-type {
+			width: 58px;
+			height: 16px;
+			line-height: 14px;
+			font-size: 12px;
+			text-align: center;
+
+			&.red {
+				border: 1px solid $main-red;
+				color: $main-red;
+			}
+
+			&.yellow {
+				border: 1px solid $main-yellow;
+				color: $main-yellow;
+			}
+
+			&.purple {
+				border: 1px solid $main-purple;
+				color: $main-purple;
+			}
+
+			&.green {
+				border: 1px solid $main-green;
+				color: $main-green;
+			}
+		}
+
+		&-name {
+			margin-top: 7px;
+			font-size: 15px;
+			font-weight: bold;
+			color: $dark;
+		}
+
+		&-detail {
+			margin-top: 7px;
+			line-height: 1.4;
+		}
+
+		&.price{
+			position:absolute;
+			top:10px;
+			right:10px;
+
+			display:inline-block;
+			font-size:17px;
+			font-weight:bold;
+			color:$main-blue;
+		}
+
+		&.spec{
+			margin-top:7px;
+		}
+
+		&-data{
+			float:left;
+			margin:0 0 0 10px;
+
+
+			&:first-child{
+				margin-left:0;
+				padding-left:0;
+				&:after{
+					display:none;
+				}
+			}
+		}
+
+		&.btn-search{
+			width:19px;
+			height:18px;
+
+			position:absolute;
+			bottom:8px;
+			right:10px;
+
+			text-indent:-99999em;
+
+			background:url(../images/bg_btn_search_simple_view.png) no-repeat;
+
+			&:hover{
+				background-position:0 -19px
+			}
 		}
 
 	}

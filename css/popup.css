@@ -687,10 +687,18 @@
 /* popup login : E */
 /* popup complex : S */
 .complex-view {
+<<<<<<< HEAD
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  margin-left: -233px;
+  width: 466px;
+=======
   position: absolute;
   top: 0;
   left: 0;
   width: 500px;
+>>>>>>> c1e37e73bc51a5d80b1404749008785ae5427c95
   border: 2px solid #25aae1;
 }
 .complex-header {
@@ -754,7 +762,11 @@
 .complex-overview-body {
   float: left;
   margin-left: 10px;
+<<<<<<< HEAD
+  width: 280px;
+=======
   width: 315px;
+>>>>>>> c1e37e73bc51a5d80b1404749008785ae5427c95
 }
 .complex-overview-text {
   margin-top: 2px;
@@ -772,7 +784,11 @@
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
+<<<<<<< HEAD
+  background: #cbcbcb;
+=======
   background: #a1b0b6;
+>>>>>>> c1e37e73bc51a5d80b1404749008785ae5427c95
   text-align: center;
 }
 .complex-overview-title.blue {
@@ -780,7 +796,10 @@
 }
 .complex-overview-data {
   float: left;
+<<<<<<< HEAD
+=======
   width: 250px;
+>>>>>>> c1e37e73bc51a5d80b1404749008785ae5427c95
 }
 .complex-overview-data-sale {
   color: #666;
@@ -789,6 +808,11 @@
 .complex-table {
   margin-top: 17px;
 }
+<<<<<<< HEAD
+.complex-table-body {
+  height: 200px;
+}
+=======
 .complex-table-head-item01 {
   width: 135px;
 }
@@ -841,6 +865,7 @@
   background: url(../images/bg_btn_search_simple_view.png) no-repeat;
   text-indent: -9999px;
 }
+>>>>>>> c1e37e73bc51a5d80b1404749008785ae5427c95
 
 /* popup complex : E */
 /* popup map simple view */
@@ -923,11 +948,143 @@
   width: 19px;
   height: 18px;
   position: absolute;
+<<<<<<< HEAD
+  bottom: 8px;
+=======
   bottom: 10px;
+>>>>>>> c1e37e73bc51a5d80b1404749008785ae5427c95
   right: 10px;
   text-indent: -99999em;
   background: url(../images/bg_btn_search_simple_view.png) no-repeat;
 }
+<<<<<<< HEAD
+.simple-view .list-item.btn-search:hover {
+  background-position: 0 -19px;
+}
+
+/* popup map simple view list type*/
+.simple-view-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px solid #25aae1;
+}
+.simple-view-list-top {
+  padding-left: 10px;
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #222;
+  line-height: 48px;
+  border-bottom: 1px solid #d8d8d8;
+  background: #f3f3f3;
+}
+.simple-view-list-scroll {
+  min-width: 460px;
+  height: 365px;
+  overflow-y: auto;
+  overflow-x: visible;
+}
+.simple-view-list-result {
+  padding: 15px 10px 5px;
+  font-weight: bold;
+}
+.simple-view-list-item {
+  position: relative;
+  padding: 10px;
+  border-top: 1px solid #d8d8d8;
+}
+.simple-view-list-item:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.simple-view-list-item.first {
+  border-top: 0;
+}
+.simple-view-list .list-item.image {
+  width: 122px;
+  float: left;
+}
+.simple-view-list .list-item.image .thumb-image {
+  width: 100%;
+}
+.simple-view-list .right-col {
+  float: left;
+  margin-left: 10px;
+}
+.simple-view-list .list-item-type {
+  width: 58px;
+  height: 16px;
+  line-height: 14px;
+  font-size: 12px;
+  text-align: center;
+}
+.simple-view-list .list-item-type.red {
+  border: 1px solid #ed1c24;
+  color: #ed1c24;
+}
+.simple-view-list .list-item-type.yellow {
+  border: 1px solid #fcb040;
+  color: #fcb040;
+}
+.simple-view-list .list-item-type.purple {
+  border: 1px solid #7030a0;
+  color: #7030a0;
+}
+.simple-view-list .list-item-type.green {
+  border: 1px solid #92d050;
+  color: #92d050;
+}
+.simple-view-list .list-item-name {
+  margin-top: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #222;
+}
+.simple-view-list .list-item-detail {
+  margin-top: 7px;
+  line-height: 1.4;
+}
+.simple-view-list .list-item.price {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  font-size: 17px;
+  font-weight: bold;
+  color: #25aae1;
+}
+.simple-view-list .list-item.spec {
+  margin-top: 7px;
+}
+.simple-view-list .list-item-data {
+  float: left;
+  margin: 0 0 0 10px;
+}
+.simple-view-list .list-item-data:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+.simple-view-list .list-item-data:first-child:after {
+  display: none;
+}
+.simple-view-list .list-item.btn-search {
+  width: 19px;
+  height: 18px;
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  text-indent: -99999em;
+  background: url(../images/bg_btn_search_simple_view.png) no-repeat;
+}
+.simple-view-list .list-item.btn-search:hover {
+  background-position: 0 -19px;
+}
+=======
+>>>>>>> c1e37e73bc51a5d80b1404749008785ae5427c95
 
 .popup-addinfo-agree {
   margin-top: 15px;
