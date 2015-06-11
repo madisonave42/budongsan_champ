@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
+include "header_top.html"
 
 <title>매물등록 | MY챔프 | 부동산 챔프</title>
 
@@ -12,156 +7,7 @@
 <link rel="stylesheet" href="../../css/my_champ.css" />
 <link rel="stylesheet" href="../../css/popup.css" />
 
-<script src="../../js/lib/jquery-1.11.0.min.js"></script>
-<script src="../../js/lib/jquery-ui.min.js"></script>
-<script src="../../js/lib/jquery.slides.min.js"></script>
-<script src="../../js/function.js"></script>
-
-<!--[if lt IE 9]>
-<link rel="stylesheet" href="../../css/ie8.css" />
-<script src="../../js/lib/html5shiv.js"></script>
-<![endif]-->
-
-</head>
-<body>
-<header class="header">
-
-  <div class="wrapper">
-
-    <h1 class="header-logo"><a href="#"><img src="../../images/logo.png" alt="부동산챔프"></a></h1>
-
-    <ul class="header-gnb js-gnb">
-      <li class="gnb-item">
-        <a href="#" class="gnb-main-link js-main-link">매물</a>
-
-        <ul class="gnb-sub-wrap">
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">주거전체</a>
-          </li>
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">아파트 (단지)</a>
-          </li>
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">오피스텔 (단지)</a>
-          </li>
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">사무실</a>
-          </li>
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">상가.점포</a>
-          </li>
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">빌딩/건물</a>
-          </li>
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">공장/창고</a>
-          </li>
-          <li class="gnb-sub-item last">
-            <a href="#" class="gnb-sub-link">토지/기타</a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="gnb-item">
-        <a href="#" class="gnb-main-link js-main-link">분양</a>
-
-        <ul class="gnb-sub-wrap narrow">
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">주거용</a>
-          </li>
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">상업용</a>
-          </li>
-          <li class="gnb-sub-item last">
-            <a href="#" class="gnb-sub-link">업무용</a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="gnb-item">
-        <a href="#" class="gnb-main-link js-main-link">실거래가</a>
-
-        <ul class="gnb-sub-wrap">
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">대출금리비교</a>
-          </li>
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">매매VS임대비교</a>
-          </li>
-          <li class="gnb-sub-item last">
-            <a href="#" class="gnb-sub-link">대출금계산기</a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="gnb-item">
-        <a href="#" class="gnb-main-link js-main-link">프리미엄전용관</a>
-
-        <ul class="gnb-sub-wrap">
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">홈페이지 관리</a>
-          </li>
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">공동중개 의뢰</a>
-          </li>
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">자동 매칭</a>
-          </li>
-          <li class="gnb-sub-item last">
-            <a href="#" class="gnb-sub-link">수동 매칭</a>
-          </li>
-        </ul>
-      </li>
-
-    </ul>
-
-    <ul class="header-util">
-      <li class="util-item"><a href="#" class="util-link">회원가입</a></li>
-      <li class="util-item"><a href="#" class="util-link">로그인</a></li>
-      <li class="util-item"><a href="#" class="util-link">인테리어</a></li>
-      <li class="util-item"><a href="#" class="util-link">중개회원</a></li>
-      <li class="util-item last"><a href="#" class="util-link">고객센터</a></li>
-    </ul>
-
-    <dl class="header-my">
-
-      <dt><a href="#" class="header-my-title js-my"><span class="typo">MY챔프</span></a></dt>
-
-      <dd class="header-my-sub">
-
-        <div class="header-my-member">
-          <div class="member-name"><span class="em-blue">부동산챔프</span>님</div>
-          <!-- note 1) for Dev -->
-          <button type="button" class="member logout">로그아웃</button>
-          <!--<div class="member login">로그인</div>-->
-          <!--/ note 1) for Dev -->
-        </div>
-
-        <ul class="header-my-info">
-          <li class="info-list"><a href="#" class="info-link info-modify">회원정보수정</a></li>
-          <li class="info-list"><a href="#" class="info-link info-goods">상품/이용권정보</a></li>
-          <li class="info-list"><a href="#" class="info-link info-payment">결제정보</a></li>
-          <li class="info-list last"><a href="#" class="info-link info-usage">이용안내</a></li>
-        </ul>
-
-        <ul class="header-my-history">
-          <li class="history-list odd"><a href="#" class="history-link notice">알림판</a></li>
-          <li class="history-list"><a href="#" class="history-link for-sale">매물</a></li>
-          <li class="history-list odd"><a href="#" class="history-link for-sale-current">최근 본 매물</a></li>
-          <li class="history-list"><a href="#" class="history-link for-sale-favorite">관심매물</a></li>
-          <li class="history-list odd"><a href="#" class="history-link search-current">최근검색</a></li>
-          <li class="history-list"><a href="#" class="history-link search-call">검색 불러오기</a></li>
-          <li class="history-list odd"><a href="#" class="history-link mediation">중개의뢰</a></li>
-          <li class="history-list"><a href="#" class="history-link inquiry">문의내역</a></li>
-        </ul>
-
-      </dd>
-
-    </dl>
-
-  </div>
-
-</header>
+include "header_bottom.html"
 
 <nav class="lnb">
   <div class="wrapper">
@@ -203,7 +49,7 @@
       <section class="contents-part">
 
         <div class="part-top no-bottom">
-          <h3 class="part-title">매물종류/유형</h3>
+          <h3 class="part-title">매물종류/유형 (타입: 도시형 생활주택)</h3>
         </div>
 
         <div class="part-mid border-bottom">
@@ -226,19 +72,29 @@
 
                   <div class="select-wrapper half-width middle left">
                     <div class="select">
-                      <p class="label">아파트</p>
+                      <p class="label">도시형 생활주택</p>
                       <b class="button">▾</b>
                     </div>
                     <ul class="select-items">
-                      <li class="selected">아파트</li>
-                      <li>아파트</li>
+                      <li class="selected">도시형 생활주택</li>
+                      <li>도시형 생활주택</li>
+                    </ul>
+                  </div>
+                  <div class="select-wrapper half-width middle left">
+                    <div class="select">
+                      <p class="label">원룸형 주택</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">원룸형 주택</li>
+                      <li>원룸형 주택</li>
                     </ul>
                   </div>
                   <button type="button" class="btn-form middle">빠른등록/편집</button>
 
                   <div class="check-wrap right middle">
-                    <input id="check-3" class="check-box" type="checkbox">
-                    <label for="check-3" class="check-label">나의매물 자동추가</label>
+                    <input id="check-2" class="check-box" type="checkbox">
+                    <label for="check-2" class="check-label">나의매물 추가</label>
                   </div>
 
                   <p class="form-msg-normal">매물등록 이후에는 매물종류 <span class="em-blue">수정이 불가능</span> 하오니, 정확히 확인해 주세요.</p>
@@ -251,18 +107,18 @@
                 </th>
                 <td>
                   <div class="radio-wrap left-float left group">
-                    <input id="radio1-1" class="radio" name="type" type="radio">
-                    <label for="radio1-1" class="radio-label">일반</label>
+                    <input id="radio4-1" class="radio" name="type" type="radio">
+                    <label for="radio4-1" class="radio-label">일반</label>
                   </div>
 
                   <div class="radio-wrap left-float left group">
-                    <input id="radio1-2" class="radio" name="type" type="radio">
-                    <label for="radio1-2" class="radio-label">분양권(일반)</label>
+                    <input id="radio4-2" class="radio" name="type" type="radio">
+                    <label for="radio4-2" class="radio-label">분양권(일반)</label>
                   </div>
 
                   <div class="radio-wrap left-float">
-                    <input id="radio1-3" class="radio" name="type" type="radio">
-                    <label for="radio1-3" class="radio-label">분양권(조합)</label>
+                    <input id="radio4-3" class="radio" name="type" type="radio">
+                    <label for="radio4-3" class="radio-label">분양권(조합)</label>
                   </div>
                 </td>
               </tr>
@@ -272,38 +128,38 @@
                 </th>
                 <td>
                   <div class="radio-wrap left-float left group">
-                    <input id="radio2-1" class="radio" name="type" type="radio">
-                    <label for="radio2-1" class="radio-label">해당사항 없음</label>
+                    <input id="radio5-1" class="radio" name="type" type="radio">
+                    <label for="radio5-1" class="radio-label">해당사항 없음</label>
                   </div>
 
                   <div class="radio-wrap left-float left group">
-                    <input id="radio2-2" class="radio" name="type" type="radio">
-                    <label for="radio2-2" class="radio-label">택지개발사업</label>
+                    <input id="radio5-2" class="radio" name="type" type="radio">
+                    <label for="radio5-2" class="radio-label">택지개발사업</label>
                   </div>
 
                   <div class="radio-wrap left-float left group">
-                    <input id="radio2-3" class="radio" name="type" type="radio">
-                    <label for="radio2-3" class="radio-label">신도시/혁신도시</label>
+                    <input id="radio5-3" class="radio" name="type" type="radio">
+                    <label for="radio5-3" class="radio-label">신도시/혁신도시</label>
                   </div>
 
                   <div class="radio-wrap left-float left group">
-                    <input id="radio2-4" class="radio" name="type" type="radio">
-                    <label for="radio2-4" class="radio-label">뉴타운</label>
+                    <input id="radio5-4" class="radio" name="type" type="radio">
+                    <label for="radio5-4" class="radio-label">뉴타운</label>
                   </div>
 
                   <div class="radio-wrap left-float left group">
-                    <input id="radio2-5" class="radio" name="type" type="radio">
-                    <label for="radio2-5" class="radio-label">재개발</label>
+                    <input id="radio5-5" class="radio" name="type" type="radio">
+                    <label for="radio5-5" class="radio-label">재개발</label>
                   </div>
 
                   <div class="radio-wrap left-float left group">
-                    <input id="radio2-6" class="radio" name="type" type="radio">
-                    <label for="radio2-6" class="radio-label">재건축</label>
+                    <input id="radio5-6" class="radio" name="type" type="radio">
+                    <label for="radio5-6" class="radio-label">재건축</label>
                   </div>
 
                   <div class="radio-wrap left-float">
-                    <input id="radio2-7" class="radio" name="type" type="radio">
-                    <label for="radio2-7" class="radio-label">보금자리주택</label>
+                    <input id="radio5-7" class="radio" name="type" type="radio">
+                    <label for="radio5-7" class="radio-label">보금자리주택</label>
                   </div>
 
                 </td>
@@ -314,13 +170,13 @@
                 </th>
                 <td>
                   <div class="radio-wrap left-float left group">
-                    <input id="radio3-1" class="radio" name="type" type="radio">
-                    <label for="radio3-1" class="radio-label">공개</label>
+                    <input id="radio6-1" class="radio" name="type" type="radio">
+                    <label for="radio6-1" class="radio-label">공개</label>
                   </div>
 
                   <div class="radio-wrap left-float">
-                    <input id="radio3-2" class="radio" name="type" type="radio">
-                    <label for="radio3-2" class="radio-label">비공개</label>
+                    <input id="radio6-2" class="radio" name="type" type="radio">
+                    <label for="radio6-2" class="radio-label">비공개</label>
                   </div>
                 </td>
               </tr>
@@ -331,21 +187,19 @@
 
       </section>
 
-      <section class="contents-part js-option-toggle">
+      <section class="contents-part">
 
         <div class="part-top no-bottom">
-          <h3 class="part-title">매물정보</h3>
+          <h3 class="part-title">위치정보</h3>
         </div>
 
         <div class="part-mid border-bottom">
 
           <table class="hr-table">
 
-            <caption class="hide">매물정보 입력</caption>
+            <caption class="hide">위치정보</caption>
 
             <colgroup>
-              <col style="width:185px;" />
-              <col style="width:315px;" />
               <col style="width:185px;" />
               <col style="width:auto;" />
             </colgroup>
@@ -355,7 +209,8 @@
                 <th scope="row">
                   소재지 <span class="em-blue">*</span>
                 </th>
-                <td colspan="3">
+                <td class="td-padding">
+
                   <div class="select-wrapper half-width left-float left">
                     <div class="select">
                       <p class="label">서울시</p>
@@ -386,14 +241,14 @@
                       <li>청담동</li>
                     </ul>
                   </div>
-                  <button type="button" class="btn-form left-float">단지찾기</button>
+                  <button type="button" class="btn-form left-float">주택찾기</button>
                 </td>
               </tr>
               <tr>
                 <th scope="row">
                   단지명 <span class="em-blue">*</span>
                 </th>
-                <td colspan="3">
+                <td>
                   <div class="select-wrapper plus-half-width left-float left">
                     <div class="select">
                       <p class="label">청담자이아파트</p>
@@ -404,54 +259,614 @@
                       <li>청담자이아파트</li>
                     </ul>
                   </div>
-                  <button type="button" class="btn-form left-float left">단지등록 요청</button>
-                  <button type="button" class="btn-form left-float">단지수정 요청</button>
+                  <button type="button" class="btn-form left-float left">주택등록 요청</button>
+                  <button type="button" class="btn-form left-float">주택수정 요청</button>
                 </td>
               </tr>
               <tr>
                 <th scope="row">
-                  면적 <span class="em-blue">*</span>
+                  상세주소 <span class="em-blue">*</span>
                 </th>
-                <td colspan="3" class="td-padding">
-                  <div class="form-msg left-float left group">공급면적</div>
-                  <div class="select-wrapper half-width left-float left">
-                    <div class="select">
-                      <p class="label">70B</p>
-                      <b class="button">▾</b>
+                <td class="td-padding">
+                  <div class="td-multi-line">
+                    <div class="radio-wrap middle left group">
+                      <input id="addr2-1" class="radio" name="type" type="radio">
+                      <label for="addr2-1" class="radio-label">일반</label>
                     </div>
-                    <ul class="select-items">
-                      <li class="selected">70B</li>
-                      <li>70B</li>
-                    </ul>
-                  </div>
-                  <div class="form-msg left-float left group">㎡ / 전용면적 <span class="em-blue">49.59㎡</span> / 전용률 <span class="em-blue">70%</span></div>
 
-                  <p class="form-msg-normal">매물등록 이후에는 매물종류 <span class="em-blue">수정이 불가</span>능 하오니, 정확히 확인해 주세요.</p>
+                    <div class="radio-wrap middle left group">
+                      <input id="addr2-2" class="radio" name="type" type="radio">
+                      <label for="addr2-2" class="radio-label">산</label>
+                    </div>
+
+                    <input class="input half-width middle left" title="번지" type="text">
+                    <div class="form-msg middle left">-</div>
+                    <input class="input half-width middle left" title="번지" type="text">
+                    <div class="form-msg middle left group">번지</div>
+
+                    <div class="label-toggle-wrap middle quarter-width">
+                      <label for="input-title2" class="label-toggle-text">동,층,호수를 입력해주세요</label>
+                      <input id="input-title2" class="input full-width js-label-toggle" title="호수 입력" type="text">
+                    </div>
+                  </div>
+                  <div class="td-multi-line">
+                    <div class="check-wrap middle left group">
+                      <input id="addr3-1" class="check-box" type="checkbox">
+                      <label for="addr3-1" class="check-label">상세주소 없음</label>
+                    </div>
+                    <div class="check-wrap middle left group">
+                      <input id="addr3-2" class="check-box" type="checkbox">
+                      <label for="addr3-2" class="check-label">가(임시주소)</label>
+                    </div>
+                    <div class="check-wrap middle left group">
+                      <input id="addr3-3" class="check-box" type="checkbox">
+                      <label for="addr3-3" class="check-label">상세주소 숨김</label>
+                    </div>
+
+                    <button type="button" class="btn-form middle">위치확인</button>
+
+                    <p class="form-msg-normal"><span class="em-blue">상세주소가 없는 경우 ‘상세주소없음’을 체크해 주세요.<br />
+                    한 번지 내 여러 호수가 개별로 등기되어 있는 경우 ‘해당호수’까지 입력해 주세요.<br />
+                    도시형생활주택, 연립, 빌라, 다세대 일 경우 ‘동/호수’ 입력해주세요.</span></p>
+                  </div>
                 </td>
               </tr>
               <tr>
                 <th scope="row">
-                  주소 <span class="em-blue">*</span>
+                  지도위치 <span class="em-blue">*</span>
                 </th>
-                <td colspan="3" class="td-padding">
-                  <div class="select-wrapper half-width left-float left">
+                <td class="td-padding">
+                  <div class="map-frame">
+                    <img src="../../images/temp/write_map.jpg" alt="" />
+                  </div>
+                  <p class="form-msg-normal"><span class="em-blue">※ 아이콘을 움직여 매물의 정확한 위치(동)를 지정해주세요.</span></p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </section>
+
+      <section class="contents-part js-option-toggle">
+
+        <div class="part-top no-bottom">
+          <h3 class="part-title">가격정보 (매매인경우, 타입:도시형생활주택)</h3>
+        </div>
+
+        <div class="part-mid border-bottom">
+
+          <table class="hr-table">
+
+            <caption class="hide">가격정보 입력</caption>
+
+            <colgroup>
+              <col style="width:185px;" />
+              <col style="width:auto;" />
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row">
+                  거래종류 <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <div class="radio-wrap middle left group">
+                    <input id="price2-1" class="radio" name="type" type="radio">
+                    <label for="price2-1" class="radio-label">매매</label>
+                  </div>
+
+                  <div class="radio-wrap middle left group">
+                    <input id="price2-2" class="radio" name="type" type="radio">
+                    <label for="price2-2" class="radio-label">전세</label>
+                  </div>
+
+                  <div class="radio-wrap middle left group">
+                    <input id="price2-3" class="radio" name="type" type="radio">
+                    <label for="price2-3" class="radio-label">월세</label>
+                  </div>
+
+                  <div class="radio-wrap middle left group">
+                    <input id="price2-4" class="radio" name="type" type="radio">
+                    <label for="price2-4" class="radio-label">단기임대</label>
+                  </div>
+                  <p class="form-msg middle">*등기부등본상 권리상태가 경매로 표기된 매물은 등록하실 수 없습니다.</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  매매가 <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <input class="input half-width middle left" title="전세가" type="text">
+                  <div class="form-msg middle left">만원</div>
+                  <p class="form-msg middle left group">[금액:<span class="em-blue">일십억</span>원]   (최근시세: <span class="em-red">상한가 -만원</span>/<span class="em-blue">하한가 -만원</span>)</p>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  가격조절(협의가)
+                </th>
+                <td>
+                  <div class="check-wrap left-float">
+                    <input id="price-check10-1" class="check-box" type="checkbox">
+                    <label for="price-check10-1" class="check-label">금액협의 가능</label>
+                  </div>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  관리비<a href="#" class="em-blue house-manage-link">공동주택관리정보시스템</a>
+                </th>
+                <td>
+                  <div class="select-wrapper double left-float left">
                     <div class="select">
-                      <p class="label">105</p>
+                      <p class="label">직접입력</p>
                       <b class="button">▾</b>
                     </div>
                     <ul class="select-items">
-                      <li class="selected">105</li>
-                      <li>105</li>
+                      <li class="selected">직접입력</li>
+                      <li>20만원~25만원</li>
                     </ul>
                   </div>
-                  <div class="form-msg left-float left group">동</div>
+                  <input class="input half-width middle left" title="직접입력" type="text">
+                  <div class="form-msg middle left">만원</div>
+                  <p class="form-msg middle left group">[금액:<span class="em-blue">오만</span>원]</p>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  관리비포함항목
+                </th>
+                <td>
+                  <div class="check-wrap middle left group">
+                    <input id="manage5-1" class="check-box" type="checkbox">
+                    <label for="manage5-1" class="check-label">전기</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage5-2" class="check-box" type="checkbox">
+                    <label for="manage5-2" class="check-label">가스</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage5-3" class="check-box" type="checkbox">
+                    <label for="manage5-3" class="check-label">수도</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage5-4" class="check-box" type="checkbox">
+                    <label for="manage5-4" class="check-label">인터넷</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage5-5" class="check-box" type="checkbox">
+                    <label for="manage5-5" class="check-label">TV</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage5-6" class="check-box" type="checkbox">
+                    <label for="manage5-6" class="check-label">청소비</label>
+                  </div>
+                  <div class="check-wrap middle left">
+                    <input id="manage5-7" class="check-box" type="checkbox">
+                    <label for="manage5-7" class="check-label">기타</label>
+                  </div>
+                  <input class="input half-width middle" title="직접입력" type="text">
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  융자금
+                </th>
+                <td>
+                  <div class="select-wrapper double left-float left">
+                    <div class="select">
+                      <p class="label">직접입력</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">직접입력</li>
+                      <li>20만원~25만원</li>
+                    </ul>
+                  </div>
+                  <input class="input half-width middle left" title="직접입력" type="text">
+                  <div class="form-msg middle left">만원</div>
+                  <p class="form-msg middle left group">[금액:<span class="em-blue">일십억</span>원] (<span class="em-red">시세대비: 10% 미만</span>)</p>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  기존 임대차 내용
+                </th>
+                <td>
+                  <div class="form-msg middle">현 보증금</div>
+                  <input class="input half-width middle left" title="보증금" type="text">
+                  <div class="form-msg middle left">만원 / 현 월세</div>
+                  <input class="input half-width middle left" title="월세" type="text">
+                  <div class="form-msg middle left">만원</div>
+                  <p class="form-msg middle left group">[금액:<span class="em-blue">이억오천만</span>원 / <span class="em-blue">일백만</span>원]</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-                  <input class="input half-width left-float left" title="호수 입력" type="text">
-                  <div class="form-msg left-float left group">호</div>
+        </div>
 
-                  <button type="button" class="btn-form left-float">동정보 수정요청</button>
+        <div class="table-more">
+          <button class="btn-small right-float btn-table-more js-toggle-btn">더보기</button>
+        </div>
 
-                  <p class="form-msg-normal"><span class="em-blue">호수 정보는 화면에 노출되지 않습니다.(정보확인용)<br />등기부등본에 나와 있는 동/ 호수를 정확히 입력해 주세요.</span></p>
+      </section>
+
+      <section class="contents-part js-option-toggle">
+
+        <div class="part-top no-bottom">
+          <h3 class="part-title">가격정보 (전세인경우, 타입:도시형생활주택)</h3>
+        </div>
+
+        <div class="part-mid border-bottom">
+
+          <table class="hr-table">
+
+            <caption class="hide">가격정보 입력</caption>
+
+            <colgroup>
+              <col style="width:185px;" />
+              <col style="width:auto;" />
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row">
+                  거래종류 <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <div class="radio-wrap middle left group">
+                    <input id="price5-1" class="radio" name="type" type="radio">
+                    <label for="price5-1" class="radio-label">매매</label>
+                  </div>
+
+                  <div class="radio-wrap middle left group">
+                    <input id="price5-2" class="radio" name="type" type="radio">
+                    <label for="price5-2" class="radio-label">전세</label>
+                  </div>
+
+                  <div class="radio-wrap middle left group">
+                    <input id="price5-3" class="radio" name="type" type="radio">
+                    <label for="price5-3" class="radio-label">월세</label>
+                  </div>
+
+                  <div class="radio-wrap middle left group">
+                    <input id="price5-4" class="radio" name="type" type="radio">
+                    <label for="price5-4" class="radio-label">단기임대</label>
+                  </div>
+                  <p class="form-msg middle">*등기부등본상 권리상태가 경매로 표기된 매물은 등록하실 수 없습니다.</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  전세가 <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <input class="input half-width middle left" title="전세가" type="text">
+                  <div class="form-msg middle left
+                  ">만원</div>
+                  <p class="form-msg middle left group">[금액:<span class="em-blue">일십억</span>원]   (최근시세: <span class="em-red">상한가 -만원</span>/<span class="em-blue">하한가 -만원</span>)</p>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  가격조절(협의가)
+                </th>
+                <td>
+                  <div class="check-wrap left-float">
+                    <input id="price-check14-1" class="check-box" type="checkbox">
+                    <label for="price-check14-1" class="check-label">금액협의 가능</label>
+                  </div>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  관리비
+                </th>
+                <td>
+                  <div class="select-wrapper double left-float left">
+                    <div class="select">
+                      <p class="label">20만원~25만원</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">20만원~25만원</li>
+                      <li>20만원~25만원</li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  관리비포함항목
+                </th>
+                <td>
+                  <div class="check-wrap middle left group">
+                    <input id="manage3-1" class="check-box" type="checkbox">
+                    <label for="manage3-1" class="check-label">전기</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage3-2" class="check-box" type="checkbox">
+                    <label for="manage3-2" class="check-label">가스</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage3-3" class="check-box" type="checkbox">
+                    <label for="manage3-3" class="check-label">수도</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage3-4" class="check-box" type="checkbox">
+                    <label for="manage3-4" class="check-label">인터넷</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage3-5" class="check-box" type="checkbox">
+                    <label for="manage3-5" class="check-label">TV</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage3-6" class="check-box" type="checkbox">
+                    <label for="manage3-6" class="check-label">청소비</label>
+                  </div>
+                  <div class="check-wrap middle left">
+                    <input id="manage3-7" class="check-box" type="checkbox">
+                    <label for="manage3-7" class="check-label">기타</label>
+                  </div>
+                  <input class="input half-width middle" title="직접입력" type="text">
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  융자금
+                </th>
+                <td>
+                  <div class="select-wrapper double left-float left">
+                    <div class="select">
+                      <p class="label">20만원~25만원</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">20만원~25만원</li>
+                      <li>20만원~25만원</li>
+                    </ul>
+                  </div>
+                  <div class="form-msg">[<span class="em-blue">이억</span>원 이상]</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="table-more">
+          <button class="btn-small right-float btn-table-more js-toggle-btn">더보기</button>
+        </div>
+
+      </section>
+
+      <section class="contents-part js-option-toggle">
+
+        <div class="part-top no-bottom">
+          <h3 class="part-title">가격정보 (월세, 단기임대인경우, 타입:도시형생활주택)</h3>
+        </div>
+
+        <div class="part-mid border-bottom">
+
+          <table class="hr-table">
+
+            <caption class="hide">가격정보 입력</caption>
+
+            <colgroup>
+              <col style="width:185px;" />
+              <col style="width:auto;" />
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row">
+                  거래종류 <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <div class="radio-wrap middle left group">
+                    <input id="price7-1" class="radio" name="type" type="radio">
+                    <label for="price7-1" class="radio-label">매매</label>
+                  </div>
+
+                  <div class="radio-wrap middle left group">
+                    <input id="price7-2" class="radio" name="type" type="radio">
+                    <label for="price7-2" class="radio-label">전세</label>
+                  </div>
+
+                  <div class="radio-wrap middle left group">
+                    <input id="price7-3" class="radio" name="type" type="radio">
+                    <label for="price7-3" class="radio-label">월세</label>
+                  </div>
+
+                  <div class="radio-wrap middle left group">
+                    <input id="price7-4" class="radio" name="type" type="radio">
+                    <label for="price7-4" class="radio-label">단기임대</label>
+                  </div>
+                  <p class="form-msg middle">*등기부등본상 권리상태가 경매로 표기된 매물은 등록하실 수 없습니다.</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  월세 <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <div class="form-msg middle">보증금</div>
+                  <input class="input half-width middle left" title="보증금" type="text">
+                  <div class="form-msg middle left">만원 / 월세</div>
+                  <input class="input half-width middle left" title="월세" type="text">
+                  <div class="form-msg middle left">만원</div>
+                  <p class="form-msg middle left group">[금액:<span class="em-blue">이억오천만</span>원 / <span class="em-blue">일백만</span>원]</p>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  가격조절(협의가)
+                </th>
+                <td>
+                  <div class="check-wrap middle left group">
+                    <input id="price-check16-1" class="check-box" type="checkbox">
+                    <label for="price-check16-1" class="check-label">보증금 및 금액협의 가능</label>
+                  </div>
+                  <div class="label-toggle-wrap middle half-width">
+                    <label for="input-price2" class="label-toggle-text">협의가능 금액을 입력하세요. ex) 30,000/50, 35,000/20</label>
+                    <input id="input-price2" class="input full-width js-label-toggle" title="금액 입력" type="text">
+                  </div>
+                  <div class="form-msg middle left"><span class="em-blue">* 최대 5개 값 입력가능</span></div>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  관리비
+                </th>
+                <td>
+                  <div class="select-wrapper double left-float left">
+                    <div class="select">
+                      <p class="label">20만원~25만원</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">20만원~25만원</li>
+                      <li>20만원~25만원</li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  관리비포함항목
+                </th>
+                <td>
+                  <div class="check-wrap middle left group">
+                    <input id="manage4-1" class="check-box" type="checkbox">
+                    <label for="manage4-1" class="check-label">전기</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage4-2" class="check-box" type="checkbox">
+                    <label for="manage4-2" class="check-label">가스</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage4-3" class="check-box" type="checkbox">
+                    <label for="manage4-3" class="check-label">수도</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage4-4" class="check-box" type="checkbox">
+                    <label for="manage4-4" class="check-label">인터넷</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage4-5" class="check-box" type="checkbox">
+                    <label for="manage4-5" class="check-label">TV</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage4-6" class="check-box" type="checkbox">
+                    <label for="manage4-6" class="check-label">청소비</label>
+                  </div>
+                  <div class="check-wrap middle left">
+                    <input id="manage4-7" class="check-box" type="checkbox">
+                    <label for="manage4-7" class="check-label">기타</label>
+                  </div>
+                  <input class="input half-width middle" title="직접입력" type="text">
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  융자금
+                </th>
+                <td>
+                  <div class="select-wrapper double left-float left">
+                    <div class="select">
+                      <p class="label">직접입력</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">직접입력</li>
+                      <li>20만원~25만원</li>
+                    </ul>
+                  </div>
+                  <input class="input half-width middle left" title="직접입력" type="text">
+                  <div class="form-msg middle left">만원</div>
+                  <p class="form-msg middle left group">[금액:<span class="em-blue">일십억</span>원] (<span class="em-red">시세대비: 10% 미만</span>)</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="table-more">
+          <button class="btn-small right-float btn-table-more js-toggle-btn">더보기</button>
+        </div>
+
+      </section>
+
+      <section class="contents-part js-option-toggle">
+
+        <div class="part-top no-bottom">
+          <h3 class="part-title">매물정보 (타입:도시형생활주택)</h3>
+        </div>
+
+        <div class="part-mid border-bottom">
+
+          <ul class="list-description">
+            <li class="list-item"><span class="em-blue">면적 등록 시 등기부등본 또는 건축물대장상 면적확인</span>이 가능한 매물은 면적 확인 후 등록해주세요.</li>
+            <li class="list-item"><span class="em-blue">등록한 면적이 다른 경우 허위매물로 신고 받으실 수 있습니다.</span></li>
+          </ul>
+
+          <table class="hr-table">
+
+            <caption class="hide">매물정보 입력</caption>
+
+            <colgroup>
+              <col style="width:185px;" />
+              <col style="width:315px;" />
+              <col style="width:185px;" />
+              <col style="width:auto;" />
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row">
+                  공급면적 <span class="em-blue">*</span>
+                </th>
+                <td colspan="3">
+                  <input class="input half-width left-float left" title="평방미터" type="text">
+                  <div class="form-msg left-float left">㎡</div>
+                  <div class="form-msg left-float left">=</div>
+                  <input class="input half-width left-float left" title="평" type="text">
+                  <div class="form-msg left-float left group">P</div>
+
+                  <p class="form-msg middle">정보를 입력하시면 상호 자동 계산됩니다.</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  전용면적 <span class="em-blue">*</span>
+                </th>
+                <td colspan="3">
+                  <input class="input half-width left-float left" title="평방미터" type="text">
+                  <div class="form-msg left-float left">㎡</div>
+                  <div class="form-msg left-float left">=</div>
+                  <input class="input half-width left-float left" title="평" type="text">
+                  <div class="form-msg left-float left group">P</div>
+
+                  <p class="form-msg middle">정보를 입력하시면 상호 자동 계산됩니다.</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  대지지분
+                </th>
+                <td colspan="3">
+                  <input class="input half-width left-float left" title="평방미터" type="text">
+                  <div class="form-msg left-float left">㎡</div>
+                  <div class="form-msg left-float left">=</div>
+                  <input class="input half-width left-float left" title="평" type="text">
+                  <div class="form-msg left-float left group">P</div>
+
+                  <p class="form-msg middle">정보를 입력하시면 상호 자동 계산됩니다.</p>
                 </td>
               </tr>
               <tr>
@@ -459,35 +874,27 @@
                   층 <span class="em-blue">*</span>
                 </th>
                 <td colspan="3">
-                  <div class="select-wrapper half-width left middle">
+                  <div class="select-wrapper half-width left-float left">
                     <div class="select">
-                      <p class="label">35</p>
+                      <p class="label">해당층</p>
                       <b class="button">▾</b>
                     </div>
                     <ul class="select-items">
-                      <li class="selected">35</li>
-                      <li>35</li>
+                      <li class="selected">해당층</li>
+                      <li>해당층</li>
                     </ul>
                   </div>
-                  <div class="form-msg middle left group">층 [<span class="em-blue">고/총 35층</span>]</div>
-
-                  <div class="radio-wrap left group middle">
-                    <input id="radio7-1" class="radio" name="type" type="radio">
-                    <label for="radio7-1" class="radio-label">직접노출</label>
+                  <div class="form-msg left-float left">/</div>
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">총층</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">총층</li>
+                      <li>총층</li>
+                    </ul>
                   </div>
-
-                  <div class="radio-wrap left group middle">
-                    <input id="radio7-2" class="radio" name="type" type="radio">
-                    <label for="radio7-2" class="radio-label">고/중/저</label>
-                  </div>
-
-                  <div class="radio-wrap middle left group">
-                    <input id="radio7-3" class="radio" name="type" type="radio">
-                    <label for="radio7-3" class="radio-label">미노출</label>
-                  </div>
-
-                  <button type="button" class="btn-form middle">층정보 수정요청</button>
-
                 </td>
               </tr>
               <tr>
@@ -544,13 +951,13 @@
                 </th>
                 <td>
                   <div class="radio-wrap left-float left group">
-                    <input id="radio8-1" class="radio" name="type" type="radio">
-                    <label for="radio8-1" class="radio-label">단층</label>
+                    <input id="radio11-1" class="radio" name="type" type="radio">
+                    <label for="radio11-1" class="radio-label">단층</label>
                   </div>
 
                   <div class="radio-wrap left-float">
-                    <input id="radio8-2" class="radio" name="type" type="radio">
-                    <label for="radio8-2" class="radio-label">복층</label>
+                    <input id="radio11-2" class="radio" name="type" type="radio">
+                    <label for="radio11-2" class="radio-label">복층</label>
                   </div>
 
                 </td>
@@ -560,30 +967,30 @@
                 <td class="td-padding">
                   <div class="td-multi-line">
                     <div class="radio-wrap left-float left group">
-                      <input id="radio9-1" class="radio" name="type" type="radio">
-                      <label for="radio9-1" class="radio-label">유</label>
+                      <input id="radio12-1" class="radio" name="type" type="radio">
+                      <label for="radio12-1" class="radio-label">유</label>
                     </div>
 
                     <div class="radio-wrap left-float">
-                      <input id="radio9-2" class="radio" name="type" type="radio">
-                      <label for="radio9-2" class="radio-label">무</label>
+                      <input id="radio12-2" class="radio" name="type" type="radio">
+                      <label for="radio12-2" class="radio-label">무</label>
                     </div>
                   </div>
 
                   <div class="td-multi-line">
                     <div class="radio-wrap left-float left group">
-                      <input id="radio10-1" class="radio" name="type" type="radio">
-                      <label for="radio10-1" class="radio-label">해당사항 없음</label>
+                      <input id="radio13-1" class="radio" name="type" type="radio">
+                      <label for="radio13-1" class="radio-label">해당사항 없음</label>
                     </div>
 
                     <div class="radio-wrap left-float left group">
-                      <input id="radio10-2" class="radio" name="type" type="radio">
-                      <label for="radio10-2" class="radio-label">확장</label>
+                      <input id="radio13-2" class="radio" name="type" type="radio">
+                      <label for="radio13-2" class="radio-label">확장</label>
                     </div>
 
                     <div class="radio-wrap left-float">
-                      <input id="radio10-3" class="radio" name="type" type="radio">
-                      <label for="radio10-3" class="radio-label">비확장</label>
+                      <input id="radio13-3" class="radio" name="type" type="radio">
+                      <label for="radio13-3" class="radio-label">비확장</label>
                     </div>
                   </div>
                 </td>
@@ -618,16 +1025,18 @@
       <section class="contents-part js-option-toggle">
 
         <div class="part-top no-bottom">
-          <h3 class="part-title">가격정보 (매매인경우)</h3>
+          <h3 class="part-title">건물정보</h3>
         </div>
 
         <div class="part-mid border-bottom">
 
           <table class="hr-table">
 
-            <caption class="hide">가격정보 입력</caption>
+            <caption class="hide">건물정보 입력</caption>
 
             <colgroup>
+              <col style="width:185px;" />
+              <col style="width:315px;" />
               <col style="width:185px;" />
               <col style="width:auto;" />
             </colgroup>
@@ -635,342 +1044,104 @@
             <tbody>
               <tr>
                 <th scope="row">
-                  거래종류 <span class="em-blue">*</span>
+                  건물명
                 </th>
-                <td>
-                  <div class="radio-wrap middle left group">
-                    <input id="price1-1" class="radio" name="type" type="radio">
-                    <label for="price1-1" class="radio-label">매매</label>
-                  </div>
-
-                  <div class="radio-wrap middle left group">
-                    <input id="price1-2" class="radio" name="type" type="radio">
-                    <label for="price1-2" class="radio-label">전세</label>
-                  </div>
-
-                  <div class="radio-wrap middle left group">
-                    <input id="price1-3" class="radio" name="type" type="radio">
-                    <label for="price1-3" class="radio-label">월세</label>
-                  </div>
-
-                  <div class="radio-wrap middle left group">
-                    <input id="price1-4" class="radio" name="type" type="radio">
-                    <label for="price1-4" class="radio-label">단기임대</label>
-                  </div>
-                  <p class="form-msg middle">*등기부등본상 권리상태가 경매로 표기된 매물은 등록하실 수 없습니다.</p>
+                <td colspan="3">
+                  <input class="input full-width left-float left" title="건물 이름" type="text">
                 </td>
               </tr>
               <tr>
                 <th scope="row">
-                  매매가 <span class="em-blue">*</span>
+                  규모
                 </th>
-                <td>
-                  <input class="input half-width middle left" title="전세가" type="text">
-                  <div class="form-msg middle left">만원</div>
-                  <p class="form-msg middle left group">[금액:<span class="em-blue">일십억</span>원]   (최근시세: <span class="em-red">상한가 -만원</span>/<span class="em-blue">하한가 -만원</span>)</p>
-                </td>
-              </tr>
-              <tr class="option-row js-toggle-item">
-                <th scope="row">
-                  가격조절(협의가)
-                </th>
-                <td>
-                  <div class="check-wrap left-float">
-                    <input id="price-check9-1" class="check-box" type="checkbox">
-                    <label for="price-check9-1" class="check-label">금액협의 가능</label>
-                  </div>
-                </td>
-              </tr>
-              <tr class="option-row js-toggle-item">
-                <th scope="row">
-                  관리비<a href="#" class="em-blue house-manage-link">공동주택관리정보시스템</a>
-                </th>
-                <td>
-                  <div class="select-wrapper double left-float left">
+                <td colspan="3">
+                  <div class="form-msg left-float left">지하</div>
+                  <div class="select-wrapper half-width left-float left">
                     <div class="select">
-                      <p class="label">직접입력</p>
+                      <p class="label">3층</p>
                       <b class="button">▾</b>
                     </div>
                     <ul class="select-items">
-                      <li class="selected">직접입력</li>
-                      <li>20만원~25만원</li>
+                      <li class="selected">3층</li>
+                      <li>3층</li>
                     </ul>
                   </div>
-                  <input class="input half-width middle left" title="직접입력" type="text">
-                  <div class="form-msg middle left">만원</div>
-                  <p class="form-msg middle left group">[금액:<span class="em-blue">오만</span>원]</p>
-                </td>
-              </tr>
-              <tr class="option-row js-toggle-item">
-                <th scope="row">
-                  융자금
-                </th>
-                <td>
-                  <div class="select-wrapper double left-float left">
+                  <div class="form-msg left-float left">/</div>
+                  <div class="form-msg left-float left">지상</div>
+                  <div class="select-wrapper half-width left-float left">
                     <div class="select">
-                      <p class="label">직접입력</p>
+                      <p class="label">20층</p>
                       <b class="button">▾</b>
                     </div>
                     <ul class="select-items">
-                      <li class="selected">직접입력</li>
-                      <li>20만원~25만원</li>
-                    </ul>
-                  </div>
-                  <input class="input half-width middle left" title="직접입력" type="text">
-                  <div class="form-msg middle left">만원</div>
-                  <p class="form-msg middle left group">[금액:<span class="em-blue">일십억</span>원] (<span class="em-red">시세대비: 10% 미만</span>)</p>
-                </td>
-              </tr>
-              <tr class="option-row js-toggle-item">
-                <th scope="row">
-                  기존 임대차 내용
-                </th>
-                <td>
-                  <div class="form-msg middle">현 보증금</div>
-                  <input class="input half-width middle left" title="보증금" type="text">
-                  <div class="form-msg middle left">만원 / 현 월세</div>
-                  <input class="input half-width middle left" title="월세" type="text">
-                  <div class="form-msg middle left">만원</div>
-                  <p class="form-msg middle left group">[금액:<span class="em-blue">이억오천만</span>원 / <span class="em-blue">일백만</span>원]</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-        </div>
-
-        <div class="table-more">
-          <button class="btn-small right-float btn-table-more js-toggle-btn">더보기</button>
-        </div>
-
-      </section>
-
-      <section class="contents-part js-option-toggle">
-
-        <div class="part-top no-bottom">
-          <h3 class="part-title">가격정보 (전세인경우)</h3>
-        </div>
-
-        <div class="part-mid border-bottom">
-
-          <table class="hr-table">
-
-            <caption class="hide">가격정보 입력</caption>
-
-            <colgroup>
-              <col style="width:185px;" />
-              <col style="width:auto;" />
-            </colgroup>
-
-            <tbody>
-              <tr>
-                <th scope="row">
-                  거래종류 <span class="em-blue">*</span>
-                </th>
-                <td>
-                  <div class="radio-wrap middle left group">
-                    <input id="price3-1" class="radio" name="type" type="radio">
-                    <label for="price3-1" class="radio-label">매매</label>
-                  </div>
-
-                  <div class="radio-wrap middle left group">
-                    <input id="price3-2" class="radio" name="type" type="radio">
-                    <label for="price3-2" class="radio-label">전세</label>
-                  </div>
-
-                  <div class="radio-wrap middle left group">
-                    <input id="price3-3" class="radio" name="type" type="radio">
-                    <label for="price3-3" class="radio-label">월세</label>
-                  </div>
-
-                  <div class="radio-wrap middle left group">
-                    <input id="price3-4" class="radio" name="type" type="radio">
-                    <label for="price3-4" class="radio-label">단기임대</label>
-                  </div>
-                  <p class="form-msg middle">*등기부등본상 권리상태가 경매로 표기된 매물은 등록하실 수 없습니다.</p>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  전세가 <span class="em-blue">*</span>
-                </th>
-                <td>
-                  <input class="input half-width middle left" title="전세가" type="text">
-                  <div class="form-msg middle left
-                  ">만원</div>
-                  <p class="form-msg middle left group">[금액:<span class="em-blue">일십억</span>원]   (최근시세: <span class="em-red">상한가 -만원</span>/<span class="em-blue">하한가 -만원</span>)</p>
-                  <div class="check-wrap middle">
-                    <input id="price-check11-1" class="check-box" type="checkbox">
-                    <label for="price-check11-1" class="check-label">가격협의 가능</label>
-                  </div>
-                </td>
-              </tr>
-              <tr class="option-row js-toggle-item">
-                <th scope="row">
-                  가격조절(협의가)
-                </th>
-                <td>
-                  <div class="check-wrap left-float">
-                    <input id="price-check12-1" class="check-box" type="checkbox">
-                    <label for="price-check12-1" class="check-label">금액협의 가능</label>
-                  </div>
-                </td>
-              </tr>
-              <tr class="option-row js-toggle-item">
-                <th scope="row">
-                  관리비<a href="#" class="em-blue house-manage-link">공동주택관리정보시스템</a>
-                </th>
-                <td>
-                  <div class="select-wrapper double left-float left">
-                    <div class="select">
-                      <p class="label">20만원~25만원</p>
-                      <b class="button">▾</b>
-                    </div>
-                    <ul class="select-items">
-                      <li class="selected">20만원~25만원</li>
-                      <li>20만원~25만원</li>
+                      <li class="selected">20층</li>
+                      <li>20층</li>
                     </ul>
                   </div>
                 </td>
               </tr>
               <tr class="option-row js-toggle-item">
                 <th scope="row">
-                  융자금
+                  총동수
                 </th>
-                <td>
-                  <div class="select-wrapper double left-float left">
-                    <div class="select">
-                      <p class="label">20만원~25만원</p>
-                      <b class="button">▾</b>
-                    </div>
-                    <ul class="select-items">
-                      <li class="selected">20만원~25만원</li>
-                      <li>20만원~25만원</li>
-                    </ul>
-                  </div>
-                  <div class="form-msg">[<span class="em-blue">이억</span>원 이상]</div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-        </div>
-
-        <div class="table-more">
-          <button class="btn-small right-float btn-table-more js-toggle-btn">더보기</button>
-        </div>
-
-      </section>
-
-      <section class="contents-part js-option-toggle">
-
-        <div class="part-top no-bottom">
-          <h3 class="part-title">가격정보 (월세, 단기임대인경우)</h3>
-        </div>
-
-        <div class="part-mid border-bottom">
-
-          <table class="hr-table">
-
-            <caption class="hide">가격정보 입력</caption>
-
-            <colgroup>
-              <col style="width:185px;" />
-              <col style="width:auto;" />
-            </colgroup>
-
-            <tbody>
-              <tr>
-                <th scope="row">
-                  거래종류 <span class="em-blue">*</span>
-                </th>
-                <td>
-                  <div class="radio-wrap middle left group">
-                    <input id="price6-1" class="radio" name="type" type="radio">
-                    <label for="price6-1" class="radio-label">매매</label>
-                  </div>
-
-                  <div class="radio-wrap middle left group">
-                    <input id="price6-2" class="radio" name="type" type="radio">
-                    <label for="price6-2" class="radio-label">전세</label>
-                  </div>
-
-                  <div class="radio-wrap middle left group">
-                    <input id="price6-3" class="radio" name="type" type="radio">
-                    <label for="price6-3" class="radio-label">월세</label>
-                  </div>
-
-                  <div class="radio-wrap middle left group">
-                    <input id="price6-4" class="radio" name="type" type="radio">
-                    <label for="price6-4" class="radio-label">단기임대</label>
-                  </div>
-                  <p class="form-msg middle">*등기부등본상 권리상태가 경매로 표기된 매물은 등록하실 수 없습니다.</p>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  월세 <span class="em-blue">*</span>
-                </th>
-                <td>
-                  <div class="form-msg middle">보증금</div>
-                  <input class="input half-width middle left" title="보증금" type="text">
-                  <div class="form-msg middle left">만원 / 월세</div>
-                  <input class="input half-width middle left" title="월세" type="text">
-                  <div class="form-msg middle left">만원</div>
-                  <p class="form-msg middle left group">[금액:<span class="em-blue">이억오천만</span>원 / <span class="em-blue">일백만</span>원]</p>
+                <td colspan="3">
+                  <input class="input half-width left-float left" title="총동수" type="text">
+                  <div class="form-msg left-float left">개동</div>
                 </td>
               </tr>
               <tr class="option-row js-toggle-item">
                 <th scope="row">
-                  가격조절(협의가)
+                  총세대수
                 </th>
-                <td>
-                  <div class="check-wrap middle left group">
-                    <input id="price-check15-1" class="check-box" type="checkbox">
-                    <label for="price-check15-1" class="check-label">보증금 및 금액협의 가능</label>
-                  </div>
-                  <div class="label-toggle-wrap middle half-width">
-                    <label for="input-price" class="label-toggle-text">협의가능 금액을 입력하세요. ex) 30,000/50, 35,000/20</label>
-                    <input id="input-price" class="input full-width js-label-toggle" title="금액 입력" type="text">
-                  </div>
-                  <div class="form-msg middle left"><span class="em-blue">* 최대 5개 값 입력가능</span></div>
+                <td colspan="3">
+                  <input class="input half-width left-float left" title="총세대수" type="text">
+                  <div class="form-msg left-float left">세대</div>
                 </td>
               </tr>
               <tr class="option-row js-toggle-item">
                 <th scope="row">
-                  관리비<a href="#" class="em-blue house-manage-link">공동주택관리정보시스템</a>
+                  총주차대수
                 </th>
-                <td>
-                  <div class="select-wrapper double left-float left">
-                    <div class="select">
-                      <p class="label">20만원~25만원</p>
-                      <b class="button">▾</b>
-                    </div>
-                    <ul class="select-items">
-                      <li class="selected">20만원~25만원</li>
-                      <li>20만원~25만원</li>
-                    </ul>
-                  </div>
+                <td colspan="3">
+                  <input class="input half-width left-float left" title="총주차대수" type="text">
+                  <div class="form-msg left-float left">대</div>
                 </td>
               </tr>
               <tr class="option-row js-toggle-item">
                 <th scope="row">
-                  융자금
+                  준공년월
                 </th>
-                <td>
-                  <div class="select-wrapper double left-float left">
+                <td colspan="3">
+                  <div class="select-wrapper half-width left-float left">
                     <div class="select">
-                      <p class="label">직접입력</p>
+                      <p class="label">1999</p>
                       <b class="button">▾</b>
                     </div>
                     <ul class="select-items">
-                      <li class="selected">직접입력</li>
-                      <li>20만원~25만원</li>
+                      <li class="selected">1999</li>
+                      <li>1999</li>
                     </ul>
                   </div>
-                  <input class="input half-width middle left" title="직접입력" type="text">
-                  <div class="form-msg middle left">만원</div>
-                  <p class="form-msg middle left group">[금액:<span class="em-blue">일십억</span>원] (<span class="em-red">시세대비: 10% 미만</span>)</p>
+                  <div class="form-msg left-float left group">년</div>
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">01</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">01</li>
+                      <li>01</li>
+                    </ul>
+                  </div>
+                  <div class="form-msg left-float">월</div>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  건설사명
+                </th>
+                <td colspan="3">
+                  <input class="input full-width left-float left" title="건설사명" type="text">
                 </td>
               </tr>
             </tbody>
@@ -1877,43 +2048,4 @@
   </div>
 </section>
 
-
-<footer class="footer">
-  <div class="wrapper">
-
-    <div class="footer-logo">
-      <img src="../../images/logo_footer.png" alt="부동산챔프" />
-    </div>
-
-    <div class="footer-content">
-
-      <ul class="footer-menu">
-        <li class="menu-item first"><a href="#" class="menu-link">회사소개</a></li>
-        <li class="menu-item"><a href="#" class="menu-link">광고</a></li>
-        <li class="menu-item"><a href="#" class="menu-link">제휴 약관 및 개인정보</a></li>
-        <li class="menu-item last"><a href="#" class="menu-link">취급방침</a></li>
-      </ul>
-
-      <address class="footer-address">
-        <div class="item">서울시 강남구 영동대로 702(청담동) 화천회관빌딩 4층 대표 정수민</div>
-        <div class="item">TEL. 02-752-2836</div>
-        <div class="item">FAX. 02-752-2838</div>
-        <div class="item last">MAIL. sc@ytp.co.kr</div>
-      </address>
-
-      <div class="footer-license">
-        <div class="item">사업자 등록번호 : 104-86-10347</div>
-        <div class="item">통신판매업 신고번호 : 제 0000-0000-000호</div>
-      </div>
-
-      <div class="footer-copyright">
-        @ <span class="co-name">YP Partners</span> 2001-2015
-      </div>
-
-    </div>
-
-  </div>
-</footer>
-
-</body>
-</html>
+include "footer.html"

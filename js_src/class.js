@@ -25,3 +25,28 @@ var toggleLabel = function ($input) {
 		}
 	});
 };
+
+/* option toggle */
+var toggleOption = function (el) {
+	el.each(function () {
+		var self = $(this),
+			options = self.find('.js-toggle-item'),
+			btn = self.find('.js-toggle-btn');
+
+		btn.on('click', function(e) {
+			e.preventDefault();
+
+			if (btn.hasClass('on')) {
+				btn.removeClass('on');
+				btn.text('더보기');
+				options.hide();
+			} else {
+				btn.addClass('on');
+				btn.text('숨기기');
+				options.show();
+			}
+
+		});
+
+	});
+};

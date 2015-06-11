@@ -31,6 +31,10 @@
     width:490px;
   }
 
+  &.full-width {
+    width:100%;
+  }
+
   &.pwd{
     background:url(../images/msg_form_pwd.png) no-repeat 5px 11px;
 
@@ -85,6 +89,10 @@
 
     &.half-width{
       width:115px;
+    }
+
+    &.plus-half-width {
+      width:365px;
     }
 
     &.sort-wide {
@@ -206,9 +214,18 @@
 
 }
 
+.textarea {
+  box-sizing:border-box;
+  width:100%;
+  height:80px;
+  padding:5px;
+  color:$dark-gray;
+  border:1px solid $form-gray;
+}
+
 .btn{
   &-fill{
-    @include btn(195, 40, 16, $white, 40, 0, $dark-gray);
+    @include btn(195, 40, 16, $white, 38, 0, $dark-gray);
     @include inline-block();
 
     &.blue{
@@ -217,6 +234,15 @@
 
     &.left {
       margin-right:7px;
+    }
+
+    &.btn-inline {
+      margin-left:10px;
+      padding:0 10px;
+      width:auto;
+      height:auto;
+      font-size:inherit;
+      line-height:inherit;
     }
 
   }
@@ -454,6 +480,36 @@
 
   }
 
+  &-small {
+    height:26px;
+    padding:0 5px;
+    color:$white;
+    border:0;
+    background:$dark-gray;
+
+    &.blue {
+      background:$main-blue;
+    }
+  }
+
+  &-item-submit {
+    padding-left:52px;
+    text-align:left;
+    background:$main-blue url(../images/icon_save.png) no-repeat 30px 13px;
+  }
+
+  &-table-more {
+    width:90px;
+    padding-left:15px;
+    text-align:left;
+
+    background:$main-blue url(../images/bg_btn_toggle_white.png) no-repeat 60px -82px;
+
+    &.on {
+      background-position:60px 9px;
+    }
+  }
+
 }
 
 .check{
@@ -544,6 +600,7 @@
     &.center{
       display:inline-block;
     }
+
   }
 
   position:absolute;
@@ -563,6 +620,7 @@
     color:$dark-gray;
 
     &.blind{
+      padding-left:20px;
       width:0;
       text-indent:-99999em;
       overflow:hidden;
@@ -637,7 +695,7 @@
   &-msg {
     height:37px;
     line-height:37px;
-    color:$gray;
+    color:$dark-gray;
     font-weight:normal;
   }
 
@@ -660,6 +718,21 @@
       left:0;
 
       background:$main-blue;
+    }
+
+    &.middle {
+      display:inlne-block;
+    }
+  }
+
+  &-msg-normal {
+    clear:both;
+    padding-top:10px;
+    font-weight:normal;
+    color:$dark-gray;
+
+    &.middle {
+      display:inlne-block;
     }
   }
 
@@ -686,5 +759,17 @@
 
   &.left {
     margin-right:6px;
+
+    &.group {
+      margin-right:16px;
+    }
+  }
+
+  &.right {
+    margin-left:6px;
+
+    &.group {
+      margin-left:16px;
+    }
   }
 }

@@ -4,6 +4,7 @@
 .vt-table {
 	width:100%;
 	border-top:2px solid $dark;
+	table-layout:fixed;
 
 	caption{
 		display:none;
@@ -17,6 +18,7 @@
 		color:$dark;
 
 		line-height:1.3;
+		text-align:center;
 
 		border-bottom: 1px solid $dark;
 
@@ -62,6 +64,7 @@
 
 .hr-table{
 	width:100%;
+	table-layout:fixed;
 
 	border:{
 		top: 2px solid $dark;
@@ -74,11 +77,20 @@
 		padding-left:10px;
 		font-weight:bold;
 		color:$dark;
-		border-bottom: 1px solid $line-gray;
+		border-left:1px solid $line-gray;
+		border-bottom:1px solid $line-gray;
 		background:$bg-white-gray;
 
+		&:first-child {
+			border-left:0;
+		}
+
 		&.last{
-			border:0;
+			border-bottom:0;
+		}
+
+		&.left-border {
+			border-left:1px solid $line-gray;
 		}
 	}
 
@@ -87,10 +99,10 @@
 		padding-left:10px;
 
 		font-weight:bold;
-		color:$dark;
+		color:$dark-gray;
 		border:{
-			left: 1px solid $line-gray;
 			bottom: 1px solid $line-gray;
+			left: 1px solid $line-gray;
 		}
 
 		&.td-padding {
@@ -101,7 +113,13 @@
 		&.last{
 			border-bottom:0;
 		}
+
+		.input.full-width,
+		.textarea.full-width {
+			width:95%;
+		}
 	}
+
 }
 
 .thumb-mini {
@@ -419,3 +437,21 @@
 
 }
 /* scrollable table : E */
+
+.option-row {
+	display:none;
+}
+
+.td-multi-line {
+	@include clear();
+	margin-top:10px;
+
+	&:first-child {
+		margin-top:0;
+	}
+
+}
+
+.table-more {
+	@include clear();
+}

@@ -27,6 +27,10 @@
 
         background:$dark-gray;
       }
+
+      &.em-red:after {
+        background:$main-red;
+      }
     }
   }
 }
@@ -552,5 +556,76 @@
     min-width:130px;
   }
 
+
+}
+
+.page {
+  margin-top:30px;
+  text-align:center;
+  font-size:0;
+
+  &-item {
+    display:inline-block;
+    margin:0 1px;
+    width:22px;
+    height:22px;
+    line-height:22px;
+    color:$dark-gray;
+    font-size:13px;
+    font-weight:bold;
+    vertical-align:middle;
+    border:1px solid $line-gray;
+
+    &:hover,
+    &:active {
+      border-color:$main-blue;
+    }
+
+    &.on {
+      color:$white;
+      background:$main-blue;
+      border-color:$main-blue;
+    }
+
+    &.prev,
+    &.next {
+      text-indent:-9999px;
+      background:url(../images/bg_arrow_page.png) no-repeat;
+    }
+
+    &.prev {
+      background-position:7px 7px;
+    }
+
+    &.next {
+      background-position:-27px 7px;
+    }
+
+
+  }
+
+}
+
+.label-toggle {
+
+  &-wrap {
+    position:relative;
+
+    &.half-width {
+      width:400px;
+    }
+
+    &.quarter-width {
+      width:200px;
+    }
+  }
+
+  &-text {
+    position:absolute;
+    top:10px;
+    left:5px;
+    font-weight:normal;
+    color:$gray;
+  }
 
 }

@@ -131,6 +131,11 @@ $(function(){
 			toggleLabel( $('.js-label-toggle') );
 		})();
 
+		// toggle label when focus on input
+		(function() {
+			toggleOption( $('.js-option-toggle') );
+		})();
+
 		// tab activation
 		(function() {
 			$('.js-tab').each(function() {
@@ -353,11 +358,15 @@ $(function(){
 	// draggable search
 	(function(){
 
-		$('.search-area').draggable({
-			handle: '.search-drag-handle',
-			containment: '.section-map',
-			scroll: false
-		});
+		var searchArea = $('.search-area');
+
+		if (searchArea.length > 0) {
+			$('.search-area').draggable({
+				handle: '.search-drag-handle',
+				containment: '.section-map',
+				scroll: false
+			});
+		}
 
 	})();
 

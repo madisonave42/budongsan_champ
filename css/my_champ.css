@@ -231,4 +231,245 @@
   background: #25aae1 url(../images/icon_search_white.png) no-repeat 70px 13px;
 }
 
+.report-provision {
+  padding: 25px 40px;
+  border: 1px solid #d8d8d8;
+  background: #f9f9f9;
+}
+.report-provision:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.report-provision-title {
+  margin-bottom: 15px;
+  color: #222;
+  font-size: 16px;
+  font-weight: bold;
+}
+.report-provision-list {
+  width: 450px;
+}
+.report-provision-item {
+  position: relative;
+  line-height: 1.7;
+}
+.report-provision-item.em-red {
+  padding-left: 8px;
+}
+.report-provision-item.em-red:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background: #ed1c24;
+}
+
+.reported {
+  margin-bottom: 10px;
+  padding: 30px 35px;
+  background: #f9f9f9;
+}
+.reported:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.reported-item {
+  float: left;
+  width: 310px;
+  text-align: center;
+}
+.reported-title {
+  margin-bottom: 10px;
+  color: #222;
+  font-size: 16px;
+  font-weight: bold;
+}
+.reported-data {
+  color: #222;
+  font-size: 22px;
+  font-weight: bold;
+}
+.reported-data.date {
+  font-size: 18px;
+}
+.reported-data.date .em-blue {
+  text-decoration: none;
+}
+.reported-data .em-blue {
+  text-decoration: underline;
+}
+
+.house-manage-link {
+  display: block;
+  margin-top: 3px;
+  text-decoration: underline;
+}
+
+.img-reg-list {
+  margin-top: 15px;
+  padding: 10px;
+  border: 1px solid #cbcbcb;
+}
+.img-reg-list:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.img-reg-list-item {
+  float: left;
+  margin-left: 10px;
+}
+.img-reg-list-item:first-child {
+  margin-left: 0;
+}
+
+.tag-chk-list:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.tag-chk-list .check-wrap,
+.tag-chk-list .radio-wrap {
+  margin: 7px 0;
+}
+
+.input-tag-keyword {
+  margin-top: 10px;
+}
+
+.map-frame {
+  width: 759px;
+  height: 458px;
+  border: 1px solid #cbcbcb;
+}
+
+.step-list {
+  width: 1000px;
+  height: 79px;
+  background: url(../images/bg_step_five.png) no-repeat;
+}
+.step-list:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.step-list.step1 {
+  background-position: 0 0px;
+}
+.step-list.step1 .first .step-mark, .step-list.step1 .first .step-title {
+  color: #ffffff;
+}
+.step-list.step2 {
+  background-position: 0 -79px;
+}
+.step-list.step2 .second .step-mark, .step-list.step2 .second .step-title {
+  color: #ffffff;
+}
+.step-list.step3 {
+  background-position: 0 -158px;
+}
+.step-list.step3 .third .step-mark, .step-list.step3 .third .step-title {
+  color: #ffffff;
+}
+.step-list.step4 {
+  background-position: 0 -237px;
+}
+.step-list.step4 .fourth .step-mark, .step-list.step4 .fourth .step-title {
+  color: #ffffff;
+}
+.step-list.step5 {
+  background-position: 0 -316px;
+}
+.step-list.step5 .fifth .step-mark, .step-list.step5 .fifth .step-title {
+  color: #ffffff;
+}
+.step-item {
+  float: left;
+  margin-top: 20px;
+}
+.step-item.first {
+  margin-left: 26px;
+  width: 240px;
+}
+.step-item.second {
+  width: 190px;
+}
+.step-item.third {
+  width: 190px;
+}
+.step-item.fourth {
+  width: 190px;
+}
+.step-item.fifth {
+  width: 150px;
+}
+.step-mark {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  color: #25aae1;
+}
+.step-title {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+  margin-top: 3px;
+}
+.step-title-small {
+  font-size: 15px;
+}
+
+.write-complete-info {
+  padding: 30px;
+  text-align: center;
+  background: #f9f9f9;
+  border: 1px solid #ededed;
+}
+.write-complete-title {
+  margin-bottom: 20px;
+  color: #222;
+  font-size: 18px;
+  font-weight: bold;
+}
+.write-complete-date {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #25aae1;
+}
+.write-complete-msg {
+  display: inline-block;
+}
+.write-complete-text {
+  position: relative;
+  line-height: 1.7;
+  padding-left: 10px;
+  text-align: left;
+}
+.write-complete-text:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background: #999;
+}
+
 /*# sourceMappingURL=my_champ.css.map */
