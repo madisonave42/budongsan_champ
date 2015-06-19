@@ -472,6 +472,7 @@
 
 .tooltip {
   display:none;
+  position:absolute;
   padding:20px;
   border:1px solid $main-blue;
   color:$dark-gray;
@@ -497,12 +498,14 @@
   }
 
   &-title {
+    @include clear();
     margin-bottom:7px;
     color:$dark-gray;
     font-size:14px;
   }
 
   &-text {
+    @include clear();
     margin-top:5px;
 
     &:first-child {

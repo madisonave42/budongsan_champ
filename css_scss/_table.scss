@@ -267,6 +267,7 @@
 	&-detail {
 		margin-top:7px;
 		line-height:1.4;
+		color:$gray;
 	}
 
 	&-price {
@@ -275,7 +276,7 @@
 		font-size:19px;
 		font-weight:bold;
 		color:$main-blue;
-		background:url(../images/icon_round_down.png) no-repeat 100% 50%;
+		background:url(../images/icon_round_down.png) no-repeat 100% 2px;
 	}
 
 	&-data {

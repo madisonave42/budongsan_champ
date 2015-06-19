@@ -159,13 +159,6 @@ $(function(){
 			});
 		})();
 
-		// toggle class on off
-		(function() {
-			$('.js-toggle-onoff').on('click', function() {
-				$(this).toggleClass('on');
-			});
-		})();
-
 		// tab activation
 		(function() {
 			$('.js-tab').each(function() {
@@ -222,6 +215,25 @@ $(function(){
 			if (onoffBtn.length > 0) {
 				onoffBtn.on('click', function() {
 					$(this).toggleClass('on');
+				});
+			}
+		})();
+
+		// expand more area
+		(function() {
+			var more = $('.js-show-more');
+
+			if (more.length > 0) {
+				more.each(function() {
+					var cont = $(this).find('.js-show-cont'),
+						btn = $(this).find('.js-show-btn');
+
+					btn.on('click', function(e){
+						e.preventDefault();
+						$(this).toggleClass('on');
+						cont.toggleClass('on');
+					});
+
 				});
 			}
 		})();
@@ -462,18 +474,22 @@ $(function(){
 		if (tooltipBtn.length > 0) {
 			tooltipBtn.on({
 				'mouseenter': function() {
+					$(this).addClass('on');
 					$(this).next('.tooltip').addClass('on');
 				},
 				'mouseleave': function() {
+					$(this).removeClass('on');
 					$(this).next('.tooltip').removeClass('on');
 				}
 			});
 
 			$('.tooltip').on({
 				'mouseenter': function() {
+					tooltipBtn.addClass('on');
 					$(this).addClass('on');
 				},
 				'mouseleave': function() {
+					tooltipBtn.removeClass('on');
 					$(this).removeClass('on');
 				}
 			});
@@ -551,16 +567,6 @@ $(function(){
 					},
 				thumbOpacity:1
 			});
-		}
-	})();
-
-	// set height of detail option section
-	(function() {
-		var optionList = $('.detail-option-list');
-
-		if (optionList.length > 0) {
-			var tHeight = $('.detail-building-info .detail-table').height();
-			optionList.css({height: tHeight});
 		}
 	})();
 

@@ -37,6 +37,7 @@
 		padding-top:0;
 		padding-bottom:0;
 		height:42px;
+		font-weight:normal;
 	}
 
 	.bg {
@@ -59,13 +60,20 @@
 
 	&-more {
 		position:absolute;
+		padding:0;
 		right:0;
 		top:-30px;
 		color:$gray-blue;
+		background:none;
+		border:0;
 
 		&:after {
 			content:"\25BE";
 			display:inline;
+		}
+
+		&.on:after {
+			content:"\25B4";
 		}
 	}
 
@@ -164,17 +172,17 @@
 		float:left;
 		box-sizing:border-box;
 		width:532px;
-		height:82px;
-		padding:19px 20px;
+		height:100px;
+		padding:23px 20px;
 		border-right:1px solid $bg-gray;
 		&-title {
-			font-size:16px;
+			font-size:20px;
 			font-weight:bold;
 			color:$dark;
 		}
 
 		&-info {
-			margin-top:7px;
+			margin-top:10px;
 			font-size:14px;
 		}
 	}
@@ -182,26 +190,36 @@
 	&-area {
 		float:left;
 		width:245px;
-		height:82px;
+		height:100px;
 		border-right:1px solid $bg-gray;
 		box-sizing:border-box;
 
 		&-text {
 			margin-left:20px;
-			margin-top:9px;
+			margin-top:10px;
+			font-size:14px;
 			font-weight:bold;
 		}
+
+		&-title {
+			display:inline-block;
+			width:80px;
+			color:$dark;
+		}
+
+		&-num {
+			font-size:17px;
+			color:$main-blue;
+		}
+
 	}
 
 	&-price {
 		float:left;
-		width:221px;
-		height:82px;
 		box-sizing:border-box;
-	}
-
-	&-price {
-		padding:19px 20px;
+		padding:9px 20px;
+		width:221px;
+		height:100px;
 
 		&-type {
 			float:left;
@@ -210,20 +228,57 @@
 			color:$dark;
 		}
 
-		&-msg {
+		&-unit {
 			float:left;
 			margin-left:5px;
 		}
 
 		&-num {
 			clear:both;
-			padding-top:5px;
 			font-size:12px;
 
 			.em-blue {
-				font-size:20px;
+				font-size:18px;
 				font-weight:bold;
 			}
+		}
+
+		&-real {
+			position:relative;
+			z-index:20;
+
+			&-tooltip {
+				top:18x;
+				left:-55px;
+				width:210px;
+			}
+
+			&-title {
+				padding-left:17px;
+				background:url(../images/icon_minus_round.png) no-repeat 0 1px;
+			}
+		}
+
+		&-btn {
+			position:realtive;
+			margin-top:5px;
+			padding:0;
+			padding-right:22px;
+			height:18px;
+			color:$dark;
+			font-weight:bold;
+			background:url(../images/icon_round_down.png) no-repeat 100% 0;
+			border:0;
+			cursor:default;
+
+			&.on {
+				background-position:100% -132px;
+			}
+
+		}
+
+		&-msg  {
+			margin-top:3px;
 		}
 	}
 
@@ -408,26 +463,29 @@
 }
 
 .detail-building-info {
-	float:left;
-	width:378px;
+	width:767px;
 	overflow:hidden;
 }
 
 .detail-option {
 	&-info {
-		float:left;
-		margin-left:11px;
-		width:378px;
+		width:767px;
 		overflow:hidden;
 	}
 
 	&-list {
-		padding:0 8px;
-		height:100%;
+		padding:0 8px 10px 8px;
+		height:180px;
+		min-height:180px;
 		border:1px solid $bg-gray;
 		border-top-color:$main-blue;
 		overflow-x:hidden;
 		overflow-y:auto;
+
+		&.on {
+			height:auto;
+		}
+
 	}
 
 	&-item {
@@ -481,10 +539,15 @@
 	&-body {
 		padding:15px;
 		height:80px;
+		min-height:80px;
 		border:1px solid $bg-gray;
 		border-top-color:$main-blue;
 		overflow-x:hidden;
 		overflow-y:auto;
+
+		&.on {
+			height:auto;
+		}
 	}
 
 	&-tag {
@@ -512,9 +575,15 @@
 }
 
 .detail-price-info {
+	position:relative;
 	float:left;
 	width:378px;
 	overflow:hidden;
+
+	&-tooltip {
+		top:20px;
+		left:100px;
+	}
 }
 
 .detail-deal-info {
@@ -805,8 +874,9 @@
 
 .detail-sidebar {
 	position:absolute;
-	top:125px;
+	top:143px;
 	right:0;
+	z-index:10;
 
 	&.fixed {
 		position:fixed;
@@ -982,6 +1052,7 @@
 	display:none;
 	margin-top:10px;
 	width:220px;
+	background:$white;
 	border:1px solid $line-gray;
 	border-top:2px solid $dark;
 
@@ -1020,6 +1091,7 @@
 	top:0;
 	left:0;
 	width:100%;
+	min-width:1000px;
 	background:$sort-top;
 	height:50px;
 	line-height:50px;
@@ -1089,6 +1161,7 @@
 	padding:0;
 	width:18px;
 	height:18px;
+	line-height:1;
 	color:$main-yellow;
 	border:2px solid $main-yellow;
 	background:none;
@@ -1096,4 +1169,5 @@
 	font-weight:bold;
 	text-align:center;
 	border-radius:9px;
+	cursor:default;
 }

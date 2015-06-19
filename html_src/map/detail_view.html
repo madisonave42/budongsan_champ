@@ -63,10 +63,10 @@ include "header_bottom.html"
               </div>
             </div>
             <div class="right-float">
-              <button type="button" class="detail-action wish js-toggle-onoff">좋아요</button>
-              <button type="button" class="detail-action share js-toggle-onoff">공유</button>
-              <button type="button" class="detail-action print js-toggle-onoff">인쇄</button>
-              <button type="button" class="detail-action alarm js-toggle-onoff">신고</button>
+              <button type="button" class="detail-action wish js-onoff">좋아요</button>
+              <button type="button" class="detail-action share js-onoff">공유</button>
+              <button type="button" class="detail-action print js-onoff">인쇄</button>
+              <button type="button" class="detail-action alarm js-onoff">신고</button>
             </div>
           </div>
 
@@ -77,13 +77,13 @@ include "header_bottom.html"
             </div>
             <div class="detail-header-area">
               <div class="detail-header-area-text">
-                <span class="em-dark">공급면적</span><span class="em-blue">100,000.00</span> ㎡
+                <span class="detail-header-area-title">공급면적</span><span class="detail-header-area-num">100,000.00</span> ㎡
               </div>
               <div class="detail-header-area-text">
-                <span class="em-dark">전용면적</span><span class="em-blue">100,000.00</span> ㎡
+                <span class="detail-header-area-title">전용면적</span><span class="detail-header-area-num">100,000.00</span> ㎡
               </div>
               <div class="detail-header-area-text">
-                <span class="em-dark">대지지분</span><span class="em-blue">100,000.00</span> ㎡
+                <span class="detail-header-area-title">대지지분</span><span class="detail-header-area-num">100,000.00</span> ㎡
               </div>
             </div>
 
@@ -91,12 +91,59 @@ include "header_bottom.html"
               <div class="detail-header-price-type">
                 월세
               </div>
+
+              <div class="detail-header-price-unit">
+                (단위: 만원)
+              </div>
+
+              <div class="detail-header-price-num">
+                <span class="em-blue">10,000,000</span><span class="detail-header-div">/</span><span class="em-blue">100,000</span>
+              </div>
+
+              <div class="detail-header-price-real">
+                <button type="button" class="detail-header-price-btn js-show-tooltip">
+                  실투자금 <span class="em-red">100,000</span>만원
+                </button>
+                <div class="tooltip detail-header-price-real-tooltip">
+                  <div class="tooltip-wrap">
+                    <div class="tooltip-title">
+                      <div class="left-float em-dark">매매가</div>
+                      <div class="right-float em-dark">
+                        <span class="em-red">200,000</span>
+                        만원
+                      </div>
+                    </div>
+                    <div class="tooltip-text">
+                      <div class="left-float detail-header-price-real-title">융자금</div>
+                      <div class="right-float">10,000만원</div>
+                    </div>
+                    <div class="tooltip-text">
+                      <div class="left-float detail-header-price-real-title">보증금</div>
+                      <div class="right-float">10,000만원</div>
+                    </div>
+                  </div>
+
+                  <div class="tooltip-wrap">
+                    <div class="tooltip-title">
+                      <div class="left-float em-dark">실투자금</div>
+                      <div class="right-float em-dark">
+                        <span class="em-red">180,000</span>
+                        만원
+                      </div>
+                    </div>
+                    <div class="tooltip-text">
+                      융자금이나 보증금 총액을 안고 구입했을 때를 가정한 실투자금 계산입니다.
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div class="detail-header-price-msg">
                 (2개월이내 협의가능)
               </div>
-              <div class="detail-header-price-num">
-                <span class="em-blue">10,000</span><span class="detail-header-div">/</span><span class="em-blue">137</span>만원
-              </div>
+
+
             </div>
 
           </div>
@@ -215,7 +262,7 @@ include "header_bottom.html"
                   <th scope="row">동일면적세대수</th>
                   <td>288세대</td>
                   <th scope="row">세대주차대수</th>
-                  <td><span class="em-blue">1대</td>
+                  <td>1대</td>
                 </tr>
                 <tr>
                   <th scope="row">수영장</th>
@@ -290,90 +337,82 @@ include "header_bottom.html"
 
       </section>
 
-      <div class="clearfix">
-        <section id="detail-building-info" class="contents-part detail-building-info">
+      <section id="detail-building-info" class="contents-part detail-building-info">
 
-          <div class="part-top">
-            <h2 class="detail-subtitle">건물정보</h2>
+        <div class="part-top">
+          <h2 class="detail-subtitle">건물정보</h2>
+        </div>
+
+        <div class="part-mid">
+
+          <table class="hr-table detail-table">
+
+            <caption class="hide">건물정보 안내</caption>
+
+            <colgroup>
+              <col style="width:145px;">
+              <col style="width:240px;">
+              <col style="width:145px;">
+              <col style="width:auto;">
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row">규모</th>
+                <td>지하3층 / 지상20층</td>
+                <th scope="row">준공년월</th>
+                <td>2010년 5월 3일</td>
+              </tr>
+              <tr>
+                <th scope="row">총동수</th>
+                <td>10개동</td>
+                <th scope="row">건설사명</th>
+                <td>현대건설</td>
+              </tr>
+              <tr>
+                <th scope="row">총세대수</th>
+                <td>7,000세대</td>
+                <th scope="row">용도지역</th>
+                <td>제 3종 일반주거지역</td>
+              </tr>
+              <tr>
+                <th scope="row">총주차대수</th>
+                <td>7,000대</td>
+                <th scope="row">건축구조</th>
+                <td>철근콘크리트</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </section>
+
+      <section id="detail-option-info" class="contents-part detail-option-info">
+
+        <div class="part-top">
+          <h2 class="detail-subtitle">옵션</h2>
+        </div>
+
+        <div class="part-mid">
+
+          <div class="detail-cont-wrap js-show-more">
+            <ul class="detail-option-list js-show-cont">
+              <li class="detail-option-item bed">침대</li>
+              <li class="detail-option-item gasrange">가스레인지</li>
+              <li class="detail-option-item wash">세탁기</li>
+              <li class="detail-option-item sofa">소파</li>
+              <li class="detail-option-item tv">TV</li>
+              <li class="detail-option-item refri">냉장고</li>
+              <li class="detail-option-item bulit">붙박이</li>
+            </ul>
+
+            <button type="button" class="detail-cont-more js-show-btn">더보기</button>
           </div>
 
-          <div class="part-mid">
+        </div>
 
-            <table class="hr-table detail-table">
-
-              <caption class="hide">건물정보 안내</caption>
-
-              <colgroup>
-                <col style="width:145px;">
-                <col style="width:auto;">
-              </colgroup>
-
-              <tbody>
-                <tr>
-                  <th scope="row">규모</th>
-                  <td>지하3층 / 지상20층</td>
-                </tr>
-                <tr>
-                  <th scope="row">총동수</th>
-                  <td>10개동</td>
-                </tr>
-                <tr>
-                  <th scope="row">총세대수</th>
-                  <td>7,000세대</td>
-                </tr>
-                <tr>
-                  <th scope="row">총주차대수</th>
-                  <td>7,000대</td>
-                </tr>
-                <tr>
-                  <th scope="row">준공년월</th>
-                  <td>2010년 5월 3일</td>
-                </tr>
-                <tr>
-                  <th scope="row">건설사명</th>
-                  <td>현대건설</td>
-                </tr>
-                <tr>
-                  <th scope="row">용도지역</th>
-                  <td>제 3종 일반주거지역</td>
-                </tr>
-                <tr>
-                  <th scope="row">건축구조</th>
-                  <td>철근콘크리트</td>
-                </tr>
-              </tbody>
-            </table>
-
-          </div>
-
-        </section>
-
-        <section id="detail-option-info" class="contents-part detail-option-info">
-
-          <div class="part-top">
-            <h2 class="detail-subtitle">옵션</h2>
-          </div>
-
-          <div class="part-mid">
-
-            <div class="detail-cont-wrap">
-              <ul class="detail-option-list">
-                <li class="detail-option-item bed">침대</li>
-                <li class="detail-option-item gasrange">가스레인지</li>
-                <li class="detail-option-item wash">세탁기</li>
-                <li class="detail-option-item sofa">소파</li>
-                <li class="detail-option-item tv">TV</li>
-                <li class="detail-option-item refri">냉장고</li>
-                <li class="detail-option-item bulit">붙박이</li>
-              </ul>
-
-              <a href="#" class="detail-cont-more">더보기</a>
-            </div>
-
-          </div>
-
-        </section>
-      </div>
+      </section>
 
       <section id="detail-description" class="contents-part detail-description">
 
@@ -383,12 +422,12 @@ include "header_bottom.html"
 
         <div class="part-mid">
 
-          <div class="detail-cont-wrap">
-            <div class="detail-description-body">
+          <div class="detail-cont-wrap js-show-more">
+            <div class="detail-description-body js-show-cont">
               강남,서초 전문공인중개사 항상 실매물+실사진 원칙으로 하는 김부장이 되겠습니다!!! 신뢰중개! 책임중개!
             </div>
 
-            <a href="#" class="detail-cont-more">더보기</a>
+            <a href="#" class="detail-cont-more js-show-btn">더보기</a>
           </div>
 
           <div class="detail-description-tag">
@@ -471,7 +510,17 @@ include "header_bottom.html"
 
           <div class="part-top">
             <h2 class="detail-subtitle left-float">실거래가</h2>
-            <button type="button" class="detail-help" title="안내">?</button>
+            <button type="button" class="detail-help js-show-tooltip">?</button>
+            <div class="tooltip  detail-price-info-tooltip">
+              <div class="tooltip-wrap">
+                <div class="tooltip-title">
+                  <span class="em-dark">실거래가란?</span>
+                </div>
+                <div class="tooltip-text">
+                  부동산챔프의 실거래가는 국토해양부에서 공개된 데이터를 통해 제공하고 있습니다.
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="part-mid">
@@ -910,78 +959,86 @@ include "header_bottom.html"
                 <ul class="detail-similar-list">
                   <li class="detail-similar-list-item">
 
-                    <div class="list-item image">
-                      <img src="../../images/temp/list-thumb-slide.jpg" alt="">
-                    </div>
-
-                    <div class="right-col">
-                      <div class="list-item description">
-                        <div class="list-item-type red">연립/빌라</div>
-                        <div class="list-item-name">삼성동 힐스테이트</div>
-                        <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
+                    <a href="#">
+                      <div class="list-item image">
+                        <img src="../../images/temp/list-thumb-slide.jpg" alt="">
                       </div>
 
-                      <div class="list-item price">
-                        <div class="list-item-price">전세 21,500</div>
+                      <div class="right-col">
+                        <div class="list-item description">
+                          <div class="list-item-type red">연립/빌라</div>
+                          <div class="list-item-name">삼성동 힐스테이트</div>
+                          <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
+                        </div>
+
+                        <div class="list-item price">
+                          <div class="list-item-price">전세 21,500</div>
+                        </div>
                       </div>
-                    </div>
+                    </a>
 
                   </li>
                   <li class="detail-similar-list-item">
 
-                    <div class="list-item image">
-                      <img src="../../images/temp/list-thumb-slide.jpg" alt="">
-                    </div>
-
-                    <div class="right-col">
-                      <div class="list-item description">
-                        <div class="list-item-type red">연립/빌라</div>
-                        <div class="list-item-name">삼성동 힐스테이트</div>
-                        <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
+                    <a href="#">
+                      <div class="list-item image">
+                        <img src="../../images/temp/list-thumb-slide.jpg" alt="">
                       </div>
 
-                      <div class="list-item price">
-                        <div class="list-item-price">전세 21,500</div>
+                      <div class="right-col">
+                        <div class="list-item description">
+                          <div class="list-item-type red">연립/빌라</div>
+                          <div class="list-item-name">삼성동 힐스테이트</div>
+                          <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
+                        </div>
+
+                        <div class="list-item price">
+                          <div class="list-item-price">전세 21,500</div>
+                        </div>
                       </div>
-                    </div>
+                    </a>
 
                   </li>
                   <li class="detail-similar-list-item">
 
-                    <div class="list-item image">
-                      <img src="../../images/temp/list-thumb-slide.jpg" alt="">
-                    </div>
-
-                    <div class="right-col">
-                      <div class="list-item description">
-                        <div class="list-item-type red">연립/빌라</div>
-                        <div class="list-item-name">삼성동 힐스테이트</div>
-                        <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
+                    <a href="#">
+                      <div class="list-item image">
+                        <img src="../../images/temp/list-thumb-slide.jpg" alt="">
                       </div>
 
-                      <div class="list-item price">
-                        <div class="list-item-price">전세 21,500</div>
+                      <div class="right-col">
+                        <div class="list-item description">
+                          <div class="list-item-type red">연립/빌라</div>
+                          <div class="list-item-name">삼성동 힐스테이트</div>
+                          <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
+                        </div>
+
+                        <div class="list-item price">
+                          <div class="list-item-price">전세 21,500</div>
+                        </div>
                       </div>
-                    </div>
+                    </a>
 
                   </li>
                   <li class="detail-similar-list-item">
 
-                    <div class="list-item image">
-                      <img src="../../images/temp/list-thumb-slide.jpg" alt="">
-                    </div>
-
-                    <div class="right-col">
-                      <div class="list-item description">
-                        <div class="list-item-type red">연립/빌라</div>
-                        <div class="list-item-name">삼성동 힐스테이트</div>
-                        <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
+                    <a href="#">
+                      <div class="list-item image">
+                        <img src="../../images/temp/list-thumb-slide.jpg" alt="">
                       </div>
 
-                      <div class="list-item price">
-                        <div class="list-item-price">전세 21,500</div>
+                      <div class="right-col">
+                        <div class="list-item description">
+                          <div class="list-item-type red">연립/빌라</div>
+                          <div class="list-item-name">삼성동 힐스테이트</div>
+                          <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
+                        </div>
+
+                        <div class="list-item price">
+                          <div class="list-item-price">전세 21,500</div>
+                        </div>
                       </div>
-                    </div>
+                    </a>
 
                   </li>
                 </ul>
