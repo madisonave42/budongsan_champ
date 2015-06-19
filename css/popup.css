@@ -72,6 +72,9 @@
   margin-left: -19px;
   background: url(../images/icon_pop_title.png) no-repeat;
 }
+.popup-title.check.yellow:after {
+  background-position: -50px 0;
+}
 .popup-subtitle {
   margin-top: 12px;
   color: #222;
@@ -687,19 +690,12 @@
 /* popup login : E */
 /* popup complex : S */
 .complex-view {
-<<<<<<< HEAD
-  position: fixed;
-  top: 100px;
-  left: 50%;
-  margin-left: -233px;
-  width: 466px;
-=======
   position: absolute;
   top: 0;
   left: 0;
   width: 500px;
->>>>>>> c1e37e73bc51a5d80b1404749008785ae5427c95
   border: 2px solid #25aae1;
+  background: #ffffff;
 }
 .complex-header {
   padding: 15px 20px;
@@ -762,11 +758,7 @@
 .complex-overview-body {
   float: left;
   margin-left: 10px;
-<<<<<<< HEAD
-  width: 280px;
-=======
   width: 315px;
->>>>>>> c1e37e73bc51a5d80b1404749008785ae5427c95
 }
 .complex-overview-text {
   margin-top: 2px;
@@ -784,11 +776,7 @@
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
-<<<<<<< HEAD
-  background: #cbcbcb;
-=======
   background: #a1b0b6;
->>>>>>> c1e37e73bc51a5d80b1404749008785ae5427c95
   text-align: center;
 }
 .complex-overview-title.blue {
@@ -796,10 +784,7 @@
 }
 .complex-overview-data {
   float: left;
-<<<<<<< HEAD
-=======
   width: 250px;
->>>>>>> c1e37e73bc51a5d80b1404749008785ae5427c95
 }
 .complex-overview-data-sale {
   color: #666;
@@ -808,11 +793,6 @@
 .complex-table {
   margin-top: 17px;
 }
-<<<<<<< HEAD
-.complex-table-body {
-  height: 200px;
-}
-=======
 .complex-table-head-item01 {
   width: 135px;
 }
@@ -865,7 +845,6 @@
   background: url(../images/bg_btn_search_simple_view.png) no-repeat;
   text-indent: -9999px;
 }
->>>>>>> c1e37e73bc51a5d80b1404749008785ae5427c95
 
 /* popup complex : E */
 /* popup map simple view */
@@ -948,16 +927,11 @@
   width: 19px;
   height: 18px;
   position: absolute;
-<<<<<<< HEAD
   bottom: 8px;
-=======
-  bottom: 10px;
->>>>>>> c1e37e73bc51a5d80b1404749008785ae5427c95
   right: 10px;
   text-indent: -99999em;
   background: url(../images/bg_btn_search_simple_view.png) no-repeat;
 }
-<<<<<<< HEAD
 .simple-view .list-item.btn-search:hover {
   background-position: 0 -19px;
 }
@@ -1083,8 +1057,6 @@
 .simple-view-list .list-item.btn-search:hover {
   background-position: 0 -19px;
 }
-=======
->>>>>>> c1e37e73bc51a5d80b1404749008785ae5427c95
 
 .popup-addinfo-agree {
   margin-top: 15px;

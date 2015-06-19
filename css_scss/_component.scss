@@ -1,5 +1,24 @@
 .list{
 
+  &-column {
+    @include clear();
+    margin-top:5px;
+    border:{
+      top:1px solid $line-gray;
+      bottom:1px solid $line-gray;
+    }
+    background: $bg-white-gray;
+
+    .list-description.left-float,
+    .list-description.right-float {
+      margin:0;
+      box-sizing:border-box;
+      padding:20px;
+      width:50%;
+      border:0;
+    }
+  }
+
   &-description{
 
     padding:25px;
@@ -297,6 +316,18 @@
 
     }
 
+    &.yellow {
+
+      .sort-tab-list-link.on {
+        color:$main-yellow;
+
+        &:after {
+          border-color:$main-yellow;
+          background:$main-yellow;
+        }
+      }
+    }
+
   }
 
 }
@@ -368,6 +399,7 @@
   &-amount {
     height:26px;
     line-height:26px;
+    font-weight:bold;
   }
 
   &-label-box {
@@ -604,6 +636,21 @@
 
   }
 
+  &.yellow {
+
+    .page-item:hover,
+    .page-item:active {
+      border-color:$main-yellow;
+    }
+
+    .page-item.on {
+      color:$white;
+      background:$main-yellow;
+      border-color:$main-yellow;
+    }
+
+  }
+
 }
 
 .label-toggle {
@@ -628,4 +675,153 @@
     color:$gray;
   }
 
+}
+
+.board-box {
+  position:relative;
+  box-sizing:border-box;
+  padding:30px;
+  border:1px solid $line-gray;
+
+  &-title {
+    margin-bottom:28px;
+    padding-bottom:8px;
+    font-size:18px;
+    font-weight:bold;
+    color:$dark;
+    line-height:1;
+    border-bottom:1px solid $dark;
+  }
+
+  &-first {
+    position:relative;
+    margin-bottom:20px;
+    height:105px;
+    overflow:hidden;
+
+    &-link:hover .board-box-first-title {
+      text-decoration:underline;
+    }
+
+    &-title {
+      display:block;
+      font-size:16px;
+      color:$main-blue;
+      line-height:1.5;
+    }
+
+    &-body {
+      margin-top:5px;
+      display:block;
+      color:$gray;
+    }
+
+    &-date {
+      position:absolute;
+      right:0;
+      bottom:0;
+      color:$dark;
+    }
+
+  }
+
+  &-list {
+    height:55px;
+    overflow:hidden;
+
+    &-item {
+      margin-top:5px;
+
+      &:first-child {
+        margin-top:0;
+      }
+
+    }
+
+    &-link {
+      position:relative;
+      display:block;
+      padding-left:10px;
+      overflow:hidden;
+
+      &:after {
+        content:"";
+        display:block;
+        position:absolute;
+        top:6px;
+        left:0;
+        width:2px;
+        height:2px;
+        background:$main-blue;
+      }
+
+      &:hover .board-box-list-text {
+        text-decoration:underline;
+      }
+
+    }
+
+    &-text {
+      color:$dark;
+      float:left;
+
+      &.has-date {
+        width:80%;
+      }
+    }
+
+    &-date {
+      float:right;
+      width:20%;
+      color:$gray;
+      text-align:right;
+    }
+
+  }
+
+  &-more {
+    position:absolute;
+    top:30px;
+    right:30px;
+    width:17px;
+    height:17px;
+    text-indent:-9999px;
+    background:url(../images/bg_btn_more.png) no-repeat;
+  }
+
+}
+
+.info-box {
+  @include clear();
+  box-sizing:border-box;
+  padding:20px 30px;
+  height:170px;
+  background:$bg-light-gray;
+
+  &-head {
+    float:left;
+  }
+
+  &-title {
+    margin-top:7px;
+    padding-top:21px;
+    font-size:28px;
+    color:$dark;
+    background:url(../images/bg_info_box_title.png) no-repeat;
+  }
+
+  &-subtitle {
+    font-size:28px;
+    font-weight:900;
+    color:$dark;
+  }
+
+  &-msg {
+    margin-top:10px;
+    color:$dark;
+  }
+
+  &-body {
+    float:right;
+  }
 }

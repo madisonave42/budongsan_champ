@@ -1,0 +1,342 @@
+include "header_top.html"
+
+<title>중개회원 | 부동산 챔프</title>
+
+<link rel="stylesheet" href="../../css/common.css" />
+<!-- 회원가입 style -->
+<link rel="stylesheet" href="../../css/agency.css" />
+<link rel="stylesheet" href="../../css/popup.css" />
+
+include "header_bottom.html"
+
+<nav class="lnb">
+  <div class="wrapper">
+    <ul class="lnb-list yellow">
+      <li class="lnb-item"><a href="#" class="lnb-link on">중개회원홈</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">매물등록</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">매물관리</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">공동중개(스마트매칭)</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">홈페이지관리</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">매물문의내역</a></li>
+    </ul>
+    <div class="lnb-util">
+      <div class="lnb-util-btns">
+        <button type="button" class="btn-med gray icon-plus">매물등록</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="contents">
+  <div class="wrapper">
+
+    <div class="contents-top">
+      <h2 class="hide">My홈</h2>
+      <div class="agency-profile">
+        <div class="agency-profile-photo">
+          <div class="agency-profile-photo-wrap">
+            <!-- [D] 기본이미지 -->
+            <img src="../../images/img_agency_photo_default.jpg" alt="등록된 사진이 없습니다." class="agency-profile-photo-img" />
+            <div class="agency-profile-photo-mask"></div>
+          </div>
+          <div class="agency-profile-photo-btns">
+            <!-- [D] 등록된 사진이 없을경우 -->
+            <button type="button" class="agency-profile-photo-btn regist">사진등록</button>
+
+            <!-- [D] 등록된 사진이 있을경우 -->
+            <!--
+            <button type="button" class="agency-profile-photo-btn change">사진변경</button>
+            <button type="button" class="agency-profile-photo-btn del">사진삭제</button>
+            -->
+          </div>
+        </div>
+        <div class="agency-profile-top">
+          <div class="left-float">
+            <div class="agency-profile-name left-float">와이티파트너스 님</div>
+            <div class="left-float"><a href="#" class="agency-profile-link" target="_blank">와이티파트너스 홈페이지</a></div>
+            <div class="agency-profile-time">최종로그인 : 2015.04.20 18:51:21</div>
+          </div>
+          <div class="agency-profile-top-btns right-float">
+            <a href="#" class="btn-med orange">상품/이용권정보</a>
+            <a href="#" class="btn-med orange">결제정보</a>
+            <a href="#" class="btn-med orange">이용안내</a>
+          </div>
+        </div>
+        <div class="agency-profile-bottom">
+          <div class="agency-profile-detail left-float">
+            <div class="agency-profile-detail-item">홍길동 대표</div>
+            <div class="agency-profile-detail-item">lovecsm@nate.com</div>
+            <div class="agency-profile-detail-item">010-1234-5678</div>
+            <div class="agency-profile-detail-item">서울시 강남구 청담동 133-3 화전회관빌딩 4층 401호</div>
+          </div>
+          <div class="agency-profile-my right-float">
+            <div class="agency-profile-my-item left-float left">
+              이달 광고 사용
+              <a href="#" class="agency-profile-my-link right-float">30건</a>
+            </div>
+            <div class="agency-profile-my-item left-float">
+              광고 진행
+              <a href="#" class="agency-profile-my-link right-float">10건</a>
+            </div>
+            <div class="agency-profile-my-item left-float left">
+              이달 광고 잔여
+              <a href="#" class="agency-profile-my-link right-float">20건</a>
+            </div>
+            <div class="agency-profile-my-item left-float">
+              광고 종료
+              <a href="#" class="agency-profile-my-link right-float">2건</a>
+            </div>
+            <div class="agency-profile-my-item left-float left">
+              신고 매물
+              <a href="#" class="agency-profile-my-link right-float">2건</a>
+            </div>
+            <div class="agency-profile-my-item left-float">
+              광고 보류
+              <a href="#" class="agency-profile-my-link right-float">2건</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="agency-banner">
+        <div style="line-height:120px; font-size:20px; color:#999; text-align:center;">중개회원 알림, 캠페인, 배너 영역</div>
+      </div>
+    </div>
+
+    <div class="contents-mid has-bottom">
+
+      <section class="contents-part">
+
+        <div class="part-top no-bottom">
+          <h3 class="part-title left-float">매물문의내역</h3>
+          <div class="right-float">
+            <button type="button" class="btn-view-all-list">전체보기</button>
+          </div>
+        </div>
+
+        <div class="part-mid">
+          <table class="vt-table">
+
+            <caption class="hide">매물 문의내역</caption>
+
+            <colgroup>
+              <col style="width:125px;" />
+              <col style="width:auto;" />
+              <col style="width:100px;" />
+              <col style="width:130px;" />
+              <col style="width:110px;" />
+              <col style="width:90px;" />
+            </colgroup>
+
+            <thead>
+              <th scope="col">매물번호</th>
+              <th scope="col">문의내용</th>
+              <th scope="col">성명</th>
+              <th scope="col">연락처</th>
+              <th scope="col">문의일자</th>
+              <th scope="col">답변</th>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td class="center">
+                  <span class="em-blue">1234567</span>
+                </td>
+                <td>
+                  <a href="#" class="td-link">매물번호 12345678  계약되었나요?? 계약안됐으면 얻고...</a>
+                </td>
+                <td class="center">
+                  홍길동
+                </td>
+                <td class="center">
+                  020-5678-8484
+                </td>
+                <td class="center">
+                  2015.05.19
+                </td>
+                <td class="center">
+                  <span class="em-blue">예</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="center">
+                  <span class="em-blue">1234567</span>
+                </td>
+                <td>
+                  <a href="#" class="td-link">매물번호 12345678  계약되었나요?? 계약안됐으면 얻고...</a>
+                </td>
+                <td class="center">
+                  홍길동
+                </td>
+                <td class="center">
+                  020-5678-8484
+                </td>
+                <td class="center">
+                  2015.05.19
+                </td>
+                <td class="center">
+                  아니오
+                </td>
+              </tr>
+              <tr>
+                <td class="center">
+                  <span class="em-blue">1234567</span>
+                </td>
+                <td>
+                  <a href="#" class="td-link">매물번호 12345678  계약되었나요?? 계약안됐으면 얻고...</a>
+                </td>
+                <td class="center">
+                  홍길동
+                </td>
+                <td class="center">
+                  020-5678-8484
+                </td>
+                <td class="center">
+                  2015.05.19
+                </td>
+                <td class="center">
+                  <span class="em-blue">예</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="center">
+                  <span class="em-blue">1234567</span>
+                </td>
+                <td>
+                  <a href="#" class="td-link">매물번호 12345678  계약되었나요?? 계약안됐으면 얻고...</a>
+                </td>
+                <td class="center">
+                  홍길동
+                </td>
+                <td class="center">
+                  020-5678-8484
+                </td>
+                <td class="center">
+                  2015.05.19
+                </td>
+                <td class="center">
+                  아니오
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </section>
+
+      <section class="contents-part">
+
+        <div class="part-mid">
+
+          <section class="board-box notice-section left-float">
+            <h2 class="board-box-title">공지사항</h2>
+            <div class="board-box-body">
+              <div class="board-box-first">
+                <a href="#" class="board-box-first-link">
+                  <span class="board-box-first-title">
+                    전산점검에 따른 홈페이지 접속
+                  </span>
+                  <span class="board-box-first-body">
+                    06월 05일 12시 자정부터 15일 새벽 3시까지 전산 점검이 있을예정입니다. 회원님들의 양해 부탁드립니다.
+                  </span>
+                  <span class="board-box-first-date">
+                    2015.04.01
+                  </span>
+                </a>
+              </div>
+              <ul class="board-box-list">
+                <li class="board-box-list-item">
+                  <a href="#" class="board-box-list-link">
+                    <span class="board-box-list-text has-date">매물등록 무료서비스 안내 매물등록 무료서비스 안내...</span>
+                    <span class="board-box-list-date">2015.05.31</span>
+                  </a>
+                </li>
+                <li class="board-box-list-item">
+                  <a href="#" class="board-box-list-link">
+                    <span class="board-box-list-text has-date">단지 VIP 유료상품 서비스 신청 안내 단지 VIP 유료상...</span>
+                    <span class="board-box-list-date">2015.05.31</span>
+                  </a>
+                </li>
+                <li class="board-box-list-item">
+                  <a href="#" class="board-box-list-link">
+                    <span class="board-box-list-text has-date">허위매물 게재 중개업소 노출제한허위매물 게재 중개...</span>
+                    <span class="board-box-list-date">2015.05.31</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <a href="#" class="board-box-more" title="공지사항 더보기">공지사항 더보기</a>
+          </section>
+
+          <section class="board-box faq-section right-float">
+            <h2 class="board-box-title">자주묻는질문</h2>
+            <div class="board-box-body">
+              <div class="board-box-first">
+                <a href="#" class="board-box-first-link">
+                  <span class="board-box-first-title">
+                    중개업소 상호명, 사업자 번호, 개설번호 수정은 어디서 하나요? 자세히 알려주세요.
+                  </span>
+                  <span class="board-box-first-body">
+                    마이챔프 내에있는 마이정보에서 중개업소 상호명, 사업자 번호, 개설번호 수정이 가능합니다. 자세한 문의는 고객센터로 연락주시기 바랍니다.
+                  </span>
+                </a>
+              </div>
+              <ul class="board-box-list">
+                <li class="board-box-list-item">
+                  <a href="#" class="board-box-list-link">
+                    <span class="board-box-list-text">중개업소 상호명, 사업자번호, 개설번호 수정은 어디서 하나요? 자세히...</span>
+                  </a>
+                </li>
+                <li class="board-box-list-item">
+                  <a href="#" class="board-box-list-link">
+                    <span class="board-box-list-text">중개업소 상호명, 사업자번호, 개설번호 수정은 어디서 하나요? 자세히...</span>
+                  </a>
+                </li>
+                <li class="board-box-list-item">
+                  <a href="#" class="board-box-list-link">
+                    <span class="board-box-list-text">중개업소 상호명, 사업자번호, 개설번호 수정은 어디서 하나요? 자세히...</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <a href="#" class="board-box-more" title="자주묻는질문 더보기">자주묻는질문 더보기</a>
+          </section>
+
+        </div>
+
+      </section>
+
+      <section class="contents-part">
+
+        <div class="part-mid">
+
+          <section class="info-box cs-section left-float">
+            <div class="info-box-head">
+              <h2 class="info-box-title">부동산 챔프 고객센터</h2>
+              <p class="info-box-subtitle">1661-0903</p>
+              <p class="info-box-msg">평일 09:00 ~ 18:00 (점심시간 12:00 ~ 13:00)</p>
+            </div>
+          </section>
+
+          <section class="info-box service-section right-float">
+            <div class="info-box-head">
+              <h2 class="info-box-title">부동산 챔프</h2>
+              <p class="info-box-subtitle">유료서비스</p>
+            </div>
+            <div class="info-box-body">
+              <a href="#" class="service-section-link">매물광고</a>
+              <a href="#" class="service-section-link">공동중개</a>
+              <a href="#" class="service-section-link">홈페이지</a>
+            </div>
+          </section>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </div>
+</section>
+
+include "footer.html"

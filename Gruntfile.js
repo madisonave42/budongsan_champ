@@ -65,6 +65,16 @@ module.exports = function(grunt) {
         }
       },
 
+      agency: {
+        cwd:'html_src/agency',
+        src: ['*.html'],
+        dest: 'html/agency',
+        options: {
+          flatten:true,
+          includePath: 'html_src/_include'
+        }
+      },
+
       login: {
 				cwd:'html_src/login',
 				src: ['*.html'],
@@ -74,67 +84,6 @@ module.exports = function(grunt) {
 					includePath: 'html_src/_include'
 				}
 			}
-/*
-			admin: {
-				cwd:'html_src/admin',
-				src: ['*.html'],
-				dest: 'html/admin',
-				options: {
-					flatten:true,
-					includePath: 'html_src/_include'
-				}
-			},
-
-      log: {
-        cwd:'html_src/log',
-        src: ['*.html'],
-        dest: 'html/log',
-        options: {
-          flatten:true,
-          includePath: 'html_src/_include'
-        }
-      },
-
-      monitoring: {
-        cwd:'html_src/monitoring',
-        src: ['*.html'],
-        dest: 'html/monitoring',
-        options: {
-          flatten:true,
-          includePath: 'html_src/_include'
-        }
-      },
-
-      setting: {
-        cwd:'html_src/setting',
-        src: ['*.html'],
-        dest: 'html/setting',
-        options: {
-          flatten:true,
-          includePath: 'html_src/_include'
-        }
-      },
-
-      stats: {
-        cwd:'html_src/stats',
-        src: ['*.html'],
-        dest: 'html/stats',
-        options: {
-          flatten:true,
-          includePath: 'html_src/_include'
-        }
-      },
-
-      vnfManagement: {
-        cwd:'html_src/vnf_management',
-        src: ['*.html'],
-        dest: 'html/vnf_management',
-        options: {
-          flatten:true,
-          includePath: 'html_src/_include'
-        }
-      }
-*/
     },
 
     concat: {

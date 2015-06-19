@@ -525,6 +525,11 @@ html.map{
 		line-height:50px;
 
 		@include clear();
+
+		&.yellow .lnb-link:hover,
+		&.yellow .lnb-link.on {
+			color:$main-yellow;
+		}
 	}
 
 	&-item{
@@ -709,6 +714,10 @@ html.map{
 
 				&.border-bottom {
 					border-bottom:1px solid $dark;
+				}
+
+				&-title {
+					margin:20px 0 15px;
 				}
 
 				.list-description {

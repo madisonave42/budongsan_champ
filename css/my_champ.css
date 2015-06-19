@@ -300,10 +300,10 @@
 .reported-data.date {
   font-size: 18px;
 }
-.reported-data.date .em-blue {
+.reported-data.date .em-yellow {
   text-decoration: none;
 }
-.reported-data .em-blue {
+.reported-data .em-yellow {
   text-decoration: underline;
 }
 

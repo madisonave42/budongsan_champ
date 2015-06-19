@@ -37,15 +37,23 @@
 		position:relative;
 		padding:20px 0 20px 10px ;
 		border-bottom: 1px solid $line-gray;
-		color:$gray;
+		color:$dark-gray;
 
 		&.center {
-			padding:0;
+			padding-left:0;
 			text-align: center;
 		}
 
 		&.top {
 			vertical-align:top;
+		}
+
+		.td-link {
+			color:$dark-gray;
+
+			&:hover {
+				text-decoration:underline;
+			}
 		}
 
 	}
@@ -92,6 +100,11 @@
 		&.left-border {
 			border-left:1px solid $line-gray;
 		}
+
+		&.center {
+			padding:0;
+			text-align:center;
+		}
 	}
 
 	td{
@@ -112,6 +125,11 @@
 
 		&.last{
 			border-bottom:0;
+		}
+
+		&.center {
+			padding:0;
+			text-align:center;
 		}
 
 		.input.full-width,
@@ -143,6 +161,10 @@
   text-align:center;
   font-weight:bold;
   border:1px solid $form-gray;
+
+  &.yellow {
+  	color:$main-yellow;
+  }
 }
 
 .list-img {
@@ -439,7 +461,7 @@
 /* scrollable table : E */
 
 .option-row {
-	display:none;
+	//display:none;
 }
 
 .td-multi-line {

@@ -232,6 +232,10 @@
       background:$main-blue;
     }
 
+    &.yellow{
+      background:$main-yellow;
+    }
+
     &.left {
       margin-right:7px;
     }
@@ -259,6 +263,14 @@
 
     &.darkblue {
       background:$btn-darkblue;
+    }
+
+    &.orange {
+      background:$main-orange;
+    }
+
+    &.yellow {
+      background:$main-yellow;
     }
 
     &.icon {
@@ -373,9 +385,9 @@
   }
 
   &-function {
-    padding:0 5px;
+    padding:0 2px;
     height:26px;
-    line-height:26px;
+    line-height:25px;
     color:$white;
     font-weight:bold;
     border:0;
@@ -425,6 +437,11 @@
     &.blue {
       color:$main-blue;
       border-color:$main-blue;
+    }
+
+    &.yellow {
+      color:$main-yellow;
+      border-color:$main-yellow;
     }
 
   }
@@ -496,6 +513,10 @@
     padding-left:52px;
     text-align:left;
     background:$main-blue url(../images/icon_save.png) no-repeat 30px 13px;
+
+    &.yellow {
+      background:$main-yellow url(../images/icon_save.png) no-repeat 30px 13px;
+    }
   }
 
   &-table-more {
@@ -507,6 +528,10 @@
 
     &.on {
       background-position:60px 9px;
+    }
+
+    &.yellow {
+      background-color:$main-yellow;
     }
   }
 
