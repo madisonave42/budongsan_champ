@@ -92,7 +92,7 @@ strong {
  * common layout style of page
  */
 html.map {
-  overflow-y: visible;
+  overflow-y: hidden;
 }
 html.map .wrapper {
   width: auto;

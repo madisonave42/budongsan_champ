@@ -330,14 +330,17 @@
   color: #ffffff;
 }
 .sort-result-list {
+  height: 40px;
+  position: relative;
   float: left;
   padding: 0 15px;
   width: 882px;
+  overflow: hidden;
 }
 .sort-result-item {
   line-height: 40px;
   color: #ffffff;
-  overflow: hidden;
+  position: absolute;
 }
 .sort-result-btn-up, .sort-result-btn-down {
   position: absolute;

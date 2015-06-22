@@ -279,11 +279,8 @@ $(function(){
 		var $contents = $('.contents');
 		var contHeight = winHeight - headerHeight - lnbHeight - footerHeight;
 
-		if( winHeight >= docHeight ) {
-			$contents.css({height: contHeight});
-		}
-
 		if( $('html').hasClass('map') ) {
+			$contents.css({height: contHeight});
 			$('.section-map').css({
 				width: winWidth - MAP_LIST_WIDTH,
 				height: contHeight
@@ -297,9 +294,11 @@ $(function(){
 			$('.sort-detail-scroll').css({
 				height:contHeight-126
 			});
-			$('.sale').css({
+			$('.sale, .sale-simple').css({
 				height:contHeight-119
 			});
+		} else if( winHeight >= docHeight ) {
+			$contents.css({height: contHeight});
 		}
 
 		// 다음 지도 API 관련 변수 선언
@@ -324,11 +323,8 @@ $(function(){
 			var $contents = $('.contents');
 			var contHeight = winHeight - headerHeight - lnbHeight - footerHeight;
 
-			if( winHeight >= docHeight ) {
-				$contents.css({height: contHeight});
-			}
-
 			if( $('html').hasClass('map') ) {
+				$contents.css({height: contHeight});
 				$('.section-map').css({
 					width: winWidth - MAP_LIST_WIDTH,
 					height: contHeight
@@ -342,10 +338,29 @@ $(function(){
 				$('.sort-detail-scroll').css({
 					height:contHeight-126
 				});
-				$('.sale').css({
+				$('.sale, .sale-simple').css({
 					height:contHeight-119
 				});
+			} else if( winHeight >= docHeight ) {
+				$contents.css({height: contHeight});
 			}
+		});
+
+	})();
+
+	// search result rolling
+	(function(){
+
+		$(window).on('load', function(){
+			banner.init();
+		});
+
+		$('.js-btn-prev').on('click', function(){
+			banner.setNext();
+		});
+
+		$('.js-btn-next').on('click', function(){
+			banner.setPrev();
 		});
 
 	})();
@@ -399,6 +414,12 @@ $(function(){
 
 			$('.btn-view').removeClass('on');
 			$(this).addClass('on');
+
+			var classArr = $(this).attr('class').split(' ');
+
+			$('.section-list .sale').removeClass('on');
+
+			$('.' + classArr[1]).addClass('on');
 
 		});
 

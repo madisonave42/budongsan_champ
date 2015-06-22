@@ -417,15 +417,19 @@
 		}
 
 		&-list {
+			height:40px;
+			position:relative;
 			float:left;
 			padding:0 15px;
 			width:882px;
+
+			overflow:hidden;
 		}
 
 		&-item {
 			line-height:40px;
 			color:$white;
-			overflow:hidden;
+			position:absolute;
 		}
 
 		&-btn {

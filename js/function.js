@@ -25,6 +25,84 @@ var toggleLabel = function ($input) {
 		}
 	});
 };
+
+var banner = (function(){
+
+	var currentIndex = 0;
+	var bannerSize;
+	var done = true;
+	var tId;
+
+	function _setNext(){
+		if(currentIndex + 1 >= bannerSize) moveDown(0);
+		else moveDown(currentIndex+1);
+	}
+
+	function _setAuto() {
+		clearInterval(tId);
+		tId = setInterval(function () {
+			_setNext();
+		}, 5000);
+	}
+
+	function moveDown(index){
+		done = false;
+
+		$('.sort-result-item').eq(currentIndex).stop().animate({top:40}, 1200, 'easeOutQuint');
+		$('.sort-result-item').eq(index).css({top:-40});
+		$('.sort-result-item').eq(index).stop().animate({top:0}, 1200, 'easeOutQuint');
+
+		currentIndex = index;
+
+		setTimeout(function(){
+			done = true;
+			_setAuto();
+		}, 1200);
+	}
+
+	function moveRight(index){
+		done = false;
+
+		$('.sort-result-item').eq(currentIndex).stop().animate({top:-40}, 1200, 'easeOutQuint');
+		$('.sort-result-item').eq(index).css({top:40});
+		$('.sort-result-item').eq(index).stop().animate({top:0}, 1200, 'easeOutQuint');
+
+		currentIndex = index;
+
+		setTimeout(function(){
+			done = true;
+			_setAuto();
+		}, 1200);
+	}
+
+	return{
+
+		init : function(){
+			bannerSize = $('.sort-result-item').size();
+			$('.sort-result-item').css({top:-40});
+			$('.sort-result-item').eq(0).css({top:0});
+
+			tId = setInterval(function(){_setNext();}, 5000);
+
+		},
+
+		setNext : function(){
+			if(!done) return;
+			clearInterval(tId);
+			if(currentIndex + 1 >= bannerSize) moveDown(0);
+			else moveDown(currentIndex+1);
+		},
+
+		setPrev : function(){
+			if(!done) return;
+			clearInterval(tId);
+			if(currentIndex <= 0) moveRight(bannerSize-1);
+			else moveRight(currentIndex-1);
+		}
+
+	};
+
+})();
 /**************
  * Main Event *
  **************/
@@ -306,11 +384,8 @@ $(function(){
 		var $contents = $('.contents');
 		var contHeight = winHeight - headerHeight - lnbHeight - footerHeight;
 
-		if( winHeight >= docHeight ) {
-			$contents.css({height: contHeight});
-		}
-
 		if( $('html').hasClass('map') ) {
+			$contents.css({height: contHeight});
 			$('.section-map').css({
 				width: winWidth - MAP_LIST_WIDTH,
 				height: contHeight
@@ -324,9 +399,11 @@ $(function(){
 			$('.sort-detail-scroll').css({
 				height:contHeight-126
 			});
-			$('.sale').css({
+			$('.sale, .sale-simple').css({
 				height:contHeight-119
 			});
+		} else if( winHeight >= docHeight ) {
+			$contents.css({height: contHeight});
 		}
 
 		// 다음 지도 API 관련 변수 선언
@@ -351,11 +428,8 @@ $(function(){
 			var $contents = $('.contents');
 			var contHeight = winHeight - headerHeight - lnbHeight - footerHeight;
 
-			if( winHeight >= docHeight ) {
-				$contents.css({height: contHeight});
-			}
-
 			if( $('html').hasClass('map') ) {
+				$contents.css({height: contHeight});
 				$('.section-map').css({
 					width: winWidth - MAP_LIST_WIDTH,
 					height: contHeight
@@ -369,10 +443,29 @@ $(function(){
 				$('.sort-detail-scroll').css({
 					height:contHeight-126
 				});
-				$('.sale').css({
+				$('.sale, .sale-simple').css({
 					height:contHeight-119
 				});
+			} else if( winHeight >= docHeight ) {
+				$contents.css({height: contHeight});
 			}
+		});
+
+	})();
+
+	// search result rolling
+	(function(){
+
+		$(window).on('load', function(){
+			banner.init();
+		});
+
+		$('.js-btn-prev').on('click', function(){
+			banner.setNext();
+		});
+
+		$('.js-btn-next').on('click', function(){
+			banner.setPrev();
 		});
 
 	})();
@@ -426,6 +519,12 @@ $(function(){
 
 			$('.btn-view').removeClass('on');
 			$(this).addClass('on');
+
+			var classArr = $(this).attr('class').split(' ');
+
+			$('.section-list .sale').removeClass('on');
+
+			$('.' + classArr[1]).addClass('on');
 
 		});
 
