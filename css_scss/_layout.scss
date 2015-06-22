@@ -525,6 +525,11 @@ html.map{
 		line-height:50px;
 
 		@include clear();
+
+		&.yellow .lnb-link:hover,
+		&.yellow .lnb-link.on {
+			color:$main-yellow;
+		}
 	}
 
 	&-item{
@@ -686,6 +691,10 @@ html.map{
 				@include clear();
 				margin:30px 0 15px;
 
+				&.no-top {
+					margin-top:0;
+				}
+
 				&.no-bottom {
 					margin-bottom:0;
 				}
@@ -696,20 +705,54 @@ html.map{
 				margin-bottom:12px;
 			}
 
+			&-subtitle {
+				margin-top:7px;
+			}
+
 			&-mid {
 				@include clear();
+
+				&.border-bottom {
+					border-bottom:1px solid $dark;
+				}
+
+				&-title {
+					margin:20px 0 15px;
+				}
+
+				.list-description {
+					margin-bottom:10px;
+				}
 			}
 
 			&-bottom{
 				@include clear();
 				margin:30px 0 100px;
 				text-align:center;
+
+				&.no-top {
+					margin-top:0;
+				}
+
+				&.no-bottom {
+					margin-bottom:0;
+				}
+
 			}
+
 		}
 
 	}
 
 	&-mid {
+
+		&.has-bottom {
+			padding-bottom:100px;
+		}
+
+	}
+
+	&-bottom {
 
 		&.has-bottom {
 			padding-bottom:100px;
@@ -807,4 +850,25 @@ html.map{
 		}
 	}
 
+}
+
+.submit-btns {
+	margin-top:55px;
+
+	&.center {
+		text-align:center;
+	}
+
+	&.left {
+		text-align:left;
+	}
+
+	&.right {
+		text-align:right;
+	}
+
+	.btn-fill {
+		display:inline-block;
+		margin:0 3px;
+	}
 }

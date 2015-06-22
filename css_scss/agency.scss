@@ -1,0 +1,622 @@
+@import "variables";
+@import "mixins";
+
+.agency-profile {
+	position:relative;
+	margin-top:35px;
+	border:1px solid $line-gray;
+
+	&-photo {
+		position:absolute;
+		top:39px;
+		left:40px;
+		width:146px;
+		height:145px;
+
+		&-wrap {
+			position:relative;
+			width:100%;
+			height:100%;
+			overflow:hidden;
+
+			&-img {
+				width:100%;
+			}
+
+		}
+
+		&-mask {
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			background:url(../images/mask_agency_photo.png) no-repeat;
+		}
+
+		&-btns {
+			display:none;
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			background:url(../images/bg_agency_photo_btns.png) 50% 50%;
+		}
+
+		&-btn {
+			position:absolute;
+			left:32px;
+			width:82px;
+			height:29px;
+			border:0;
+			border-radius:2px;
+			color:$white;
+			font-weight:bold;
+
+			&.regist {
+				top:59px;
+				background:$orange;
+			}
+
+			&.change {
+				top:42px;
+				background:$btn-darkblue;
+			}
+
+			&.del {
+				top:76px;
+				background:$btn-darkblue;
+			}
+		}
+
+		&:hover .agency-profile-photo-btns {
+			display:block;
+		}
+	}
+
+	&-top {
+		@include clear();
+		padding-left:220px;
+		height:96px;
+		background:$main-yellow;
+
+		&-btns {
+			margin:34px 40px 0 0;
+		}
+	}
+
+	&-name {
+		margin-top:23px;
+		font-size:30px;
+		font-weight:bold;
+		color:$white;
+		line-height:1;
+	}
+
+	&-link {
+		display:block;
+		margin:26px 0 0 10px;
+		width:26px;
+		height:26px;
+		background:url(../images/bg_home_link.png) no-repeat;
+		text-indent:-9999px;
+	}
+
+	&-time {
+		clear:left;
+		float:left;
+		padding-top:10px;
+		color:$white;
+	}
+
+	&-bottom {
+		padding-left:220px;
+		height:127px;
+	}
+
+	&-detail {
+		margin-top:16px;
+		width:370px;
+
+		&-item {
+			margin-top:5px;
+			font-size:15px;
+			color:$dark;
+		}
+	}
+
+	&-my {
+		margin-top:38px;
+		padding-left:30px;
+		width:370px;
+		height:72px;
+		border-left:1px solid $line-gray;
+
+		&-item {
+			@include clear();
+			position:relative;
+			margin-bottom:10px;
+			padding-left:12px;
+			width:145px;
+			height:17px;
+			line-height:17px;
+			color:$dark;
+			font-size:15px;
+			font-weight:bold;
+
+			&.left-float.left {
+				margin-right:30px;
+			}
+
+			&:after {
+				content:"";
+				position:absolute;
+				top:6px;
+				left:0;
+				width:2px;
+				height:2px;
+				background:$main-blue;
+			}
+		}
+
+		&-link {
+			color:$dark-yellow;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+	}
+
+}
+
+.agency-banner {
+	margin-top:20px;
+	height:120px;
+	background:$bg-light-gray;
+}
+
+.notice-section {
+	margin-top:60px;
+
+	&.left-float {
+		width:490px;
+	}
+
+}
+
+.faq-section {
+	margin-top:60px;
+
+	&.right-float {
+		width:490px;
+	}
+
+}
+
+.cs-section {
+	margin-top:35px;
+	background:$bg-light-gray url(../images/bg_cs_tel.png) no-repeat 341px 21px;
+
+	&.left-float {
+		width:490px;
+	}
+
+}
+
+.service-section {
+	margin-top:35px;
+
+	&.right-float {
+		width:490px;
+	}
+
+	&-link {
+		display:block;
+		margin-top:10px;
+		width:225px;
+		height:35px;
+		line-height:35px;
+		font-size:18px;
+		font-weight:bold;
+		background:$dark-gray;
+		color:$white;
+		text-align:center;
+
+		&:first-child {
+			margin-top:0;
+		}
+	}
+
+}
+
+.search-option {
+	border:1px solid $line-gray;
+
+	&-detail {
+		@include clear();
+		padding:0 40px 25px 40px;
+		background:$bg-white-gray;
+	}
+
+	&-wrap {
+		@include clear();
+		float:left;
+		margin-top:25px;
+		width:100%;
+
+		&.deal-type {
+			width:239px;
+		}
+
+		&.item-type {
+			width:239px;
+		}
+
+		&.area-type {
+			width:440px;
+		}
+
+		&.open-type {
+			width:478px;
+		}
+
+		&.manage-type {
+			width:440px;
+		}
+	}
+
+	&-label {
+		float:left;
+		width:75px;
+		line-height:37px;
+		color:$dark;
+		font-size:15px;
+		font-weight:bold;
+	}
+
+	&-monthly-btn {
+		padding:0;
+		width:69px;
+	}
+
+	&-condition {
+		@include clear();
+		margin-top:9px;
+
+		&-pannel {
+			display:none;
+
+			&.on {
+				display:block;
+			}
+		}
+
+		&-input {
+			width:508px;
+		}
+
+		&-unit {
+			float:left;
+			padding-left:5px;
+			width:25px;
+			line-height:37px;
+		}
+	}
+
+	&-bottom {
+		padding:10px 0;
+		background:$bg-light-gray;
+		border-top:1px solid $line-gray;
+		text-align:center;
+
+		.btn-fill {
+			margin:0 8px;
+			font-size:20px;
+
+			&.btn-search-icon {
+				padding-left:90px;
+				text-align:left;
+				background:$main-yellow url(../images/icon_search_white.png) no-repeat 70px 13px;
+			}
+		}
+	}
+
+}
+
+.report-provision {
+	@include clear();
+	padding:25px 40px;
+	border:1px solid $line-gray;
+	background:$bg-white-gray;
+
+	&-title {
+		margin-bottom:15px;
+		color:$dark;
+		font-size:16px;
+		font-weight:bold;
+	}
+
+	&-list {
+		width:450px;
+	}
+
+	&-item {
+		position:relative;
+		line-height:1.7;
+
+		&.em-red {
+			padding-left:8px;
+
+			&:after {
+				content:"";
+				position:absolute;
+				top:10px;
+				left:0;
+				width:2px;
+				height:2px;
+				background:$main-red;
+			}
+		}
+	}
+
+}
+
+.reported {
+	@include clear();
+	margin-bottom:10px;
+	padding:30px 35px;
+	background:$bg-white-gray;
+
+	&-item {
+		float:left;
+		width:310px;
+		text-align:center;
+	}
+
+	&-title {
+		margin-bottom:10px;
+		color:$dark;
+		font-size:16px;
+		font-weight:bold;
+	}
+
+	&-data {
+		color:$dark;
+		font-size:22px;
+		font-weight:bold;
+
+		&.date {
+			font-size:18px;
+
+			.em-yellow {
+				text-decoration:none;
+			}
+		}
+
+		.em-yellow {
+			text-decoration:underline;
+		}
+
+
+	}
+
+}
+
+.house-manage-link {
+	display:block;
+	margin-top:3px;
+	text-decoration:underline;
+}
+
+.img-reg-list {
+	@include clear();
+	margin-top:15px;
+	padding:10px;
+	border:1px solid $form-gray;
+
+	&-item {
+		float:left;
+		margin-left:10px;
+
+		&:first-child {
+			margin-left:0;
+		}
+	}
+}
+
+.tag-chk-list {
+  @include clear();
+
+  .check-wrap,
+  .radio-wrap {
+    margin:7px 0;
+  }
+}
+
+.input-tag-keyword {
+  margin-top:10px;
+}
+
+.map-frame {
+	width:759px;
+	height:458px;
+	border:1px solid $form-gray;
+}
+
+.agency-item-list {
+	border-collapse:separate;
+
+	&-header th,
+	&-header td {
+		background:$bg-white-gray;
+	}
+
+	tbody th,
+	tbody td {
+		border-bottom:1px solid $bg-gray;
+		border-left:1px solid $bg-gray;
+	}
+
+	tbody td {
+		padding:15px 0;
+		text-align:center;
+	}
+
+
+	.first {
+		border-left:0;
+	}
+
+	.last {
+		border-right:0;
+	}
+}
+
+.step{
+
+	  &-list{
+	    @include size(1000, 79);
+	    @include clear();
+	    background:url(../images/bg_step_five.png) no-repeat;
+
+	    // override each step
+	    &.step1{
+	      background-position:0 0px;
+	      .first {
+	        .step {
+	          &-mark, &-title {
+	            color: $white;
+	          }
+	        }
+	      }
+	    }
+
+	    &.step2{
+	      background-position:0 -79px;
+	      .second {
+	        .step {
+	          &-mark, &-title {
+	            color: $white;
+	          }
+	        }
+	      }
+	    }
+
+	    &.step3{
+	      background-position:0 -158px;
+	      .third {
+	        .step {
+	          &-mark, &-title {
+	            color: $white;
+	          }
+	        }
+	      }
+	    }
+
+	    &.step4{
+	      background-position:0 -237px;
+	      .fourth {
+	        .step {
+	          &-mark, &-title {
+	            color: $white;
+	          }
+	        }
+	      }
+	    }
+
+	    &.step5{
+	      background-position:0 -316px;
+	      .fifth {
+	        .step {
+	          &-mark, &-title {
+	            color: $white;
+	          }
+	        }
+	      }
+	    }
+	  }
+
+	  &-item{
+	    float:left;
+	    margin-top:20px;
+
+	    &.first{
+	      margin-left:26px;
+	      width:240px;
+	    }
+	    &.second{
+	      width:190px;
+	    }
+	    &.third{
+	      width:190px;
+	    }
+	    &.fourth{
+	      width:190px;
+	    }
+	    &.fifth{
+	      width:150px;
+	    }
+	  }
+
+	  &-mark{
+	    @include font(13, normal, $main-blue);
+	  }
+
+	  &-title{
+	    @include font(18, bold, $dark);
+	    margin-top:3px;
+
+			&-small {
+				font-size:15px;
+			}
+
+	  }
+
+}
+
+.write-complete {
+
+	&-info {
+		padding:30px;
+		text-align:center;
+		background:$bg-white-gray;
+		border:1px solid $bg-light-gray;
+	}
+
+	&-title {
+		margin-bottom:20px;
+		color:$dark;
+		font-size:18px;
+		font-weight:bold;
+	}
+
+	&-date {
+		margin-bottom:20px;
+		font-size:18px;
+		font-weight:bold;
+		color:$main-blue;
+	}
+
+	&-msg {
+		display:inline-block;
+	}
+
+	&-text {
+		position:relative;
+		line-height:1.7;
+		padding-left:10px;
+		text-align:left;
+
+		&:after {
+			content:"";
+			display:block;
+			position:absolute;
+			top:10px;
+			left:0;
+			width:2px;
+			height:2px;
+			background:$gray;
+		}
+	}
+
+}

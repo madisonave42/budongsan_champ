@@ -1,0 +1,599 @@
+include "header_top.html"
+
+<title>매물관리 | 중개회원 | 부동산 챔프</title>
+
+<link rel="stylesheet" href="../../css/common.css" />
+<!-- 회원가입 style -->
+<link rel="stylesheet" href="../../css/agency.css" />
+<link rel="stylesheet" href="../../css/popup.css" />
+
+include "header_bottom.html"
+
+<nav class="lnb">
+  <div class="wrapper">
+    <ul class="lnb-list yellow">
+      <li class="lnb-item"><a href="#" class="lnb-link">중개회원홈</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">매물등록</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link on">매물관리</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">공동중개(스마트매칭)</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">홈페이지관리</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">매물문의내역</a></li>
+    </ul>
+    <div class="lnb-util">
+      <div class="lnb-util-btns">
+        <button type="button" class="btn-med gray icon-plus">매물등록</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="contents">
+  <div class="wrapper">
+
+    <div class="contents-top">
+      <h2 class="hide">My매물</h2>
+      <div class="sort-tab js-tab">
+        <ul class="sort-tab-list yellow">
+          <li class="sort-tab-list-item"><a href="#" class="sort-tab-list-link js-tab-link on">ALL (4)</a></li>
+          <li class="sort-tab-list-item"><a href="#" class="sort-tab-list-link js-tab-link">매물등록 (1)</a></li>
+          <li class="sort-tab-list-item"><a href="#" class="sort-tab-list-link js-tab-link">광고대기 (0)</a></li>
+          <li class="sort-tab-list-item"><a href="#" class="sort-tab-list-link js-tab-link">광고진행 (1)</a></li>
+          <li class="sort-tab-list-item"><a href="#" class="sort-tab-list-link js-tab-link">광고종료예정 (1)</a></li>
+          <li class="sort-tab-list-item"><a href="#" class="sort-tab-list-link js-tab-link">광고종료 (1)</a></li>
+          <li class="sort-tab-list-item"><a href="#" class="sort-tab-list-link js-tab-link">거래완료 (1)</a></li>
+          <li class="sort-tab-list-item"><a href="#" class="sort-tab-list-link js-tab-link">신고매물 (1)</a></li>
+        </ul>
+      </div>
+      <div class="search-option">
+        <div class="search-option-detail">
+
+          <div class="search-option-wrap deal-type">
+            <div class="search-option-label">거래종류</div>
+            <div class="select-wrapper half-width left-float">
+              <div class="select">
+                <p class="label">매매</p>
+                <b class="button">▾</b>
+              </div>
+              <ul class="select-items">
+                <li class="selected">매매</li>
+                <li>매매</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="search-option-wrap item-type">
+            <div class="search-option-label">매물종류</div>
+            <div class="select-wrapper half-width left-float">
+              <div class="select">
+                <p class="label">아파트</p>
+                <b class="button">▾</b>
+              </div>
+              <ul class="select-items">
+                <li class="selected">아파트</li>
+                <li>아파트</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="search-option-wrap area-type">
+            <div class="search-option-label">지역선택</div>
+            <div class="select-wrapper half-width left-float left">
+              <div class="select">
+                <p class="label">도시</p>
+                <b class="button">▾</b>
+              </div>
+              <ul class="select-items">
+                <li class="selected">도시</li>
+                <li>도시</li>
+              </ul>
+            </div>
+            <div class="select-wrapper half-width left-float left">
+              <div class="select">
+                <p class="label">시/군/구</p>
+                <b class="button">▾</b>
+              </div>
+              <ul class="select-items">
+                <li class="selected">시/군/구</li>
+                <li>시/군/구</li>
+              </ul>
+            </div>
+            <div class="select-wrapper half-width left-float">
+              <div class="select">
+                <p class="label">읍/면/동</p>
+                <b class="button">▾</b>
+              </div>
+              <ul class="select-items">
+                <li class="selected">읍/면/동</li>
+                <li>읍/면/동</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="search-option-wrap open-type">
+            <div class="search-option-label">매물공개</div>
+            <div class="search-option-condition left-float left group">
+              <div class="radio-wrap left-float left group">
+                <input id="open-1" class="radio" name="open" type="radio" checked="checked">
+                <label for="open-1" class="radio-label">전체공개</label>
+              </div>
+              <div class="radio-wrap left-float left group">
+                <input id="open-2" class="radio" name="open" type="radio">
+                <label for="open-2" class="radio-label">사내공개</label>
+              </div>
+              <div class="radio-wrap left-float left group">
+                <input id="open-3" class="radio" name="open" type="radio">
+                <label for="open-3" class="radio-label">비공개</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="search-option-wrap manage-type">
+            <div class="search-option-label">공동중개</div>
+            <div class="search-option-condition left-float left group">
+              <div class="radio-wrap left-float left group">
+                <input id="manage-1" class="radio" name="manage" type="radio" checked="checked">
+                <label for="manage-1" class="radio-label">전체공개</label>
+              </div>
+              <div class="radio-wrap left-float left group">
+                <input id="manage-2" class="radio" name="manage" type="radio">
+                <label for="manage-2" class="radio-label">그룹공개</label>
+              </div>
+              <div class="radio-wrap left-float left group">
+                <input id="manage-3" class="radio" name="manage" type="radio">
+                <label for="manage-3" class="radio-label">비공개</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="search-option-wrap">
+            <div class="search-option-label">조회기간</div>
+            <div class="calendar left-float js-cal">
+              <input type="text" class="input calendar-input">
+              <button class="calendar-btn">달력열기</button>
+            </div>
+            <div class="div-item">~</div>
+            <div class="calendar left-float left js-cal">
+              <input type="text" class="input calendar-input">
+              <button class="calendar-btn">달력열기</button>
+            </div>
+
+            <div class="search-option-term left-float left group">
+              <button type="button" class="btn-cal-term yellow">1주</button>
+              <button type="button" class="btn-cal-term">15일</button>
+              <button type="button" class="btn-cal-term">1개월</button>
+              <button type="button" class="btn-cal-term">3개월</button>
+            </div>
+
+            <div class="search-monthly left-float">
+              <div class="search-spinner left-float left">
+                <button class="search-spinner-left">감소</button>
+                <div type="text" class="search-spinner-text year">2015년</div>
+                <button class="search-spinner-right">증가</button>
+              </div>
+              <div class="search-spinner left-float left">
+                <button class="search-spinner-left">감소</button>
+                <div type="text" class="search-spinner-text">4월</div>
+                <button class="search-spinner-right">증가</button>
+              </div>
+              <button type="button" class="btn-form search-option-monthly-btn left-float">월별선택</button>
+            </div>
+          </div>
+
+          <div class="search-option-wrap js-condition">
+            <div class="search-option-label">조건검색</div>
+            <div class="search-option-condition left-float left group">
+              <div class="radio-wrap left-float left group">
+                <input id="radio1-1" class="radio js-condition-item" name="type" type="radio" data-condition="name" checked="checked">
+                <label for="radio1-1" class="radio-label">매물명</label>
+              </div>
+              <div class="radio-wrap left-float left group">
+                <input id="radio1-2" class="radio js-condition-item" name="type" type="radio" data-condition="num">
+                <label for="radio1-2" class="radio-label">매물번호</label>
+              </div>
+              <div class="radio-wrap left-float left group">
+                <input id="radio1-3" class="radio js-condition-item" name="type" type="radio" data-condition="area">
+                <label for="radio1-3" class="radio-label">면적</label>
+              </div>
+              <div class="radio-wrap left-float">
+                <input id="radio1-4" class="radio js-condition-item" name="type" type="radio" data-condition="price">
+                <label for="radio1-4" class="radio-label">가격</label>
+              </div>
+            </div>
+
+            <div class="search-option-condition-input left-float">
+              <div class="search-option-condition-pannel js-condition-pannel on name">
+                <input type="text" class="input search-option-full">
+              </div>
+
+              <div class="search-option-condition-pannel js-condition-pannel num">
+                <input type="text" class="input search-option-full">
+              </div>
+
+              <div class="search-option-condition-pannel js-condition-pannel area">
+                <input type="text" class="input search-option-fromto left-float">
+                <div class="search-option-condition-unit">㎡</div>
+                <div class="div-item">~</div>
+                <input type="text" class="input search-option-fromto left-float">
+                <div class="search-option-condition-unit">㎡</div>
+              </div>
+
+              <div class="search-option-condition-pannel js-condition-pannel price">
+              <input type="text" class="input search-option-fromto left-float">
+                <div class="search-option-condition-unit">만원</div>
+                <div class="div-item">~</div>
+                <input type="text" class="input search-option-fromto left-float">
+                <div class="search-option-condition-unit">만원</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="search-option-bottom">
+          <input type="submit" class="btn-fill blue btn-search-icon" value="검색">
+          <button type="button" class="btn-fill gray">초기화</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="contents-mid has-bottom">
+
+      <section class="contents-part">
+
+        <div class="part-top">
+          <div class="sorting-amount left-float">
+            전체 <span class="em-yellow">4건</span>의 매물이 있습니다.
+          </div>
+          <div class="right-float">
+             <div class="sorting-label-box left-float left">
+               <div class="radio-wrap left-float left">
+                  <input id="radio2-1" type="radio" class="radio" name="sort" />
+                  <label for="radio2-1" class="radio-label">전체</label>
+                </div>
+
+                <div class="radio-wrap left-float left">
+                  <input id="radio2-2" type="radio" class="radio" name="sort" />
+                  <label for="radio2-2" class="radio-label">심사중 (1건)</label>
+                </div>
+
+                <div class="radio-wrap left-float">
+                  <input id="radio3-2" type="radio" class="radio" name="sort" />
+                  <label for="radio3-2" class="radio-label">보류 (0건)</label>
+                </div>
+             </div>
+
+              <button class="btn-function left-float">광고재등록</button>
+              <button class="btn-function left-float right">광고등록</button>
+              <button class="btn-function left-float right">거래완료</button>
+              <button class="btn-function left-float right">광고종료</button>
+              <button class="btn-function left-float right">비공개설정</button>
+              <button class="btn-function left-float right">매물복사</button>
+              <button class="btn-function left-float right">매물삭제</button>
+              <button class="btn-function left-float right">갱신일변경</button>
+          </div>
+        </div>
+
+        <div class="part-mid">
+
+          <table class="vt-table">
+
+            <caption class="hide">My 매물 목록</caption>
+
+            <colgroup>
+              <col style="width:30px;" />
+              <col style="width:105px;" />
+              <col style="width:80px;" />
+              <col style="width:125px;" />
+              <col style="width:60px;" />
+              <col style="width:auto;" />
+              <col style="width:140px;" />
+              <col style="width:100px;" />
+              <col style="width:115px;" />
+            </colgroup>
+
+            <thead>
+              <th scope="col">
+                <div class="check-wrap left middle">
+                  <input id="check-1" class="check-box" type="checkbox">
+                  <label for="check-1" class="check-label blind">전체선택</label>
+                </div>
+              </th>
+              <th scope="col">매물번호<br />매물상태</th>
+              <th scope="col">사진</th>
+              <th scope="col">매물관리</th>
+              <th scope="col">거래종류<br />매물종류</th>
+              <th scope="col">소재지 / 상세주소 매물설명</th>
+              <th scope="col">면적</th>
+              <th scope="col">가격<br />(만원)</th>
+              <th scope="col">일자</th>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td scope="col">
+                  <div class="check-wrap left middle">
+                    <input id="check-2" class="check-box" type="checkbox">
+                    <label for="check-2" class="check-label blind">현재 매물선택</label>
+                  </div>
+                </td>
+                <td class="center">
+                  <div class="td-inner">1234567</div>
+                  <div class="td-inner">광고진행</div>
+                  <div class="td-inner">무료</div>
+                  <div class="td-inner">
+                    <button class="btn-table-function">광고재등록</button>
+                  </div>
+                </td>
+                <td class="center">
+                  <div class="thumb-mini">
+                    <img src="../../images/temp/list_thumb_mini.jpg" alt="" class="thumb-mini-img" />
+                  </div>
+                </td>
+                <td>
+                  <div class="td-inner">
+                    <button class="btn-table-function wide">거래완료</button>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-function wide">광고종료</button>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-function half left-float">비공개</button>
+                    <button class="btn-table-function half left-float">복사</button>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-function half left-float">수정</button>
+                    <button class="btn-table-function half left-float">삭제</button>
+                  </div>
+                </td>
+                <td class="center">
+                  <div class="td-inner">월세</div>
+                  <div class="td-inner">아파트</div>
+                </td>
+                <td>
+                  <div class="td-inner">서울시/강남구/삼성동</div>
+                  <div class="td-inner">삼성힐스테이트 2단지(123-123번지)...</div>
+                  <div class="td-inner">10층/15층, 방2/욕실1</div>
+                </td>
+                <td>
+                  <div class="td-inner">공급 100,000.00㎡</div>
+                  <div class="td-inner">전용 100,000.00㎡</div>
+                </td>
+                <td class="center">
+                  <div class="td-inner">
+                    <div class="price-box yellow">1,000,000</div>
+                  </div>
+                  <div class="td-inner">
+                    <div class="price-box yellow">3,450</div>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-change-price">가격수정</button>
+                  </div>
+                </td>
+                <td>
+                  <div class="td-inner"><span class="em-dark">등록</span> 2015.04.01</div>
+                  <div class="td-inner"><span class="em-dark">수정</span> 2015.04.08</div>
+                  <div class="td-inner"><span class="em-dark">종료</span> <span class="em-red">1일전</span></div>
+                </td>
+              </tr>
+              <tr>
+                <td scope="col">
+                  <div class="check-wrap left middle">
+                    <input id="check-2" class="check-box" type="checkbox">
+                    <label for="check-2" class="check-label blind">현재 매물선택</label>
+                  </div>
+                </td>
+                <td class="center">
+                  <div class="td-inner">1234567</div>
+                  <div class="td-inner">등록대기</div>
+                  <div class="td-inner">
+                    <button class="btn-table-function">광고등록</button>
+                  </div>
+                </td>
+                <td class="center">
+                  <div class="thumb-mini">
+                    <img src="../../images/temp/list_thumb_mini.jpg" alt="" class="thumb-mini-img" />
+                  </div>
+                </td>
+                <td>
+                  <div class="td-inner">
+                    <button class="btn-table-function wide">거래완료</button>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-function wide">광고종료</button>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-function half left-float">비공개</button>
+                    <button class="btn-table-function half left-float">복사</button>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-function half left-float">수정</button>
+                    <button class="btn-table-function half left-float">삭제</button>
+                  </div>
+                </td>
+                <td class="center">
+                  <div class="td-inner">월세</div>
+                  <div class="td-inner">아파트</div>
+                </td>
+                <td>
+                  <div class="td-inner">서울시/강남구/삼성동</div>
+                  <div class="td-inner">삼성힐스테이트 2단지(123-123번지)...</div>
+                  <div class="td-inner">10층/15층, 방2/욕실1</div>
+                </td>
+                <td>
+                  <div class="td-inner">공급 100,000.00㎡</div>
+                  <div class="td-inner">전용 100,000.00㎡</div>
+                </td>
+                <td class="center">
+                  <div class="td-inner">
+                    <div class="price-box yellow">1,000,000</div>
+                  </div>
+                  <div class="td-inner">
+                    <div class="price-box yellow">3,450</div>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-change-price">가격수정</button>
+                  </div>
+                </td>
+                <td>
+                  <div class="td-inner"><span class="em-dark">등록</span> 2015.04.01</div>
+                  <div class="td-inner"><span class="em-dark">수정</span> 2015.04.08</div>
+                  <div class="td-inner"><span class="em-dark">종료</span> <span class="em-red">1일전</span></div>
+                </td>
+              </tr>
+              <tr>
+                <td scope="col">
+                  <div class="check-wrap left middle">
+                    <input id="check-2" class="check-box" type="checkbox">
+                    <label for="check-2" class="check-label blind">현재 매물선택</label>
+                  </div>
+                </td>
+                <td class="center">
+                  <div class="td-inner">1234567</div>
+                  <div class="td-inner">광고진행</div>
+                  <div class="td-inner">
+                    <span class="em-red">(VIP)</span>
+                  </div>
+                </td>
+                <td class="center">
+                  <div class="thumb-mini">
+                    <img src="../../images/temp/list_thumb_mini.jpg" alt="" class="thumb-mini-img" />
+                  </div>
+                </td>
+                <td>
+                  <div class="td-inner">
+                    <button class="btn-table-function wide">거래완료</button>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-function wide">광고종료</button>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-function half left-float">비공개</button>
+                    <button class="btn-table-function half left-float">복사</button>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-function half left-float">수정</button>
+                    <button class="btn-table-function half left-float">삭제</button>
+                  </div>
+                </td>
+                <td class="center">
+                  <div class="td-inner">월세</div>
+                  <div class="td-inner">아파트</div>
+                </td>
+                <td>
+                  <div class="td-inner">서울시/강남구/삼성동</div>
+                  <div class="td-inner">삼성힐스테이트 2단지(123-123번지)...</div>
+                  <div class="td-inner">10층/15층, 방2/욕실1</div>
+                </td>
+                <td>
+                  <div class="td-inner">공급 100,000.00㎡</div>
+                  <div class="td-inner">전용 100,000.00㎡</div>
+                </td>
+                <td class="center">
+                  <div class="td-inner">
+                    <div class="price-box yellow">1,000,000</div>
+                  </div>
+                  <div class="td-inner">
+                    <div class="price-box yellow">3,450</div>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-change-price">가격수정</button>
+                  </div>
+                </td>
+                <td>
+                  <div class="td-inner"><span class="em-dark">등록</span> 2015.04.01</div>
+                  <div class="td-inner"><span class="em-dark">수정</span> 2015.04.08</div>
+                </td>
+              </tr>
+              <tr>
+                <td scope="col">
+                  <div class="check-wrap left middle">
+                    <input id="check-2" class="check-box" type="checkbox">
+                    <label for="check-2" class="check-label blind">현재 매물선택</label>
+                  </div>
+                </td>
+                <td class="center">
+                  <div class="td-inner">1234567</div>
+                  <div class="td-inner">정보확인</div>
+                  <div class="td-inner">
+                    <span class="em-yellow">(심사중)</span>
+                  </div>
+                </td>
+                <td class="center">
+                  <div class="thumb-mini">
+                    <img src="../../images/temp/list_thumb_mini.jpg" alt="" class="thumb-mini-img" />
+                  </div>
+                </td>
+                <td>
+                  <div class="td-inner">
+                    <button class="btn-table-function wide">거래완료</button>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-function wide">광고종료</button>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-function half left-float">비공개</button>
+                    <button class="btn-table-function half left-float">복사</button>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-function half left-float">수정</button>
+                    <button class="btn-table-function half left-float">삭제</button>
+                  </div>
+                </td>
+                <td class="center">
+                  <div class="td-inner">월세</div>
+                  <div class="td-inner">아파트</div>
+                </td>
+                <td>
+                  <div class="td-inner">서울시/강남구/삼성동</div>
+                  <div class="td-inner">삼성힐스테이트 2단지(123-123번지)...</div>
+                  <div class="td-inner">10층/15층, 방2/욕실1</div>
+                </td>
+                <td>
+                  <div class="td-inner">공급 100,000.00㎡</div>
+                  <div class="td-inner">전용 100,000.00㎡</div>
+                </td>
+                <td class="center">
+                  <div class="td-inner">
+                    <div class="price-box yellow">1,000,000</div>
+                  </div>
+                  <div class="td-inner">
+                    <div class="price-box yellow">3,450</div>
+                  </div>
+                  <div class="td-inner">
+                    <button class="btn-table-change-price">가격수정</button>
+                  </div>
+                </td>
+                <td>
+                  <div class="td-inner"><span class="em-dark">등록</span> 2015.04.01</div>
+                  <div class="td-inner"><span class="em-dark">수정</span> 2015.04.08</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="page yellow">
+            <a href="#" class="page-item prev">이전</a>
+            <a href="#" class="page-item on">1</a>
+            <a href="#" class="page-item">2</a>
+            <a href="#" class="page-item">3</a>
+            <a href="#" class="page-item">4</a>
+            <a href="#" class="page-item">5</a>
+            <a href="#" class="page-item">6</a>
+            <a href="#" class="page-item">7</a>
+            <a href="#" class="page-item">8</a>
+            <a href="#" class="page-item">9</a>
+            <a href="#" class="page-item">10</a>
+            <a href="#" class="page-item next">다음</a>
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </div>
+</section>
+
+include "footer.html"

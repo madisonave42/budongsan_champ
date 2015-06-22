@@ -1,0 +1,186 @@
+include "header_top.html"
+
+<title>프리미엄 기업회원 가입방식 선택 | 회원가입 | 부동산 챔프</title>
+
+<link rel="stylesheet" href="../../css/common.css" />
+<!-- 회원가입 style -->
+<link rel="stylesheet" href="../../css/join.css" />
+<link rel="stylesheet" href="../../css/popup.css" />
+
+include "header_bottom.html"
+
+<section class="contents top-border">
+  <div class="wrapper">
+
+    <div class="contents-top">
+      <h2 class="join-title">프리미엄 기업회원(부동산 플레닛) 가입방식 선택</h2>
+      <p class="join-title-desc mediation">
+       개인회원으로 가입 후 기업회원 인증절차를 통해 기업회원 가입이 가능합니다.<br />부동산중개사무소는 기업회원으로 가입하실 수 없습니다.(기업회원 가입 시 서비스중지 및 해지)<br /><span class="em-red">부동산관련업 종사자(건설, 시행, 분양, 인테리어, AMC, PMC, 컨설팅 등) 는 프리미엄 기업회원으로 가입하실 수 없습니다.</span><br /><br />회원님께서 원하시는 가입방식을 선택하여 주세요.
+      </p>
+    </div>
+
+    <div class="contents-mid">
+
+      <div class="join-type">
+        <h3 class="join-type-title email">이메일 가입</h3>
+        <button type="button" class="btn-join js-open-popup" data-href="#join-email">가입하기</button>
+      </div>
+
+      <div class="join-type">
+        <h3 class="join-type-title facebook">페이스북 가입</h3>
+        <button type="button" class="btn-join js-open-popup" data-href="#join-facebook">가입하기</button>
+      </div>
+
+      <div class="join-type">
+        <h3 class="join-type-title naver">네이버 가입</h3>
+        <button type="button" class="btn-join js-open-popup" data-href="#join-naver">가입하기</button>
+      </div>
+
+      <div class="join-type last">
+        <h3 class="join-type-title kakao">카카오톡 가입</h3>
+        <button type="button" class="btn-join js-open-popup" data-href="#join-kakao">가입하기</button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- [D] 팝업 배경 -->
+<div class="dimmed on"></div>
+
+<!-- [D] 팝업 : S -->
+<section class="popup popup-wide-width on">
+  <div class="popup-mid">
+    <section class="contents-part">
+
+      <div class="part-top no-top">
+        <h3 class="part-title">본인 확인/추가정보 입력</h3>
+        <ul class="list-description">
+          <li class="list-item em-red">매물 등록을 위해서 아래 내용을 입력해 주세요.</li>
+          <li class="list-item">입력하신 정보(핸드폰번호, 주소정보)는 본인확인 및 매물등록 시 필요한 정보 입니다.</li>
+          <li class="list-item">고객님의 정보(핸드폰번호, 주소정보)는 암호화 되어 부동산챔프에 저장됩니다.</li>
+        </ul>
+      </div>
+
+      <div class="part-mid">
+
+        <table class="hr-table">
+
+          <caption class="hide">기본정보입력</caption>
+
+          <colgroup>
+            <col style="width:185px;">
+            <col style="width:auto;">
+          </colgroup>
+
+          <tbody>
+            <tr>
+              <th scope="row">
+                <label for="id">회원정보</label> <span class="em-blue">*</span>
+              </th>
+              <td>
+                홍길동 (user@gmail.com)
+              </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                  <label for="phone">핸드폰 번호</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">010</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">010</li>
+                      <li>010</li>
+                      <li>010</li>
+                    </ul>
+                  </div>
+
+                  <input type="text" class="input half-width left-float left" title="핸드폰 가운데자리" />
+
+                  <input type="text" class="input half-width left-float left" title="핸드폰 끝자리" />
+
+                  <button type="button" class="btn-form left-float">인증하기</button>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="phone-confirm"></label>핸드폰 인증번호 <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <input id="phone-confirm" type="text" class="input left-float left gray-bg"/>
+
+                  <button type="button" class="btn-form left-float">확인</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  주소 <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <button type="button" class="btn-form">주소찾기</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="addr01">도로명주소</label>
+                </th>
+                <td>
+                  <input id="addr01" type="text" class="input double gray-bg"/>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="last">
+                  <label for="addr02">지번주소</label>
+                </th>
+                <td class="last">
+                  <input id="addr02" type="text" class="input double gray-bg"/>
+                </td>
+              </tr>
+          </tbody>
+        </table>
+
+      	<div class="popup-addinfo-agree">
+      		<div class="popup-addinfo-agree-left">
+      			<div class="check-wrap left middle">
+	            <input id="check-1" type="checkbox" class="check-box" />
+	            <label for="check-1" class="check-label">개인정보 이용동의</label>
+	          </div>
+	          <a href="#" class="popup-addinfo-agree-view">내용보기</a>
+      		</div>
+      		<div class="popup-addinfo-agree-center">
+      			<div class="check-wrap left middle">
+	            <input id="check-2" type="checkbox" class="check-box" />
+	            <label for="check-2" class="check-label">개인정보 이용 및 활용동의</label>
+	          </div>
+	          <a href="#" class="popup-addinfo-agree-view">내용보기</a>
+      		</div>
+      		<div class="popup-addinfo-agree-right">
+      			<div class="check-wrap left middle">
+	            <input id="check-3" type="checkbox" class="check-box" />
+	            <label for="check-3" class="check-label">고유식별정보 처리 동의</label>
+	          </div>
+	          <a href="#" class="popup-addinfo-agree-view">내용보기</a>
+      		</div>
+      	</div>
+
+      </div>
+
+	    <div class="part-bottom no-bottom">
+	    	<input type="submit" class="btn-fill blue" value="확인" />
+	    	<button type="button" class="btn-fill gray">취소</button>
+	    </div>
+    </section>
+  </div>
+
+  <button type="button" class="popup-close js-close-popup">이메일 입력 팝업 닫기</button>
+</section>
+<!-- [D] 팝업 : E -->
+
+include "footer.html"
