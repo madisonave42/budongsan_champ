@@ -1,0 +1,2039 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+<title>매물등록 | 중개회원 | 부동산 챔프</title>
+
+<link rel="stylesheet" href="../../css/common.css" />
+<!-- 회원가입 style -->
+<link rel="stylesheet" href="../../css/agency.css" />
+<link rel="stylesheet" href="../../css/popup.css" />
+
+<script src="../../js/lib/jquery-1.11.0.min.js"></script>
+<script src="../../js/lib/jquery-ui.min.js"></script>
+<script src="../../js/lib/jquery.slides.min.js"></script>
+<script src="../../js/lib/jquery.jcarousel.min.js"></script>
+<script src="../../js/lib/jquery.pikachoose.min.js"></script>
+<script src="../../js/function.js"></script>
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="../../css/ie8.css" />
+<script src="../../js/lib/html5shiv.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<header class="header">
+
+  <div class="wrapper">
+
+    <h1 class="header-logo"><a href="#"><img src="../../images/logo.png" alt="부동산챔프"></a></h1>
+
+    <ul class="header-gnb js-gnb">
+      <li class="gnb-item">
+        <a href="#" class="gnb-main-link js-main-link">매물</a>
+
+        <ul class="gnb-sub-wrap">
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">주거전체</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">아파트 (단지)</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">오피스텔 (단지)</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">사무실</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">상가.점포</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">빌딩/건물</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">공장/창고</a>
+          </li>
+          <li class="gnb-sub-item last">
+            <a href="#" class="gnb-sub-link">토지/기타</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="gnb-item">
+        <a href="#" class="gnb-main-link js-main-link">분양</a>
+
+        <ul class="gnb-sub-wrap narrow">
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">주거용</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">상업용</a>
+          </li>
+          <li class="gnb-sub-item last">
+            <a href="#" class="gnb-sub-link">업무용</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="gnb-item">
+        <a href="#" class="gnb-main-link js-main-link">실거래가</a>
+
+        <ul class="gnb-sub-wrap">
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">대출금리비교</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">매매VS임대비교</a>
+          </li>
+          <li class="gnb-sub-item last">
+            <a href="#" class="gnb-sub-link">대출금계산기</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="gnb-item">
+        <a href="#" class="gnb-main-link js-main-link">프리미엄전용관</a>
+
+        <ul class="gnb-sub-wrap">
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">홈페이지 관리</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">공동중개 의뢰</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">자동 매칭</a>
+          </li>
+          <li class="gnb-sub-item last">
+            <a href="#" class="gnb-sub-link">수동 매칭</a>
+          </li>
+        </ul>
+      </li>
+
+    </ul>
+
+    <ul class="header-util">
+      <li class="util-item"><a href="#" class="util-link">회원가입</a></li>
+      <li class="util-item"><a href="#" class="util-link">로그인</a></li>
+      <li class="util-item"><a href="#" class="util-link">인테리어</a></li>
+      <li class="util-item"><a href="#" class="util-link">중개회원</a></li>
+      <li class="util-item last"><a href="#" class="util-link">고객센터</a></li>
+    </ul>
+
+    <dl class="header-my">
+
+      <dt><a href="#" class="header-my-title js-my"><span class="typo">MY챔프</span></a></dt>
+
+      <dd class="header-my-sub">
+
+        <div class="header-my-member">
+          <div class="member-name"><span class="em-blue">부동산챔프</span>님</div>
+          <!-- note 1) for Dev -->
+          <button type="button" class="member logout">로그아웃</button>
+          <!--<div class="member login">로그인</div>-->
+          <!--/ note 1) for Dev -->
+        </div>
+
+        <ul class="header-my-info">
+          <li class="info-list"><a href="#" class="info-link info-modify">회원정보수정</a></li>
+          <li class="info-list"><a href="#" class="info-link info-goods">상품/이용권정보</a></li>
+          <li class="info-list"><a href="#" class="info-link info-payment">결제정보</a></li>
+          <li class="info-list last"><a href="#" class="info-link info-usage">이용안내</a></li>
+        </ul>
+
+        <ul class="header-my-history">
+          <li class="history-list odd"><a href="#" class="history-link notice">알림판</a></li>
+          <li class="history-list"><a href="#" class="history-link for-sale">매물</a></li>
+          <li class="history-list odd"><a href="#" class="history-link for-sale-current">최근 본 매물</a></li>
+          <li class="history-list"><a href="#" class="history-link for-sale-favorite">관심매물</a></li>
+          <li class="history-list odd"><a href="#" class="history-link search-current">최근검색</a></li>
+          <li class="history-list"><a href="#" class="history-link search-call">검색 불러오기</a></li>
+          <li class="history-list odd"><a href="#" class="history-link mediation">중개의뢰</a></li>
+          <li class="history-list"><a href="#" class="history-link inquiry">문의내역</a></li>
+        </ul>
+
+      </dd>
+
+    </dl>
+
+  </div>
+
+</header>
+
+<nav class="lnb">
+  <div class="wrapper">
+    <ul class="lnb-list yellow">
+      <li class="lnb-item"><a href="#" class="lnb-link">중개회원홈</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link on">매물등록</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">매물관리</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">공동중개(스마트매칭)</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">홈페이지관리</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">매물문의내역</a></li>
+    </ul>
+    <div class="lnb-util">
+      <div class="lnb-util-btns">
+        <button type="button" class="btn-med gray icon-plus">매물등록</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="contents">
+  <div class="wrapper">
+
+    <div class="contents-top">
+      <h2 class="contents-title">매물등록</h2>
+      <ul class="list-description">
+        <li class="list-item">등록한 매물은 별도의 갱신이 없는 경우 30일 동안 노출됩니다.</li>
+        <li class="list-item">거래완료 또는 가격 이산 등 매물정보의 변화를 알게 된 시점에 지체 없이 해당 매물의 정보를 수정해야 합니다.</li>
+        <li class="list-item">허위매물로 신고 3회 이상 적발 시 서비스 이용이 제한될 수 있습니다.</li>
+        <li class="list-item em-red">건물전체를 매매 및 임대하고자 하는 경우에만 등록하시기 바랍니다.</li>
+      </ul>
+    </div>
+
+    <div class="contents-mid">
+
+      <section class="contents-part">
+
+        <div class="part-top no-bottom">
+          <h3 class="part-title">매물종류/유형</h3>
+        </div>
+
+        <div class="part-mid border-bottom">
+
+          <table class="hr-table">
+
+            <caption class="hide">매물종류/유형</caption>
+
+            <colgroup>
+              <col style="width:185px;" />
+              <col style="width:315px;" />
+              <col style="width:185px;" />
+              <col style="width:auto;" />
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row">
+                  매물종류 <span class="em-yellow">*</span>
+                </th>
+                <td colspan="3" class="td-padding">
+
+                  <div class="select-wrapper half-width middle left">
+                    <div class="select">
+                      <p class="label">상업용건물</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">상업용건물</li>
+                      <li>상업용건물</li>
+                    </ul>
+                  </div>
+                  <div class="select-wrapper half-width middle left">
+                    <div class="select">
+                      <p class="label">업무시설</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">업무시설</li>
+                      <li>업무시설</li>
+                    </ul>
+                  </div>
+                  <button type="button" class="btn-form middle">빠른등록/편집</button>
+
+                  <div class="check-wrap right middle">
+                    <input id="check-3" class="check-box" type="checkbox">
+                    <label for="check-3" class="check-label">빠른등록 단지/지역으로 자동추가</label>
+                  </div>
+
+                  <p class="form-msg-normal">매물등록 이후에는 매물종류 <span class="em-yellow">수정이 불가능</span> 하오니, 정확히 확인해 주세요.</p>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="col-th">
+                  매물공개 <span class="em-yellow">*</span>
+                </th>
+                <td>
+                  <div class="radio-wrap left-float left group">
+                    <input id="radio3-1" class="radio" name="type" type="radio">
+                    <label for="radio3-1" class="radio-label">전체공개</label>
+                  </div>
+
+                  <div class="radio-wrap left-float left group">
+                    <input id="radio3-2" class="radio" name="type" type="radio">
+                    <label for="radio3-2" class="radio-label">사내공개</label>
+                  </div>
+
+                  <div class="radio-wrap left-float">
+                    <input id="radio3-3" class="radio" name="type" type="radio">
+                    <label for="radio3-3" class="radio-label">비공개</label>
+                  </div>
+                </td>
+
+                <th scope="row" class="col-th">
+                  공동중개
+                </th>
+                <td>
+                  <div class="radio-wrap left-float left group">
+                    <input id="manage1-1" class="radio" name="type" type="radio">
+                    <label for="manage1-1" class="radio-label">전체공개</label>
+                  </div>
+
+                  <div class="radio-wrap left-float left group">
+                    <input id="manage1-2" class="radio" name="type" type="radio">
+                    <label for="manage1-2" class="radio-label">그룹공개</label>
+                  </div>
+
+                  <div class="radio-wrap left-float">
+                    <input id="manage1-3" class="radio" name="type" type="radio">
+                    <label for="manage1-3" class="radio-label">비공개</label>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </section>
+
+      <section class="contents-part">
+
+        <div class="part-top no-bottom">
+          <h3 class="part-title">위치정보</h3>
+        </div>
+
+        <div class="part-mid border-bottom">
+
+          <table class="hr-table">
+
+            <caption class="hide">위치정보</caption>
+
+            <colgroup>
+              <col style="width:185px;">
+              <col style="width:auto;">
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row">
+                  소재지 <span class="em-blue">*</span>
+                </th>
+                <td class="td-padding">
+
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">서울시</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">서울시</li>
+                      <li>서울시</li>
+                    </ul>
+                  </div>
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">강남구</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">강남구</li>
+                      <li>강남구</li>
+                    </ul>
+                  </div>
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">청담동</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">청담동</li>
+                      <li>청담동</li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  상세주소 <span class="em-blue">*</span>
+                </th>
+                <td class="td-padding">
+                  <div class="td-multi-line">
+                    <div class="radio-wrap middle left group">
+                      <input id="addr2-1" class="radio" name="type" type="radio">
+                      <label for="addr2-1" class="radio-label">일반</label>
+                    </div>
+
+                    <div class="radio-wrap middle left group">
+                      <input id="addr2-2" class="radio" name="type" type="radio">
+                      <label for="addr2-2" class="radio-label">산</label>
+                    </div>
+
+                    <input class="input half-width middle left" title="번지" type="text">
+                    <div class="form-msg middle left">-</div>
+                    <input class="input half-width middle left" title="번지" type="text">
+                    <div class="form-msg middle left group">번지</div>
+
+                    <div class="label-toggle-wrap middle quarter-width">
+                      <label for="input-title2" class="label-toggle-text">동,층,호수를 입력해주세요</label>
+                      <input id="input-title2" class="input full-width js-label-toggle" title="호수 입력" type="text">
+                    </div>
+                  </div>
+                  <div class="td-multi-line">
+                    <div class="check-wrap middle left group">
+                      <input id="addr3-1" class="check-box" type="checkbox">
+                      <label for="addr3-1" class="check-label">상세주소 없음</label>
+                    </div>
+                    <div class="check-wrap middle left group">
+                      <input id="addr3-2" class="check-box" type="checkbox">
+                      <label for="addr3-2" class="check-label">가(임시주소)</label>
+                    </div>
+                    <div class="check-wrap middle left group">
+                      <input id="addr3-3" class="check-box" type="checkbox">
+                      <label for="addr3-3" class="check-label">상세주소 숨김</label>
+                    </div>
+
+                    <button type="button" class="btn-form middle">위치확인</button>
+
+                    <p class="form-msg-normal"><span class="em-blue">상세주소가 없는 경우 ‘상세주소없음’을 체크해 주세요.<br>
+                    한 번지 내 여러 호수가 개별로 등기되어 있는 경우 ‘해당호수’까지 입력해 주세요.</span></p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  지도위치 <span class="em-blue">*</span>
+                </th>
+                <td class="td-padding">
+                  <div class="map-frame">
+                    <img src="../../images/temp/write_map.jpg" alt="">
+                  </div>
+                  <p class="form-msg-normal"><span class="em-blue">※ 아이콘을 움직여 매물의 정확한 위치(동)를 지정해주세요.</span></p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </section>
+
+      <section class="contents-part">
+
+        <div class="part-top no-bottom">
+          <h3 class="part-title">매물정보 (매매의 경우)</h3>
+        </div>
+
+        <div class="part-mid border-bottom">
+
+          <ul class="list-description">
+            <li class="list-item"><span class="em-blue">면적 등록 시 등기부등본 또는 건축물대장상 면적확인</span>이 가능한 매물은 면적 확인 후 등록해주세요</li>
+            <li class="list-item"><span class="em-blue">등록한 면적이 다른 경우 허위매물로 신고 받으실 수 있습니다.</span></li>
+          </ul>
+
+          <table class="hr-table">
+
+            <caption class="hide">매물정보 입력</caption>
+
+            <colgroup>
+              <col style="width:185px;" />
+              <col style="width:315px;" />
+              <col style="width:185px;" />
+              <col style="width:auto;" />
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row">
+                  계약면적 <span class="em-yellow">*</span>
+                </th>
+                <td colspan="3">
+                  <input class="input half-width left-float left" title="평방미터" type="text">
+                  <div class="form-msg left-float left">㎡</div>
+                  <div class="form-msg left-float left">=</div>
+                  <input class="input half-width left-float left" title="평" type="text">
+                  <div class="form-msg left-float left group">P</div>
+
+                  <p class="form-msg middle">정보를 입력하시면 상호 자동 계산됩니다.</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  전용면적 <span class="em-yellow">*</span>
+                </th>
+                <td colspan="3">
+                  <input class="input half-width left-float left" title="평방미터" type="text">
+                  <div class="form-msg left-float left">㎡</div>
+                  <div class="form-msg left-float left">=</div>
+                  <input class="input half-width left-float left" title="평" type="text">
+                  <div class="form-msg left-float left group">P</div>
+
+                  <p class="form-msg middle">정보를 입력하시면 상호 자동 계산됩니다.</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  대지면적 <span class="em-yellow">*</span>
+                </th>
+                <td colspan="3">
+                  <input class="input half-width left-float left" title="평방미터" type="text">
+                  <div class="form-msg left-float left">㎡</div>
+                  <div class="form-msg left-float left">=</div>
+                  <input class="input half-width left-float left" title="평" type="text">
+                  <div class="form-msg left-float left group">P</div>
+
+                  <p class="form-msg middle">정보를 입력하시면 상호 자동 계산됩니다.</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  층 <span class="em-yellow">*</span>
+                </th>
+                <td colspan="3">
+                  <div class="form-msg middle left">지하</div>
+                  <div class="select-wrapper half-width left middle">
+                    <div class="select">
+                      <p class="label">반지하</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">반지하</li>
+                      <li>반지하</li>
+                    </ul>
+                  </div>
+                  <div class="form-msg middle left">/</div>
+                  <div class="form-msg middle left">지상</div>
+                  <div class="select-wrapper half-width left middle">
+                    <div class="select">
+                      <p class="label">2층</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">2층</li>
+                      <li>2층</li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  입주자수
+                </th>
+                <td>
+                  <input class="input half-width middle left" title="입주자수" type="text">
+                  <div class="form-msg middle left">개</div>
+                </td>
+                <th scope="row">
+                  무료주차대수
+                </th>
+                <td>
+                  <input class="input half-width middle left" title="무료주차대수" type="text">
+                  <div class="check-wrap right middle">
+                    <input id="check-park2" class="check-box" type="checkbox">
+                    <label for="check-park2" class="check-label">협의</label>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </section>
+
+      <section class="contents-part">
+
+        <div class="part-top no-bottom">
+          <h3 class="part-title">매물정보 (전세, 월세, 단기임대의 경우)</h3>
+        </div>
+
+        <div class="part-mid border-bottom">
+
+          <ul class="list-description">
+            <li class="list-item"><span class="em-blue">면적 등록 시 등기부등본 또는 건축물대장상 면적확인</span>이 가능한 매물은 면적 확인 후 등록해주세요</li>
+            <li class="list-item"><span class="em-blue">등록한 면적이 다른 경우 허위매물로 신고 받으실 수 있습니다.</span></li>
+          </ul>
+
+          <table class="hr-table">
+
+            <caption class="hide">매물정보 입력</caption>
+
+            <colgroup>
+              <col style="width:185px;" />
+              <col style="width:315px;" />
+              <col style="width:185px;" />
+              <col style="width:auto;" />
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row">
+                  임대면적 <span class="em-yellow">*</span>
+                </th>
+                <td colspan="3">
+                  <input class="input half-width left-float left" title="평방미터" type="text">
+                  <div class="form-msg left-float left">㎡</div>
+                  <div class="form-msg left-float left">=</div>
+                  <input class="input half-width left-float left" title="평" type="text">
+                  <div class="form-msg left-float left group">P</div>
+
+                  <p class="form-msg middle">정보를 입력하시면 상호 자동 계산됩니다.</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  전용면적 <span class="em-yellow">*</span>
+                </th>
+                <td colspan="3">
+                  <input class="input half-width left-float left" title="평방미터" type="text">
+                  <div class="form-msg left-float left">㎡</div>
+                  <div class="form-msg left-float left">=</div>
+                  <input class="input half-width left-float left" title="평" type="text">
+                  <div class="form-msg left-float left group">P</div>
+
+                  <p class="form-msg middle">정보를 입력하시면 상호 자동 계산됩니다.</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  대지면적 <span class="em-yellow">*</span>
+                </th>
+                <td colspan="3">
+                  <input class="input half-width left-float left" title="평방미터" type="text">
+                  <div class="form-msg left-float left">㎡</div>
+                  <div class="form-msg left-float left">=</div>
+                  <input class="input half-width left-float left" title="평" type="text">
+                  <div class="form-msg left-float left group">P</div>
+
+                  <p class="form-msg middle">정보를 입력하시면 상호 자동 계산됩니다.</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  층 <span class="em-yellow">*</span>
+                </th>
+                <td colspan="3">
+                  <div class="form-msg middle left">지하</div>
+                  <div class="select-wrapper half-width left middle">
+                    <div class="select">
+                      <p class="label">반지하</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">반지하</li>
+                      <li>반지하</li>
+                    </ul>
+                  </div>
+                  <div class="form-msg middle left">/</div>
+                  <div class="form-msg middle left">지상</div>
+                  <div class="select-wrapper half-width left middle">
+                    <div class="select">
+                      <p class="label">2층</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">2층</li>
+                      <li>2층</li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  입주자수
+                </th>
+                <td>
+                  <input class="input half-width middle left" title="입주자수" type="text">
+                  <div class="form-msg middle left">개</div>
+                </td>
+                <th scope="row">
+                  무료주차대수
+                </th>
+                <td>
+                  <input class="input half-width middle left" title="무료주차대수" type="text">
+                  <div class="check-wrap right middle">
+                    <input id="check-park3" class="check-box" type="checkbox">
+                    <label for="check-park3" class="check-label">협의</label>
+                  </div>
+                </td>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </section>
+
+
+
+      <section class="contents-part js-option-toggle">
+
+        <div class="part-top no-bottom">
+          <h3 class="part-title">건물정보</h3>
+        </div>
+
+        <div class="part-mid border-bottom">
+
+          <ul class="list-description">
+            <li class="list-item"><span class="em-blue">건축물대장을 기준</span>으로 등록해 주세요. 건물정보를 정확히 등록할수록 이용자들의 호응이 좋습니다.</li>
+          </ul>
+
+          <table class="hr-table">
+
+            <caption class="hide">건물정보 입력</caption>
+
+            <colgroup>
+              <col style="width:185px;">
+              <col style="width:auto;">
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row">
+                  건물명
+                </th>
+                <td>
+                  <input class="input full-width left-float left" title="건물 이름" type="text">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  연면적 <span class="em-yellow">*</span>
+                </th>
+                <td>
+                  <input class="input half-width left-float left" title="평방미터" type="text">
+                  <div class="form-msg left-float left">㎡</div>
+                  <div class="form-msg left-float left">=</div>
+                  <input class="input half-width left-float left" title="평" type="text">
+                  <div class="form-msg left-float left group">P</div>
+
+                  <p class="form-msg middle">정보를 입력하시면 상호 자동 계산됩니다.</p>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  규모
+                </th>
+                <td>
+                  <div class="form-msg left-float left">지하</div>
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">3층</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">3층</li>
+                      <li>3층</li>
+                    </ul>
+                  </div>
+                  <div class="form-msg left-float left">/</div>
+                  <div class="form-msg left-float left">지상</div>
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">20층</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">20층</li>
+                      <li>20층</li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  준공년월
+                </th>
+                <td>
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">1999</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">1999</li>
+                      <li>1999</li>
+                    </ul>
+                  </div>
+                  <div class="form-msg left-float left group">년</div>
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">01</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">01</li>
+                      <li>01</li>
+                    </ul>
+                  </div>
+                  <div class="form-msg left-float">월</div>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  건축면적
+                </th>
+                <td>
+                  <input class="input half-width left-float left" title="평방미터" type="text">
+                  <div class="form-msg left-float left">㎡</div>
+                  <div class="form-msg left-float left">=</div>
+                  <input class="input half-width left-float left" title="평" type="text">
+                  <div class="form-msg left-float left group">P</div>
+
+                  <p class="form-msg middle">정보를 입력하시면 상호 자동 계산됩니다.</p>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  용적률 / 건폐율
+                </th>
+                <td>
+                  <div class="form-msg left-float left">용적률</div>
+                  <input class="input half-width left-float left" title="용적률" type="text">
+                  <div class="form-msg left-float left">%</div>
+                  <div class="form-msg left-float left">/</div>
+                  <div class="form-msg left-float left">건폐율</div>
+                  <input class="input half-width left-float left" title="건폐율" type="text">
+                  <div class="form-msg left-float left group">%</div>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  총주차대수
+                </th>
+                <td>
+                  <input class="input half-width left-float left" title="총주차대수" type="text">
+                  <div class="form-msg left-float left">대</div>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  엘리베이터수
+                </th>
+                <td>
+                  <div class="form-msg left-float left">승객용</div>
+                  <input class="input half-width left-float left" title="승객용" type="text">
+                  <div class="form-msg left-float left">대</div>
+                  <div class="form-msg left-float left">/</div>
+                  <div class="form-msg left-float left">화물용</div>
+                  <input class="input half-width left-float left" title="화물용" type="text">
+                  <div class="form-msg left-float left group">대</div>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  용도지역
+                </th>
+                <td>
+                  <div class="select-wrapper">
+                    <div class="select">
+                      <p class="label">제3종 일반주거지역</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">제3종 일반주거지역</li>
+                      <li>제3종 일반주거지역</li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  건축구조
+                </th>
+                <td>
+                  <div class="select-wrapper left-float left">
+                    <div class="select">
+                      <p class="label">벽돌</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">벽돌</li>
+                      <li>벽돌</li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  용도(건축물대장)
+                </th>
+                <td>
+                  <div class="select-wrapper left-float left">
+                    <div class="select">
+                      <p class="label">업무시설</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">업무시설</li>
+                      <li>업무시설</li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  입주자수
+                </th>
+                <td>
+                  <input class="input half-width left-float left" title="입주자" type="text">
+                  <div class="form-msg left-float left">개</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="table-more">
+          <button class="btn-small right-float btn-table-more yellow js-toggle-btn">더보기</button>
+        </div>
+
+      </section>
+
+
+      <section class="contents-part js-option-toggle">
+
+        <div class="part-top no-bottom">
+          <h3 class="part-title">가격정보 (매매인경우)</h3>
+        </div>
+
+        <div class="part-mid border-bottom">
+
+          <table class="hr-table">
+
+            <caption class="hide">가격정보 입력</caption>
+
+            <colgroup>
+              <col style="width:95px;">
+              <col style="width:90px;">
+              <col style="width:auto;">
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row" colspan="2">
+                  거래종류 <span class="em-yellow">*</span>
+                </th>
+                <td>
+                  <div class="radio-wrap middle left group">
+                    <input id="price1-1" class="radio" name="type" type="radio">
+                    <label for="price1-1" class="radio-label">매매</label>
+                  </div>
+
+                  <div class="radio-wrap middle left group">
+                    <input id="price1-2" class="radio" name="type" type="radio">
+                    <label for="price1-2" class="radio-label">전세</label>
+                  </div>
+
+                  <div class="radio-wrap middle left group">
+                    <input id="price1-3" class="radio" name="type" type="radio">
+                    <label for="price1-3" class="radio-label">월세</label>
+                  </div>
+
+                  <div class="radio-wrap middle left group">
+                    <input id="price1-4" class="radio" name="type" type="radio">
+                    <label for="price1-4" class="radio-label">단기임대</label>
+                  </div>
+                  <p class="form-msg middle">*등기부등본상 권리상태가 경매로 표기된 매물은 등록하실 수 없습니다.</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" colspan="2">
+                  매매가 <span class="em-yellow">*</span>
+                </th>
+                <td>
+                  <input class="input half-width middle left" title="전세가" type="text">
+                  <div class="form-msg middle left">만원</div>
+                  <p class="form-msg middle left group">[금액:<span class="em-yellow">일십억</span>원]</p>
+                  <div class="check-wrap middle">
+                    <input id="price-check11-1" class="check-box" type="checkbox">
+                    <label for="price-check11-1" class="check-label">금액협의 가능</label>
+                  </div>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row" rowspan="4">
+                  기존<br />임대차내용
+                </th>
+                <th scope="row" class="left-border">
+                  보증금총액
+                </th>
+                <td>
+                  <input class="input half-width middle left" title="전세가" type="text">
+                  <div class="form-msg middle left">만원</div>
+                  <p class="form-msg middle left group">[금액:<span class="em-yellow">일십억</span>원]</p>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row" class="left-border">
+                  월세총액
+                </th>
+                <td>
+                  <input class="input half-width middle left" title="전세가" type="text">
+                  <div class="form-msg middle left">만원</div>
+                  <p class="form-msg middle left group">[금액:<span class="em-yellow">일십억</span>원]</p>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row" class="left-border">
+                  월관리비총액
+                </th>
+                <td>
+                  <input class="input half-width middle left" title="전세가" type="text">
+                  <div class="form-msg middle left">만원</div>
+                  <p class="form-msg middle left group">[금액:<span class="em-yellow">일십억</span>원]</p>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row" class="left-border">
+                  기타관리비
+                </th>
+                <td>
+                  <div class="check-wrap middle left group">
+                    <input id="manage5-1" class="check-box" type="checkbox">
+                    <label for="manage5-1" class="check-label">없음</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage5-2" class="check-box" type="checkbox">
+                    <label for="manage5-2" class="check-label">전기별도</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage5-3" class="check-box" type="checkbox">
+                    <label for="manage5-3" class="check-label">수도별도</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage5-4" class="check-box" type="checkbox">
+                    <label for="manage5-4" class="check-label">가스별도</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage5-5" class="check-box" type="checkbox">
+                    <label for="manage5-5" class="check-label">청소비</label>
+                  </div>
+                  <div class="check-wrap middle left">
+                    <input id="manage5-6" class="check-box" type="checkbox">
+                    <label for="manage5-6" class="check-label">기타</label>
+                  </div>
+                  <input class="input half-width middle" title="직접입력" type="text">
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row" colspan="2">
+                  융자금
+                </th>
+                <td>
+                  <div class="select-wrapper double left-float left">
+                    <div class="select">
+                      <p class="label">직접입력</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">직접입력</li>
+                      <li>20만원~25만원</li>
+                    </ul>
+                  </div>
+                  <input class="input half-width middle left" title="직접입력" type="text">
+                  <div class="form-msg middle left">만원</div>
+                  <p class="form-msg middle left group">[금액:<span class="em-yellow">일십억</span>원] (<span class="em-red">시세대비: 10%</span>)</p>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row" colspan="2">
+                  권리금
+                </th>
+                <td>
+                  <input class="input half-width middle left" title="권리금" type="text">
+                  <div class="form-msg middle left">만원</div>
+                  <p class="form-msg middle left group">[금액:<span class="em-yellow">이백만</span>원]</p>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row" colspan="2">
+                  예상수익률(년)
+                </th>
+                <td>
+                  <input class="input half-width middle left" title="예상수익률" type="text">
+                  <div class="form-msg middle left">%</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="table-more">
+          <button class="btn-small right-float btn-table-more yellow js-toggle-btn">더보기</button>
+        </div>
+
+      </section>
+
+      <section class="contents-part js-option-toggle">
+
+        <div class="part-top no-bottom">
+          <h3 class="part-title">가격정보 (전세인경우)</h3>
+        </div>
+
+        <div class="part-mid border-bottom">
+
+          <table class="hr-table">
+
+            <caption class="hide">가격정보 입력</caption>
+
+            <colgroup>
+              <col style="width:95px;">
+              <col style="width:90px;">
+              <col style="width:auto;">
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row" colspan="2">
+                  거래종류 <span class="em-yellow">*</span>
+                </th>
+                <td>
+                  <div class="radio-wrap middle left group">
+                    <input id="price3-1" class="radio" name="type" type="radio">
+                    <label for="price3-1" class="radio-label">매매</label>
+                  </div>
+
+                  <div class="radio-wrap middle left group">
+                    <input id="price3-2" class="radio" name="type" type="radio">
+                    <label for="price3-2" class="radio-label">전세</label>
+                  </div>
+
+                  <div class="radio-wrap middle left group">
+                    <input id="price3-3" class="radio" name="type" type="radio">
+                    <label for="price3-3" class="radio-label">월세</label>
+                  </div>
+
+                  <div class="radio-wrap middle left group">
+                    <input id="price3-4" class="radio" name="type" type="radio">
+                    <label for="price3-4" class="radio-label">단기임대</label>
+                  </div>
+                  <p class="form-msg middle">*등기부등본상 권리상태가 경매로 표기된 매물은 등록하실 수 없습니다.</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" colspan="2">
+                  전세가 <span class="em-yellow">*</span>
+                </th>
+                <td>
+                  <input class="input half-width middle left" title="전세가" type="text">
+                  <div class="form-msg middle left
+                  ">만원</div>
+                  <p class="form-msg middle left group">[금액:<span class="em-yellow">일십억</span>원]</p>
+                  <div class="check-wrap middle">
+                    <input id="price-check11-1" class="check-box" type="checkbox">
+                    <label for="price-check11-1" class="check-label">금액협의 가능</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" rowspan="2">
+                  관리비 <span class="em-yellow">*</span>
+                </th>
+                <th scope="row">
+                  월 관리비
+                </th>
+                <td>
+                  <input class="input half-width middle left" title="전세가" type="text">
+                  <div class="form-msg middle left">만원</div>
+                  <p class="form-msg middle left group">[금액:<span class="em-yellow">이백오십만</span>원]</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="left-border">
+                  기타관리비
+                </th>
+                <td>
+                  <div class="check-wrap middle left group">
+                    <input id="manage6-1" class="check-box" type="checkbox">
+                    <label for="manage6-1" class="check-label">없음</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage6-2" class="check-box" type="checkbox">
+                    <label for="manage6-2" class="check-label">전기별도</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage6-3" class="check-box" type="checkbox">
+                    <label for="manage6-3" class="check-label">수도별도</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage6-4" class="check-box" type="checkbox">
+                    <label for="manage6-4" class="check-label">가스별도</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage6-5" class="check-box" type="checkbox">
+                    <label for="manage6-5" class="check-label">청소비</label>
+                  </div>
+                  <div class="check-wrap middle left">
+                    <input id="manage6-6" class="check-box" type="checkbox">
+                    <label for="manage6-6" class="check-label">기타</label>
+                  </div>
+                  <input class="input half-width middle" title="직접입력" type="text">
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row" colspan="2">
+                  융자금
+                </th>
+                <td>
+                  <div class="select-wrapper double left-float left">
+                    <div class="select">
+                      <p class="label">직접입력</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">직접입력</li>
+                      <li>20만원~25만원</li>
+                    </ul>
+                  </div>
+                  <input class="input half-width middle left" title="직접입력" type="text">
+                  <div class="form-msg middle left">만원</div>
+                  <p class="form-msg middle left group">[금액:<span class="em-yellow">일십억</span>원] (<span class="em-red">시세대비: 10%</span>)</p>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row" colspan="2">
+                  권리금
+                </th>
+                <td>
+                  <input class="input half-width middle left" title="권리금" type="text">
+                  <div class="form-msg middle left">만원</div>
+                  <p class="form-msg middle left group">[금액:<span class="em-yellow">이백만</span>원]</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="table-more">
+          <button class="btn-small right-float btn-table-more yellow js-toggle-btn">더보기</button>
+        </div>
+
+      </section>
+
+      <section class="contents-part js-option-toggle">
+
+        <div class="part-top no-bottom">
+          <h3 class="part-title">가격정보 (월세, 단기임대인 경우)</h3>
+        </div>
+
+        <div class="part-mid border-bottom">
+
+          <table class="hr-table">
+
+            <caption class="hide">가격정보 입력</caption>
+
+            <colgroup>
+              <col style="width:95px;">
+              <col style="width:90px;">
+              <col style="width:auto;">
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row" colspan="2">
+                  거래종류 <span class="em-yellow">*</span>
+                </th>
+                <td>
+                  <div class="radio-wrap middle left group">
+                    <input id="price4-1" class="radio" name="type" type="radio">
+                    <label for="price4-1" class="radio-label">매매</label>
+                  </div>
+
+                  <div class="radio-wrap middle left group">
+                    <input id="price4-2" class="radio" name="type" type="radio">
+                    <label for="price4-2" class="radio-label">전세</label>
+                  </div>
+
+                  <div class="radio-wrap middle left group">
+                    <input id="price4-3" class="radio" name="type" type="radio">
+                    <label for="price4-3" class="radio-label">월세</label>
+                  </div>
+
+                  <div class="radio-wrap middle left group">
+                    <input id="price4-4" class="radio" name="type" type="radio">
+                    <label for="price4-4" class="radio-label">단기임대</label>
+                  </div>
+                  <p class="form-msg middle">*등기부등본상 권리상태가 경매로 표기된 매물은 등록하실 수 없습니다.</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" colspan="2">
+                  월세가 <span class="em-yellow">*</span>
+                </th>
+                <td>
+                  <div class="form-msg middle">보증금</div>
+                  <input class="input half-width middle left" title="보증금" type="text">
+                  <div class="form-msg middle left">만원 / 월세</div>
+                  <input class="input half-width middle left" title="월세" type="text">
+                  <div class="form-msg middle left">만원</div>
+                  <p class="form-msg middle left group">[금액:<span class="em-yellow">이억오천만</span>원 / <span class="em-yellow">일백만</span>원]</p>
+                  <div class="check-wrap middle">
+                    <input id="price-check11-1" class="check-box" type="checkbox">
+                    <label for="price-check11-1" class="check-label">금액협의 가능</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" rowspan="2">
+                  관리비 <span class="em-yellow">*</span>
+                </th>
+                <th scope="row">
+                  월 관리비
+                </th>
+                <td>
+                  <input class="input half-width middle left" title="전세가" type="text">
+                  <div class="form-msg middle left">만원</div>
+                  <p class="form-msg middle left group">[금액:<span class="em-yellow">일십억</span>원]</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="left-border">
+                  기타관리비
+                </th>
+                <td>
+                  <div class="check-wrap middle left group">
+                    <input id="manage7-1" class="check-box" type="checkbox">
+                    <label for="manage7-1" class="check-label">없음</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage7-2" class="check-box" type="checkbox">
+                    <label for="manage7-2" class="check-label">전기별도</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage7-3" class="check-box" type="checkbox">
+                    <label for="manage7-3" class="check-label">수도별도</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage7-4" class="check-box" type="checkbox">
+                    <label for="manage7-4" class="check-label">가스별도</label>
+                  </div>
+                  <div class="check-wrap middle left group">
+                    <input id="manage7-5" class="check-box" type="checkbox">
+                    <label for="manage7-5" class="check-label">청소비</label>
+                  </div>
+                  <div class="check-wrap middle left">
+                    <input id="manage7-6" class="check-box" type="checkbox">
+                    <label for="manage7-6" class="check-label">기타</label>
+                  </div>
+                  <input class="input half-width middle" title="직접입력" type="text">
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row" colspan="2">
+                  융자금
+                </th>
+                <td>
+                  <div class="select-wrapper double left-float left">
+                    <div class="select">
+                      <p class="label">직접입력</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">직접입력</li>
+                      <li>20만원~25만원</li>
+                    </ul>
+                  </div>
+                  <input class="input half-width middle left" title="직접입력" type="text">
+                  <div class="form-msg middle left">만원</div>
+                  <p class="form-msg middle left group">[금액:<span class="em-yellow">일십억</span>원] (<span class="em-red">시세대비: 10%</span>)</p>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row" colspan="2">
+                  권리금
+                </th>
+                <td>
+                  <input class="input half-width middle left" title="권리금" type="text">
+                  <div class="form-msg middle left">만원</div>
+                  <p class="form-msg middle left group">[금액:<span class="em-yellow">이백만</span>원]</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="table-more">
+          <button class="btn-small right-float btn-table-more yellow js-toggle-btn">더보기</button>
+        </div>
+
+      </section>
+
+      <section class="contents-part">
+
+        <div class="part-top no-bottom">
+          <h3 class="part-title">입주일</h3>
+        </div>
+
+        <div class="part-mid border-bottom">
+
+          <table class="hr-table">
+
+            <caption class="hide">입주일 입력</caption>
+
+            <colgroup>
+              <col style="width:185px;" />
+              <col style="width:auto;" />
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row">
+                  입주가능일 <span class="em-yellow">*</span>
+                </th>
+                <td>
+                  <div class="radio-wrap middle left group">
+                    <input id="date1-1" class="radio" name="type" type="radio">
+                    <label for="date1-1" class="radio-label">즉시입주</label>
+                  </div>
+
+                  <div class="radio-wrap middle">
+                    <input id="date1-2" class="radio" name="type" type="radio">
+                    <label for="date1-2" class="radio-label blind">나중에 입주</label>
+                  </div>
+                  <div class="select-wrapper half-width middle">
+                    <div class="select">
+                      <p class="label">선택</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">선택</li>
+                      <li>선택</li>
+                    </ul>
+                  </div>
+                  <div class="form-msg middle left">개월 이내</div>
+
+                  <div class="select-wrapper half-width middle">
+                    <div class="select">
+                      <p class="label">선택</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">선택</li>
+                      <li>선택</li>
+                    </ul>
+                  </div>
+                  <div class="form-msg middle left">년</div>
+
+                  <div class="select-wrapper half-width middle">
+                    <div class="select">
+                      <p class="label">선택</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">선택</li>
+                      <li>선택</li>
+                    </ul>
+                  </div>
+                  <div class="form-msg middle left group">월 이후</div>
+
+                  <div class="check-wrap middle">
+                    <input id="price-check17-1" class="check-box" type="checkbox">
+                    <label for="price-check17-1" class="check-label">협의 가능</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  전/월세 만기일
+                </th>
+                <td>
+                  <input class="input half-width left-float left" title="전월세 만기일" type="text">
+                  <button type="button" class="btn-form left-float">달력</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </section>
+
+      <section class="contents-part js-option-toggle">
+
+        <div class="part-top no-bottom">
+          <h3 class="part-title">시설정보</h3>
+        </div>
+
+        <div class="part-mid border-bottom">
+
+          <table class="hr-table">
+
+            <caption class="hide">시설정보 입력</caption>
+
+            <colgroup>
+              <col style="width:185px;" />
+              <col style="width:315px;" />
+              <col style="width:185px;" />
+              <col style="width:auto;" />
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row">
+                  난방시설 <span class="em-yellow">*</span>
+                </th>
+                <td>
+                  <div class="select-wrapper left-float left">
+                    <div class="select">
+                      <p class="label">지역난방</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">지역난방</li>
+                      <li>지역난방</li>
+                    </ul>
+                  </div>
+                </td>
+                <th scope="row">
+                  난방연료
+                </th>
+                <td>
+                  <div class="select-wrapper left-float left">
+                    <div class="select">
+                      <p class="label">열병합</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">열병합</li>
+                      <li>열병합</li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  냉방시설
+                </th>
+                <td colspan="3">
+                  <div class="check-wrap left-float left group">
+                    <input id="air-check-1" class="check-box" type="checkbox">
+                    <label for="air-check-1" class="check-label">없음</label>
+                  </div>
+                  <div class="check-wrap left-float left group">
+                    <input id="air-check-2" class="check-box" type="checkbox">
+                    <label for="air-check-2" class="check-label">벽걸이에어컨</label>
+                  </div>
+                  <div class="check-wrap left-float left group">
+                    <input id="air-check-3" class="check-box" type="checkbox">
+                    <label for="air-check-3" class="check-label">스탠드에어컨</label>
+                  </div>
+                  <div class="check-wrap left-float left group">
+                    <input id="air-check-4" class="check-box" type="checkbox">
+                    <label for="air-check-4" class="check-label">천정형시스템에어컨</label>
+                  </div>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  주차시설
+                </th>
+                <td colspan="3">
+                  <div class="check-wrap left-float left group">
+                    <input id="pakr-check-1" class="check-box" type="checkbox">
+                    <label for="pakr-check-1" class="check-label">없음</label>
+                  </div>
+                  <div class="check-wrap left-float left group">
+                    <input id="pakr-check-2" class="check-box" type="checkbox">
+                    <label for="pakr-check-2" class="check-label">전용주차시설</label>
+                  </div>
+                  <div class="check-wrap left-float left group">
+                    <input id="pakr-check-3" class="check-box" type="checkbox">
+                    <label for="pakr-check-3" class="check-label">공동주차시설</label>
+                  </div>
+                  <div class="check-wrap left-float left group">
+                    <input id="pakr-check-4" class="check-box" type="checkbox">
+                    <label for="pakr-check-4" class="check-label">자주식</label>
+                  </div>
+                  <div class="check-wrap left-float left group">
+                    <input id="pakr-check-5" class="check-box" type="checkbox">
+                    <label for="pakr-check-5" class="check-label">기계식</label>
+                  </div>
+                  <div class="check-wrap left-float left group">
+                    <input id="pakr-check-6" class="check-box" type="checkbox">
+                    <label for="pakr-check-6" class="check-label">자주식/기계식</label>
+                  </div>
+                </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row">
+                  승강시설
+                </th>
+                <td colspan="3">
+                  <div class="check-wrap left-float left group">
+                    <input id="lift-check-1" class="check-box" type="checkbox">
+                    <label for="lift-check-1" class="check-label">없음</label>
+                  </div>
+                  <div class="check-wrap left-float left group">
+                    <input id="lift-check-2" class="check-box" type="checkbox">
+                    <label for="lift-check-2" class="check-label">엘리베이터</label>
+                  </div>
+                  <div class="check-wrap left-float left group">
+                    <input id="lift-check-3" class="check-box" type="checkbox">
+                    <label for="lift-check-3" class="check-label">에스컬레이터</label>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="table-more">
+          <button class="btn-small right-float btn-table-more yellow js-toggle-btn">더보기</button>
+        </div>
+
+      </section>
+
+      <section class="contents-part">
+
+        <div class="part-top no-bottom">
+          <h3 class="part-title">옵션정보</h3>
+        </div>
+
+        <div class="part-mid border-bottom">
+
+          <table class="hr-table">
+
+            <caption class="hide">옵션정보 입력</caption>
+
+            <colgroup>
+              <col style="width:185px;" />
+              <col style="width:auto;" />
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row">
+                  옵션(유/무)
+                </th>
+                <td class="td-padding">
+                  <div class="tag-chk-list">
+                    <div class="check-wrap left-float left group">
+                      <input id="opt1-1" class="check-box" type="checkbox">
+                      <label for="opt1-1" class="check-label">휴게공간</label>
+                    </div>
+                    <div class="check-wrap left-float left group">
+                      <input id="opt1-2" class="check-box" type="checkbox">
+                      <label for="opt1-2" class="check-label">테라스</label>
+                    </div>
+                    <div class="check-wrap left-float left group">
+                      <input id="opt1-3" class="check-box" type="checkbox">
+                      <label for="opt1-3" class="check-label">자연환기(창문개폐)</label>
+                    </div>
+                    <div class="check-wrap left-float left group">
+                      <input id="opt1-4" class="check-box" type="checkbox">
+                      <label for="opt1-4" class="check-label">CCTV</label>
+                    </div>
+                    <div class="check-wrap left-float left group">
+                      <input id="opt1-5" class="check-box" type="checkbox">
+                      <label for="opt1-5" class="check-label">관리인 상주</label>
+                    </div>
+                    <div class="check-wrap left-float left group">
+                      <input id="opt1-6" class="check-box" type="checkbox">
+                      <label for="opt1-6" class="check-label">화재경보기</label>
+                    </div>
+                    <div class="check-wrap left-float left group">
+                      <input id="opt1-7" class="check-box" type="checkbox">
+                      <label for="opt1-7" class="check-label">O/A Floor</label>
+                    </div>
+                    <div class="check-wrap left-float left group">
+                      <input id="opt1-8" class="check-box" type="checkbox">
+                      <label for="opt1-8" class="check-label">Access Floor</label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  태그입력
+                </th>
+                <td class="td-padding">
+                  <div class="tag-chk-list">
+                    <div class="check-wrap left-float left group">
+                      <input id="tag-check-1" class="check-box" type="checkbox">
+                      <label for="tag-check-1" class="check-label">대로변</label>
+                    </div>
+                    <div class="check-wrap left-float left group">
+                      <input id="tag-check-2" class="check-box" type="checkbox">
+                      <label for="tag-check-2" class="check-label">신축</label>
+                    </div>
+                    <div class="check-wrap left-float left group">
+                      <input id="tag-check-3" class="check-box" type="checkbox">
+                      <label for="tag-check-3" class="check-label">역세권</label>
+                    </div>
+                    <div class="check-wrap left-float left group">
+                      <input id="tag-check-4" class="check-box" type="checkbox">
+                      <label for="tag-check-4" class="check-label">급매</label>
+                    </div>
+                    <div class="check-wrap left-float left group">
+                      <input id="tag-check-5" class="check-box" type="checkbox">
+                      <label for="tag-check-5" class="check-label">인테리어 굿</label>
+                    </div>
+                    <div class="check-wrap left-float left group">
+                      <input id="tag-check-6" class="check-box" type="checkbox">
+                      <label for="tag-check-6" class="check-label">시세보다 저렴</label>
+                    </div>
+                    <div class="check-wrap left-float left group">
+                      <input id="tag-check-7" class="check-box" type="checkbox">
+                      <label for="tag-check-7" class="check-label">관리비 저렴</label>
+                    </div>
+                    <div class="check-wrap left-float left group">
+                      <input id="tag-check-8" class="check-box" type="checkbox">
+                      <label for="tag-check-8" class="check-label">주변환경 우수</label>
+                    </div>
+                    <div class="check-wrap left-float left group">
+                      <input id="tag-check-9" class="check-box" type="checkbox">
+                      <label for="tag-check-9" class="check-label">주차시설 좋음</label>
+                    </div>
+                    <div class="check-wrap left-float left group">
+                      <input id="tag-check-10" class="check-box" type="checkbox">
+                      <label for="tag-check-10" class="check-label">무융자</label>
+                    </div>
+                    <div class="check-wrap left-float left group">
+                      <input id="tag-check-11" class="check-box" type="checkbox">
+                      <label for="tag-check-11" class="check-label">천정고 높음</label>
+                    </div>
+                  </div>
+
+                  <div class="label-toggle-wrap input-tag-keyword">
+                    <label for="input-tag3" class="label-toggle-text">ex) #대로변  #신축  #시세보다 저럼</label>
+                    <input id="input-tag3" class="input full-width js-label-toggle" title="태그 입력" type="text">
+                  </div>
+
+                  <p class="form-msg-normal"><span class="em-yellow">태그를 직접 입력하시거나 위의 태그를 선택해 주세요. 선택한 태그는 자동으로 입력됩니다.<br />태그는 이용자가 검색 시 사용합니다. 태그는 20개 까지 입력 가능합니다.</span></p>
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </section>
+
+      <section class="contents-part">
+
+        <div class="part-top no-bottom">
+          <h3 class="part-title left-float left group">사진등록</h3>
+          <p class="part-subtitle left-float"><span class="em-yellow">* 필수입력: 최소 3장 이상 등록해주세요.</span></p>
+          <div class="right-float">
+            <button class="btn-small left-float left">사진직접등록</button>
+            <button class="btn-small left-float">매물사진관리등록</button>
+          </div>
+        </div>
+
+        <div class="part-mid">
+
+          <ul class="list-description">
+            <li class="list-item">첫번째 사진은 대표사진으로 사용됩니다.</li>
+            <li class="list-item">사진은 한번에 여러장을 등록 할 수 있습니다.</li>
+            <li class="list-item">내부 구조와 평수가 잘 드러나는 사진으로 등록해주세요. 사진을 많이 등록할수록 이용자들의 호응이 좋습니다.</li>
+            <li class="list-item">사진은 한 장당 5MB (jpg, jpeg, png, gif) 미만만 업로드 가능합니다.</li>
+            <li class="list-item">매물과 무관한 사진 게재 시 등록한 매물은 <span class="em-yellow">삭제</span>되며 계정이 <span class="em-yellow">제재</span>될 수 있습니다.</li>
+            <li class="list-item">연락처가 사진에 표시되어 있거나, 다른 서비스의 워터마크가 있는 경우 등록이 제한됩니다.</li>
+          </ul>
+
+          <ul class="img-reg-list">
+            <li class="img-reg-list-item">
+              <img src="../../images/img_reg_pic_yellow01.png" alt="" />
+            </li>
+            <li class="img-reg-list-item">
+              <img src="../../images/img_reg_pic_yellow02.png" alt="" />
+            </li>
+            <li class="img-reg-list-item">
+              <img src="../../images/img_reg_pic_yellow03.png" alt="" />
+            </li>
+            <li class="img-reg-list-item">
+              <img src="../../images/img_reg_pic_yellow04.png" alt="" />
+            </li>
+          </ul>
+
+        </div>
+
+      </section>
+
+      <section class="contents-part js-option-toggle">
+
+        <div class="part-top no-bottom">
+          <h3 class="part-title">매물설명</h3>
+        </div>
+
+        <div class="part-mid border-bottom">
+
+          <table class="hr-table">
+
+            <caption class="hide">매물설명 입력</caption>
+
+            <colgroup>
+              <col style="width:185px;" />
+              <col style="width:auto;" />
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row">
+                  제목 <span class="em-yellow">*</span>
+                </th>
+                <td>
+                  <div class="label-toggle-wrap">
+                    <label for="input-title" class="label-toggle-text">리스트에 노출되는 문구입니다. 20자 이내로 작성해주세요. 특수문자는 입력할 수 없습니다.</label>
+                    <input id="input-title" class="input full-width js-label-toggle" title="제목 입력" type="text">
+                  </div>
+                 </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  상세설명
+                </th>
+                <td class="td-padding">
+                  <div class="label-toggle-wrap">
+                    <label for="input-text" class="label-toggle-text">매물상세페이지에 노출되는 문구입니다.<br />1000자 아내로 작성해 주세요.</label>
+                    <textarea id="input-text" class="textarea full-width js-label-toggle" title="내용 입력"></textarea>
+                  </div>
+
+                  <p class="form-msg-normal"><span class="em-yellow">매물에 대한 설명 이외에 개인이나 중개사무소를 홍보하는 내용이 포함된 경우 해당 매물은 삭제 처리되며 서비스 이용이 제한 됩니다.</span></p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  비공개메모
+                </th>
+                <td>
+                  <div class="label-toggle-wrap">
+                    <label for="input-memo" class="label-toggle-text">매물 노출 시에 공개되지 않습니다.</label>
+                    <input id="input-memo" class="input full-width js-label-toggle" title="메모 입력" type="text">
+                  </div>
+                 </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </section>
+
+      <section class="contents-part js-option-toggle">
+
+        <div class="part-top no-bottom">
+          <h3 class="part-title">주변정보</h3>
+        </div>
+
+        <div class="part-mid border-bottom">
+
+          <table class="hr-table">
+
+            <caption class="hide">주변정보 입력</caption>
+
+            <colgroup>
+              <col style="width:95px;" />
+              <col style="width:90px;" />
+              <col style="width:auto;" />
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="rowgroup" rowspan="3">
+                  교통정보
+                </th>
+                <th scope="row">
+                  지하철
+                </th>
+                <td>
+                  <input type="text" class="input full-width " title="지하철정보 입력" value="지하철 2호선 선릉역 100m 도보 2분">
+                 </td>
+              </tr>
+              <tr>
+                <th scope="row" class="left-border">
+                  버스정보
+                </th>
+                <td>
+                   <input type="text" class="input full-width " title="버스정보 입력" value="지하철 2호선 선릉역 100m 도보 2분">
+                 </td>
+              </tr>
+              <tr>
+                <th scope="row" class="left-border">
+                  도로정보
+                </th>
+                <td>
+                   <input type="text" class="input full-width " title="도로정보 입력" value="지하철 2호선 선릉역 100m 도보 2분">
+                 </td>
+              </tr>
+
+              <tr class="option-row js-toggle-item">
+                <th scope="rowgroup" rowspan="5">
+                  교육시설
+                </th>
+                <th scope="row">
+                  어린이집
+                </th>
+                <td>
+                   <input type="text" class="input full-width " title="어린이집 입력" value="지하철 2호선 선릉역 100m 도보 2분">
+                 </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row" class="left-border">
+                  초등학교
+                </th>
+                <td>
+                   <input type="text" class="input full-width " title="초등학교 입력" value="지하철 2호선 선릉역 100m 도보 2분">
+                 </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row" class="left-border">
+                  중학교
+                </th>
+                <td>
+                   <input type="text" class="input full-width " title="중학교 입력" value="지하철 2호선 선릉역 100m 도보 2분">
+                 </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row" class="left-border">
+                  고등학교
+                </th>
+                <td>
+                   <input type="text" class="input full-width " title="고등학교 입력" value="지하철 2호선 선릉역 100m 도보 2분">
+                 </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row" class="left-border">
+                  대학교
+                </th>
+                <td>
+                   <input type="text" class="input full-width " title="대학교 입력" value="지하철 2호선 선릉역 100m 도보 2분">
+                 </td>
+              </tr>
+
+              <tr class="option-row js-toggle-item">
+                <th scope="rowgroup" rowspan="7">
+                  편의시설
+                </th>
+                <th scope="row">
+                  편의점
+                </th>
+                <td>
+                   <input type="text" class="input full-width " title="편의점 입력" value="지하철 2호선 선릉역 100m 도보 2분">
+                 </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row" class="left-border">
+                  카페
+                </th>
+                <td>
+                   <input type="text" class="input full-width " title="카페 입력" value="지하철 2호선 선릉역 100m 도보 2분">
+                 </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row" class="left-border">
+                  은행
+                </th>
+                <td>
+                   <input type="text" class="input full-width " title="은행 입력" value="지하철 2호선 선릉역 100m 도보 2분">
+                 </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row" class="left-border">
+                  병원
+                </th>
+                <td>
+                   <input type="text" class="input full-width " title="병원 입력" value="지하철 2호선 선릉역 100m 도보 2분">
+                 </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row" class="left-border">
+                  관공서
+                </th>
+                <td>
+                   <input type="text" class="input full-width " title="관공서 입력" value="지하철 2호선 선릉역 100m 도보 2분">
+                 </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row" class="left-border">
+                  주차장
+                </th>
+                <td>
+                   <input type="text" class="input full-width " title="주차장 입력" value="지하철 2호선 선릉역 100m 도보 2분">
+                 </td>
+              </tr>
+              <tr class="option-row js-toggle-item">
+                <th scope="row" class="left-border">
+                  공원/기타
+                </th>
+                <td>
+                   <input type="text" class="input full-width " title="공원/기타 입력" value="지하철 2호선 선릉역 100m 도보 2분">
+                 </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="table-more">
+          <button class="btn-small right-float btn-table-more yellow js-toggle-btn">더보기</button>
+        </div>
+
+      </section>
+
+    </div>
+
+    <div class="contents-bottom has-bottom">
+      <div class="submit-btns center">
+        <button type="button" class="btn-fill btn-item-submit yellow">매물등록(저장)</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="wrapper">
+
+    <div class="footer-logo">
+      <img src="../../images/logo_footer.png" alt="부동산챔프" />
+    </div>
+
+    <div class="footer-content">
+
+      <ul class="footer-menu">
+        <li class="menu-item first"><a href="#" class="menu-link">회사소개</a></li>
+        <li class="menu-item"><a href="#" class="menu-link">광고</a></li>
+        <li class="menu-item"><a href="#" class="menu-link">제휴 약관 및 개인정보</a></li>
+        <li class="menu-item last"><a href="#" class="menu-link">취급방침</a></li>
+      </ul>
+
+      <address class="footer-address">
+        <div class="item">서울시 강남구 영동대로 702(청담동) 화천회관빌딩 4층 대표 정수민</div>
+        <div class="item">TEL. 02-752-2836</div>
+        <div class="item">FAX. 02-752-2838</div>
+        <div class="item last">MAIL. sc@ytp.co.kr</div>
+      </address>
+
+      <div class="footer-license">
+        <div class="item">사업자 등록번호 : 104-86-10347</div>
+        <div class="item">통신판매업 신고번호 : 제 0000-0000-000호</div>
+      </div>
+
+      <div class="footer-copyright">
+        @ <span class="co-name">YP Partners</span> 2001-2015
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>

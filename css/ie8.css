@@ -1,0 +1,220 @@
+/* reset */
+body {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #666;
+}
+
+.os-xp body {
+  letter-spacing: -1px;
+}
+
+select, input, button, textarea {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #666;
+}
+
+/* header */
+.header-gnb .gnb-main-link {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #555;
+}
+.header-gnb .gnb-sub-link {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #555;
+}
+.header-my-title {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.header-my-member .member-name {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  color: #222;
+}
+.header-my-member .member.login, .header-my-member .member.logout {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #666;
+}
+.header-my-info .info-link {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #222;
+}
+.header-my-history .history-link {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* contents */
+.contents-title {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 29px;
+  font-weight: bold;
+  color: #222;
+}
+.contents-part-title {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* footer */
+.footer-menu .menu-link {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #555;
+}
+.footer-address {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #888;
+}
+.footer-copyright {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #888;
+}
+
+/* form */
+.input {
+  line-height: 35px;
+}
+
+.btn-fill {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.btn-join {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #666;
+}
+
+.radio-label {
+  padding-left: 25px;
+  line-height: 20px;
+}
+.radio-label:after {
+  display: none;
+}
+
+.check-label {
+  padding-left: 20px;
+}
+.check-label:after {
+  display: none;
+}
+
+/* join */
+.join-title {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 29px;
+  font-weight: bold;
+  color: #25aae1;
+}
+.join-title-desc {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  color: #666;
+}
+.join-type-title {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+  color: #222;
+}
+.join-type-desc {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #666;
+}
+.join-complete-title {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 23px;
+  font-weight: bold;
+  color: #222;
+}
+.join-complete-msg {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  color: #222;
+}
+
+.step-mark {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #25aae1;
+}
+.step-title {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  color: #222;
+  margin-top: 3px;
+}
+
+.step-list.premium .step-title {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* list */
+.sort-input-label {
+  top: 7px;
+}
+
+.sort-input {
+  line-height: 27px;
+}
+
+/* popup dimmed */
+.dimmed {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+}
+
+.popup-join-title {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+  color: #222;
+}
+.popup-join-form-submit {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #ffffff;
+}
+.popup-join-form-input {
+  line-height: 35px;
+}
+
+/*# sourceMappingURL=ie8.css.map */
