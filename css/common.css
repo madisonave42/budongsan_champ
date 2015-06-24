@@ -125,7 +125,7 @@ html.map .footer-content {
   background-color: #ffffff;
   min-width: 1000px;
   position: relative;
-  z-index: 90;
+  z-index: 1000;
 }
 .header-logo {
   float: left;
