@@ -1166,6 +1166,9 @@
 .sale.map-detail-view {
   display: none;
 }
+.sale.map-detail-view.user-sale-view {
+  display: block;
+}
 .sale.map-detail-view.on {
   display: block;
 }
@@ -1250,7 +1253,7 @@
   position: absolute;
   top: 50%;
   margin-top: -12px;
-  right: 20px;
+  right: 15px;
   padding: 0 20px 0 10px;
   font-size: 11px;
   color: #ffffff;
@@ -1328,7 +1331,7 @@
   position: absolute;
   top: 50%;
   margin-top: -12px;
-  right: 20px;
+  right: 15px;
   padding: 0 20px 0 10px;
   font-size: 11px;
   color: #ffffff;
@@ -1349,7 +1352,7 @@
 }
 
 .sale {
-  overflow-y: auto;
+  overflow-y: scroll;
   overflow-x: hidden;
 }
 .sale-list {
@@ -1384,7 +1387,7 @@
 .sale .list-item.price {
   position: absolute;
   top: 18px;
-  right: 30px;
+  right: 15px;
 }
 .sale .list-item.spec {
   width: 360px;
@@ -1409,8 +1412,8 @@
 }
 .sale .list-item.buttons {
   position: absolute;
-  bottom: 16px;
-  right: 36px;
+  top: 124px;
+  right: 20px;
 }
 .sale .list-item-type {
   width: 58px;
@@ -1589,7 +1592,7 @@
 }
 
 .sale-simple {
-  overflow-y: auto;
+  overflow-y: scroll;
   overflow-x: hidden;
 }
 .sale-simple-list {
@@ -1600,6 +1603,9 @@
   padding: 10px 0 10px 140px;
   border-bottom: 1px solid #dbdbdb;
   cursor: pointer;
+}
+.sale-simple-list:hover {
+  background: #f4fbfd;
 }
 .sale-simple .list-amount {
   height: 38px;
@@ -1627,7 +1633,7 @@
 .sale-simple .list-item.price {
   position: absolute;
   top: 18px;
-  right: 30px;
+  right: 15px;
 }
 .sale-simple .list-item.spec {
   width: 360px;
@@ -1932,7 +1938,7 @@
 }
 .user-list-memo-read, .user-list-memo-write {
   display: none;
-  padding: 10px 0 2px;
+  padding: 10px 0;
   border-top: 1px solid #ededed;
 }
 .user-list-memo-read:after, .user-list-memo-write:after {
@@ -1989,7 +1995,7 @@
 }
 
 .user-sale-view .list-item.buttons {
-  top: 137px;
+  top: 124px;
   bottom: auto;
 }
 .user-sale-view .list-item-btn.memo {
@@ -2001,7 +2007,6 @@
   background: url(../images/icon_list_action.png) no-repeat 0 -40px;
 }
 .user-sale-view .sale-list {
-  padding-bottom: 8px;
   border-bottom: 1px solid #dbdbdb;
 }
 .user-sale-view .sale-list .right-col {

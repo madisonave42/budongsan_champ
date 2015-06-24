@@ -629,7 +629,9 @@ $(function(){
 		$('.js-del-list').on('click', function(){
 			$(this).closest('.sale-list').stop().animate({left:'100%'}, 1000, 'easeOutQuint' ,function(){
 				$(this).remove();
-				$('#simple-' + $(this).attr('id')).remove();
+				if( $(this).attr('id') != undefined ) {
+					$('#simple-' + $(this).attr('id')).remove();
+				}
 			});
 		});
 
