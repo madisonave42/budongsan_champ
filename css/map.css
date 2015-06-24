@@ -759,6 +759,12 @@
   width: 600px;
   float: right;
   overflow: hidden;
+  position: absolute;
+  top: -9999px;
+}
+.section-list-content.on {
+  position: static;
+  top: 0;
 }
 .section-list-detail-popup {
   width: 767px;
@@ -770,6 +776,10 @@
   height: 0;
   overflow: hidden;
   clear: both;
+}
+
+.section-wish-list {
+  background: #ffffff;
 }
 
 .marker-group {
@@ -1834,19 +1844,6 @@
   height: 0;
   overflow: hidden;
   clear: both;
-}
-
-.section-list-content {
-  position: absolute;
-  top: -9999px;
-}
-.section-list-content.on {
-  position: static;
-  top: 0;
-}
-
-.section-wish-list {
-  background: #ffffff;
 }
 
 .user-list-top {
