@@ -219,9 +219,9 @@
   z-index: 20;
 }
 .detail-header-price-real-tooltip {
-  top: 18x;
-  left: -55px;
-  width: 210px;
+  top: 21px;
+  left: -20px;
+  width: 180px;
 }
 .detail-header-price-real-title {
   padding-left: 17px;
@@ -497,11 +497,21 @@
   margin-top: 10px;
 }
 
+.detail-prices {
+  width: 767px;
+}
+.detail-prices:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+
 .detail-price-info {
   position: relative;
   float: left;
   width: 378px;
-  overflow: hidden;
 }
 .detail-price-info-tooltip {
   top: 20px;
@@ -509,21 +519,25 @@
 }
 
 .detail-deal-info {
-  float: left;
+  float: right;
   margin-left: 11px;
   width: 378px;
   overflow: hidden;
 }
 
 .detail-price-graph {
+  float: left;
   margin-top: 10px;
   width: 765px;
   border: 1px solid #d8d8d8;
 }
 
+.detail-map {
+  width: 767px;
+}
+
 .detail-map-tab {
   margin-top: 50px;
-  width: 767px;
 }
 .detail-map-tab-list:after {
   content: ".";
@@ -567,7 +581,6 @@
 .detail-map {
   position: relative;
   margin-top: 20px;
-  width: 767px;
 }
 .detail-map-frame {
   width: 765px;
@@ -729,7 +742,6 @@
 
 .detail-map-data {
   margin-top: 20px;
-  width: 767px;
 }
 .detail-map-data-section {
   display: none;

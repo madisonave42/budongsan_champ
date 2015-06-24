@@ -249,9 +249,9 @@
 			z-index:20;
 
 			&-tooltip {
-				top:18x;
-				left:-55px;
-				width:210px;
+				top:21px;
+				left:-20px;
+				width:180px;
 			}
 
 			&-title {
@@ -575,11 +575,15 @@
 	}
 }
 
+.detail-prices {
+	@include clear();
+	width:767px;
+}
+
 .detail-price-info {
 	position:relative;
 	float:left;
 	width:378px;
-	overflow:hidden;
 
 	&-tooltip {
 		top:20px;
@@ -588,21 +592,25 @@
 }
 
 .detail-deal-info {
-	float:left;
+	float:right;
 	margin-left:11px;
 	width:378px;
 	overflow:hidden;
 }
 
 .detail-price-graph {
+	float:left;
 	margin-top:10px;
 	width:765px;
 	border:1px solid $line-gray;
 }
 
+.detail-map {
+	width:767px;
+}
+
 .detail-map-tab {
 	margin-top:50px;
-	width:767px;
 
 	&-list {
 		@include clear();
@@ -649,7 +657,6 @@
 .detail-map {
 	position:relative;
 	margin-top:20px;
-	width:767px;
 
 	&-frame {
 		width:765px;
@@ -856,7 +863,6 @@
 
 .detail-map-data {
 	margin-top:20px;
-	width:767px;
 
 	&-section {
 		display:none;
