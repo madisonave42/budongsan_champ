@@ -761,7 +761,7 @@
   overflow: hidden;
 }
 .section-list-detail-popup {
-  width: 0;
+  width: 767px;
   float: left;
 }
 .section-list:after {
