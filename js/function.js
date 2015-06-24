@@ -60,7 +60,7 @@ var banner = (function(){
 		}, 1200);
 	}
 
-	function moveRight(index){
+	function moveUp(index){
 		done = false;
 
 		$('.sort-result-item').eq(currentIndex).stop().animate({top:-40}, 1200, 'easeOutQuint');
@@ -79,6 +79,7 @@ var banner = (function(){
 
 		init : function(){
 			bannerSize = $('.sort-result-item').size();
+			if( bannerSize < 2 ) return;
 			$('.sort-result-item').css({top:-40});
 			$('.sort-result-item').eq(0).css({top:0});
 
@@ -96,8 +97,8 @@ var banner = (function(){
 		setPrev : function(){
 			if(!done) return;
 			clearInterval(tId);
-			if(currentIndex <= 0) moveRight(bannerSize-1);
-			else moveRight(currentIndex-1);
+			if(currentIndex <= 0) moveUp(bannerSize-1);
+			else moveUp(currentIndex-1);
 		}
 
 	};
@@ -533,14 +534,42 @@ $(function(){
 	(function(){
 
 		var searchArea = $('.search-area');
+		var isDrag = false;
 
 		if (searchArea.length > 0) {
 			$('.search-area').draggable({
 				handle: '.search-drag-handle',
 				containment: '.section-map',
-				scroll: false
+				scroll: false,
+				start: function(){
+					isDrag = true;
+				}
 			});
 		}
+
+		$('.search-drag-handle').data('fold', 'false').on('click', function(){
+
+			if( isDrag == false && $(this).data('fold') == 'false' ) {
+
+				$(this).closest('.search-area').addClass('fold');
+				$(this).closest('.search-area').find('.search-tab-area').addClass('hide');
+				$(this).closest('.search-area').find('.search-form-area').addClass('hide');
+
+				$(this).data('fold', 'true');
+
+			} else if( isDrag == false && $(this).data('fold') == 'true' ){
+
+				$(this).closest('.search-area').removeClass('fold');
+				$(this).closest('.search-area').find('.search-tab-area').removeClass('hide');
+				$(this).closest('.search-area').find('.search-form-area').removeClass('hide');
+
+				$(this).data('fold', 'false');
+
+			}
+
+			isDrag = false;
+
+		});
 
 	})();
 
@@ -670,6 +699,18 @@ $(function(){
 				$(this).data('view', 'false');
 			}
 
+		});
+
+	})();
+
+	// delete list
+	(function(){
+
+		$('.js-del-list').on('click', function(){
+			$(this).closest('.sale-list').stop().animate({left:'100%'}, 1000, 'easeOutQuint' ,function(){
+				$(this).remove();
+				$('#simple-' + $(this).attr('id')).remove();
+			});
 		});
 
 	})();

@@ -60,7 +60,7 @@ var banner = (function(){
 		}, 1200);
 	}
 
-	function moveRight(index){
+	function moveUp(index){
 		done = false;
 
 		$('.sort-result-item').eq(currentIndex).stop().animate({top:-40}, 1200, 'easeOutQuint');
@@ -79,6 +79,7 @@ var banner = (function(){
 
 		init : function(){
 			bannerSize = $('.sort-result-item').size();
+			if( bannerSize < 2 ) return;
 			$('.sort-result-item').css({top:-40});
 			$('.sort-result-item').eq(0).css({top:0});
 
@@ -96,8 +97,8 @@ var banner = (function(){
 		setPrev : function(){
 			if(!done) return;
 			clearInterval(tId);
-			if(currentIndex <= 0) moveRight(bannerSize-1);
-			else moveRight(currentIndex-1);
+			if(currentIndex <= 0) moveUp(bannerSize-1);
+			else moveUp(currentIndex-1);
 		}
 
 	};

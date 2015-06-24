@@ -428,14 +428,42 @@ $(function(){
 	(function(){
 
 		var searchArea = $('.search-area');
+		var isDrag = false;
 
 		if (searchArea.length > 0) {
 			$('.search-area').draggable({
 				handle: '.search-drag-handle',
 				containment: '.section-map',
-				scroll: false
+				scroll: false,
+				start: function(){
+					isDrag = true;
+				}
 			});
 		}
+
+		$('.search-drag-handle').data('fold', 'false').on('click', function(){
+
+			if( isDrag == false && $(this).data('fold') == 'false' ) {
+
+				$(this).closest('.search-area').addClass('fold');
+				$(this).closest('.search-area').find('.search-tab-area').addClass('hide');
+				$(this).closest('.search-area').find('.search-form-area').addClass('hide');
+
+				$(this).data('fold', 'true');
+
+			} else if( isDrag == false && $(this).data('fold') == 'true' ){
+
+				$(this).closest('.search-area').removeClass('fold');
+				$(this).closest('.search-area').find('.search-tab-area').removeClass('hide');
+				$(this).closest('.search-area').find('.search-form-area').removeClass('hide');
+
+				$(this).data('fold', 'false');
+
+			}
+
+			isDrag = false;
+
+		});
 
 	})();
 
@@ -565,6 +593,18 @@ $(function(){
 				$(this).data('view', 'false');
 			}
 
+		});
+
+	})();
+
+	// delete list
+	(function(){
+
+		$('.js-del-list').on('click', function(){
+			$(this).closest('.sale-list').stop().animate({left:'100%'}, 1000, 'easeOutQuint' ,function(){
+				$(this).remove();
+				$('#simple-' + $(this).attr('id')).remove();
+			});
 		});
 
 	})();

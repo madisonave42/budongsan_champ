@@ -878,9 +878,12 @@
 
     z-index:900;
 
+    overflow:hidden;
+
     &-content{
       width:600px;
       float:right;
+      overflow:hidden;
     }
 
     &-detail-popup{
@@ -908,23 +911,35 @@
     color:$white;
     font-weight:bold;
     text-align:center;
-    line-height:91px;
 
     background:url(../images/bg_marker_group.png) no-repeat;
 
-    &.temp1{
-      top:290px;
-      left:320px;
+    &.digit1{
+      width:40px;
+      height:40px;
+      line-height:40px;
+      background-position:-300px 0;
     }
 
-    &.temp2{
-      top:200px;
-      left:680px;
+    &.digit2{
+      width:53px;
+      height:53px;
+      line-height:53px;
+      background-position:-200px 0;
     }
 
-    &.temp3{
-      top:460px;
-      left:810px;
+    &.digit3{
+      width:67px;
+      height:67px;
+      line-height:67px;
+      background-position:-100px 0;
+    }
+
+    &.digit4{
+      width:91px;
+      height:91px;
+      line-height:91px;
+      background-position:0 0;
     }
 
   }
@@ -998,7 +1013,7 @@
     top:0;
     right:0;
 
-    padding:10px 20px;
+    padding:0 20px;
 
     @include font(13, bold, $white);
     line-height:20px;
@@ -1035,12 +1050,28 @@
     background:url(../images/bg_legend.png);
 
     box-sizing:border-box;
+
+    overflow:hidden;
+
+    transition:width .5s linear, height .5s linear;
+
+    &.fold{
+      width:58px;
+      height:58px;
+      padding:0;
+    }
   }
 
   &-tab{
     &-area{
+      width:296px;
       margin-bottom:6px;
       @include clear();
+
+      &.hide{
+        display:none;
+      }
+
     }
 
     float:left;
@@ -1058,6 +1089,7 @@
   }
 
   &-form-area{
+    width:296px;
     position:relative;
 
     @include clear();
@@ -1066,6 +1098,10 @@
 
     &.on{
       display:block;
+    }
+
+    &.hide{
+      display:none;
     }
 
     .search-input{
@@ -1338,10 +1374,246 @@
   }
 }
 
+.group-bar {
+  height: 25px;
+  position:relative;
+
+  padding:0 0 0 40px;
+
+  line-height:23px;
+
+  color:$white;
+  font-weight:bold;
+
+  border-top: 1px solid #b0a899;
+  border-bottom: 1px solid #b0a899;
+  background:#b9b1a1;
+
+  box-sizing:border-box;
+
+  &:after{
+    content:"";
+    display:block;
+
+    width:14px;
+    height:14px;
+
+    position:absolute;
+    top:50%;
+    margin-top:-7px;
+    left:20px;
+
+    background:url(../images/icon_bullet_list_group.png) no-repeat;
+  }
+}
+
+.estate-agent{
+
+  &-ad{
+    position:relative;
+    padding:14px 20px;
+    background:#fffbea;
+    border-bottom:1px solid #e6e2d3;
+  }
+
+  &-name{
+    @include font(18, bold, #fcb040 );
+  }
+
+  &-list{
+
+    margin:10px 0 0 0;
+
+    &:after{
+      content:"";
+      display:block;
+      clear:both;
+    }
+
+    &-item{
+      position:relative;
+      float:left;
+
+      margin:0 0 0 20px;
+
+      border-bottom:1px solid $gray;
+
+      font-size:12px;
+
+      &:after{
+        content:"";
+        display:block;
+
+        width:1px;
+        height:10px;
+
+        position:absolute;
+        top:3px;
+        left:-10px;
+
+        background:$gray;
+      }
+
+      &:first-child{
+
+        padding:0;
+        margin:0;
+
+        &:after{
+          display:none;
+        }
+
+      }
+
+    }
+
+  }
+
+  &-more{
+    height:24px;
+
+    position:absolute;
+    top:50%;
+    margin-top:-12px;
+    right:20px;
+    padding:0 20px 0 10px;
+
+    font-size:11px;
+    color:$white;
+    line-height:26px;
+
+    border:0;
+    border-radius:20px;
+    background:#f6b247;
+
+    &:after{
+      content:"";
+      display:block;
+
+      width:5px;
+      height:9px;
+
+      position:absolute;
+      top:6px;
+      right:8px;
+
+      background:url(../images/icon_ad_more.png) no-repeat;
+    }
+  }
+
+}
+
+.simple-estate-agent{
+
+  &-ad{
+    position:relative;
+    padding:22px 0 22px 140px;
+    background:#fffbea;
+    border-bottom:1px solid #e6e2d3;
+  }
+
+  &-image{
+    position:absolute;
+    top:10px;
+    left:20px;
+
+    img{
+      width:100px;
+      height:70px;
+    }
+  }
+
+  &-name{
+    @include font(18, bold, #fcb040 );
+  }
+
+  &-list{
+
+    margin:10px 0 0 0;
+
+    &:after{
+      content:"";
+      display:block;
+      clear:both;
+    }
+
+    &-item{
+      position:relative;
+      float:left;
+
+      margin:0 0 0 20px;
+
+      border-bottom:1px solid $gray;
+
+      font-size:12px;
+
+      &:after{
+        content:"";
+        display:block;
+
+        width:1px;
+        height:10px;
+
+        position:absolute;
+        top:3px;
+        left:-10px;
+
+        background:$gray;
+      }
+
+      &:first-child{
+
+        padding:0;
+        margin:0;
+
+        &:after{
+          display:none;
+        }
+
+      }
+
+    }
+
+  }
+
+  &-more{
+    height:24px;
+
+    position:absolute;
+    top:50%;
+    margin-top:-12px;
+    right:20px;
+    padding:0 20px 0 10px;
+
+    font-size:11px;
+    color:$white;
+    line-height:26px;
+
+    border:0;
+    border-radius:20px;
+    background:#f6b247;
+
+    &:after{
+      content:"";
+      display:block;
+
+      width:5px;
+      height:9px;
+
+      position:absolute;
+      top:6px;
+      right:8px;
+
+      background:url(../images/icon_ad_more.png) no-repeat;
+    }
+  }
+
+}
+
 .sale{
 
   overflow-y:auto;
-  overflow-x:visible;
+  overflow-x:hidden;
 
   &-list{
 
@@ -1349,16 +1621,22 @@
 
     .right-col{
       position:relative;
-      padding:18px 0 18px 210px;
+      padding:10px 0 10px 210px;
       border-bottom:1px solid #dbdbdb;
       cursor:pointer;
+    }
+
+    &:hover{
+      background:#f4fbfd;
     }
 
   }
 
   .list {
     &-amount {
-      padding:15px 18px 0;
+      height:38px;
+      line-height:38px;
+      padding:0 18px;
       color:$dark-gray;
       font-weight:bold;
     }
@@ -1372,8 +1650,11 @@
 
     &.image{
       position:absolute;
-      top:18px;
+      top:10px;
       left:18px;
+
+      width:177px;
+      height:129px;
     }
 
     &.price{
@@ -1397,8 +1678,8 @@
 
     &.buttons{
       position:absolute;
-      bottom:22px;
-      right:33px;
+      bottom:16px;
+      right:36px;
     }
 
     &-type {
@@ -1548,6 +1829,7 @@
         text-indent:-9999px;
         border:0;
         background:url(../images/icon_list_action.png) no-repeat 100% 0;
+        margin-left:12px;
       }
     }
 
@@ -1572,9 +1854,9 @@
   .tooltip.extent{
 
     position:absolute;
-    top:70px;
-    left:210px;
-    min-width:140px;
+    top:23px;
+    left:0;
+    min-width:150px;
     padding:10px;
     box-sizing:border-box;
 
@@ -1614,7 +1896,7 @@
 .sale-simple{
 
   overflow-y:auto;
-  overflow-x:visible;
+  overflow-x:hidden;
 
   &-list{
 
@@ -1622,7 +1904,7 @@
 
     .right-col{
       position:relative;
-      padding:18px 0 18px 170px;
+      padding:10px 0 10px 140px;
       border-bottom:1px solid #dbdbdb;
       cursor:pointer;
     }
@@ -1631,18 +1913,21 @@
 
   .list {
     &-amount {
-      padding:15px 18px 0;
+      height:38px;
+      line-height:38px;
+      padding:0 18px;
       color:$dark-gray;
       font-weight:bold;
     }
 
     &-img{
-      width:132px;
-      height:96px;
+      width:100px;
+      height:70px;
       margin:0;
 
       img{
-        width:100%;
+        width:100px;
+        height:70px;
       }
     }
   }
@@ -1651,8 +1936,10 @@
 
     &.image{
       position:absolute;
-      top:18px;
-      left:18px;
+      top:10px;
+      left:20px;
+      width:100px;
+      height:70px;
     }
 
     &.price{
@@ -1709,7 +1996,7 @@
     }
 
     &-name {
-      margin-top:10px;
+      margin-top:8px;
       font-size:18px;
       font-weight:bold;
       color:$dark;
@@ -1717,7 +2004,7 @@
     }
 
     &-detail {
-      margin-top:7px;
+      margin-top:5px;
       line-height:1.4;
       width:175px;
       white-space:nowrap;
