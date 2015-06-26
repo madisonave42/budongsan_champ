@@ -1,52 +1,6 @@
 @import "variables";
 @import "mixins";
 
-.detail-table {
-	border-top:1px solid $main-blue;
-	border-right:1px solid $line-gray;
-	border-bottom:0;
-	border-collapse:separate;
-
-	th,
-	td {
-		border-bottom:1px solid $line-gray;
-		border-left:1px solid $line-gray;
-
-		&:first-child {
-			border-left:1px solid $line-gray;
-		}
-
-		&.em-red {
-			color:$main-red;
-		}
-
-		&.em-dark {
-			color:$dark;
-		}
-
-		&.center {
-			padding-left:0;
-			text-align:center;
-		}
-	}
-
-	th {
-		height:42px;
-	}
-
-	td {
-		padding-top:0;
-		padding-bottom:0;
-		height:42px;
-		font-weight:normal;
-	}
-
-	.bg {
-		background:$bg-white-gray;
-	}
-
-}
-
 .detail-subtitle {
 	font-size:18px;
 	font-weight:bold;
@@ -88,6 +42,7 @@
 		float:left;
 		margin-right:15px;
 		color:$dark-gray;
+		white-space:nowrap;
 	}
 
 	&-title {
@@ -261,10 +216,9 @@
 		}
 
 		&-btn {
-			position:realtive;
+			position:relative;
 			margin-top:5px;
-			padding:0;
-			padding-right:22px;
+			padding: 0 22px 0 0;
 			height:18px;
 			color:$dark;
 			font-weight:bold;
@@ -418,8 +372,7 @@
 		&-map {
 			float:left;
 			box-sizing:border-box;
-			padding:0;
-			padding-top:30px;
+			padding: 30px 0 0;
 			width:55px;
 			height:50px;
 			color:$white;
@@ -434,8 +387,7 @@
 			float:left;
 			margin-left:5px;
 			box-sizing:border-box;
-			padding:0;
-			padding-top:30px;
+			padding: 30px 0 0;
 			width:55px;
 			height:50px;
 			color:$white;
@@ -605,10 +557,6 @@
 	border:1px solid $line-gray;
 }
 
-.detail-map {
-	width:767px;
-}
-
 .detail-map-tab {
 	margin-top:50px;
 
@@ -655,6 +603,7 @@
 }
 
 .detail-map {
+	width:767px;
 	position:relative;
 	margin-top:20px;
 

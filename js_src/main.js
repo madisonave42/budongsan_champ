@@ -374,6 +374,9 @@ $(function(){
 			$('.sale.user-sale-view').css({
 				height:contHeight-79
 			});
+
+			$('.section-list-detail-popup-content').css({height: contHeight - 74});
+
 		} else if( winHeight >= docHeight ) {
 			$contents.css({height: contHeight});
 		}
@@ -387,6 +390,17 @@ $(function(){
 				level: 3
 			};
 			var map = new daum.maps.Map(container, options);
+		}
+
+		// 다음 지도 API 관련 변수 선언
+		var popupContainer = document.getElementById('popup-map');
+
+		if( popupContainer != null ) {
+			var options = {
+				center: new daum.maps.LatLng(37.5215971, 127.05771319999997),
+				level: 3
+			};
+			var map = new daum.maps.Map(popupContainer, options);
 		}
 
 		$(window).on('load resize', function(){
@@ -501,8 +515,6 @@ $(function(){
 			$(this).addClass('on');
 			$('.search-area .search-form-area').eq(index).addClass('on');
 
-
-
 		});
 
 	})();
@@ -587,22 +599,84 @@ $(function(){
 		});
 	})();
 
-	// view & hide detail popup
+	// view & hide detail popup by list
 	(function(){
 
 		$('.js-view-detail-popup').on('click', function(){
 			$('.section-list-detail-popup').stop().animate({
-				width:600
+				width:828
+			}, 500, function(){
+				$('.section-list-detail-popup .popup-top-action-group').addClass('on');
+				$('.section-list-detail-popup .popup-top-menu').addClass('on');
 			});
 		});
 
-		$('.section-list-detail-popup').on('click', function(){
+		$('.section-list-detail-popup .popup-top-menu-btn.close').on('click', function(){
+
+			$('.section-list-detail-popup .popup-top-action-group').removeClass('on');
+			$('.section-list-detail-popup .popup-top-menu').removeClass('on');
+
+			$('.btn-map-area').removeClass('expand');
+
 			$('.section-list-detail-popup').stop().animate({
 				width:0
-			});
+			}, 500);
+
+			$('.section-list-content').stop().animate({
+				width:600
+			}, 500);
+
 		});
 
 	})();
+
+	// view & hide detail popup by marker
+	$('.js-marker').on('click', function(){
+
+		$('.btn-map-area').addClass('expand');
+
+		$('.section-list-detail-popup').stop().animate({
+			width:828
+		}, 500, function(){
+			$('.section-list-detail-popup .popup-top-action-group').addClass('on');
+			$('.section-list-detail-popup .popup-top-menu').addClass('on');
+		});
+
+		$('.section-list-content').stop().animate({
+			width:0
+		}, 500);
+
+	});
+
+	// view & hide ask pop in detail popup
+	(function(){
+
+		$('.js-ask').data('open', 'false').on('click', function(){
+			if( $(this).data('open') == 'false' ) {
+				$('.popup-top-ask').addClass('on');
+				$(this).data('open', 'true');
+			} else {
+				$('.popup-top-ask').removeClass('on');
+				$(this).data('open', 'false');
+			}
+		});
+
+	})();
+
+	// view & hide popup list item
+	$('.js-subtitle').data('open', 'false').on('click', function(){
+
+		if( $(this).data('open') == 'false' ) {
+			$(this).addClass('on');
+			$(this).closest('.part-top').next('.part-mid').removeClass('fold-content');
+			$(this).data('open', 'true');
+		} else {
+			$(this).removeClass('on');
+			$(this).closest('.part-top').next('.part-mid').addClass('fold-content');
+			$(this).data('open', 'false');
+		}
+
+	});
 
 	// view search education
 	(function(){

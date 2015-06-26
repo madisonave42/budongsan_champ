@@ -140,6 +140,60 @@
 
 }
 
+.detail-header.table{
+	width:100%;
+
+	td{
+		border:1px solid $bg-gray;
+	}
+}
+
+.detail-table {
+	border-top:1px solid $main-blue;
+	border-right:1px solid $line-gray;
+	border-bottom:0;
+	border-collapse:separate;
+
+	th,
+	td {
+		border-bottom:1px solid $line-gray;
+		border-left:1px solid $line-gray;
+
+		&:first-child {
+			border-left:1px solid $line-gray;
+		}
+
+		&.em-red {
+			color:$main-red;
+		}
+
+		&.em-dark {
+			color:$dark;
+		}
+
+		&.center {
+			padding-left:0;
+			text-align:center;
+		}
+	}
+
+	th {
+		height:42px;
+	}
+
+	td {
+		padding-top:0;
+		padding-bottom:0;
+		height:42px;
+		font-weight:normal;
+	}
+
+	.bg {
+		background:$bg-white-gray;
+	}
+
+}
+
 .thumb-mini {
   margin:0 auto;
   width:68px;
@@ -354,62 +408,6 @@
 	}
 
 }
-
-/*
-.tb-form {
-
-	&-btn {
-
-		&-sort{
-			@include btn(7px, 4px, 7px, 0, $light-gray, $white, 0);
-			text-indent:-99999em;
-			background:url(../images/table/sprite_btn_icons.png) no-repeat 0 0px;
-			padding:0;
-			margin:3px 10px 3px 0;
-
-			&.asc{
-				background-position:0 -57px;
-
-				&:hover, &.on{
-					background-position:-18px -57px;
-				}
-			}
-
-			&.desc{
-				background-position:0 -66px;
-
-				&:hover, &.on{
-					background-position:-18px -66px;
-				}
-			}
-		}
-
-		&-edit {
-			@include inline-block();
-			@include btn(25px, 25px, 25px, 0, $white, $blue, 4px);
-			text-indent: -9999px;
-			background: $blue url(../images/table/sprite_btn_icons.png) no-repeat 50% 0;
-		}
-
-		&-del {
-			@include inline-block();
-			@include btn(25px, 25px, 25px, 0, $white, $orange, 4px);
-			text-indent: -9999px;
-			background: $orange url(../images/table/sprite_btn_icons.png) no-repeat 50% -25px;
-
-			&:disabled {
-				background-color:$white-orange;
-				cursor:default;
-			}
-		}
-	}
-}
-
-.table-link {
-	color:$dark-gray;
-	text-decoration:underline;
-}
-*/
 
 /* scrollable table : S */
 .scroll-table {
