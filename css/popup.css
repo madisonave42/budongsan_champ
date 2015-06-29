@@ -10,7 +10,7 @@
   height: 100%;
   background: #000;
   opacity: 0.7;
-  z-index: 999;
+  z-index: 1010;
 }
 .dimmed.on {
   display: block;
@@ -28,7 +28,7 @@
   width: 500px;
   background: #ffffff;
   border-radius: 2px;
-  z-index: 1000;
+  z-index: 1020;
 }
 .popup.on {
   display: block;
@@ -36,6 +36,10 @@
 .popup-small-width {
   margin-left: -156px;
   width: 313px;
+}
+.popup-med-width {
+  width: 612px;
+  margin-left: -306px;
 }
 .popup-wide-width {
   margin-left: -400px;
@@ -212,6 +216,7 @@
   padding-bottom: 20px;
   font-size: 20px;
   color: #00a0e9;
+  line-height: 1;
   border-bottom: 1px solid #cbcbcb;
 }
 
@@ -260,11 +265,26 @@
   display: block;
 }
 
+.pop-btn-box {
+  margin: 10px 0;
+  text-align: center;
+}
+
 .pop-gray-box {
   padding: 10px;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
   background-color: #fafafa;
+}
+.pop-gray-box .row-1:after, .pop-gray-box .row-2:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.pop-gray-box .row-1 {
+  margin: 0 0 10px 0;
 }
 
 .pop-gray-box:after {
@@ -277,6 +297,15 @@
   margin-top: 10px;
   border-top: 2px solid #282828;
   border-bottom: 1px solid #dcdcdc;
+}
+.pop-box.has-table {
+  height: 244px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.pop-box.has-table .estate-name {
+  color: #25aae1;
+  border-bottom: 1px solid #25aae1;
 }
 
 .pop-box:after {
@@ -428,6 +457,20 @@
   background-color: #00a0e9;
 }
 
+.btn-small-height {
+  height: 28px;
+  line-height: 28px;
+}
+
+.btn-tiny {
+  display: block;
+  height: 20px;
+  color: #ffffff;
+  line-height: 20px;
+  border: 0;
+  background: #888;
+}
+
 .find-addr {
   width: 613px;
 }
@@ -490,9 +533,26 @@
 }
 
 .addr-search-list {
-  height: 245px;
-  overflow-x: hidden;
-  overflow-y: auto;
+  height: 238px;
+}
+
+.estate-search-list {
+  height: 244px;
+}
+
+.register-search-label {
+  float: left;
+  box-sizing: border-box;
+  padding-right: 9px;
+  width: 70px;
+  height: 37px;
+  line-height: 37px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.list-col-item {
+  float: left;
 }
 
 .result-title {
@@ -500,15 +560,29 @@
   line-height: 40px;
   text-align: center;
   font-size: 13px;
+  font-weight: bold;
   background-color: #fafafa;
   border-bottom: 1px solid #dcdcdc;
 }
 
+.result-list {
+  height: 204px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 .result-list-item {
   display: block;
-  padding: 15px;
+  padding: 7px 15px;
   color: #666;
   border-bottom: 1px solid #dcdcdc;
+  line-height: 1.4;
+}
+.result-list-item .estate-name {
+  color: #222;
+}
+.result-list-item .estate-addr {
+  color: #ddd;
 }
 
 .result-list-item-sub {
@@ -1111,6 +1185,33 @@
 }
 .deal-complete-confirm .btn-fill {
   margin: 0 3px;
+}
+
+.search-estate {
+  padding: 10px 10px 0 10px;
+  border: 1px solid #ddd;
+}
+.search-estate-regional {
+  padding: 20px 4px;
+}
+.search-estate-regional:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.search-estate-regional-list {
+  margin: 0 9px;
+  float: left;
+  line-height: 1.8;
+}
+.search-estate-regional-link {
+  color: #666;
+}
+.search-estate-regional-link:hover {
+  color: #25aae1;
+  border-bottom: 1px solid #25aae1;
 }
 
 /*# sourceMappingURL=popup.css.map */

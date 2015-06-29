@@ -87,6 +87,10 @@
     position: relative;
     cursor: pointer;
 
+    &.popup-select-width{
+      width:105px;
+    }
+
     &.half-width{
       width:115px;
     }
