@@ -68,6 +68,21 @@
 		}
 	}
 
+	&.popup-table{
+		border-top:0;
+
+		th{
+			height:40px;
+			background:#fafafa;
+			border-bottom:1px solid $line-gray
+		}
+
+		td{
+			padding:15px 0;
+			text-align:center;
+		}
+	}
+
 }
 
 .hr-table{

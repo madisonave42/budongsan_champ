@@ -875,6 +875,18 @@ html.map .footer-content {
 .vt-table .td-inner:first-child {
   margin-top: 0;
 }
+.vt-table.popup-table {
+  border-top: 0;
+}
+.vt-table.popup-table th {
+  height: 40px;
+  background: #fafafa;
+  border-bottom: 1px solid #d8d8d8;
+}
+.vt-table.popup-table td {
+  padding: 15px 0;
+  text-align: center;
+}
 
 .hr-table {
   width: 100%;
@@ -1297,6 +1309,9 @@ html.map .footer-content {
   width: 240px;
   position: relative;
   cursor: pointer;
+}
+.select-wrapper.popup-select-width {
+  width: 105px;
 }
 .select-wrapper.half-width {
   width: 115px;
