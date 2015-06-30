@@ -966,6 +966,9 @@ html.map .footer-content {
 .hr-table td .textarea.full-width {
   width: 95%;
 }
+.hr-table td.over-height {
+  padding: 10px;
+}
 
 .detail-header.table {
   width: 100%;
@@ -1495,6 +1498,9 @@ html.map .footer-content {
   padding: 5px;
   color: #666;
   border: 1px solid #cbcbcb;
+}
+.textarea.short {
+  height: 37px;
 }
 
 .btn-fill {

@@ -26,167 +26,406 @@ include "header_bottom.html"
 <div class="dimmed"></div>
 
 <!-- [D] 팝업 : S -->
-<section id="deal-complete" class="popup popup-med-width">
-  <h1 class="pop-title find-addr-title">빠른등록관리</h1>
+<section id="deal-complete" class="popup register-popup">
 
-  <div class="pop-cont">
+  <div class="register-popup-scroll">
 
-    <div class="search-estate">
-
-      <div class="pop-gray-box">
-        <div class="row-1">
-
-          <label for="search" class="register-search-label">매물종류</label>
-
-          <div class="select-wrapper popup-select-width left-float left">
-            <div class="select">
-              <p class="label">경기도</p>
-              <b class="button">▾</b>
-            </div>
-            <ul class="select-items">
-              <li class="selected">경기도</li>
-              <li>경기도</li>
-              <li>경기도</li>
-            </ul>
-          </div>
-
-        </div>
-
-        <div class="row-2">
-          <label for="search" class="register-search-label">소재지</label>
-
-          <div class="select-wrapper popup-select-width left-float left">
-            <div class="select">
-              <p class="label">경기도</p>
-              <b class="button">▾</b>
-            </div>
-            <ul class="select-items">
-              <li class="selected">경기도</li>
-              <li>경기도</li>
-              <li>경기도</li>
-            </ul>
-          </div>
-
-          <div class="select-wrapper popup-select-width left-float left">
-            <div class="select">
-              <p class="label">경기도</p>
-              <b class="button">▾</b>
-            </div>
-            <ul class="select-items">
-              <li class="selected">경기도</li>
-              <li>경기도</li>
-              <li>경기도</li>
-            </ul>
-          </div>
-
-          <div class="select-wrapper popup-select-width left-float left">
-            <div class="select">
-              <p class="label">경기도</p>
-              <b class="button">▾</b>
-            </div>
-            <ul class="select-items">
-              <li class="selected">경기도</li>
-              <li>경기도</li>
-              <li>경기도</li>
-            </ul>
-          </div>
-
-          <div class="select-wrapper popup-select-width left-float left">
-            <div class="select">
-              <p class="label">경기도</p>
-              <b class="button">▾</b>
-            </div>
-            <ul class="select-items">
-              <li class="selected">경기도</li>
-              <li>경기도</li>
-              <li>경기도</li>
-            </ul>
-          </div>
-
-        </div>
+    <div>
+      <div class="part-top no-top no-bottom">
+        <h1 class="part-title">단지등록요청</h1>
       </div>
 
-      <div class="pop-btn-box">
-        <button type="button" class="btn-blue btn-small-height">추가하기</button>
-        <button type="button" class="btn btn-small-height js-close-popup">검색</button>
+      <div class="part-mid border-bottom">
+
+        <table class="hr-table">
+
+          <caption class="hide">단지등록요청</caption>
+
+          <colgroup>
+            <col style="width:135px;" />
+            <col style="width:auto;" />
+            <col style="width:135px;" />
+            <col style="width:auto;" />
+          </colgroup>
+
+          <tbody>
+            <tr>
+              <th scope="row">
+                매물종류 <span class="em-blue">*</span>
+              </th>
+              <td colspan="3">
+                <div class="select-wrapper med-half middle left">
+                  <div class="select">
+                    <p class="label">아파트</p>
+                    <b class="button">▾</b>
+                  </div>
+                  <ul class="select-items">
+                    <li class="selected">아파트</li>
+                    <li>아파트</li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                소재지 <span class="em-blue">*</span>
+              </th>
+              <td colspan="3">
+                <div class="select-wrapper med-half middle left">
+                  <div class="select">
+                    <p class="label">아파트</p>
+                    <b class="button">▾</b>
+                  </div>
+                  <ul class="select-items">
+                    <li class="selected">아파트</li>
+                    <li>아파트</li>
+                  </ul>
+                </div>
+                <div class="select-wrapper med-half middle left">
+                  <div class="select">
+                    <p class="label">아파트</p>
+                    <b class="button">▾</b>
+                  </div>
+                  <ul class="select-items">
+                    <li class="selected">아파트</li>
+                    <li>아파트</li>
+                  </ul>
+                </div>
+                <div class="select-wrapper med-half middle left">
+                  <div class="select">
+                    <p class="label">아파트</p>
+                    <b class="button">▾</b>
+                  </div>
+                  <ul class="select-items">
+                    <li class="selected">아파트</li>
+                    <li>아파트</li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">상세주소</th>
+              <td colspan="3">
+                <div class="radio-wrap middle left group">
+                  <input id="radio1-1" class="radio" name="type" type="radio">
+                  <label for="radio1-1" class="radio-label">일반</label>
+                </div>
+
+                <div class="radio-wrap middle left group">
+                  <input id="radio1-2" class="radio" name="type" type="radio">
+                  <label for="radio1-2" class="radio-label">산</label>
+                </div>
+
+                <input class="input med-half middle left" type="text">
+
+                <div class="form-msg middle left">-</div>
+
+                <input class="input med-half middle left" type="text">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">단지명</th>
+              <td colspan="3">
+                <input type="text" class="input full-width">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">총세대수</th>
+              <td>
+                <div class="form-msg middle left">총</div>
+                <input class="input med-half middle left" type="text">
+                <div class="form-msg middle left">세대</div>
+              </td>
+              <th scope="row">총동수</th>
+              <td>
+                <div class="form-msg middle left">총</div>
+                <input class="input med-half middle left" type="text">
+                <div class="form-msg middle left">개동</div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">준공년월</th>
+              <td>
+                <div class="select-wrapper med-half middle left">
+                  <div class="select">
+                    <p class="label">1999</p>
+                    <b class="button">▾</b>
+                  </div>
+                  <ul class="select-items">
+                    <li class="selected">1999</li>
+                    <li>1999</li>
+                  </ul>
+                </div>
+                <div class="form-msg middle left">년</div>
+                <div class="select-wrapper med-half middle left">
+                  <div class="select">
+                    <p class="label">1999</p>
+                    <b class="button">▾</b>
+                  </div>
+                  <ul class="select-items">
+                    <li class="selected">1999</li>
+                    <li>1999</li>
+                  </ul>
+                </div>
+                <div class="form-msg middle left">월</div>
+              </td>
+              <th scope="row">건설사명</th>
+              <td>
+                <input class="input full-width" type="text">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">총주차대수</th>
+              <td>
+                <div class="form-msg middle left">총</div>
+                <input class="input med-half middle left" type="text">
+                <div class="form-msg middle left">대</div>
+              </td>
+              <th scope="row">세대당주차대수</th>
+              <td>
+                <input class="input med-half middle left" type="text">
+                <div class="form-msg middle left">대</div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">난방시설</th>
+              <td>
+                <div class="select-wrapper med-half">
+                  <div class="select">
+                    <p class="label">지역난방</p>
+                    <b class="button">▾</b>
+                  </div>
+                  <ul class="select-items">
+                    <li class="selected">지역난방</li>
+                    <li>지역난방</li>
+                  </ul>
+                </div>
+              </td>
+              <th scope="row">난방연료</th>
+              <td>
+                <div class="select-wrapper med-half">
+                  <div class="select">
+                    <p class="label">열병합</p>
+                    <b class="button">▾</b>
+                  </div>
+                  <ul class="select-items">
+                    <li class="selected">열병합</li>
+                    <li>열병합</li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">용적율</th>
+              <td>
+                <div class="select-wrapper med-half middle left">
+                  <div class="select">
+                    <p class="label">20</p>
+                    <b class="button">▾</b>
+                  </div>
+                  <ul class="select-items">
+                    <li class="selected">20</li>
+                    <li>20</li>
+                  </ul>
+                </div>
+                <div class="form-msg middle left">%</div>
+              </td>
+              <th scope="row">건폐율</th>
+              <td>
+                <div class="select-wrapper med-half middle left">
+                  <div class="select">
+                    <p class="label">20</p>
+                    <b class="button">▾</b>
+                  </div>
+                  <ul class="select-items">
+                    <li class="selected">20</li>
+                    <li>20</li>
+                  </ul>
+                </div>
+                <div class="form-msg middle left">%</div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">최고층</th>
+              <td>
+                <div class="select-wrapper med-half middle left">
+                  <div class="select">
+                    <p class="label">20</p>
+                    <b class="button">▾</b>
+                  </div>
+                  <ul class="select-items">
+                    <li class="selected">20</li>
+                    <li>20</li>
+                  </ul>
+                </div>
+                <div class="form-msg middle left">층</div>
+              </td>
+              <th scope="row">최저층</th>
+              <td>
+                <div class="select-wrapper med-half middle left">
+                  <div class="select">
+                    <p class="label">20</p>
+                    <b class="button">▾</b>
+                  </div>
+                  <ul class="select-items">
+                    <li class="selected">20</li>
+                    <li>20</li>
+                  </ul>
+                </div>
+                <div class="form-msg middle left">층</div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">기타사항</th>
+              <td colspan="3">
+                <textarea class="textarea short"></textarea>
+              </td>
+            </tr>
+          </tbody>
+
+        </table>
+
+        <table class="vt-table popup-table style2">
+          <colgroup>
+            <col style="width:40px;" />
+            <col style="width:90px;" />
+            <col style="width:90px;" />
+            <col style="width:90px;" />
+            <col style="width:67px;" />
+            <col style="width:67px;" />
+            <col style="width:67px;" />
+            <col style="width:108px;" />
+            <col style="width:78px;" />
+            <col style="width:auto;" />
+            <col style="width:81px;" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">평/형</th>
+              <th scope="col">전용면적</th>
+              <th scope="col">전용면적</th>
+              <th scope="col">방수</th>
+              <th scope="col">방수</th>
+              <th scope="col">욕실수</th>
+              <th scope="col">현관구조</th>
+              <th scope="col">방향</th>
+              <th scope="col">평면도</th>
+              <th scope="col">삭제/복사</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td class="has-unit">
+                <input class="input small left-float left half" type="text">
+                <div class="form-msg left-float">/</div>
+                <input class="input small left-float mt8" type="text">
+              </td>
+              <td class="has-unit">
+                <input class="input small left-float left half" type="text">
+                <div class="form-msg left-float">㎡</div>
+                <input class="input small left-float left half mt8" type="text">
+                <div class="form-msg left-float mt8">P</div>
+              </td>
+              <td class="has-unit">
+                <input class="input small left-float left half" type="text">
+                <div class="form-msg left-float">㎡</div>
+                <input class="input small left-float left half mt8" type="text">
+                <div class="form-msg left-float mt8">P</div>
+              </td>
+              <td>
+                <input class="input mini left-float left half" type="text">
+              </td>
+              <td>
+                <input class="input mini left-float left half" type="text">
+              </td>
+              <td>
+                <input class="input mini left-float left half" type="text">
+              </td>
+              <td>
+                <div class="select-wrapper med-half">
+                  <div class="select">
+                    <p class="label narrow">복층계단식</p>
+                    <b class="button">▾</b>
+                  </div>
+                  <ul class="select-items">
+                    <li class="selected">복층계단식</li>
+                    <li>복층계단식</li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="select-wrapper small">
+                  <div class="select">
+                    <p class="label narrow">동</p>
+                    <b class="button">▾</b>
+                  </div>
+                  <ul class="select-items">
+                    <li class="selected">동</li>
+                    <li>동</li>
+                  </ul>
+                </div>
+              </td>
+              <td>파일<br />등록</td>
+              <td>
+                <button type="button" class="btn-pyung del">삭제</button>
+                <button type="button" class="btn-pyung add">추가</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
       </div>
+
+      <button type="button" class="btn-add-pyung">평형정보추가</button>
 
     </div>
 
-    <div class="pop-box has-table">
+    <div>
+      <div class="part-top no-bottom">
+        <h1 class="part-title">신청자정보</h1>
+      </div>
 
-      <table class="vt-table popup-table">
-        <colgroup>
-          <col style="width:20%" />
-          <col style="width:35%" />
-          <col style="width:30%" />
-          <col style="width:15%" />
-        </colgroup>
-        <tbody>
-          <tr>
-            <th scope="col">매물구분</th>
-            <th scope="col">소재지</th>
-            <th scope="col">단지명</th>
-            <th scope="col">&nbsp;</th>
-          </tr>
-          <tr>
-            <td>아파트</td>
-            <td>서울시 서초구 서초동</td>
-            <td><span class="estate-name">서초래미안</span></td>
-            <td>
-              <button type="button" class="btn-tiny">삭제</button>
-            </td>
-          </tr>
-          <tr>
-            <td>아파트</td>
-            <td>서울시 서초구 서초동</td>
-            <td><span class="estate-name">서초래미안</span></td>
-            <td>
-              <button type="button" class="btn-tiny">삭제</button>
-            </td>
-          </tr>
-          <tr>
-            <td>아파트</td>
-            <td>서울시 서초구 서초동</td>
-            <td><span class="estate-name">서초래미안</span></td>
-            <td>
-              <button type="button" class="btn-tiny">삭제</button>
-            </td>
-          </tr>
-          <tr>
-            <td>아파트</td>
-            <td>서울시 서초구 서초동</td>
-            <td><span class="estate-name">서초래미안</span></td>
-            <td>
-              <button type="button" class="btn-tiny">삭제</button>
-            </td>
-          </tr>
-          <tr>
-            <td>아파트</td>
-            <td>서울시 서초구 서초동</td>
-            <td><span class="estate-name">서초래미안</span></td>
-            <td>
-              <button type="button" class="btn-tiny">삭제</button>
-            </td>
-          </tr>
-          <tr>
-            <td>아파트</td>
-            <td>서울시 서초구 서초동</td>
-            <td><span class="estate-name">서초래미안</span></td>
-            <td>
-              <button type="button" class="btn-tiny">삭제</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="part-mid border-bottom">
+        <table class="hr-table">
 
-    </div>
+          <caption class="hide">신청자정보</caption>
 
-    <div class="pop-bottom">
-      <button type="button" class="btn js-close-popup">닫기</button>
+          <colgroup>
+            <col style="width:135px;" />
+            <col style="width:auto;" />
+            <col style="width:135px;" />
+            <col style="width:auto;" />
+          </colgroup>
+
+          <tbody>
+
+            <tr>
+              <th scope="row">중개사무소명</th>
+              <td>(주) 와이티파트너스 부동산중개</td>
+              <th scope="row">신청자명</th>
+              <td>홍길동</td>
+            </tr>
+            <tr>
+              <th scope="row">연락처</th>
+              <td>02-123-4567</td>
+              <th scope="row">E-mail</th>
+              <td>help@email.com</td>
+            </tr>
+
+          </tbody>
+
+        </table>
+      </div>
     </div>
 
   </div>
+
+
+  <div class="pop-bottom">
+    <button type="button" class="btn-blue">신청</button>
+    <button type="button" class="btn js-close-popup">취소</button>
+  </div>
+
 </section>
 <!-- [D] 팝업 : E -->
 

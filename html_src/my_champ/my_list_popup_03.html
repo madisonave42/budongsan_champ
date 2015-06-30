@@ -1,0 +1,146 @@
+include "header_top.html"
+
+<title>MY챔프 | 부동산 챔프</title>
+
+<link rel="stylesheet" href="../../css/common.css" />
+<!-- 회원가입 style -->
+<link rel="stylesheet" href="../../css/my_champ.css" />
+<link rel="stylesheet" href="../../css/popup.css" />
+
+include "header_bottom.html"
+
+<nav class="lnb">
+
+</nav>
+
+<section class="contents">
+  <button type="button" class="js-popup-temp-btn" style="width:300px; height:50px; position:absolute; top:50%; left:50%; margin:-25px 0 0 -150px">레이어 팝업창 임시 확인 버튼 입니다.</button>
+  <script>
+    $('.js-popup-temp-btn').on('click', function(){
+      $('.dimmed, .popup').addClass('on');
+    });
+  </script>
+</section>
+
+<!-- [D] 팝업 배경 -->
+<div class="dimmed"></div>
+
+<!-- [D] 팝업 : S -->
+<section id="deal-complete" class="popup popup-med-width">
+  <h1 class="pop-title find-addr-title">주택찾기</h1>
+
+  <div class="pop-cont">
+
+    <div class="search-estate">
+
+      <div class="pop-gray-box">
+        <label for="search" class="addr-search-label">주택명</label>
+        <input type="text" id="search" class="addr-search-input01" />
+        <input type="submit" value="검색" class="btn-search" />
+      </div>
+
+      <ul class="search-estate-regional">
+        <li class="search-estate-regional-list"><a href="#" class="search-estate-regional-link">서울(25)</a></li>
+        <li class="search-estate-regional-list"><a href="#" class="search-estate-regional-link">서울(25)</a></li>
+        <li class="search-estate-regional-list"><a href="#" class="search-estate-regional-link">서울(25)</a></li>
+        <li class="search-estate-regional-list"><a href="#" class="search-estate-regional-link">서울(25)</a></li>
+        <li class="search-estate-regional-list"><a href="#" class="search-estate-regional-link">서울(25)</a></li>
+        <li class="search-estate-regional-list"><a href="#" class="search-estate-regional-link">서울(25)</a></li>
+        <li class="search-estate-regional-list"><a href="#" class="search-estate-regional-link">서울(25)</a></li>
+        <li class="search-estate-regional-list"><a href="#" class="search-estate-regional-link">서울(25)</a></li>
+        <li class="search-estate-regional-list"><a href="#" class="search-estate-regional-link">서울(25)</a></li>
+        <li class="search-estate-regional-list"><a href="#" class="search-estate-regional-link">서울(25)</a></li>
+        <li class="search-estate-regional-list"><a href="#" class="search-estate-regional-link">서울(25)</a></li>
+        <li class="search-estate-regional-list"><a href="#" class="search-estate-regional-link">서울(25)</a></li>
+      </ul>
+
+    </div>
+
+    <div class="pop-box estate-search-list">
+      <h2 class="result-title">주택명</h2>
+      <ul class="result-list">
+        <li>
+          <a href="#" class="result-list-item">
+            <span class="estate-name">샤인빌</span>
+            <br />
+            <span class="estate-addr">서초구 서초동</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="result-list-item">
+            <span class="estate-name">샤인빌</span>
+            <br />
+            <span class="estate-addr">서초구 서초동</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="result-list-item">
+            <span class="estate-name">샤인빌</span>
+            <br />
+            <span class="estate-addr">서초구 서초동</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="result-list-item">
+            <span class="estate-name">샤인빌</span>
+            <br />
+            <span class="estate-addr">서초구 서초동</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="result-list-item">
+            <span class="estate-name">샤인빌</span>
+            <br />
+            <span class="estate-addr">서초구 서초동</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="result-list-item">
+            <span class="estate-name">샤인빌</span>
+            <br />
+            <span class="estate-addr">서초구 서초동</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="result-list-item">
+            <span class="estate-name">샤인빌</span>
+            <br />
+            <span class="estate-addr">서초구 서초동</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="result-list-item">
+            <span class="estate-name">샤인빌</span>
+            <br />
+            <span class="estate-addr">서초구 서초동</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="result-list-item">
+            <span class="estate-name">샤인빌</span>
+            <br />
+            <span class="estate-addr">서초구 서초동</span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="pop-bottom">
+      <button type="button" class="btn-blue">확인</button>
+      <button type="button" class="btn js-close-popup">닫기</button>
+    </div>
+
+  </div>
+</section>
+<!-- [D] 팝업 : E -->
+
+include "footer.html"

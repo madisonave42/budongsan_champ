@@ -262,6 +262,10 @@
   padding:5px;
   color:$dark-gray;
   border:1px solid $form-gray;
+
+  &.short{
+    height:37px;
+  }
 }
 
 .btn{
