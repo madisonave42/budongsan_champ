@@ -637,7 +637,6 @@ html.map .footer-content {
   color: #222;
   margin: 35px 0 32px;
 }
-<<<<<<< HEAD
 .contents-title-wrap {
   margin: 0 0 32px;
 }
@@ -647,12 +646,11 @@ html.map .footer-content {
 .contents-title-desc {
   margin: 15px 0 0 0;
   font-size: 16px;
-=======
+}
 .contents-top-util {
   position: absolute;
   top: 3px;
   right: 0;
->>>>>>> d139bbb95d54a1889de150a90f9e5c4e79a3a98b
 }
 .contents-mid:after {
   content: ".";
@@ -1372,7 +1370,6 @@ html.map .footer-content {
 .select-wrapper.search-med {
   width: 88px;
 }
-<<<<<<< HEAD
 .select-wrapper.med-half {
   width: 90px;
 }
@@ -1381,13 +1378,12 @@ html.map .footer-content {
 }
 .select-wrapper.mini {
   width: 50px;
-=======
+}
 .select-wrapper.search-interior-normal {
   width: 130px;
 }
 .select-wrapper.search-interior-wide {
   width: 390px;
->>>>>>> d139bbb95d54a1889de150a90f9e5c4e79a3a98b
 }
 .select .label {
   display: block;
