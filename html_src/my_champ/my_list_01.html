@@ -1453,10 +1453,6 @@ include "header_bottom.html"
         <div class="part-top no-bottom">
           <h3 class="part-title left-float left group">사진등록</h3>
           <p class="part-subtitle left-float"><span class="em-blue">* 필수입력: 최소 3장 이상 등록해주세요.</span></p>
-          <div class="right-float">
-            <button class="btn-small left-float left">사진직접등록</button>
-            <button class="btn-small left-float">매물사진관리등록</button>
-          </div>
         </div>
 
         <div class="part-mid">
@@ -1470,20 +1466,60 @@ include "header_bottom.html"
             <li class="list-item">연락처가 사진에 표시되어 있거나, 다른 서비스의 워터마크가 있는 경우 등록이 제한됩니다.</li>
           </ul>
 
-          <ul class="img-reg-list">
-            <li class="img-reg-list-item">
-              <img src="../../images/img_reg_pic01.png" alt="" />
-            </li>
-            <li class="img-reg-list-item">
-              <img src="../../images/img_reg_pic02.png" alt="" />
-            </li>
-            <li class="img-reg-list-item">
-              <img src="../../images/img_reg_pic03.png" alt="" />
-            </li>
-            <li class="img-reg-list-item">
-              <img src="../../images/img_reg_pic04.png" alt="" />
-            </li>
+          <div class="img-reg-list">
+            <div class="img-reg-list-wrap">
+
+              <div class="img-reg-list-upload">
+                <div>사진은 최소 3장 이상 등록하셔야 합니다.</div>
+                <div>(가로 사진 권장)</div>
+                <button type="button" class="btn-fill blue">사진 등록</button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="contents-part">
+
+        <div class="part-top no-bottom">
+          <h3 class="part-title left-float left group">사진등록</h3>
+          <p class="part-subtitle left-float"><span class="em-blue">* 필수입력: 최소 3장 이상 등록해주세요.</span></p>
+        </div>
+
+        <div class="part-mid">
+
+          <ul class="list-description">
+            <li class="list-item">첫번째 사진은 대표사진으로 사용됩니다.</li>
+            <li class="list-item">사진은 한번에 여러장을 등록 할 수 있습니다.</li>
+            <li class="list-item">내부 구조와 평수가 잘 드러나는 사진으로 등록해주세요. 사진을 많이 등록할수록 이용자들의 호응이 좋습니다.</li>
+            <li class="list-item">사진은 한 장당 5MB (jpg, jpeg, png, gif) 미만만 업로드 가능합니다.</li>
+            <li class="list-item">매물과 무관한 사진 게재 시 등록한 매물은 <span class="em-blue">삭제</span>되며 계정이 <span class="em-blue">제재</span>될 수 있습니다.</li>
+            <li class="list-item">연락처가 사진에 표시되어 있거나, 다른 서비스의 워터마크가 있는 경우 등록이 제한됩니다.</li>
           </ul>
+
+          <div class="img-reg-list">
+            <div class="img-reg-list-wrap">
+
+              <div class="img-reg-list-item">
+                <img src="../../images/temp/thumb_reg_pic.jpg" alt="" />
+                <div class="img-reg-list-item-rep">대표사진</div>
+                <button type="button" class="img-reg-list-item-rotate">회전</button>
+                <button type="button" class="img-reg-list-item-del">삭제</button>
+              </div>
+
+              <div class="img-reg-list-item">
+                <img src="../../images/temp/thumb_reg_pic.jpg" alt="" />
+                <button type="button" class="img-reg-list-item-rotate">회전</button>
+                <button type="button" class="img-reg-list-item-del">삭제</button>
+              </div>
+
+              <button type="button" class="img-reg-list-item-add">사진추가</button>
+
+            </div>
+          </div>
 
         </div>
 
