@@ -789,7 +789,6 @@ $(function(){
 		initScrollTab($('.detail-side-link .js-tab-link'), 50);
 	})();
 
-
 	 /*
 	 * popup
 	 */

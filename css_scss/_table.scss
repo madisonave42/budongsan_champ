@@ -204,10 +204,16 @@
 			padding-left:0;
 			text-align:center;
 		}
+
 	}
 
 	th {
 		height:42px;
+
+		&.interior-info-table-th {
+			padding:0;
+			text-align:center;
+		}
 	}
 
 	td {
@@ -215,6 +221,10 @@
 		padding-bottom:0;
 		height:42px;
 		font-weight:normal;
+
+		&.interior-info-table-td {
+			padding:20px 15px;
+		}
 	}
 
 	.bg {

@@ -85,6 +85,16 @@ module.exports = function(grunt) {
         }
       },
 
+      interior: {
+        cwd:'html_src/interior',
+        src: ['*.html'],
+        dest: 'html/interior',
+        options: {
+          flatten:true,
+          includePath: 'html_src/_include'
+        }
+      },
+
       login: {
 				cwd:'html_src/login',
 				src: ['*.html'],
