@@ -35,6 +35,16 @@ module.exports = function(grunt) {
 				}
 			},
 
+			customer: {
+				cwd:'html_src/cs_center',
+				src: ['*.html'],
+				dest: 'html/cs_center',
+				options: {
+					flatten:true,
+					includePath: 'html_src/_include'
+				}
+			},
+
 			member: {
         cwd:'html_src/member',
         src: ['*.html'],
@@ -171,15 +181,16 @@ module.exports = function(grunt) {
 				}],
 				options:{
 					process: function(content){
-						content = content.replace('/*# sourceMappingURL=common.css.map */', '')
+						content = content.replace('/*# sourceMappingURL=agency.css.map */', '')
+							.replace('/*# sourceMappingURL=common.css.map */', '')
+							.replace('/*# sourceMappingURL=cs_center.css.map */', '')
+							.replace('/*# sourceMappingURL=detail.css.map */', '')
 							.replace('/*# sourceMappingURL=ie8.css.map */', '')
 							.replace('/*# sourceMappingURL=join.css.map */', '')
+							.replace('/*# sourceMappingURL=list.css.map */', '')
+							.replace('/*# sourceMappingURL=map.css.map */', '')
+							.replace('/*# sourceMappingURL=my_champ.css.map */', '')
 							.replace('/*# sourceMappingURL=popup.css.map */', '');
-							//.replace('/*# sourceMappingURL=popup.css.map */', '')
-							//.replace('/*# sourceMappingURL=stats.css.map */', '')
-							//.replace('/*# sourceMappingURL=table_ori.css.map */', '')
-							//.replace('/*# sourceMappingURL=vim.css.map */', '')
-							//.replace('/*# sourceMappingURL=vnf.css.map */', '');
 
 						return content;
 					}

@@ -463,12 +463,51 @@
 }
 
 .btn-tiny {
-  display: block;
+  display: inline-block;
   height: 20px;
   color: #ffffff;
   line-height: 20px;
   border: 0;
   background: #888;
+}
+
+.btn-pyung {
+  display: block;
+  width: 22px;
+  height: 22px;
+  float: left;
+  padding: 0;
+  margin: 0 5px;
+  text-indent: -99999em;
+  border: 0;
+  background: url(../images/btn_pyung.png) no-repeat;
+}
+.btn-pyung.add {
+  background-position: -27px 0;
+}
+
+.btn-add-pyung {
+  display: block;
+  width: 98px;
+  height: 22px;
+  position: relative;
+  padding: 0 0 0 10px;
+  margin: 10px auto 0;
+  font-weight: bold;
+  font-size: 12px;
+  color: #ffffff;
+  border: 0;
+  background: #666;
+  box-sizing: border-box;
+}
+.btn-add-pyung:after {
+  content: "+";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 7px;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 .find-addr {
@@ -1212,6 +1251,78 @@
 .search-estate-regional-link:hover {
   color: #25aae1;
   border-bottom: 1px solid #25aae1;
+}
+
+/* ask registering estate */
+.register-popup {
+  margin-left: -460px;
+  width: 920px;
+  padding: 0 0 20px 0;
+}
+.register-popup-scroll {
+  height: 680px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 20px 20px 0 20px;
+}
+.register-popup .part-top {
+  margin: 30px 0 15px;
+}
+.register-popup .part-top:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.register-popup .part-top.no-top {
+  margin-top: 0;
+}
+.register-popup .part-top.no-bottom {
+  margin-bottom: 0;
+}
+.register-popup .part-title {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 12px;
+}
+.register-popup .part-subtitle {
+  margin-top: 7px;
+}
+.register-popup .part-mid:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.register-popup .part-mid.border-bottom {
+  border-bottom: 1px solid #222;
+}
+.register-popup .part-mid-title {
+  margin: 20px 0 15px;
+}
+.register-popup .part-mid .list-description {
+  margin-bottom: 10px;
+}
+.register-popup .part-bottom {
+  margin: 30px 0 100px;
+  text-align: center;
+}
+.register-popup .part-bottom:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.register-popup .part-bottom.no-top {
+  margin-top: 0;
+}
+.register-popup .part-bottom.no-bottom {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=popup.css.map */

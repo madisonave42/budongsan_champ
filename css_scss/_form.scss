@@ -23,6 +23,10 @@
     width:80px;
   }
 
+  &.med-half{
+    width:90px;
+  }
+
   &.half-width {
     width:115px;
   }
@@ -110,6 +114,18 @@
     &.search-med{
       width:88px;
     }
+
+    &.med-half{
+      width:90px;
+    }
+
+    &.small{
+      width:60px;
+    }
+
+    &.mini{
+      width:50px;
+    }
   }
 
   .label {
@@ -122,6 +138,10 @@
     line-height: 35px;
     color: #666666;
     height: 35px;
+
+    &.narrow{
+      margin:0 25px 0 5px;
+    }
   }
 
   .button {

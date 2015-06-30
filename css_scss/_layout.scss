@@ -677,6 +677,20 @@ html.map{
 	&-title{
 		@include font(30, bold, $dark);
 		margin:35px 0 32px;
+
+		&-wrap{
+			margin:0 0 32px;
+		}
+
+		&.has-description{
+			margin:35px 0 0 0;
+		}
+
+		&-desc{
+			margin:15px 0 0 0;
+
+			font-size:16px;
+		}
 	}
 
 	&-mid{

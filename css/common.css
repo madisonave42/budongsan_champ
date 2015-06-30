@@ -637,6 +637,16 @@ html.map .footer-content {
   color: #222;
   margin: 35px 0 32px;
 }
+.contents-title-wrap {
+  margin: 0 0 32px;
+}
+.contents-title.has-description {
+  margin: 35px 0 0 0;
+}
+.contents-title-desc {
+  margin: 15px 0 0 0;
+  font-size: 16px;
+}
 .contents-mid:after {
   content: ".";
   display: block;
@@ -886,6 +896,17 @@ html.map .footer-content {
 .vt-table.popup-table td {
   padding: 15px 0;
   text-align: center;
+}
+.vt-table.popup-table.style2 {
+  margin-top: 30px;
+  border-top: 2px solid #282828;
+}
+.vt-table.popup-table.style2 th, .vt-table.popup-table.style2 td {
+  padding: 8px;
+  border: 1px solid #d8d8d8;
+}
+.vt-table.popup-table.style2 th.has-unit, .vt-table.popup-table.style2 td.has-unit {
+  padding: 8px 0 8px 8px;
 }
 
 .hr-table {
@@ -1258,6 +1279,9 @@ html.map .footer-content {
 .input.med {
   width: 80px;
 }
+.input.med-half {
+  width: 90px;
+}
 .input.half-width {
   width: 115px;
 }
@@ -1328,6 +1352,15 @@ html.map .footer-content {
 .select-wrapper.search-med {
   width: 88px;
 }
+.select-wrapper.med-half {
+  width: 90px;
+}
+.select-wrapper.small {
+  width: 60px;
+}
+.select-wrapper.mini {
+  width: 50px;
+}
 .select .label {
   display: block;
   white-space: nowrap;
@@ -1338,6 +1371,9 @@ html.map .footer-content {
   line-height: 35px;
   color: #666666;
   height: 35px;
+}
+.select .label.narrow {
+  margin: 0 25px 0 5px;
 }
 .select .button {
   display: block;
@@ -2756,6 +2792,10 @@ html.map .footer-content {
   width: 20px;
   line-height: 37px;
   text-align: center;
+}
+
+.mt8 {
+  margin: 8px 0 0 0;
 }
 
 /*

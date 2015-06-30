@@ -1,0 +1,29 @@
+.cs-center-tab:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.cs-center-tab-list {
+  width: 250px;
+  height: 170px;
+  float: left;
+}
+.cs-center-tab-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 125px 0 0 0;
+  font-size: 16px;
+  text-align: center;
+  color: #666;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+.cs-center-tab-link:hover {
+  color: #fcb040;
+}
+
+/*# sourceMappingURL=cs_center.css.map */

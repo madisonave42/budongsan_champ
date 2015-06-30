@@ -474,7 +474,7 @@
 }
 
 .btn-tiny{
-	display:block;
+	display:inline-block;
 	height:20px;
 
 	color:$white;
@@ -482,6 +482,55 @@
 
 	border:0;
 	background:$gnb-gray;
+}
+
+.btn-pyung{
+	display:block;
+	width:22px;
+	height:22px;
+
+	float:left;
+
+	padding:0;
+	margin:0 5px;
+	text-indent:-99999em;
+
+	border:0;
+	background:url(../images/btn_pyung.png) no-repeat;
+
+	&.add{
+		background-position:-27px 0;
+	}
+}
+
+.btn-add-pyung{
+	display:block;
+	width:98px;
+	height:22px;
+	position:relative;
+
+	padding:0 0 0 10px;
+	margin:10px auto 0;
+
+	font-weight:bold;
+	font-size:12px;
+	color:$white;
+
+	border:0;
+	background:#666;
+	box-sizing:border-box;
+
+	&:after{
+		content:"+";
+		display:block;
+
+		position:absolute;
+		top:3px;
+		left:7px;
+
+		font-weight:bold;
+		color:$white;
+	}
 }
 
 .find-addr {
@@ -1345,4 +1394,78 @@
 			}
 		}
 	}
+}
+
+/* ask registering estate */
+.register-popup{
+
+	margin-left:-460px;
+	width:920px;
+
+	padding:0 0 20px 0;
+
+	&-scroll{
+		height:680px;
+		overflow-x:hidden;
+		overflow-y:scroll;
+		padding:20px 20px 0 20px;
+	}
+
+	.part{
+
+		&-top{
+			@include clear();
+			margin:30px 0 15px;
+
+			&.no-top {
+				margin-top:0;
+			}
+
+			&.no-bottom {
+				margin-bottom:0;
+			}
+		}
+
+		&-title{
+			@include font(18, bold, $dark);
+			margin-bottom:12px;
+		}
+
+		&-subtitle {
+			margin-top:7px;
+		}
+
+		&-mid {
+			@include clear();
+
+			&.border-bottom {
+				border-bottom:1px solid $dark;
+			}
+
+			&-title {
+				margin:20px 0 15px;
+			}
+
+			.list-description {
+				margin-bottom:10px;
+			}
+		}
+
+		&-bottom{
+			@include clear();
+			margin:30px 0 100px;
+			text-align:center;
+
+			&.no-top {
+				margin-top:0;
+			}
+
+			&.no-bottom {
+				margin-bottom:0;
+			}
+
+		}
+
+	}
+
 }
