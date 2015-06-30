@@ -1,0 +1,308 @@
+include "header_top.html"
+
+<title>인테리어 | 부동산 챔프</title>
+
+<link rel="stylesheet" href="../../css/common.css" />
+<!-- 회원가입 style -->
+<link rel="stylesheet" href="../../css/interior.css" />
+<link rel="stylesheet" href="../../css/popup.css" />
+
+include "header_bottom.html"
+
+<section class="contents top-border">
+  <div class="wrapper">
+
+    <div class="contents-top">
+      <h2 class="contents-title">인테리어 조회</h2>
+
+      <div class="contents-top-util">
+        <button type="button" class="btn-med gray icon-plus interior-add">인테리어 등록</button>
+        <button type="button" class="btn-med gray icon-gear">인테리어 관리</button>
+      </div>
+
+      <div class="search-option">
+        <div class="search-option-detail">
+
+          <div class="search-option-wrap area-type left-float">
+            <div class="search-option-label">지역</div>
+            <div class="select-wrapper search-interior-normal left-float left">
+              <div class="select">
+                <p class="label">시/도</p>
+                <b class="button">▾</b>
+              </div>
+              <ul class="select-items">
+                <li class="selected">시/도</li>
+                <li>시/도</li>
+              </ul>
+            </div>
+            <div class="select-wrapper search-interior-normal left-float left">
+              <div class="select">
+                <p class="label">시/군/구</p>
+                <b class="button">▾</b>
+              </div>
+              <ul class="select-items">
+                <li class="selected">시/군/구</li>
+                <li>시/군/구</li>
+              </ul>
+            </div>
+            <div class="select-wrapper search-interior-normal left-float left">
+              <div class="select">
+                <p class="label">읍/면/동</p>
+                <b class="button">▾</b>
+              </div>
+              <ul class="select-items">
+                <li class="selected">읍/면/동</li>
+                <li>읍/면/동</li>
+              </ul>
+            </div>
+            <div class="select-wrapper search-interior-wide left-float">
+              <div class="select">
+                <p class="label">단지명</p>
+                <b class="button">▾</b>
+              </div>
+              <ul class="select-items">
+                <li class="selected">단지명</li>
+                <li>단지명</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="search-option-wrap interior-price">
+            <div class="search-option-label">시공비</div>
+            <input type="text" class="input search-interior-normal left-float">
+            <div class="search-option-condition-unit">만원</div>
+            <div class="div-item">~</div>
+            <input type="text" class="input search-interior-normal left-float">
+            <div class="search-option-condition-unit">만원</div>
+          </div>
+
+          <div class="search-option-wrap interior-area">
+            <div class="search-option-label">면적</div>
+            <input type="text" class="input search-interior-normal left-float">
+            <div class="search-option-condition-unit">㎡</div>
+            <div class="div-item">~</div>
+            <input type="text" class="input search-interior-normal left-float">
+            <div class="search-option-condition-unit">㎡</div>
+          </div>
+
+          <div class="search-option-wrap">
+            <div class="search-option-label">시공사</div>
+            <input type="text" class="input search-interior-full left-float">
+          </div>
+
+        </div>
+
+        <div class="search-option-bottom">
+          <input type="submit" class="btn-fill blue btn-search-icon" value="검색">
+        </div>
+      </div>
+    </div>
+
+    <div class="contents-mid has-bottom">
+
+      <section class="contents-part">
+
+        <div class="part-top">
+          <div class="sorting-amount left-float">
+            전체 <span class="em-blue">1,000건</span>의 인테리어 정보가 검색되었습니다.
+          </div>
+          <div class="right-float">
+             <div class="sorting-label-box">
+               <div class="radio-wrap left-float left group">
+                  <input id="radio1-1" type="radio" class="radio" name="sort" />
+                  <label for="radio1-1" class="radio-label">조회순</label>
+                </div>
+
+                <div class="radio-wrap left-float left group">
+                  <input id="radio1-2" type="radio" class="radio" name="sort" />
+                  <label for="radio1-2" class="radio-label">등록순</label>
+                </div>
+
+                <div class="radio-wrap left-float left group">
+                  <input id="radio1-3" type="radio" class="radio" name="sort" />
+                  <label for="radio1-3" class="radio-label">면적순</label>
+                </div>
+
+                <div class="radio-wrap left-float left">
+                  <input id="radio1-4" type="radio" class="radio" name="sort" />
+                  <label for="radio1-4" class="radio-label">가격순</label>
+                </div>
+             </div>
+          </div>
+        </div>
+
+        <div class="part-mid">
+
+          <ul class="big-list">
+            <!-- [D] 리스트 각행의 첫번째 항목에 first클래스, 세번째 항목에 last클래스 추가 -->
+            <li class="big-list-item first">
+              <div class="big-list-thumb">
+                <img src="../../images/temp/list_thumb_big01.jpg" alt="" />
+              </div>
+              <div class="big-list-addr">
+                <div class="big-list-addr01">[서울시 강남구 논현동]</div>
+                <div class="big-list-addr02">역삼 푸르지오 3단지 12층 1203호</div>
+                <div class="big-list-addr-text em-yellow">부동산챔프 인테리어 시공사</div>
+              </div>
+              <div class="big-list-overview line3">
+                <div class="big-list-overview-item">
+                  <span class="big-list-overview-title">가격</span>
+                  1,900만원 ~ 2,000만원
+                </div>
+                <div class="big-list-overview-item">
+                  <span class="big-list-overview-title gray">면적</span>
+                  123.11㎡
+                </div>
+                <div class="big-list-overview-item">
+                  <span class="big-list-overview-title gray">조회수</span>
+                  13,232
+                </div>
+              </div>
+            </li>
+            <li class="big-list-item">
+              <div class="big-list-thumb">
+                <img src="../../images/temp/list_thumb_big02.jpg" alt="" />
+              </div>
+              <div class="big-list-addr">
+                <div class="big-list-addr01">[서울시 강남구 논현동]</div>
+                <div class="big-list-addr02">역삼 푸르지오 3단지 12층 1203호</div>
+                <div class="big-list-addr-text em-yellow">부동산챔프 인테리어 시공사</div>
+              </div>
+              <div class="big-list-overview line3">
+                <div class="big-list-overview-item">
+                  <span class="big-list-overview-title">가격</span>
+                  1,900만원 ~ 2,000만원
+                </div>
+                <div class="big-list-overview-item">
+                  <span class="big-list-overview-title gray">면적</span>
+                  123.11㎡
+                </div>
+                <div class="big-list-overview-item">
+                  <span class="big-list-overview-title gray">조회수</span>
+                  13,232
+                </div>
+              </div>
+            </li>
+            <li class="big-list-item last">
+              <div class="big-list-thumb">
+                <img src="../../images/temp/list_thumb_big03.jpg" alt="" />
+              </div>
+              <div class="big-list-addr">
+                <div class="big-list-addr01">[서울시 강남구 논현동]</div>
+                <div class="big-list-addr02">역삼 푸르지오 3단지 12층 1203호</div>
+                <div class="big-list-addr-text em-yellow">부동산챔프 인테리어 시공사</div>
+              </div>
+              <div class="big-list-overview line3">
+                <div class="big-list-overview-item">
+                  <span class="big-list-overview-title">가격</span>
+                  1,900만원 ~ 2,000만원
+                </div>
+                <div class="big-list-overview-item">
+                  <span class="big-list-overview-title gray">면적</span>
+                  123.11㎡
+                </div>
+                <div class="big-list-overview-item">
+                  <span class="big-list-overview-title gray">조회수</span>
+                  13,232
+                </div>
+              </div>
+            </li>
+            <li class="big-list-item first">
+              <div class="big-list-thumb">
+                <img src="../../images/temp/list_thumb_big01.jpg" alt="" />
+              </div>
+              <div class="big-list-addr">
+                <div class="big-list-addr01">[서울시 강남구 논현동]</div>
+                <div class="big-list-addr02">역삼 푸르지오 3단지 12층 1203호</div>
+                <div class="big-list-addr-text em-yellow">부동산챔프 인테리어 시공사</div>
+              </div>
+              <div class="big-list-overview line3">
+                <div class="big-list-overview-item">
+                  <span class="big-list-overview-title">가격</span>
+                  1,900만원 ~ 2,000만원
+                </div>
+                <div class="big-list-overview-item">
+                  <span class="big-list-overview-title gray">면적</span>
+                  123.11㎡
+                </div>
+                <div class="big-list-overview-item">
+                  <span class="big-list-overview-title gray">조회수</span>
+                  13,232
+                </div>
+              </div>
+            </li>
+            <li class="big-list-item">
+              <div class="big-list-thumb">
+                <img src="../../images/temp/list_thumb_big02.jpg" alt="" />
+              </div>
+              <div class="big-list-addr">
+                <div class="big-list-addr01">[서울시 강남구 논현동]</div>
+                <div class="big-list-addr02">역삼 푸르지오 3단지 12층 1203호</div>
+                <div class="big-list-addr-text em-yellow">부동산챔프 인테리어 시공사</div>
+              </div>
+              <div class="big-list-overview line3">
+                <div class="big-list-overview-item">
+                  <span class="big-list-overview-title">가격</span>
+                  1,900만원 ~ 2,000만원
+                </div>
+                <div class="big-list-overview-item">
+                  <span class="big-list-overview-title gray">면적</span>
+                  123.11㎡
+                </div>
+                <div class="big-list-overview-item">
+                  <span class="big-list-overview-title gray">조회수</span>
+                  13,232
+                </div>
+              </div>
+            </li>
+            <li class="big-list-item last">
+              <div class="big-list-thumb">
+                <img src="../../images/temp/list_thumb_big03.jpg" alt="" />
+              </div>
+              <div class="big-list-addr">
+                <div class="big-list-addr01">[서울시 강남구 논현동]</div>
+                <div class="big-list-addr02">역삼 푸르지오 3단지 12층 1203호</div>
+                <div class="big-list-addr-text em-yellow">부동산챔프 인테리어 시공사</div>
+              </div>
+              <div class="big-list-overview line3">
+                <div class="big-list-overview-item">
+                  <span class="big-list-overview-title">가격</span>
+                  1,900만원 ~ 2,000만원
+                </div>
+                <div class="big-list-overview-item">
+                  <span class="big-list-overview-title gray">면적</span>
+                  123.11㎡
+                </div>
+                <div class="big-list-overview-item">
+                  <span class="big-list-overview-title gray">조회수</span>
+                  13,232
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="page">
+            <a href="#" class="page-item prev">이전</a>
+            <a href="#" class="page-item on">1</a>
+            <a href="#" class="page-item">2</a>
+            <a href="#" class="page-item">3</a>
+            <a href="#" class="page-item">4</a>
+            <a href="#" class="page-item">5</a>
+            <a href="#" class="page-item">6</a>
+            <a href="#" class="page-item">7</a>
+            <a href="#" class="page-item">8</a>
+            <a href="#" class="page-item">9</a>
+            <a href="#" class="page-item">10</a>
+            <a href="#" class="page-item next">다음</a>
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </div>
+</section>
+
+include "footer.html"

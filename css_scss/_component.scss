@@ -403,6 +403,7 @@
   }
 
   &-label-box {
+    @include clear();
     margin-top:4px;
   }
 }
@@ -432,10 +433,32 @@
     border-bottom:1px solid $line-gray;
   }
 
+  &-addr {
+    margin:14px 20px 0 20px;
+    height:82px;
+    border-bottom:1px solid $line-gray;
+
+    &02 {
+      margin-top:8px;
+      font-size:18px;
+      font-weight:bold;
+      color:$dark;
+    }
+
+    &-text {
+      margin-top:9px;
+      font-weight:bold;
+    }
+  }
+
   &-overview {
     margin-top:20px;
     margin-left:20px;
     height:62px;
+
+    &.line3 {
+      height:78px;
+    }
 
     &-item {
       margin-bottom:10px;
@@ -454,6 +477,10 @@
 
       &.yellow {
         background:$main-yellow;
+      }
+
+      &.gray {
+        background:$gray-blue;
       }
     }
   }

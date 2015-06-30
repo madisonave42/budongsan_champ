@@ -75,6 +75,14 @@
     text-align:right;
   }
 
+  &.search-interior-normal {
+    width:130px;
+  }
+
+  &.search-interior-full {
+    width:810px;
+  }
+
 }
 
 .select {
@@ -109,6 +117,14 @@
 
     &.search-med{
       width:88px;
+    }
+
+    &.search-interior-normal {
+      width:130px;
+    }
+
+    &.search-interior-wide {
+      width:390px;
     }
   }
 
@@ -280,10 +296,20 @@
     &.icon {
 
       &-plus {
-        padding:0;
-        padding-left:38px;
+        padding:0 0 0 38px;
         text-align:left;
         background:$btn-gray url(../images/icon_plus.png) no-repeat 22px 50%;
+
+        &.interior-add {
+          padding:0 0 0 27px;
+          background-position:9px 50%;
+        }
+      }
+
+      &-gear {
+        padding:0 0 0 27px;
+        text-align:left;
+        background:$btn-gray url(../images/icon_gear02.png) no-repeat 9px 50%;
       }
 
     }

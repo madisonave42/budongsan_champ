@@ -679,6 +679,12 @@ html.map{
 		margin:35px 0 32px;
 	}
 
+	&-top-util {
+		position:absolute;
+		top:3px;
+		right:0;
+	}
+
 	&-mid{
 		@include clear();
 	}
