@@ -1,0 +1,291 @@
+include "header_top.html"
+
+<title>인테리어 관리 | 부동산 챔프</title>
+
+<link rel="stylesheet" href="../../css/common.css" />
+<!-- 회원가입 style -->
+<link rel="stylesheet" href="../../css/interior.css" />
+<link rel="stylesheet" href="../../css/popup.css" />
+
+include "header_bottom.html"
+
+<section class="contents top-border">
+  <div class="wrapper">
+
+    <div class="contents-top">
+      <h2 class="contents-title">인테리어 관리</h2>
+
+      <div class="contents-top-util">
+        <button type="button" class="btn-med gray icon-plus interior-add">인테리어 등록</button>
+        <button type="button" class="btn-med gray icon-gear">인테리어 관리</button>
+      </div>
+
+      <div class="search-option">
+        <div class="search-option-detail">
+
+          <div class="search-option-wrap area-type left-float">
+            <div class="search-option-label">지역</div>
+            <div class="select-wrapper search-interior-normal left-float left">
+              <div class="select">
+                <p class="label">시/도</p>
+                <b class="button">▾</b>
+              </div>
+              <ul class="select-items">
+                <li class="selected">시/도</li>
+                <li>시/도</li>
+              </ul>
+            </div>
+            <div class="select-wrapper search-interior-normal left-float left">
+              <div class="select">
+                <p class="label">시/군/구</p>
+                <b class="button">▾</b>
+              </div>
+              <ul class="select-items">
+                <li class="selected">시/군/구</li>
+                <li>시/군/구</li>
+              </ul>
+            </div>
+            <div class="select-wrapper search-interior-normal left-float left">
+              <div class="select">
+                <p class="label">읍/면/동</p>
+                <b class="button">▾</b>
+              </div>
+              <ul class="select-items">
+                <li class="selected">읍/면/동</li>
+                <li>읍/면/동</li>
+              </ul>
+            </div>
+            <div class="select-wrapper search-interior-wide left-float">
+              <div class="select">
+                <p class="label">단지명</p>
+                <b class="button">▾</b>
+              </div>
+              <ul class="select-items">
+                <li class="selected">단지명</li>
+                <li>단지명</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="search-option-wrap interior-price">
+            <div class="search-option-label">시공비</div>
+            <input type="text" class="input search-interior-normal left-float">
+            <div class="search-option-condition-unit">만원</div>
+            <div class="div-item">~</div>
+            <input type="text" class="input search-interior-normal left-float">
+            <div class="search-option-condition-unit">만원</div>
+          </div>
+
+          <div class="search-option-wrap interior-area">
+            <div class="search-option-label">면적</div>
+            <input type="text" class="input search-interior-normal left-float">
+            <div class="search-option-condition-unit">㎡</div>
+            <div class="div-item">~</div>
+            <input type="text" class="input search-interior-normal left-float">
+            <div class="search-option-condition-unit">㎡</div>
+          </div>
+
+          <div class="search-option-wrap">
+            <div class="search-option-label">조회기간</div>
+            <div class="calendar left-float js-cal">
+              <input type="text" class="input calendar-input">
+              <button class="calendar-btn">달력열기</button>
+            </div>
+            <div class="div-item">~</div>
+            <div class="calendar left-float left js-cal">
+              <input type="text" class="input calendar-input">
+              <button class="calendar-btn">달력열기</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="search-option-bottom">
+          <input type="submit" class="btn-fill blue btn-search-icon" value="검색">
+        </div>
+      </div>
+    </div>
+
+    <div class="contents-mid has-bottom">
+
+      <section class="contents-part">
+
+        <div class="part-top">
+          <div class="sorting-amount left-float">
+            전체 <span class="em-blue">1,000건</span>의 인테리어 정보가 검색되었습니다.
+          </div>
+          <div class="right-float">
+              <button class="btn-function left-float">노출</button>
+              <button class="btn-function left-float right">비노출</button>
+              <button class="btn-function left-float right">삭제</button>
+          </div>
+        </div>
+
+        <div class="part-mid">
+
+          <table class="vt-table">
+
+            <caption class="hide">인테리어 정보 목록</caption>
+
+            <colgroup>
+              <col style="width:30px;" />
+              <col style="width:95px;" />
+              <col style="width:80px;" />
+              <col style="width:auto;" />
+              <col style="width:180px;" />
+              <col style="width:130px;" />
+              <col style="width:130px;" />
+              <col style="width:100px;" />
+              <col style="width:100px;" />
+            </colgroup>
+
+            <thead>
+              <th scope="col">
+                <div class="check-wrap left middle">
+                  <input id="check-1" class="check-box" type="checkbox">
+                  <label for="check-1" class="check-label blind">전체선택</label>
+                </div>
+              </th>
+              <th scope="col">번호</th>
+              <th scope="col">사진</th>
+              <th scope="col">지역</th>
+              <th scope="col">단지명</th>
+              <th scope="col">면적</th>
+              <th scope="col">시공비</th>
+              <th scope="col">노출여부</th>
+              <th scope="col">등록일</th>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td scope="col">
+                  <div class="check-wrap left middle">
+                    <input id="check-2" class="check-box" type="checkbox">
+                    <label for="check-2" class="check-label blind">현재 매물선택</label>
+                  </div>
+                </td>
+                <td class="center">
+                  100
+                </td>
+                <td class="center">
+                  <div class="thumb-mini">
+                    <img src="../../images/temp/list_thumb_mini.jpg" alt="" class="thumb-mini-img" />
+                  </div>
+                </td>
+                <td class="center">
+                  서울시/강남구/삼성동
+                </td>
+                <td>
+                  <div class="td-inner">삼성힐스테이트 2단지</div>
+                  <div class="td-inner">(123-123번지)</div>
+                </td>
+                <td class="center">
+                  <div class="td-inner">100,000.00㎡</div>
+                </td>
+                <td class="center">
+                  <div class="td-inner">100,000만원</div>
+                </td>
+                <td class="center">
+                  <div class="em-blue">노출</div>
+                </td>
+                <td class="center">
+                  2015.05.08
+                </td>
+              </tr>
+              <tr>
+                <td scope="col">
+                  <div class="check-wrap left middle">
+                    <input id="check-2" class="check-box" type="checkbox">
+                    <label for="check-2" class="check-label blind">현재 매물선택</label>
+                  </div>
+                </td>
+                <td class="center">
+                  100
+                </td>
+                <td class="center">
+                  <div class="thumb-mini">
+                    <img src="../../images/temp/list_thumb_mini.jpg" alt="" class="thumb-mini-img" />
+                  </div>
+                <td class="center">
+                  서울시/강남구/삼성동
+                </td>
+                <td>
+                  <div class="td-inner">삼성힐스테이트 2단지</div>
+                  <div class="td-inner">(123-123번지)</div>
+                </td>
+                <td class="center">
+                  <div class="td-inner">100,000.00㎡</div>
+                </td>
+                <td class="center">
+                  <div class="td-inner">100,000만원</div>
+                </td>
+                <td class="center">
+                  <div class="em-blue">노출</div>
+                </td>
+                <td class="center">
+                  2015.05.08
+                </td>
+              </tr>
+              <tr>
+                <td scope="col">
+                  <div class="check-wrap left middle">
+                    <input id="check-2" class="check-box" type="checkbox">
+                    <label for="check-2" class="check-label blind">현재 매물선택</label>
+                  </div>
+                </td>
+                <td class="center">
+                  100
+                </td>
+                <td class="center">
+                  <div class="thumb-mini">
+                    <img src="../../images/temp/list_thumb_mini.jpg" alt="" class="thumb-mini-img" />
+                  </div>
+                </td>
+                <td class="center">
+                  서울시/강남구/삼성동
+                </td>
+                <td>
+                  <div class="td-inner">삼성힐스테이트 2단지</div>
+                  <div class="td-inner">(123-123번지)</div>
+                </td>
+                <td class="center">
+                  <div class="td-inner">100,000.00㎡</div>
+                </td>
+                <td class="center">
+                  <div class="td-inner">100,000만원</div>
+                </td>
+                <td class="center">
+                  <div class="em-blue">노출</div>
+                </td>
+                <td class="center">
+                  2015.05.08
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="page">
+            <a href="#" class="page-item prev">이전</a>
+            <a href="#" class="page-item on">1</a>
+            <a href="#" class="page-item">2</a>
+            <a href="#" class="page-item">3</a>
+            <a href="#" class="page-item">4</a>
+            <a href="#" class="page-item">5</a>
+            <a href="#" class="page-item">6</a>
+            <a href="#" class="page-item">7</a>
+            <a href="#" class="page-item">8</a>
+            <a href="#" class="page-item">9</a>
+            <a href="#" class="page-item">10</a>
+            <a href="#" class="page-item next">다음</a>
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </div>
+</section>
+
+include "footer.html"

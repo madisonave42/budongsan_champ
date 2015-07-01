@@ -836,7 +836,7 @@
 
 	&.fixed {
 		position:fixed;
-		top:27px;
+		top:25px;
 		left:50%;
 		margin-left:278px;
 		.detail-user-header {
@@ -862,7 +862,7 @@
 	padding:10px;
 	width:200px;
 	border:1px solid $line-gray;
-	border-top:2px solid $main-yellow;
+	border-top:4px solid $main-yellow;
 
 
 	&-header {

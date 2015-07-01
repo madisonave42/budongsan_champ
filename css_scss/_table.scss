@@ -519,3 +519,8 @@
 .table-more {
 	@include clear();
 }
+
+.add-table-btns {
+	@include clear();
+	margin-top:10px;
+}

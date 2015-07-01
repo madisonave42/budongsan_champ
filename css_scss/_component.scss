@@ -497,6 +497,208 @@
   }
 }
 
+
+.slide-list {
+  @include clear();
+  padding-top:30px;
+  border-top:2px solid $dark;
+
+  &-item {
+    @include clear();
+    margin:0 0 20px 18px;
+    float:left;
+    width:489px;
+    height:193px;
+    border:1px solid $line-gray;
+
+    &.first {
+      margin:0 0 20px 0;
+    }
+
+  }
+
+  &-thumb {
+    float:left;
+    width:213px;
+    height:194px;
+
+    /* Style the thumbnails */
+    .pika-thumbs {
+      padding:0;
+      height:49px;
+      li {
+        position:relative;
+        width:71px;
+        height:48px;
+        padding:0;
+        //overflow: hidden;
+        float: left;
+        margin:0;
+        cursor:pointer;
+        .clip {
+
+          img {
+            display:block;
+            width:100%;
+            box-sizing:border-box;
+          }
+        }
+
+        &.active:after {
+          content:"";
+          position:absolute;
+          top:0;
+          left:0;
+          width:65px;
+          height:42px;
+          border:3px solid $main-blue;
+        }
+      }
+    }
+
+    /* The stage is the wrapper. The image fills 100% the height of the stage */
+    .pika-stage, .pika-textnav {
+      width: 213px;
+    }
+
+    .pika-stage {
+      position: relative;
+      text-align: center;
+      height: 145px;
+      img {
+        height: 100%;
+      }
+      .caption {
+        position: absolute;
+        background: #000;
+        background: rgba(0, 0, 0, 0.75);
+        border: 1px solid #141414;
+        font-size: 11px;
+        color: #fafafa;
+        padding: 10px;
+        text-align: right;
+        bottom: 50px;
+        right: 10px;
+        p {
+          padding: 0;
+          margin: 0;
+          line-height: 14px;
+        }
+      }
+    }
+
+    /* Ths play, pause, prev and next buttons */
+    .pika-imgnav a {
+      position: absolute;
+      display: block;
+      width:29px;
+      height:29px;
+      text-indent:-9999px;
+      background:url(../images/bg_btn_detail_slide_small.png) no-repeat;
+      z-index: 3;
+      cursor:pointer;
+      &.previous {
+        top:58px;
+        left:0;
+      }
+      &.next {
+        top:58px;
+        right:0;
+        background-position:-29px 0;
+      }
+      &.play {
+        display:none;
+      }
+    }
+
+    /* The previous and next textual buttons */
+    .pika-textnav {
+      display:none;
+    }
+
+    .pika-counter {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: white;
+      background: rgba(0, 0, 0, 0.7);
+      font-size: 11px;
+      padding: 3px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+    }
+
+    .jcarousel-container {
+      position:absolute;
+      bottom:0;
+      left:0;
+    }
+
+    .jcarousel-clip {
+      overflow:hidden;
+    }
+  }
+
+  &-addr {
+    position:relative;
+    float:left;
+    margin:20px 0 0 20px;
+    width:236px;
+    height:75px;
+    overflow:hidden;
+
+    &02 {
+      margin-top:5px;
+      font-size:16px;
+      font-weight:bold;
+      color:$dark;
+    }
+
+    &-info {
+      position:absolute;
+      top:0;
+      right:0;
+      padding:0 0 0 19px;
+      width:49px;
+      height:16px;
+      line-height:16px;
+      font-size:12px;
+      color:$white;
+      background:$main-yellow url(../images/icon_loc_btn.png) no-repeat 3px 2px;
+    }
+  }
+
+  &-overview {
+    float:left;
+    margin:0 0 0 20px;
+
+    &-item {
+      margin-bottom:7px;
+    }
+
+    &-title {
+      display:inline-block;
+      margin-right:7px;
+      width:62px;
+      height:16px;
+      color:$white;
+      font-size:12px;
+      font-weight:bold;
+      text-align:center;
+      background:$gray-blue;
+
+      &.yellow {
+        background:$main-yellow;
+      }
+
+      &.blue {
+        background:$main-blue;
+      }
+    }
+  }
+
+}
+
 .tooltip {
   display:none;
   position:absolute;
@@ -853,5 +1055,32 @@
 
   &-body {
     float:right;
+  }
+}
+
+.bottom-info {
+  padding:20px 0 0 0;
+  border-top:1px solid $line-gray;
+
+  &-msg {
+    position:relative;
+    margin:8px 0 0 0;
+    padding:0 0 0 9px;
+    color:$dark-gray;
+    font-size:12px;
+
+    &:first-child {
+      margin:0;
+    }
+
+    &:after {
+      content:"";
+      position:absolute;
+      top:7px;
+      left:0;
+      width:2px;
+      height:2px;
+      background:$dark-gray;
+    }
   }
 }

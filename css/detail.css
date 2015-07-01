@@ -715,7 +715,7 @@
 }
 .detail-sidebar.fixed {
   position: fixed;
-  top: 27px;
+  top: 25px;
   left: 50%;
   margin-left: 278px;
 }
@@ -739,7 +739,7 @@
   padding: 10px;
   width: 200px;
   border: 1px solid #d8d8d8;
-  border-top: 2px solid #fcb040;
+  border-top: 4px solid #fcb040;
 }
 .detail-user-header {
   padding: 10px 0;
