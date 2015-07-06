@@ -847,6 +847,16 @@
   font-size: 15px;
   font-weight: bold;
 }
+.complex-title-price-summary {
+  color: #25aae1;
+  font-size: 16px;
+  font-weight: bold;
+}
+.complex-title-price-name {
+  margin: 10px 0 0 0;
+  font-size: 16px;
+  font-weight: bold;
+}
 .complex-addr {
   color: #222;
 }
@@ -878,6 +888,12 @@
   overflow: hidden;
 }
 .complex-overview-text:first-child {
+  margin-top: 0;
+}
+.complex-overview-text.price {
+  margin-top: 7px;
+}
+.complex-overview-text.price:first-child {
   margin-top: 0;
 }
 .complex-overview-title {
@@ -927,6 +943,21 @@
 .complex-table-head-item07 {
   width: 60px;
 }
+.complex-table-head-price01 {
+  width: 80px;
+}
+.complex-table-head-price02 {
+  width: 80px;
+}
+.complex-table-head-price03 {
+  width: 70px;
+}
+.complex-table-head-price04 {
+  width: 90px;
+}
+.complex-table-head-price05 {
+  width: 140px;
+}
 .complex-table-head-sort {
   display: inline;
   padding: 0;
@@ -969,6 +1000,9 @@
   min-width: 420px;
   border: 2px solid #25aae1;
 }
+.simple-view.price {
+  min-width: 436px;
+}
 .simple-view .list-item.image {
   width: 122px;
   float: left;
@@ -986,6 +1020,9 @@
   line-height: 14px;
   font-size: 12px;
   text-align: center;
+}
+.simple-view .list-item-type.price {
+  width: 100px;
 }
 .simple-view .list-item-type.red {
   border: 1px solid #ed1c24;
@@ -1108,6 +1145,9 @@
   line-height: 14px;
   font-size: 12px;
   text-align: center;
+}
+.simple-view-list .list-item-type.price {
+  width: 100px;
 }
 .simple-view-list .list-item-type.red {
   border: 1px solid #ed1c24;

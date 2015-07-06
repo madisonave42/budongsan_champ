@@ -95,6 +95,16 @@ module.exports = function(grunt) {
         }
       },
 
+      price: {
+        cwd:'html_src/price',
+        src: ['*.html'],
+        dest: 'html/price',
+        options: {
+          flatten:true,
+          includePath: 'html_src/_include'
+        }
+      },
+
       login: {
 				cwd:'html_src/login',
 				src: ['*.html'],

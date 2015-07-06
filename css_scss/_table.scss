@@ -374,6 +374,12 @@
 		font-weight:bold;
 		color:$main-blue;
 		background:url(../images/icon_round_down.png) no-repeat 100% 2px;
+
+		&.price {
+			padding:0;
+			font-size: 13px;
+			background:none;
+		}
 	}
 
 	&-data {

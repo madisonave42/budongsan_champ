@@ -1143,6 +1143,11 @@ html.map .footer-content {
   color: #25aae1;
   background: url(../images/icon_round_down.png) no-repeat 100% 2px;
 }
+.list-item-price.price {
+  padding: 0;
+  font-size: 13px;
+  background: none;
+}
 .list-item-data {
   position: relative;
   margin-top: 5px;
