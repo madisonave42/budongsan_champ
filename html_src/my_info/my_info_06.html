@@ -1,0 +1,103 @@
+include "header_top.html"
+
+<title>기본정보관리 | 회원정보 | 부동산 챔프</title>
+
+<link rel="stylesheet" href="../../css/common.css" />
+<!-- 회원가입 style -->
+<link rel="stylesheet" href="../../css/my_info.css" />
+<link rel="stylesheet" href="../../css/popup.css" />
+
+include "header_bottom.html"
+
+<nav class="lnb">
+  <div class="wrapper">
+    <ul class="lnb-list">
+      <li class="lnb-item"><a href="#" class="lnb-link on">기본정보관리</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">내정보보호</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">이용권/결제정보</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">이벤트응모내역</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="contents">
+  <div class="wrapper">
+
+    <div class="contents-top">
+      <div class="contents-title-wrap">
+        <h2 class="contents-title">기본정보 관리</h2>
+      </div>
+
+      <ul class="cs-center-tab">
+        <li class="cs-center-tab-list"><a href="#" class="cs-center-tab-link">정보수정</a></li>
+        <li class="cs-center-tab-list"><a href="#" class="cs-center-tab-link">비밀번호 변경</a></li>
+        <li class="cs-center-tab-list"><a href="#" class="cs-center-tab-link">SNS 계정 연결</a></li>
+        <li class="cs-center-tab-list"><a href="#" class="cs-center-tab-link">회원탈퇴</a></li>
+      </ul>
+
+    </div>
+
+    <div class="contents-mid">
+
+      <section class="contents-part">
+
+        <div class="part-top">
+          <ul class="list-description">
+            <li class="list-item">새 비밀번호 설정 시 <span class="em-blue">6자리 이상의 영어, 숫자, 특수문자를 혼합</span>하여 입력해 주세요.</li>
+            <li class="list-item">개인정보(생년월일, 휴대전화번호 등)와 관련된 숫자 등 다른 사람이 알아낼 수 있는 비밀번호는 사용하지 마세요.</li>
+
+          </ul>
+        </div>
+
+        <div class="part-mid">
+
+          <div class="border-box gray">
+            <div class="re-pw">
+              <dl class="re-pw-input">
+                <dt class="re-pw-input-title">아이디</dt>
+                <dd class="re-pw-input-body">gildonghong</dd>
+              </dl>
+              <dl class="re-pw-input">
+                <dt class="re-pw-input-title">
+                  <label for="re-pw1">현재 비밀번호</label>
+                </dt>
+                <dd class="re-pw-input-body">
+                  <input type="text" id="re-pw1" class="input full-width" />
+                  <div class="re-pw-input-msg em-red">6자리 이상의 영어/숫자/특수문자를 혼합해서 사용해 주세요.</div>
+                </dd>
+              </dl>
+              <dl class="re-pw-input">
+                <dt class="re-pw-input-title">
+                  <label for="re-pw2">새 비밀번호</label>
+                </dt>
+                <dd class="re-pw-input-body">
+                  <input type="text" id="re-pw2" class="input full-width" />
+                  <div class="re-pw-input-msg em-blue">강력한 비밀번호 입니다.</div>
+                </dd>
+              </dl>
+              <dl class="re-pw-input">
+                <dt class="re-pw-input-title">
+                  <label for="re-pw3">새 비밀번호 확인</label>
+                </dt>
+                <dd class="re-pw-input-body">
+                  <input type="text" id="re-pw3" class="input full-width" />
+                </dd>
+              </dl>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="part-bottom">
+          <input type="submit" class="btn-fill blue" value="비밀번호 변경" />
+        </div>
+
+      </section>
+
+    </div>
+
+  </div>
+</section>
+
+include "footer.html"

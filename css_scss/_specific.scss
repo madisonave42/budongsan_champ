@@ -81,6 +81,15 @@
   color:$main-red!important;
 }
 
+.em-link {
+  color:$main-blue;
+  text-decoration:underline;
+
+  &-item {
+    color:$main-blue;
+  }
+}
+
 .small-font{
   font-size:$font-size-small;
 }

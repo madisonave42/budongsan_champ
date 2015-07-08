@@ -55,6 +55,16 @@ module.exports = function(grunt) {
         }
       },
 
+      myinfo: {
+        cwd:'html_src/my_info',
+        src: ['*.html'],
+        dest: 'html/my_info',
+        options: {
+          flatten:true,
+          includePath: 'html_src/_include'
+        }
+      },
+
 			map: {
 				cwd:'html_src/map',
 				src: ['*.html'],
