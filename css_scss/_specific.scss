@@ -73,7 +73,16 @@
   color:$main-blue!important;
 }
 
+.em-blue-bold{
+  color:$main-blue!important;
+  font-weight:bold;
+}
+
 .em-yellow{
+  color:$main-yellow!important;
+}
+
+.em-yellow-bold{
   color:$main-yellow!important;
 }
 
@@ -109,4 +118,9 @@
 
 .mt8{
   margin:8px 0 0 0;
+}
+
+.required{
+  margin:10px 0 0 0;
+  text-align:right;
 }

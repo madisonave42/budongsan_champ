@@ -984,10 +984,31 @@ $(function(){
 		}
 	})();
 
+	/*
+	 * CS Center
+	 */
+
+	(function(){
+
+		$('.faq-list-title').data('open', 'false').on('click', function(){
+
+			if( $(this).data('open') == 'false' ) {
+				$(this).next('.faq-list-content').addClass('open');
+				$(this).data('open', 'true');
+			} else {
+				$(this).next('.faq-list-content').removeClass('open');
+				$(this).data('open', 'false');
+			}
+
+
+		});
+
+	})();
+
+
+
+
 });
-
-
-
 
 
 

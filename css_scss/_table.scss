@@ -48,6 +48,13 @@
 			vertical-align:top;
 		}
 
+		&.over-cut{
+			white-space:nowrap;
+			text-overflow: ellipsis;
+			vertical-align:bottom;
+			overflow:hidden;
+		}
+
 		.td-link {
 			color:$dark-gray;
 
