@@ -181,8 +181,16 @@
 
     <div class="contents-top">
       <div class="contents-title-wrap">
-        <h2 class="contents-title">내정보보호</h2>
+        <h2 class="contents-title">기본정보 관리</h2>
       </div>
+
+      <ul class="my-info-tab">
+        <li class="my-info-tab-list"><a href="#" class="my-info-tab-link edit on">정보수정</a></li>
+        <li class="my-info-tab-list"><a href="#" class="my-info-tab-link changepw">비밀번호 변경</a></li>
+        <li class="my-info-tab-list"><a href="#" class="my-info-tab-link sns">SNS 계정 연결</a></li>
+        <li class="my-info-tab-list"><a href="#" class="my-info-tab-link close">회원탈퇴</a></li>
+      </ul>
+
     </div>
 
     <div class="contents-mid">
@@ -191,30 +199,127 @@
 
         <div class="part-mid">
 
-          <div class="border-box gray">
-            <div class="check-pw">
-              <h3 class="check-pw-title">본인확인을 위해 <span class="em-blue">비밀번호</span>를 한번 더 입력해주세요.</h3>
-              <dl class="check-pw-input">
-                <dt class="check-pw-input-title">아이디</dt>
-                <dd class="check-pw-input-body">gildonghong</dd>
-              </dl>
-              <dl class="check-pw-input">
-                <dt class="check-pw-input-title">
-                  <label for="check-pw">비밀번호</label>
-                </dt>
-                <dd class="check-pw-input-body">
-                  <input type="text" id="check-pw" class="input full-width" />
-                </dd>
-              </dl>
+          <table class="hr-table">
 
-            </div>
-          </div>
+            <caption class="hide">개인정보수정</caption>
+
+            <colgroup>
+              <col style="width:185px;">
+              <col style="width:auto;">
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <label for="id">아이디 (이메일)</label>
+                </th>
+                <td>
+                  user@gmail.com
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="name">이름/성별</label>
+                </th>
+                <td>
+                  홍길동/남
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label>생년월일</label>
+                </th>
+                <td>
+
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">1990년</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">1990년</li>
+                      <li>1991년</li>
+                      <li>1992년</li>
+                      <li>1991년</li>
+                      <li>1992년</li>
+                      <li>1991년</li>
+                      <li>1992년</li>
+                      <li>1991년</li>
+                      <li>1992년</li>
+                      <li>1991년</li>
+                      <li>1992년</li>
+                    </ul>
+                  </div>
+
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">1월</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">1월</li>
+                      <li>2월</li>
+                      <li>3월</li>
+                    </ul>
+                  </div>
+
+                  <div class="select-wrapper half-width left-float">
+                    <div class="select">
+                      <p class="label">1일</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">1일</li>
+                      <li>2일</li>
+                      <li>3일</li>
+                    </ul>
+                  </div>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  이메일 수신여부
+                </th>
+                <td>
+
+                  <div class="radio-wrap left-float left">
+                    <input id="radio-1" class="radio" name="e-receive" type="radio">
+                    <label for="radio-1" class="radio-label">수신합니다</label>
+                  </div>
+
+                  <div class="radio-wrap left-float">
+                    <input id="radio-2" class="radio" name="e-receive" type="radio">
+                    <label for="radio-2" class="radio-label">수신하지 않습니다</label>
+                  </div>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="last">
+                  뉴스레터 수신여부
+                </th>
+                <td class="last">
+
+                  <div class="radio-wrap left-float left">
+                    <input id="radio-3" class="radio" name="n-receive" type="radio">
+                    <label for="radio-3" class="radio-label">수신합니다</label>
+                  </div>
+
+                  <div class="radio-wrap left-float">
+                    <input id="radio-4" class="radio" name="n-receive" type="radio">
+                    <label for="radio-4" class="radio-label">수신하지 않습니다</label>
+                  </div>
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
         </div>
 
         <div class="part-bottom">
-          <input type="submit" class="btn-fill blue" value="확인" />
-          <a href="#" class="btn-fill">취소</a>
+          <input type="submit" class="btn-fill blue" value="회원정보 변경" />
         </div>
 
       </section>

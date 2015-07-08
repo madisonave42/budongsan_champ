@@ -184,11 +184,11 @@
         <h2 class="contents-title">기본정보 관리</h2>
       </div>
 
-      <ul class="cs-center-tab">
-        <li class="cs-center-tab-list"><a href="#" class="cs-center-tab-link">정보수정</a></li>
-        <li class="cs-center-tab-list"><a href="#" class="cs-center-tab-link">비밀번호 변경</a></li>
-        <li class="cs-center-tab-list"><a href="#" class="cs-center-tab-link">SNS 계정 연결</a></li>
-        <li class="cs-center-tab-list"><a href="#" class="cs-center-tab-link">회원탈퇴</a></li>
+      <ul class="my-info-tab">
+        <li class="my-info-tab-list"><a href="#" class="my-info-tab-link edit on">정보수정</a></li>
+        <li class="my-info-tab-list"><a href="#" class="my-info-tab-link changepw">비밀번호 변경</a></li>
+        <li class="my-info-tab-list"><a href="#" class="my-info-tab-link sns">SNS 계정 연결</a></li>
+        <li class="my-info-tab-list"><a href="#" class="my-info-tab-link close">회원탈퇴</a></li>
       </ul>
 
     </div>
@@ -196,6 +196,10 @@
     <div class="contents-mid">
 
       <section class="contents-part">
+
+        <div class="part-top">
+          <h3 class="part-title">회원기본 정보</h3>
+        </div>
 
         <div class="part-mid">
 
@@ -296,10 +300,10 @@
                 </td>
               </tr>
               <tr>
-                <th scope="row" class="last">
+                <th scope="row">
                   뉴스레터 수신여부
                 </th>
-                <td class="last">
+                <td>
 
                   <div class="radio-wrap left-float left">
                     <input id="radio-3" class="radio" name="n-receive" type="radio">
@@ -311,6 +315,301 @@
                     <label for="radio-4" class="radio-label">수신하지 않습니다</label>
                   </div>
 
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="phone">핸드폰 번호</label>
+                </th>
+                <td>
+
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">010</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">010</li>
+                      <li>010</li>
+                      <li>010</li>
+                    </ul>
+                  </div>
+
+                  <input class="input half-width left-float left" title="핸드폰 가운데자리" type="text">
+
+                  <input class="input half-width left-float left" title="핸드폰 끝자리" type="text">
+
+                  <button type="button" class="btn-form left-float">정보변경요청</button>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  SMS 수신여부
+                </th>
+                <td>
+
+                  <div class="radio-wrap left-float left">
+                    <input id="radio-5" class="radio" name="s-receive" type="radio">
+                    <label for="radio-5" class="radio-label">수신합니다</label>
+                  </div>
+
+                  <div class="radio-wrap left-float">
+                    <input id="radio-6" class="radio" name="s-receive" type="radio">
+                    <label for="radio-6" class="radio-label">수신하지 않습니다</label>
+                  </div>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  주소
+                </th>
+                <td>
+                  <button type="button" class="btn-form">주소찾기</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="addr01">도로명주소</label>
+                </th>
+                <td>
+                  <input id="addr01" class="input double gray-bg" type="text">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="last">
+                  <label for="addr02">지번주소</label>
+                </th>
+                <td class="last">
+                  <input id="addr02" class="input double gray-bg" type="text">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </section>
+
+      <section class="contents-part">
+
+        <div class="part-top">
+          <h3 class="part-title">기업정보 입력</h3>
+          <ul class="list-description">
+            <li class="list-item">회사명, 주소, 전화번호는 매물정보에 노출되니 반드시 실제 정보를 입력하시기 바랍니다.</li>
+            <li class="list-item">사업자등록번호 도용 피해방지를 위해 기업인증을 시행하고 있습니다.</li>
+            <li class="list-item">NICE신용평가정보㈜에 등록되어 있지  않은 기업은 <span class="em-blue">사업자등록증 사본을 팩스(02-752-2835)</span>로 보내주시기 바랍니다.</li>
+          </ul>
+        </div>
+
+        <div class="part-mid">
+
+          <table class="hr-table">
+
+            <caption class="hide">기업정보 입력</caption>
+
+            <colgroup>
+              <col style="width:185px;">
+              <col style="width:auto;">
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <label for="med-name">사업자구분</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+
+                  <div class="radio-wrap left-float left">
+                    <input id="radio-1" class="radio" name="type" type="radio">
+                    <label for="radio-1" class="radio-label">법인사업자</label>
+                  </div>
+
+                  <div class="radio-wrap left-float">
+                    <input id="radio-2" class="radio" name="type" type="radio">
+                    <label for="radio-2" class="radio-label">개인사업자</label>
+                  </div>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="rep-name">상호/법인명</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <input id="rep-name" class="input gray-bg" value="행복기업" type="text">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="com-num">사업자등록번호</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+
+                  <input id="com-num" class="input half-width left-float left gray-bg" title="사업자 등록번호 첫자리" type="text">
+
+                  <input class="input mini left-float left gray-bg" title="사업자 등록번호 가운데자리" type="text">
+
+                  <input class="input half-width left-float left gray-bg" title="사업자 등록번호 끝자리" type="text">
+
+                  <button type="button" class="btn-form left-float">인증하기</button>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="com-num">법인등록번호</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+
+                  <input class="input left-float left" title="법인등록번호 첫자리" type="text">
+
+                  <input class="input left-float" title="법인등록번호 끝자리" type="text">
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="rep-name">대표자명</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <input id="rep-name" class="input" type="text">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="rep-email">사업장 종류</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+
+                  <div class="select-wrapper left-float left">
+                    <div class="select">
+                      <p class="label">사업분야를 선택하세요</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">분야</li>
+                      <li>분야</li>
+                      <li>분야</li>
+                    </ul>
+                  </div>
+
+                  <div class="input-wrap left-float left">
+                    <label for="com-info01" class="label-on-input">업태</label>
+                    <input id="com-info01" class="input half-width js-label-toggle" type="text">
+                  </div>
+
+                  <div class="input-wrap left-float">
+                    <label for="com-info02" class="label-on-input">종목</label>
+                    <input id="com-info02" class="input half-width js-label-toggle" type="text">
+                  </div>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="rep-email">사업장 대표메일</label>
+                </th>
+                <td>
+                  <input id="rep-email" class="input double" type="text">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="com-tel">사업장 대표전화</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">02</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">02</li>
+                      <li>02</li>
+                      <li>02</li>
+                    </ul>
+                  </div>
+
+                  <input class="input half-width left-float left" title="대표전화 가운데자리" type="text">
+
+                  <input class="input half-width left-float" title="대표전화 끝자리" type="text">
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="com-tel">사업장 팩스번호</label>
+                </th>
+                <td>
+
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">02</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">02</li>
+                      <li>02</li>
+                      <li>02</li>
+                    </ul>
+                  </div>
+
+                  <input class="input half-width left-float left" title="팩스번호 가운데자리" type="text">
+
+                  <input class="input half-width left-float" title="팩스번호 끝자리" type="text">
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  사업장 주소 <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <button type="button" class="btn-form">주소찾기</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="addr03">도로명주소</label>
+                </th>
+                <td>
+                  <input id="addr03" class="input double gray-bg" type="text">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="addr04">지번주소</label>
+                </th>
+                <td>
+                  <input id="addr04" class="input double gray-bg" type="text">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  사업자등록증 <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <button type="button" class="btn-form left-float left">파일첨부</button>
+                  <div class="form-attached-file left-float left">20150420_행복중개사무소 사업자등록증.pdf</div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="homepage">홈페이지</label>
+                </th>
+                <td>
+                  <input id="homepage" class="input double" type="text">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="self-intro">간단소개</label>
+                </th>
+                <td>
+                  <input id="self-intro" class="input double" type="text">
                 </td>
               </tr>
             </tbody>
