@@ -896,6 +896,18 @@
 			font-weight:bold;
 		}
 
+		&-price-summary {
+			color:$main-blue;
+			font-size:16px;
+			font-weight:bold;
+		}
+
+		&-price-name {
+			margin:10px 0 0 0;
+			font-size:16px;
+			font-weight:bold;
+		}
+
 	}
 
 	&-addr {
@@ -931,6 +943,14 @@
 
 			&:first-child {
 				margin-top:0;
+			}
+
+			&.price {
+				margin-top:7px;
+
+				&:first-child {
+					margin-top:0;
+				}
 			}
 		}
 
@@ -998,6 +1018,26 @@
 				width:60px;
 			}
 
+			&-price01 {
+				width:80px;
+			}
+
+			&-price02 {
+				width:80px;
+			}
+
+			&-price03 {
+				width:70px;
+			}
+
+			&-price04 {
+				width:90px;
+			}
+
+			&-price05 {
+				width:140px;
+			}
+
 			&-sort {
 				display:inline;
 				padding:0;
@@ -1058,6 +1098,10 @@
 
 	border:2px solid $main-blue;
 
+	&.price {
+		min-width:436px;
+	}
+
 	.list-item.image{
 		width:122px;
 		//height:94px;
@@ -1081,6 +1125,10 @@
 			line-height: 14px;
 			font-size: 12px;
 			text-align: center;
+
+			&.price {
+				width:100px;
+			}
 
 			&.red {
 				border: 1px solid $main-red;
@@ -1230,6 +1278,10 @@
 			line-height: 14px;
 			font-size: 12px;
 			text-align: center;
+
+			&.price {
+				width:100px;
+			}
 
 			&.red {
 				border: 1px solid $main-red;

@@ -895,7 +895,41 @@ $(function(){
 		initScrollTab($('.detail-side-link .js-tab-link'), 50);
 	})();
 
-	 /*
+	/*
+	 * interior
+	 */
+	 // company detail slide
+	(function() {
+		var examSlide = $('.js-interior-exam');
+
+		if (examSlide.length > 0) {
+			examSlide.each(function() {
+		    $(this).jcarousel({
+	        itemFallbackDimension: 300
+		    });
+			});
+		}
+	})();
+
+	// company info slide
+	(function (){
+		var listGallery = $('.js-list-gallery');
+
+		if (listGallery.length > 0) {
+			listGallery.PikaChoose({
+				carousel:true,
+				showCaption:false,
+				autoPlay:false,
+				text: {
+						previous: '이전',
+						next: '다음'
+					},
+				thumbOpacity:1
+			});
+		}
+	})();
+
+	/*
 	 * popup
 	 */
 
@@ -1009,33 +1043,6 @@ $(function(){
 
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -566,6 +566,10 @@
     &.blue {
       background:$main-blue;
     }
+
+    &.gray {
+      background:$gray;
+    }
   }
 
   &-item-submit {
@@ -592,6 +596,14 @@
     &.yellow {
       background-color:$main-yellow;
     }
+  }
+
+  &-add {
+    @include btn(37, 37, 13, $white, 34, 0, $dark-gray);
+  }
+
+  &-remove {
+    @include btn(37, 37, 13, $white, 34, 0, $dark-gray);
   }
 
 }

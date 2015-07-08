@@ -1,0 +1,1044 @@
+include "header_top_map.html"
+
+<title>매물 | 부동산 챔프</title>
+
+<link rel="stylesheet" href="../../css/common.css" />
+<!-- map style -->
+<link rel="stylesheet" href="../../css/price_map.css" />
+<link rel="stylesheet" href="../../css/popup.css" />
+<!-- 지도 API 로딩 -->
+<script type="text/javascript" src="http://apis.daum.net/maps/maps3.js?apikey=195b1ef32f1567715276a78e67930163"></script>
+
+include "header_bottom.html"
+
+<nav class="lnb">
+  <div class="wrapper">
+    <ul class="lnb-list">
+      <li class="lnb-item"><a href="#" class="lnb-link on">주거전체</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">아파트(단지)</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">오피스텔(단지)</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">사무실</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">상가.점포</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">건물</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">공장/창고</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">토지/기타</a></li>
+    </ul>
+    <div class="lnb-util">
+      <ul class="view left-float">
+        <li class="view-item"><a href="#" class="view-link on">MAP</a></li>
+        <li class="view-item"><a href="#" class="view-link">LIST</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="contents">
+  <div class="wrapper">
+
+    <section class="section-map">
+
+      <!-- 임시 지도 표시영역 : MAP 관련 스크립트는 function.js에 위치-->
+      <div id="map" class="map-area"></div>
+
+      <!-- marker -->
+      <!-- [D] class - 아래 임시 위치이므로  실제 적용시 삭제 -->
+      <div class="marker-group digit1" style="left:100px; top:300px;">1</div>
+      <div class="marker-group digit2" style="left:200px; top:300px;">9+</div>
+      <div class="marker-group digit2" style="left:300px; top:300px;">24</div>
+      <div class="marker-group digit3" style="left:400px; top:300px;">24+</div>
+      <div class="marker-group digit3" style="left:500px; top:300px;">131</div>
+      <div class="marker-group digit4" style="left:600px; top:300px;">131+</div>
+      <div class="marker-group digit4" style="left:700px; top:300px;">1314</div>
+
+      <div class="marker-subway"></div>
+
+      <!-- [D] class - 아래 임시 위치이므로  실제 적용시 삭제 -->
+      <div class="marker yellow js-marker" style="left:300px; top:500px;">9+</div>
+      <!-- [D] 어두운 배경 적용 -->
+      <div class="marker brown dark-bg js-marker" style="left:350px; top:500px;">9+</div>
+
+      <!-- 검색결과 -->
+      <dl class="search-result">
+        <dt class="search-result-title">
+          검색결과
+          <button type="button" class="btn-prev js-btn-prev">prev</button>
+          <button type="button" class="btn-next js-btn-next">next</button>
+        </dt>
+        <dd class="search-result-list">
+          <li class="sort-result-item">평균 면적 110㎡(최저 66㎡~최고 150 ㎡ 평균매매가 100,000만원  (최저 50,000만원~최고 130,000만원)</li>
+          <li class="sort-result-item">평균 면적 110㎡(최저 66㎡~최고 150 ㎡ 평균매매가 100,000만원  (최저 50,000만원~최고 130,000만원)</li>
+          <li class="sort-result-item">평균 면적 110㎡(최저 66㎡~최고 150 ㎡ 평균매매가 100,000만원  (최저 50,000만원~최고 130,000만원)</li>
+        </dd>
+      </dl>
+
+      <!-- 검색창 -->
+      <div class="search-area">
+
+        <ul class="search-tab-area">
+          <li class="search-tab total on">통합검색</li>
+          <li class="search-tab apt">단지검색</li>
+          <li class="search-tab subway">지하철</li>
+          <li class="search-tab area">지역</li>
+          <li class="search-tab edu last">교육기관</li>
+        </ul>
+
+        <div class="search-form-area total on">
+          <label for="search-1" class="search-input-msg">검색어를 입력해주세요</label>
+          <input id="search-1" type="text" class="search-input js-label-toggle" />
+          <button type="button" class="search-button">검색</button>
+        </div>
+
+        <div class="search-form-area apt">
+          <label for="search-2" class="search-input-msg">단지명을 입력해주세요</label>
+          <input id="search-2" type="text" class="search-input js-label-toggle" />
+          <button type="button" class="search-button">검색</button>
+        </div>
+
+        <div class="search-form-area subway">
+          <label for="search-3" class="search-input-msg">지하철역명을 입력해주세요</label>
+          <input id="search-3" type="text" class="search-input js-label-toggle" />
+          <button type="button" class="search-button">검색</button>
+        </div>
+
+        <div class="search-form-area area">
+          <div class="select-wrapper search-med left-float">
+            <div class="select">
+              <p class="label">서울시</p>
+              <b class="button">▾</b>
+            </div>
+            <ul class="select-items">
+              <li class="selected">경기도</li>
+              <li>인천시</li>
+            </ul>
+          </div>
+          <div class="select-wrapper search-med left-float">
+            <div class="select">
+              <p class="label">강남구</p>
+              <b class="button">▾</b>
+            </div>
+            <ul class="select-items">
+              <li class="selected">강남구</li>
+              <li>강남구</li>
+            </ul>
+          </div>
+          <div class="select-wrapper search-med left-float">
+            <div class="select">
+              <p class="label">논현동</p>
+              <b class="button">▾</b>
+            </div>
+            <ul class="select-items">
+              <li class="selected">논현동</li>
+              <li>논현동</li>
+            </ul>
+          </div>
+          <button type="button" class="search-button">검색</button>
+        </div>
+
+        <div class="search-form-area edu">
+          <label for="search-4" class="search-input-msg">교육기관명을 입력해주세요</label>
+          <input id="search-4" type="text" class="search-input js-label-toggle" />
+          <button type="button" class="search-button">검색</button>
+        </div>
+
+        <div class="search-drag-handle"></div>
+
+      </div>
+
+      <!-- 기능 버튼 -->
+      <div class="btn-map-area">
+
+        <button type="button" class="btn-map-function zoomin">확대</button>
+        <button type="button" class="btn-map-function zoomout">축소</button>
+        <button type="button" class="btn-map-function edu js-edu-view">교육기관검색</button>
+        <button type="button" class="btn-map-function mousedrag">마우스드래그</button>
+
+      </div>
+
+      <!-- 교육기관검색 팝업 -->
+      <div class="search-edu-popup">
+
+        <div class="search-edu-popup-top">
+          <div class="check-wrap">
+            <input id="search-edu-1" class="check-box" type="checkbox">
+            <label for="search-edu-1" class="check-label em-red">교육기관 지도상에 표시</label>
+          </div>
+        </div>
+
+        <div class="search-edu-popup-bottom">
+
+          <ul class="left-float">
+            <li>
+              <div class="check-wrap">
+                <input id="search-edu-1-1" class="check-box" type="checkbox">
+                <label for="search-edu-1-1" class="check-label">어린이집(국/공립)</label>
+              </div>
+            </li>
+            <li>
+              <div class="check-wrap">
+                <input id="search-edu-2" class="check-box" type="checkbox">
+                <label for="search-edu-2" class="check-label">어린이집(법인/단체)</label>
+              </div>
+            </li>
+            <li>
+              <div class="check-wrap">
+                <input id="search-edu-3" class="check-box" type="checkbox">
+                <label for="search-edu-3" class="check-label">어린이집(민간)</label>
+              </div>
+            </li>
+            <li>
+              <div class="check-wrap">
+                <input id="search-edu-4" class="check-box" type="checkbox">
+                <label for="search-edu-4" class="check-label">어린이집(가정)</label>
+              </div>
+            </li>
+            <li>
+              <div class="check-wrap">
+                <input id="search-edu-5" class="check-box" type="checkbox">
+                <label for="search-edu-5" class="check-label">유치원(국/공립)</label>
+              </div>
+            </li>
+            <li>
+              <div class="check-wrap">
+                <input id="search-edu-6" class="check-box" type="checkbox">
+                <label for="search-edu-6" class="check-label">유치원(사립)</label>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="left-float right group">
+            <li>
+              <div class="check-wrap">
+                <input id="search-edu-7" class="check-box" type="checkbox">
+                <label for="search-edu-7" class="check-label">초등학교(국/공립)</label>
+              </div>
+            </li>
+            <li>
+              <div class="check-wrap">
+                <input id="search-edu-8" class="check-box" type="checkbox">
+                <label for="search-edu-8" class="check-label">초등학교(사립)</label>
+              </div>
+            </li>
+            <li>
+              <div class="check-wrap">
+                <input id="search-edu-9" class="check-box" type="checkbox">
+                <label for="search-edu-9" class="check-label">중학교(특목)</label>
+              </div>
+            </li>
+            <li>
+              <div class="check-wrap">
+                <input id="search-edu-10" class="check-box" type="checkbox">
+                <label for="search-edu-10" class="check-label">중학교(일반)</label>
+              </div>
+            </li>
+            <li>
+              <div class="check-wrap">
+                <input id="search-edu-11" class="check-box" type="checkbox">
+                <label for="search-edu-11" class="check-label">고등학교(특목/자유/특성화)</label>
+              </div>
+            </li>
+            <li>
+              <div class="check-wrap">
+                <input id="search-edu-12" class="check-box" type="checkbox">
+                <label for="search-edu-12" class="check-label">고등학교(일반)</label>
+              </div>
+            </li>
+            <div class="check-wrap">
+              <input id="search-edu-13" class="check-box" type="checkbox">
+              <label for="search-edu-13" class="check-label">대학교</label>
+            </div>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <!-- 범례 : 실제 사용시 style="left:..px" 삭제 -->
+      <dl class="legend-list offer-type">
+        <dt class="legend-list-title">
+          <span class="large">매물종류</span>
+        </dt>
+        <dd class="legend-list-item offer yellow">아파트</dd>
+        <dd class="legend-list-item offer blue">주상복합</dd>
+        <dd class="legend-list-item offer purple">오피스텔</dd>
+        <dd class="legend-list-item offer brown">도시형생활주택</dd>
+        <dd class="legend-list-item offer orange">단독/다가구</dd>
+        <dd class="legend-list-item offer pink">다세대(빌라/연립)</dd>
+        <dd class="legend-list-item offer green">상가주택</dd>
+        <dd class="legend-list-item offer red">고급주택</dd>
+      </dl>
+
+      <dl class="legend-list price-type" style="left:250px">
+        <dt class="legend-list-title">
+          <span class="large">범례구간(8구간)/면적당<br />(1㎡)단가</span>
+          <span class="small">전세환산가(단위:㎡, 만원)</span>
+        </dt>
+        <dd class="legend-list-item price level8">700이상</dd>
+        <dd class="legend-list-item price level7">600이상~700미만</dd>
+        <dd class="legend-list-item price level6">500이상~600미만</dd>
+        <dd class="legend-list-item price level5">400이상~500미만</dd>
+        <dd class="legend-list-item price level4">300이상~400미만</dd>
+        <dd class="legend-list-item price level3">200이상~300미만</dd>
+        <dd class="legend-list-item price level2">100이상~200미만</dd>
+        <dd class="legend-list-item price level1">100미만</dd>
+      </dl>
+
+      <dl class="legend-list price-type" style="left:500px">
+        <dt class="legend-list-title">
+          <span class="large">범례구간(8구간)/면적당(1㎡)단가</span>
+          <span class="small">매매가(단위:㎡, 만원)</span>
+        </dt>
+        <dd class="legend-list-item price level8">1,050이상</dd>
+        <dd class="legend-list-item price level7">900이상~1,050미만</dd>
+        <dd class="legend-list-item price level6">750이상~900미만</dd>
+        <dd class="legend-list-item price level5">600이상~750미만</dd>
+        <dd class="legend-list-item price level4">450이상~600미만</dd>
+        <dd class="legend-list-item price level3">300이상~450미만</dd>
+        <dd class="legend-list-item price level2">150이상~300미만</dd>
+        <dd class="legend-list-item price level1">150미만</dd>
+      </dl>
+
+      <div class="legend-type">
+        <!-- [D] 버튼 활성화시 class on 추가 -->
+        <button class="legend-type-btn-offer">매물</button>
+        <button class="legend-type-btn-price">가격</button>
+      </div>
+
+    </section>
+
+    <section class="section-list">
+
+      <div class="section-list-content section-price-list on">
+        <div class="sort-section">
+          <div class="sort-section-top">
+            <div class="wrapper">
+              <div class="sort-option-more right-float">
+                <ul class="sort-menu js-sort-menu">
+                  <li class="sort-menu-item">
+                    <button type="button" class="sort-menu-btn">매물종류</button>
+                    <div class="sort-menu-sub">
+                      <ul class="sort-menu-sub-list">
+                        <li class="sort-menu-sub-item">
+                          <div class="check-wrap">
+                            <input id="item-type-1" class="check-box" type="checkbox">
+                            <label for="item-type-1" class="check-label"><span class="check-label-text type-icon all">전체</span></label>
+                          </div>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <div class="check-wrap left-float">
+                            <input id="item-type-2" class="check-box" type="checkbox" checked="checked">
+                            <label for="item-type-2" class="check-label"><span class="check-label-text type-icon yellow on">아파트</span></label>
+                          </div>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <div class="check-wrap">
+                            <input id="item-type-7" class="check-box" type="checkbox">
+                            <label for="item-type-7" class="check-label"><span class="check-label-text type-icon pink">다세대(빌라/연립)</span></label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="sort-menu-item">
+                    <button type="button" class="sort-menu-btn">보증금</button>
+                    <div class="sort-menu-sub from">
+                      <div class="sort-menu-sub-input">
+                        <div class="sort-input-wrap">
+                          <label for="min1-1" class="sort-input-label">Min</label>
+                          <input id="min1-1" type="text" class="sort-input from js-label-toggle" data-type="from">
+                        </div>
+                        <div class="sort-input-div">-</div>
+                        <div class="sort-input-wrap">
+                          <label for="min1-2" class="sort-input-label">Max</label>
+                          <input id="min1-2" type="text" class="sort-input to js-label-toggle" data-type="to">
+                        </div>
+                      </div>
+                      <ul class="sort-menu-sub-list from">
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">0</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">5백이상</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">1천이상</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn on">5천이상</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">1억</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">2억</button>
+                        </li>
+                      </ul>
+
+                      <ul class="sort-menu-sub-list to">
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">0</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">5백이상</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">1천이상</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn on">5천이상</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">1억</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">2억</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="sort-menu-item">
+                    <button type="button" class="sort-menu-btn">월세</button>
+                    <div class="sort-menu-sub from">
+                      <div class="sort-menu-sub-input">
+                        <div class="sort-input-wrap">
+                          <label for="min2-1" class="sort-input-label">Min</label>
+                          <input id="min2-1" type="text" class="sort-input from js-label-toggle" data-type="from">
+                        </div>
+                        <div class="sort-input-div">-</div>
+                        <div class="sort-input-wrap">
+                          <label for="min2-2" class="sort-input-label">Max</label>
+                          <input id="min2-2" type="text" class="sort-input to js-label-toggle" data-type="to">
+                        </div>
+                      </div>
+                      <ul class="sort-menu-sub-list from">
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">0</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">5백이상</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">1천이상</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn on">5천이상</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">1억</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">2억</button>
+                        </li>
+                      </ul>
+
+                      <ul class="sort-menu-sub-list to">
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">0</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">5백이상</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">1천이상</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn on">5천이상</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">1억</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">2억</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="sort-menu-item">
+                    <button type="button" class="sort-menu-btn">전용면적</button>
+                    <div class="sort-menu-sub from">
+                      <div class="sort-menu-sub-input">
+                        <div class="sort-input-wrap">
+                          <label for="min3-1" class="sort-input-label">Min</label>
+                          <input id="min3-1" type="text" class="sort-input from js-label-toggle" data-type="from">
+                        </div>
+                        <div class="sort-input-div">-</div>
+                        <div class="sort-input-wrap">
+                          <label for="min3-2" class="sort-input-label">Max</label>
+                          <input id="min3-2" type="text" class="sort-input to js-label-toggle" data-type="to">
+                        </div>
+                      </div>
+                      <ul class="sort-menu-sub-list from">
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">0</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">33㎡</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">66㎡</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn on">99㎡</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">330㎡</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">660㎡</button>
+                        </li>
+                      </ul>
+
+                      <ul class="sort-menu-sub-list to">
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">0</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">33㎡</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">66㎡</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn on">99㎡</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">330㎡</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">660㎡</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="sort-menu-item">
+                    <button type="button" class="sort-menu-btn">층</button>
+                    <div class="sort-menu-sub from">
+                      <div class="sort-menu-sub-input">
+                        <div class="sort-input-wrap">
+                          <label for="min4-1" class="sort-input-label">Min</label>
+                          <input id="min4-1" type="text" class="sort-input from js-label-toggle" data-type="from">
+                        </div>
+                        <div class="sort-input-div">-</div>
+                        <div class="sort-input-wrap">
+                          <label for="min4-2" class="sort-input-label">Max</label>
+                          <input id="min4-2" type="text" class="sort-input to js-label-toggle" data-type="to">
+                        </div>
+                      </div>
+                      <ul class="sort-menu-sub-list from">
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">1층</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">2층</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">3층</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn on">4층</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">5층</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">6층</button>
+                        </li>
+                      </ul>
+
+                      <ul class="sort-menu-sub-list to">
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">1층</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">2층</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">3층</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn on">4층</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">5층</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">6층</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="sort-menu-item">
+                    <button type="button" class="sort-menu-btn">년도</button>
+                    <div class="sort-menu-sub from">
+                      <div class="sort-menu-sub-input">
+                        <div class="sort-input-wrap">
+                          <label for="min5-1" class="sort-input-label">Min</label>
+                          <input id="min5-1" type="text" class="sort-input from js-label-toggle" data-type="from">
+                        </div>
+                        <div class="sort-input-div">-</div>
+                        <div class="sort-input-wrap">
+                          <label for="min5-2" class="sort-input-label">Max</label>
+                          <input id="min5-2" type="text" class="sort-input to js-label-toggle" data-type="to">
+                        </div>
+                      </div>
+                      <ul class="sort-menu-sub-list from">
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">2015년</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">2014년</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">2013년</button>
+                        </li>
+                      </ul>
+
+                      <ul class="sort-menu-sub-list to">
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">2015년</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">2014년</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">2013년</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="sort-menu-item">
+                    <button type="button" class="sort-menu-btn">분기</button>
+                    <div class="sort-menu-sub menu-right from">
+                      <div class="sort-menu-sub-input">
+                        <div class="sort-input-wrap">
+                          <label for="min6-1" class="sort-input-label">Min</label>
+                          <input id="min6-1" type="text" class="sort-input from js-label-toggle" data-type="from">
+                        </div>
+                        <div class="sort-input-div">-</div>
+                        <div class="sort-input-wrap">
+                          <label for="min6-2" class="sort-input-label">Max</label>
+                          <input id="min6-2" type="text" class="sort-input to js-label-toggle" data-type="to">
+                        </div>
+                      </div>
+                      <ul class="sort-menu-sub-list from">
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">1분기</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">2분기</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">3분기</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn on">4분기</button>
+                        </li>
+                      </ul>
+
+                      <ul class="sort-menu-sub-list to">
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">1분기</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">2분기</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">3분기</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn on">4분기</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="sort-menu-item">
+                    <button type="button" class="sort-menu-btn">월</button>
+                    <div class="sort-menu-sub menu-right from">
+                      <div class="sort-menu-sub-input">
+                        <div class="sort-input-wrap">
+                          <label for="min7-1" class="sort-input-label">Min</label>
+                          <input id="min7-1" type="text" class="sort-input from js-label-toggle" data-type="from">
+                        </div>
+                        <div class="sort-input-div">-</div>
+                        <div class="sort-input-wrap">
+                          <label for="min7-2" class="sort-input-label">Max</label>
+                          <input id="min7-2" type="text" class="sort-input to js-label-toggle" data-type="to">
+                        </div>
+                      </div>
+                      <ul class="sort-menu-sub-list from">
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">1월</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">2월</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">3월</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn on">4월</button>
+                        </li>
+                      </ul>
+
+                      <ul class="sort-menu-sub-list to">
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">1월</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">2월</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn">3월</button>
+                        </li>
+                        <li class="sort-menu-sub-item">
+                          <button type="button" class="sort-menu-sub-btn on">4월</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+
+                </ul>
+              </div>
+
+              <div class="sort-option-tag left-float">
+                <div class="sort-option-tag-manage">
+                  <button type="button" class="sort-option-btn-save">검색 저장하기</button>
+                  <button type="button" class="sort-option-btn-load">저장검색 불러오기</button>
+                </div>
+
+                <ul class="sort-option-tag-list">
+                  <li class="sort-option-tag-item">
+                    <span class="sort-option-tag-text">2014년</span>
+                    <button type="button" class="sort-option-btn-del">삭제</button>
+                  </li>
+                  <li class="sort-option-tag-item">
+                    <span class="sort-option-tag-text">2014년</span>
+                    <button type="button" class="sort-option-btn-del">삭제</button>
+                  </li>
+                </ul>
+
+                <div class="sort-option-tag-function">
+                  <button type="button" class="sort-option-btn-refresh">새로고침</button>
+                  <button type="button" class="sort-option-btn-alltag js-tag-toggle">전체보기</button>
+                </div>
+
+                <div class="sort-tag-all">
+                  <div class="sort-tag-all-title">
+                    선택된 조건 <span class="em-yellow">25</span>건
+                  </div>
+
+                  <ul class="sort-tag-all-list">
+                    <li class="sort-option-tag-item">
+                      <span class="sort-option-tag-text">2014년</span>
+                      <button type="button" class="sort-option-btn-del">삭제</button>
+                    </li>
+                    <li class="sort-option-tag-item">
+                      <span class="sort-option-tag-text">3억</span>
+                      <button type="button" class="sort-option-btn-del">삭제</button>
+                    </li>
+                    <li class="sort-option-tag-item">
+                      <span class="sort-option-tag-text">150.7㎡</span>
+                      <button type="button" class="sort-option-btn-del">삭제</button>
+                    </li>
+                    <li class="sort-option-tag-item">
+                      <span class="sort-option-tag-text">2014년</span>
+                      <button type="button" class="sort-option-btn-del">삭제</button>
+                    </li>
+                    <li class="sort-option-tag-item">
+                      <span class="sort-option-tag-text">경기 > 안산구</span>
+                      <button type="button" class="sort-option-btn-del">삭제</button>
+                    </li>
+                    <li class="sort-option-tag-item">
+                      <span class="sort-option-tag-text">150.7㎡</span>
+                      <button type="button" class="sort-option-btn-del">삭제</button>
+                    </li>
+                    <li class="sort-option-tag-item">
+                      <span class="sort-option-tag-text">2014년</span>
+                      <button type="button" class="sort-option-btn-del">삭제</button>
+                    </li>
+                    <li class="sort-option-tag-item">
+                      <span class="sort-option-tag-text">경기 > 안산구</span>
+                      <button type="button" class="sort-option-btn-del">삭제</button>
+                    </li>
+                    <li class="sort-option-tag-item">
+                      <span class="sort-option-tag-text">150.7㎡</span>
+                      <button type="button" class="sort-option-btn-del">삭제</button>
+                    </li>
+                    <li class="sort-option-tag-item">
+                      <span class="sort-option-tag-text">3억</span>
+                      <button type="button" class="sort-option-btn-del">삭제</button>
+                    </li>
+                    <li class="sort-option-tag-item">
+                      <span class="sort-option-tag-text">2014년</span>
+                      <button type="button" class="sort-option-btn-del">삭제</button>
+                    </li>
+                    <li class="sort-option-tag-item">
+                      <span class="sort-option-tag-text">3억</span>
+                      <button type="button" class="sort-option-btn-del">삭제</button>
+                    </li>
+                    <li class="sort-option-tag-item">
+                      <span class="sort-option-tag-text">150.7㎡</span>
+                      <button type="button" class="sort-option-btn-del">삭제</button>
+                    </li>
+                    <li class="sort-option-tag-item">
+                      <span class="sort-option-tag-text">3억</span>
+                      <button type="button" class="sort-option-btn-del">삭제</button>
+                    </li>
+                    <li class="sort-option-tag-item">
+                      <span class="sort-option-tag-text">경기 > 안산구</span>
+                      <button type="button" class="sort-option-btn-del">삭제</button>
+                    </li>
+                    <li class="sort-option-tag-item">
+                      <span class="sort-option-tag-text">150.7㎡</span>
+                      <button type="button" class="sort-option-btn-del">삭제</button>
+                    </li>
+                    <li class="sort-option-tag-item">
+                      <span class="sort-option-tag-text">2014년</span>
+                      <button type="button" class="sort-option-btn-del">삭제</button>
+                    </li>
+                    <li class="sort-option-tag-item">
+                      <span class="sort-option-tag-text">3억</span>
+                      <button type="button" class="sort-option-btn-del">삭제</button>
+                    </li>
+                    <li class="sort-option-tag-item">
+                      <span class="sort-option-tag-text">경기 > 안산구</span>
+                      <button type="button" class="sort-option-btn-del">삭제</button>
+                    </li>
+                    <li class="sort-option-tag-item">
+                      <span class="sort-option-tag-text">150.7㎡</span>
+                      <button type="button" class="sort-option-btn-del">삭제</button>
+                    </li>
+                    <li class="sort-option-tag-item">
+                      <span class="sort-option-tag-text">2014년</span>
+                      <button type="button" class="sort-option-btn-del">삭제</button>
+                    </li>
+                    <li class="sort-option-tag-item">
+                      <span class="sort-option-tag-text">3억</span>
+                      <button type="button" class="sort-option-btn-del">삭제</button>
+                    </li>
+                    <li class="sort-option-tag-item">
+                      <span class="sort-option-tag-text">경기 > 안산구</span>
+                      <button type="button" class="sort-option-btn-del">삭제</button>
+                    </li>
+                    <li class="sort-option-tag-item">
+                      <span class="sort-option-tag-text">150.7㎡</span>
+                      <button type="button" class="sort-option-btn-del">삭제</button>
+                    </li>
+                  </ul>
+
+                  <div class="sort-tag-all-subtmit">
+                    <input type="submit" class="sort-tag-all-btn" value="검색하기">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="list-sort">
+
+          <div class="list-sort-recommend-wrap">
+            <button type="button" class="list-sort-recommend left-float js-show-tooltip">추천순</button>
+            <ul class="tooltip recommend">
+              <li class="tooltip-item yellow">아파트</li>
+              <li class="tooltip-item pink">다세대</li>
+            </ul>
+          </div>
+
+          <div class="list-sort-check left-float left group">
+            <div class="check-wrap left-float left group">
+              <input id="check-sort-1" class="check-box" type="checkbox">
+              <label for="check-sort-1" class="check-label">전체</label>
+            </div>
+            <div class="check-wrap left-float left group">
+              <input id="check-sort-2" class="check-box" type="checkbox">
+              <label for="check-sort-2" class="check-label">매매</label>
+            </div>
+            <div class="check-wrap left-float left group">
+              <input id="check-sort-3" class="check-box" type="checkbox">
+              <label for="check-sort-3" class="check-label">월세</label>
+            </div>
+            <div class="check-wrap left-float left group">
+              <input id="check-sort-4" class="check-box" type="checkbox">
+              <label for="check-sort-4" class="check-label">전세</label>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="sale sale-price">
+          <p class="list-amount">실거래가 <span class="em-red">300건</span>이 조회 되었습니다.</p>
+
+          <article class="sale-price-list">
+
+            <div class="list-item description">
+              <div class="list-item-type red">다세대(연립/빌라)</div>
+              <div class="list-item-name">삼성동 힐스테이트</div>
+            </div>
+
+            <div class="list-item price">
+              <div class="list-item-price">월세 12,000 / 100</div>
+            </div>
+
+            <div class="list-item spec">
+              <div class="list-item-data">전용면적 128.123.00㎡</div>
+              <div class="list-item-data">층 14층</div>
+              <div class="list-item-data">거래년월 2015.02 (1~10일)</div>
+              <div class="list-item-data">준공년도 2014년</div>
+            </div>
+
+          </article>
+
+          <article class="sale-price-list">
+
+            <div class="list-item description">
+              <div class="list-item-type yellow">아파트</div>
+              <div class="list-item-name">삼성동 힐스테이트</div>
+            </div>
+
+            <div class="list-item price">
+              <div class="list-item-price">월세 12,000 / 100</div>
+            </div>
+
+            <div class="list-item spec">
+              <div class="list-item-data">전용면적 128.123.00㎡</div>
+              <div class="list-item-data">층 14층</div>
+              <div class="list-item-data">거래년월 2015.02 (1~10일)</div>
+              <div class="list-item-data">준공년도 2014년</div>
+            </div>
+
+          </article>
+
+          <article class="sale-price-list">
+
+            <div class="list-item description">
+              <div class="list-item-type purple">오피스텔</div>
+              <div class="list-item-name">삼성동 힐스테이트</div>
+            </div>
+
+            <div class="list-item price">
+              <div class="list-item-price">월세 12,000 / 100</div>
+            </div>
+
+            <div class="list-item spec">
+              <div class="list-item-data">전용면적 128.123.00㎡</div>
+              <div class="list-item-data">층 14층</div>
+              <div class="list-item-data">거래년월 2015.02 (1~10일)</div>
+              <div class="list-item-data">준공년도 2014년</div>
+            </div>
+
+          </article>
+
+          <article class="sale-price-list">
+
+            <div class="list-item description">
+              <div class="list-item-type green">사무실</div>
+              <div class="list-item-name">삼성동 힐스테이트</div>
+            </div>
+
+            <div class="list-item price">
+              <div class="list-item-price">월세 12,000 / 100</div>
+            </div>
+
+            <div class="list-item spec">
+              <div class="list-item-data">전용면적 128.123.00㎡</div>
+              <div class="list-item-data">층 14층</div>
+              <div class="list-item-data">거래년월 2015.02 (1~10일)</div>
+              <div class="list-item-data">준공년도 2014년</div>
+            </div>
+
+          </article>
+
+          <article class="sale-price-list">
+
+            <div class="list-item description">
+              <div class="list-item-type red">다세대(연립/빌라)</div>
+              <div class="list-item-name">삼성동 힐스테이트</div>
+            </div>
+
+            <div class="list-item price">
+              <div class="list-item-price">월세 12,000 / 100</div>
+            </div>
+
+            <div class="list-item spec">
+              <div class="list-item-data">전용면적 128.123.00㎡</div>
+              <div class="list-item-data">층 14층</div>
+              <div class="list-item-data">거래년월 2015.02 (1~10일)</div>
+              <div class="list-item-data">준공년도 2014년</div>
+            </div>
+
+          </article>
+
+          <article class="sale-price-list">
+
+            <div class="list-item description">
+              <div class="list-item-type red">다세대(연립/빌라)</div>
+              <div class="list-item-name">삼성동 힐스테이트</div>
+            </div>
+
+            <div class="list-item price">
+              <div class="list-item-price">월세 12,000 / 100</div>
+            </div>
+
+            <div class="list-item spec">
+              <div class="list-item-data">전용면적 128.123.00㎡</div>
+              <div class="list-item-data">층 14층</div>
+              <div class="list-item-data">거래년월 2015.02 (1~10일)</div>
+              <div class="list-item-data">준공년도 2014년</div>
+            </div>
+
+          </article>
+
+          <article class="sale-price-list">
+
+            <div class="list-item description">
+              <div class="list-item-type red">다세대(연립/빌라)</div>
+              <div class="list-item-name">삼성동 힐스테이트</div>
+            </div>
+
+            <div class="list-item price">
+              <div class="list-item-price">월세 12,000 / 100</div>
+            </div>
+
+            <div class="list-item spec">
+              <div class="list-item-data">전용면적 128.123.00㎡</div>
+              <div class="list-item-data">층 14층</div>
+              <div class="list-item-data">거래년월 2015.02 (1~10일)</div>
+              <div class="list-item-data">준공년도 2014년</div>
+            </div>
+
+          </article>
+
+          <article class="sale-price-list">
+
+            <div class="list-item description">
+              <div class="list-item-type red">다세대(연립/빌라)</div>
+              <div class="list-item-name">삼성동 힐스테이트</div>
+            </div>
+
+            <div class="list-item price">
+              <div class="list-item-price">월세 12,000 / 100</div>
+            </div>
+
+            <div class="list-item spec">
+              <div class="list-item-data">전용면적 128.123.00㎡</div>
+              <div class="list-item-data">층 14층</div>
+              <div class="list-item-data">거래년월 2015.02 (1~10일)</div>
+              <div class="list-item-data">준공년도 2014년</div>
+            </div>
+
+          </article>
+
+        </div>
+      </div>
+
+    </section>
+  </div>
+</section>

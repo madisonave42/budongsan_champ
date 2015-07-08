@@ -1,0 +1,293 @@
+include "header_top.html"
+
+<title>인테리어 관리 | 부동산 챔프</title>
+
+<link rel="stylesheet" href="../../css/common.css" />
+<!-- 회원가입 style -->
+<link rel="stylesheet" href="../../css/interior.css" />
+<link rel="stylesheet" href="../../css/popup.css" />
+
+include "header_bottom.html"
+
+<section class="contents top-border">
+  <div class="wrapper">
+
+    <div class="contents-top">
+      <h2 class="contents-title">인테리어 관리</h2>
+      <ul class="list-description">
+        <li class="list-item">등록한 인테리어 정보는 별도의 갱신이 없는 경우 30일 동안 노출 됩니다.</li>
+        <li class="list-item">인테리어 정보는 기업회원만 등록 가능합니다.</li>
+      </ul>
+    </div>
+
+    <div class="contents-mid">
+
+      <section class="contents-part js-option-toggle">
+
+        <div class="part-top no-bottom">
+          <h3 class="part-title left-float">인테리어 기본정보</h3>
+          <p class="part-subtitle right-float"><span class="em-blue">※ 시공비가 단일인 경우 처음 값만 입력해 주세요.</span></p>
+        </div>
+
+        <div class="part-mid">
+
+          <table class="hr-table">
+
+            <caption class="hide">인테리어 기본정보 입력</caption>
+
+            <colgroup>
+              <col style="width:185px;" />
+              <col style="width:315px;" />
+              <col style="width:185px;" />
+              <col style="width:auto;" />
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row">
+                  노출여부
+                </th>
+                <td colspan="3">
+                  <div class="radio-wrap left-float left group">
+                    <input id="radio1-1" class="radio" name="post" type="radio">
+                    <label for="radio1-1" class="radio-label">노출</label>
+                  </div>
+
+                  <div class="radio-wrap left-float">
+                    <input id="radio1-2" class="radio" name="post" type="radio">
+                    <label for="radio1-2" class="radio-label">비노출</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  제목
+                </th>
+                <td colspan="3">
+                  <input class="input full-width" title="제목 입력" type="text">
+                 </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  소재지/단지명
+                </th>
+                <td colspan="3">
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">서울시</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">서울시</li>
+                      <li>서울시</li>
+                    </ul>
+                  </div>
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">강남구</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">강남구</li>
+                      <li>강남구</li>
+                    </ul>
+                  </div>
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">청담동</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">청담동</li>
+                      <li>청담동</li>
+                    </ul>
+                  </div>
+                  <div class="select-wrapper plus-half-width left-float left">
+                    <div class="select">
+                      <p class="label">단지</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">단지</li>
+                      <li>단지</li>
+                    </ul>
+                  </div>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  시공비
+                </th>
+                <td>
+                  <input class="input med-half left-float left" title="최저비용" type="text">
+                  <div class="form-msg left-float left">만원</div>
+                  <div class="form-msg left-float left">~</div>
+                  <input class="input med-half left-float left" title="최대비용" type="text">
+                  <div class="form-msg left-float left group">만원</div>
+                </td>
+                <th scope="row">
+                  면적
+                </th>
+                <td>
+                  <input class="input half-width left-float left" title="면적" type="text">
+                  <div class="form-msg left-float left">㎡</div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  공사일
+                </th>
+                <td>
+                  <div class="calendar left-float js-cal">
+                    <input class="input calendar-input" type="text">
+                    <button class="calendar-btn">달력열기</button>
+                  </div>
+                </td>
+                <th scope="row">
+                  공사기간
+                </th>
+                <td>
+                  <div class="calendar left-float js-cal">
+                    <input class="input calendar-input" type="text">
+                    <button class="calendar-btn">달력열기</button>
+                  </div>
+                  <div class="div-item">~</div>
+                  <div class="calendar left-float js-cal">
+                    <input class="input calendar-input" type="text">
+                    <button class="calendar-btn">달력열기</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  공사내역
+                </th>
+                <td colspan="3">
+                  <div class="radio-wrap left group middle">
+                    <input id="radio2-1" class="radio" name="type" type="radio">
+                    <label for="radio2-1" class="radio-label">부분</label>
+                  </div>
+
+                  <div class="radio-wrap left group middle">
+                    <input id="radio2-2" class="radio" name="type" type="radio">
+                    <label for="radio2-2" class="radio-label">전체</label>
+                  </div>
+
+                  <input class="input double middle" title="내역상세" type="text">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  대표사진
+                </th>
+                <td colspan="3" class="td-padding">
+                  <input class="input double left-float left" type="text">
+                  <button type="button" class="btn-form left-float">찾아보기</button>
+                  <p class="form-msg-normal">인테리어 조회 시 노출될 대표이미지를 등록해 주세요.(jpg, jpeg, gif, png / 최대 5MB)</p>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+
+      </section>
+
+      <section class="contents-part js-option-toggle">
+
+        <div class="part-top no-bottom">
+          <h3 class="part-title">인테리어 상세정보</h3>
+        </div>
+
+        <div class="part-mid">
+
+          <table class="hr-table">
+
+            <caption class="hide">인테리어 상세정보 입력</caption>
+
+            <colgroup>
+              <col style="width:185px;" />
+              <col style="width:auto;" />
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row">
+                  시공공간
+                </th>
+                <td>
+                  <input class="input full-width" title="제목 입력" type="text">
+                 </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  주요공사내역
+                </th>
+                <td class="td-padding">
+                  <textarea class="textarea full-width" title="내용 입력"></textarea>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  주요자재내역
+                </th>
+                <td class="td-padding">
+                  <textarea class="textarea full-width" title="내용 입력"></textarea>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  상세내용
+                </th>
+                <td class="td-padding">
+                  <div class="td-multi-line">
+                    <input class="input double left-float left" type="text">
+                    <button type="button" class="btn-form left-float left">찾아보기</button>
+                    <button type="button" class="btn-add left-float" title="추가">+</button>
+                    <div class="form-msg-normal">abcdefg1234.jpg</div>
+                  </div>
+                  <div class="td-multi-line">
+                    <input class="input double left-float left" type="text">
+                    <button type="button" class="btn-form left-float left">찾아보기</button>
+                    <button type="button" class="btn-add left-float" title="추가">+</button>
+                    <div class="form-msg-normal">abcdefg1234.jpg</div>
+                  </div>
+                  <div class="td-multi-line">
+                    <input class="input double left-float left" type="text">
+                    <button type="button" class="btn-form left-float left">찾아보기</button>
+                    <button type="button" class="btn-remove left-float" title="삭제">-</button>
+                  </div>
+                  <p class="form-msg-normal">* 인테리어 조회 시 노출될 대표이미지를 등록해 주세요.(jpg, jpeg, gif, png / 최대 5MB)</p>
+                  <p class="form-msg-normal">* 이미지는 최소 1개 이상 등록해 주세요.</p>
+                 </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="add-table-btns">
+            <div class="right-float">
+              <button class="btn-small gray left-float left">상세정보 추가</button>
+              <button class="btn-small gray left-float">삭제</button>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+    <div class="contents-bottom has-bottom">
+      <div class="submit-btns center">
+        <button type="button" class="btn-fill blue">인테리어 등록</button>
+        <button type="button" class="btn-fill">목록</button>
+        <button type="button" class="btn-fill">삭제</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+include "footer.html"

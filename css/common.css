@@ -1149,6 +1149,11 @@ html.map .footer-content {
   color: #25aae1;
   background: url(../images/icon_round_down.png) no-repeat 100% 2px;
 }
+.list-item-price.price {
+  padding: 0;
+  font-size: 13px;
+  background: none;
+}
 .list-item-data {
   position: relative;
   margin-top: 5px;
@@ -1270,6 +1275,17 @@ html.map .footer-content {
 }
 
 .table-more:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+
+.add-table-btns {
+  margin-top: 10px;
+}
+.add-table-btns:after {
   content: ".";
   display: block;
   height: 0;
@@ -1808,6 +1824,9 @@ html.map .footer-content {
 .btn-small.blue {
   background: #25aae1;
 }
+.btn-small.gray {
+  background: #999;
+}
 .btn-item-submit {
   padding-left: 52px;
   text-align: left;
@@ -1827,6 +1846,32 @@ html.map .footer-content {
 }
 .btn-table-more.yellow {
   background-color: #fcb040;
+}
+.btn-add {
+  width: 37px;
+  height: 37px;
+  font-size: 13px;
+  color: #ffffff;
+  line-height: 34px;
+  border: 0;
+  background: #666;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.btn-remove {
+  width: 37px;
+  height: 37px;
+  font-size: 13px;
+  color: #ffffff;
+  line-height: 34px;
+  border: 0;
+  background: #666;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
 .check-wrap {
@@ -2475,6 +2520,193 @@ html.map .footer-content {
   line-height: 1.5;
 }
 
+.slide-list {
+  padding-top: 30px;
+  border-top: 2px solid #222;
+}
+.slide-list:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.slide-list-item {
+  margin: 0 0 20px 18px;
+  float: left;
+  width: 489px;
+  height: 193px;
+  border: 1px solid #d8d8d8;
+}
+.slide-list-item:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.slide-list-item.first {
+  margin: 0 0 20px 0;
+}
+.slide-list-thumb {
+  float: left;
+  width: 213px;
+  height: 194px;
+  /* Style the thumbnails */
+  /* The stage is the wrapper. The image fills 100% the height of the stage */
+  /* Ths play, pause, prev and next buttons */
+  /* The previous and next textual buttons */
+}
+.slide-list-thumb .pika-thumbs {
+  padding: 0;
+  height: 49px;
+}
+.slide-list-thumb .pika-thumbs li {
+  position: relative;
+  width: 71px;
+  height: 48px;
+  padding: 0;
+  float: left;
+  margin: 0;
+  cursor: pointer;
+}
+.slide-list-thumb .pika-thumbs li .clip img {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+.slide-list-thumb .pika-thumbs li.active:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 65px;
+  height: 42px;
+  border: 3px solid #25aae1;
+}
+.slide-list-thumb .pika-stage, .slide-list-thumb .pika-textnav {
+  width: 213px;
+}
+.slide-list-thumb .pika-stage {
+  position: relative;
+  text-align: center;
+  height: 145px;
+}
+.slide-list-thumb .pika-stage img {
+  height: 100%;
+}
+.slide-list-thumb .pika-stage .caption {
+  position: absolute;
+  background: #000;
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid #141414;
+  font-size: 11px;
+  color: #fafafa;
+  padding: 10px;
+  text-align: right;
+  bottom: 50px;
+  right: 10px;
+}
+.slide-list-thumb .pika-stage .caption p {
+  padding: 0;
+  margin: 0;
+  line-height: 14px;
+}
+.slide-list-thumb .pika-imgnav a {
+  position: absolute;
+  display: block;
+  width: 29px;
+  height: 29px;
+  text-indent: -9999px;
+  background: url(../images/bg_btn_detail_slide_small.png) no-repeat;
+  z-index: 3;
+  cursor: pointer;
+}
+.slide-list-thumb .pika-imgnav a.previous {
+  top: 58px;
+  left: 0;
+}
+.slide-list-thumb .pika-imgnav a.next {
+  top: 58px;
+  right: 0;
+  background-position: -29px 0;
+}
+.slide-list-thumb .pika-imgnav a.play {
+  display: none;
+}
+.slide-list-thumb .pika-textnav {
+  display: none;
+}
+.slide-list-thumb .pika-counter {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 11px;
+  padding: 3px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.slide-list-thumb .jcarousel-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.slide-list-thumb .jcarousel-clip {
+  overflow: hidden;
+}
+.slide-list-addr {
+  position: relative;
+  float: left;
+  margin: 20px 0 0 20px;
+  width: 236px;
+  height: 75px;
+  overflow: hidden;
+}
+.slide-list-addr02 {
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #222;
+}
+.slide-list-addr-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 0 0 19px;
+  width: 49px;
+  height: 16px;
+  line-height: 16px;
+  font-size: 12px;
+  color: #ffffff;
+  background: #fcb040 url(../images/icon_loc_btn.png) no-repeat 3px 2px;
+}
+.slide-list-overview {
+  float: left;
+  margin: 0 0 0 20px;
+}
+.slide-list-overview-item {
+  margin-bottom: 7px;
+}
+.slide-list-overview-title {
+  display: inline-block;
+  margin-right: 7px;
+  width: 62px;
+  height: 16px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  background: #a1b0b6;
+}
+.slide-list-overview-title.yellow {
+  background: #fcb040;
+}
+.slide-list-overview-title.blue {
+  background: #25aae1;
+}
+
 .tooltip {
   display: none;
   position: absolute;
@@ -2769,6 +3001,30 @@ html.map .footer-content {
 }
 .info-box-body {
   float: right;
+}
+
+.bottom-info {
+  padding: 20px 0 0 0;
+  border-top: 1px solid #d8d8d8;
+}
+.bottom-info-msg {
+  position: relative;
+  margin: 8px 0 0 0;
+  padding: 0 0 0 9px;
+  color: #666;
+  font-size: 12px;
+}
+.bottom-info-msg:first-child {
+  margin: 0;
+}
+.bottom-info-msg:after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background: #666;
 }
 
 /*
