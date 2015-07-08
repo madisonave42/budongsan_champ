@@ -1,3 +1,7 @@
+.contents-part .part-mid {
+  margin: 30px 0 50px;
+}
+
 .cs-center-tab:after {
   content: ".";
   display: block;
@@ -8,7 +12,18 @@
 .cs-center-tab-list {
   width: 250px;
   height: 170px;
+  position: relative;
   float: left;
+}
+.cs-center-tab-list.on:after, .cs-center-tab-list:hover:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fcb040;
 }
 .cs-center-tab-link {
   display: block;
@@ -22,8 +37,217 @@
   border: 1px solid #ddd;
   box-sizing: border-box;
 }
-.cs-center-tab-link:hover {
+.cs-center-tab-link.on, .cs-center-tab-link:hover {
   color: #fcb040;
+}
+.cs-center-tab-link:after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  margin: 0 0 0 -32px;
+  background: url(../images/sprite_bg_cs_center_tab.png) no-repeat;
+}
+.cs-center-tab-link.faq.on:after, .cs-center-tab-link.faq:hover:after {
+  background-position: 1px -66px;
+}
+.cs-center-tab-link.faq:after {
+  background-position: 1px 0;
+}
+.cs-center-tab-link.ask.on:after, .cs-center-tab-link.ask:hover:after {
+  background-position: -78px -66px;
+}
+.cs-center-tab-link.ask:after {
+  background-position: -78px 0;
+}
+.cs-center-tab-link.notice.on:after, .cs-center-tab-link.notice:hover:after {
+  background-position: -158px -66px;
+}
+.cs-center-tab-link.notice:after {
+  background-position: -158px 0;
+}
+.cs-center-tab-link.guide.on:after, .cs-center-tab-link.guide:hover:after {
+  background-position: -240px -66px;
+}
+.cs-center-tab-link.guide:after {
+  background-position: -240px 0;
+}
+.cs-center-search {
+  width: 100%;
+  height: 115px;
+  padding: 30px 125px 20px;
+  border: 1px solid #ddd;
+  background: #f8f8f8;
+  box-sizing: border-box;
+}
+.cs-center-search-select {
+  width: 125px;
+}
+.cs-center-search-select .select {
+  border: 2px solid #25aae1;
+}
+.cs-center-search-select .label {
+  height: 38px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 38px;
+}
+.cs-center-search-input {
+  width: 488px;
+  height: 42px;
+  padding: 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #25aae1;
+  box-sizing: border-box;
+}
+.cs-center-search-btn {
+  width: 115px;
+  height: 42px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  border: 0;
+  background: #25aae1;
+}
+.cs-center-search .search-input-area:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.cs-center-search .search-keyword {
+  width: 488px;
+  margin: 7px auto 0;
+  text-align: center;
+}
+.cs-center-search .search-keyword-item {
+  display: inline-block;
+  margin: 0 0 0 14px;
+}
+.cs-center-search .search-keyword-item.first {
+  margin: 0;
+}
+.cs-center-search .search-keyword-link {
+  color: #666;
+}
+.cs-center-search .search-keyword-link:hover {
+  color: #25aae1;
+  border-bottom: 1px solid #25aae1;
+}
+
+.faq-wrap {
+  border-top: 2px solid #222;
+}
+.faq-wrap.no-result {
+  text-align: center;
+  font-weight: bold;
+  padding: 150px 0;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.faq-list {
+  border-bottom: 1px solid #ebebeb;
+}
+.faq-list-title {
+  position: relative;
+  line-height: 1.6;
+  padding: 22px 0;
+  cursor: pointer;
+}
+.faq-list-title:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.faq-list-title:hover {
+  background: #f8f8f8;
+}
+.faq-list-title .category {
+  width: 180px;
+  float: left;
+  position: relative;
+  font-weight: bold;
+  text-align: center;
+  color: #25aae1;
+}
+.faq-list-title .category:after {
+  content: "Q";
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: 20px;
+  color: #222;
+  font-weight: bold;
+}
+.faq-list-title .question {
+  width: 820px;
+  float: left;
+}
+.faq-list-content {
+  display: none;
+  position: relative;
+  padding: 25px 25px 25px 180px;
+  line-height: 1.6;
+  background: #f8f8f8;
+  box-sizing: border-box;
+}
+.faq-list-content.open {
+  display: block;
+}
+.faq-list-content:after {
+  content: "A";
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 70px;
+  margin: -20px 0 0 0;
+  text-align: center;
+  font-weight: bold;
+  line-height: 40px;
+  color: #ffffff;
+  background: url(../images/bg_faq_answer.png) no-repeat;
+}
+
+.notice-view-head {
+  padding: 20px 40px;
+  border-top: 2px solid #222;
+  border-bottom: 1px solid #dcdcdc;
+  background: #fafafa;
+}
+.notice-view-head:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.notice-view-head .category {
+  float: left;
+  font-weight: bold;
+  color: #25aae1;
+}
+.notice-view-head .title {
+  padding: 0 0 0 40px;
+  float: left;
+  font-weight: bold;
+  color: #222;
+}
+.notice-view-head .date {
+  font-weight: bold;
+  color: #222;
+  float: right;
+}
+.notice-view-body {
+  padding: 40px;
+  line-height: 1.6;
+  border-bottom: 1px solid #dcdcdc;
 }
 
 /*# sourceMappingURL=cs_center.css.map */

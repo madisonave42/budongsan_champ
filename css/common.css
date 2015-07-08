@@ -870,6 +870,12 @@ html.map .footer-content {
 .vt-table td.top {
   vertical-align: top;
 }
+.vt-table td.over-cut {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: bottom;
+  overflow: hidden;
+}
 .vt-table td .td-link {
   color: #666;
 }
@@ -1517,6 +1523,9 @@ html.map .footer-content {
 }
 .textarea.short {
   height: 37px;
+}
+.textarea.big {
+  height: 160px;
 }
 
 .btn-fill {
@@ -3098,7 +3107,16 @@ html.map .footer-content {
   color: #25aae1 !important;
 }
 
+.em-blue-bold {
+  color: #25aae1 !important;
+  font-weight: bold;
+}
+
 .em-yellow {
+  color: #fcb040 !important;
+}
+
+.em-yellow-bold {
   color: #fcb040 !important;
 }
 
@@ -3142,6 +3160,11 @@ html.map .footer-content {
 
 .mt8 {
   margin: 8px 0 0 0;
+}
+
+.required {
+  margin: 10px 0 0 0;
+  text-align: right;
 }
 
 /*
