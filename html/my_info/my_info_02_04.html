@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+<title>기본정보관리 | 회원정보 | 부동산 챔프</title>
+
+<link rel="stylesheet" href="../../css/common.css" />
+<!-- 회원가입 style -->
+<link rel="stylesheet" href="../../css/my_info.css" />
+<link rel="stylesheet" href="../../css/popup.css" />
+
+<script src="../../js/lib/jquery-1.11.0.min.js"></script>
+<script src="../../js/lib/jquery-ui.min.js"></script>
+<script src="../../js/lib/jquery.slides.min.js"></script>
+<script src="../../js/lib/jquery.jcarousel.min.js"></script>
+<script src="../../js/lib/jquery.pikachoose.min.js"></script>
+<script src="../../js/function.js"></script>
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="../../css/ie8.css" />
+<script src="../../js/lib/html5shiv.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<header class="header">
+
+  <div class="wrapper">
+
+    <h1 class="header-logo"><a href="#"><img src="../../images/logo.png" alt="부동산챔프"></a></h1>
+
+    <ul class="header-gnb js-gnb">
+      <li class="gnb-item">
+        <a href="#" class="gnb-main-link js-main-link">매물</a>
+
+        <ul class="gnb-sub-wrap">
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">주거전체</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">아파트 (단지)</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">오피스텔 (단지)</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">사무실</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">상가.점포</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">빌딩/건물</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">공장/창고</a>
+          </li>
+          <li class="gnb-sub-item last">
+            <a href="#" class="gnb-sub-link">토지/기타</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="gnb-item">
+        <a href="#" class="gnb-main-link js-main-link">분양</a>
+
+        <ul class="gnb-sub-wrap narrow">
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">주거용</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">상업용</a>
+          </li>
+          <li class="gnb-sub-item last">
+            <a href="#" class="gnb-sub-link">업무용</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="gnb-item">
+        <a href="#" class="gnb-main-link js-main-link">실거래가</a>
+
+        <ul class="gnb-sub-wrap">
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">대출금리비교</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">매매VS임대비교</a>
+          </li>
+          <li class="gnb-sub-item last">
+            <a href="#" class="gnb-sub-link">대출금계산기</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="gnb-item">
+        <a href="#" class="gnb-main-link js-main-link">프리미엄전용관</a>
+
+        <ul class="gnb-sub-wrap">
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">홈페이지 관리</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">공동중개 의뢰</a>
+          </li>
+          <li class="gnb-sub-item">
+            <a href="#" class="gnb-sub-link">자동 매칭</a>
+          </li>
+          <li class="gnb-sub-item last">
+            <a href="#" class="gnb-sub-link">수동 매칭</a>
+          </li>
+        </ul>
+      </li>
+
+    </ul>
+
+    <ul class="header-util">
+      <li class="util-item"><a href="#" class="util-link">회원가입</a></li>
+      <li class="util-item"><a href="#" class="util-link">로그인</a></li>
+      <li class="util-item"><a href="#" class="util-link">인테리어</a></li>
+      <li class="util-item"><a href="#" class="util-link">중개회원</a></li>
+      <li class="util-item last"><a href="#" class="util-link">고객센터</a></li>
+    </ul>
+
+    <dl class="header-my">
+
+      <dt><a href="#" class="header-my-title js-my"><span class="typo">MY챔프</span></a></dt>
+
+      <dd class="header-my-sub">
+
+        <div class="header-my-member">
+          <div class="member-name"><span class="em-blue">부동산챔프</span>님</div>
+          <!-- note 1) for Dev -->
+          <button type="button" class="member logout">로그아웃</button>
+          <!--<div class="member login">로그인</div>-->
+          <!--/ note 1) for Dev -->
+        </div>
+
+        <ul class="header-my-info">
+          <li class="info-list"><a href="#" class="info-link info-modify">회원정보수정</a></li>
+          <li class="info-list"><a href="#" class="info-link info-goods">상품/이용권정보</a></li>
+          <li class="info-list"><a href="#" class="info-link info-payment">결제정보</a></li>
+          <li class="info-list last"><a href="#" class="info-link info-usage">이용안내</a></li>
+        </ul>
+
+        <ul class="header-my-history">
+          <li class="history-list odd"><a href="#" class="history-link notice">알림판</a></li>
+          <li class="history-list"><a href="#" class="history-link for-sale">매물</a></li>
+          <li class="history-list odd"><a href="#" class="history-link for-sale-current">최근 본 매물</a></li>
+          <li class="history-list"><a href="#" class="history-link for-sale-favorite">관심매물</a></li>
+          <li class="history-list odd"><a href="#" class="history-link search-current">최근검색</a></li>
+          <li class="history-list"><a href="#" class="history-link search-call">검색 불러오기</a></li>
+          <li class="history-list odd"><a href="#" class="history-link mediation">중개의뢰</a></li>
+          <li class="history-list"><a href="#" class="history-link inquiry">문의내역</a></li>
+        </ul>
+
+      </dd>
+
+    </dl>
+
+  </div>
+
+</header>
+
+<nav class="lnb">
+  <div class="wrapper">
+    <ul class="lnb-list">
+      <li class="lnb-item"><a href="#" class="lnb-link on">기본정보관리</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">내정보보호</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">이용권/결제정보</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">이벤트응모내역</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="contents">
+  <div class="wrapper">
+
+    <div class="contents-top">
+      <div class="contents-title-wrap">
+        <h2 class="contents-title">기본정보 관리</h2>
+      </div>
+
+      <ul class="my-info-tab">
+        <li class="my-info-tab-list"><a href="#" class="my-info-tab-link edit on">정보수정</a></li>
+        <li class="my-info-tab-list"><a href="#" class="my-info-tab-link changepw">비밀번호 변경</a></li>
+        <li class="my-info-tab-list"><a href="#" class="my-info-tab-link sns">SNS 계정 연결</a></li>
+        <li class="my-info-tab-list"><a href="#" class="my-info-tab-link close">회원탈퇴</a></li>
+      </ul>
+
+    </div>
+
+    <div class="contents-mid">
+
+      <section class="contents-part">
+
+        <div class="part-top">
+          <h3 class="part-title">회원기본 정보</h3>
+        </div>
+
+        <div class="part-mid">
+
+          <table class="hr-table">
+
+            <caption class="hide">개인정보수정</caption>
+
+            <colgroup>
+              <col style="width:185px;">
+              <col style="width:auto;">
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <label for="id">아이디 (이메일)</label>
+                </th>
+                <td>
+                  user@gmail.com
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="name">이름/성별</label>
+                </th>
+                <td>
+                  홍길동/남
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label>생년월일</label>
+                </th>
+                <td>
+
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">1990년</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">1990년</li>
+                      <li>1991년</li>
+                      <li>1992년</li>
+                      <li>1991년</li>
+                      <li>1992년</li>
+                      <li>1991년</li>
+                      <li>1992년</li>
+                      <li>1991년</li>
+                      <li>1992년</li>
+                      <li>1991년</li>
+                      <li>1992년</li>
+                    </ul>
+                  </div>
+
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">1월</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">1월</li>
+                      <li>2월</li>
+                      <li>3월</li>
+                    </ul>
+                  </div>
+
+                  <div class="select-wrapper half-width left-float">
+                    <div class="select">
+                      <p class="label">1일</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">1일</li>
+                      <li>2일</li>
+                      <li>3일</li>
+                    </ul>
+                  </div>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  이메일 수신여부
+                </th>
+                <td>
+
+                  <div class="radio-wrap left-float left">
+                    <input id="radio-1" class="radio" name="e-receive" type="radio">
+                    <label for="radio-1" class="radio-label">수신합니다</label>
+                  </div>
+
+                  <div class="radio-wrap left-float">
+                    <input id="radio-2" class="radio" name="e-receive" type="radio">
+                    <label for="radio-2" class="radio-label">수신하지 않습니다</label>
+                  </div>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  뉴스레터 수신여부
+                </th>
+                <td>
+
+                  <div class="radio-wrap left-float left">
+                    <input id="radio-3" class="radio" name="n-receive" type="radio">
+                    <label for="radio-3" class="radio-label">수신합니다</label>
+                  </div>
+
+                  <div class="radio-wrap left-float">
+                    <input id="radio-4" class="radio" name="n-receive" type="radio">
+                    <label for="radio-4" class="radio-label">수신하지 않습니다</label>
+                  </div>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="phone">핸드폰 번호</label>
+                </th>
+                <td>
+
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">010</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">010</li>
+                      <li>010</li>
+                      <li>010</li>
+                    </ul>
+                  </div>
+
+                  <input class="input half-width left-float left" title="핸드폰 가운데자리" type="text">
+
+                  <input class="input half-width left-float left" title="핸드폰 끝자리" type="text">
+
+                  <button type="button" class="btn-form left-float">정보변경요청</button>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  SMS 수신여부
+                </th>
+                <td>
+
+                  <div class="radio-wrap left-float left">
+                    <input id="radio-5" class="radio" name="s-receive" type="radio">
+                    <label for="radio-5" class="radio-label">수신합니다</label>
+                  </div>
+
+                  <div class="radio-wrap left-float">
+                    <input id="radio-6" class="radio" name="s-receive" type="radio">
+                    <label for="radio-6" class="radio-label">수신하지 않습니다</label>
+                  </div>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  주소
+                </th>
+                <td>
+                  <button type="button" class="btn-form">주소찾기</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="addr01">도로명주소</label>
+                </th>
+                <td>
+                  <input id="addr01" class="input double gray-bg" type="text">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="last">
+                  <label for="addr02">지번주소</label>
+                </th>
+                <td class="last">
+                  <input id="addr02" class="input double gray-bg" type="text">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </section>
+
+      <section class="contents-part">
+
+        <div class="part-top">
+          <h3 class="part-title">기업정보 입력</h3>
+          <ul class="list-description">
+            <li class="list-item">회사명, 주소, 전화번호는 매물정보에 노출되니 반드시 실제 정보를 입력하시기 바랍니다.</li>
+            <li class="list-item">사업자등록번호 도용 피해방지를 위해 기업인증을 시행하고 있습니다.</li>
+            <li class="list-item">NICE신용평가정보㈜에 등록되어 있지  않은 기업은 <span class="em-blue">사업자등록증 사본을 팩스(02-752-2835)</span>로 보내주시기 바랍니다.</li>
+          </ul>
+        </div>
+
+        <div class="part-mid">
+
+          <table class="hr-table">
+
+            <caption class="hide">기업정보 입력</caption>
+
+            <colgroup>
+              <col style="width:185px;">
+              <col style="width:auto;">
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <label for="med-name">사업자구분</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+
+                  <div class="radio-wrap left-float left">
+                    <input id="radio-1" class="radio" name="type" type="radio">
+                    <label for="radio-1" class="radio-label">법인사업자</label>
+                  </div>
+
+                  <div class="radio-wrap left-float">
+                    <input id="radio-2" class="radio" name="type" type="radio">
+                    <label for="radio-2" class="radio-label">개인사업자</label>
+                  </div>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="rep-name">상호/법인명</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <input id="rep-name" class="input gray-bg" value="행복기업" type="text">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="com-num">사업자등록번호</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+
+                  <input id="com-num" class="input half-width left-float left gray-bg" title="사업자 등록번호 첫자리" type="text">
+
+                  <input class="input mini left-float left gray-bg" title="사업자 등록번호 가운데자리" type="text">
+
+                  <input class="input half-width left-float left gray-bg" title="사업자 등록번호 끝자리" type="text">
+
+                  <button type="button" class="btn-form left-float">인증하기</button>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="com-num">법인등록번호</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+
+                  <input class="input left-float left" title="법인등록번호 첫자리" type="text">
+
+                  <input class="input left-float" title="법인등록번호 끝자리" type="text">
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="rep-name">대표자명</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <input id="rep-name" class="input" type="text">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="rep-email">사업장 종류</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+
+                  <div class="select-wrapper left-float left">
+                    <div class="select">
+                      <p class="label">사업분야를 선택하세요</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">분야</li>
+                      <li>분야</li>
+                      <li>분야</li>
+                    </ul>
+                  </div>
+
+                  <div class="input-wrap left-float left">
+                    <label for="com-info01" class="label-on-input">업태</label>
+                    <input id="com-info01" class="input half-width js-label-toggle" type="text">
+                  </div>
+
+                  <div class="input-wrap left-float">
+                    <label for="com-info02" class="label-on-input">종목</label>
+                    <input id="com-info02" class="input half-width js-label-toggle" type="text">
+                  </div>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="rep-email">사업장 대표메일</label>
+                </th>
+                <td>
+                  <input id="rep-email" class="input double" type="text">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="com-tel">사업장 대표전화</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">02</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">02</li>
+                      <li>02</li>
+                      <li>02</li>
+                    </ul>
+                  </div>
+
+                  <input class="input half-width left-float left" title="대표전화 가운데자리" type="text">
+
+                  <input class="input half-width left-float" title="대표전화 끝자리" type="text">
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="com-tel">사업장 팩스번호</label>
+                </th>
+                <td>
+
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">02</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">02</li>
+                      <li>02</li>
+                      <li>02</li>
+                    </ul>
+                  </div>
+
+                  <input class="input half-width left-float left" title="팩스번호 가운데자리" type="text">
+
+                  <input class="input half-width left-float" title="팩스번호 끝자리" type="text">
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  사업장 주소 <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <button type="button" class="btn-form">주소찾기</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="addr03">도로명주소</label>
+                </th>
+                <td>
+                  <input id="addr03" class="input double gray-bg" type="text">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="addr04">지번주소</label>
+                </th>
+                <td>
+                  <input id="addr04" class="input double gray-bg" type="text">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  사업자등록증 <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <button type="button" class="btn-form left-float left">파일첨부</button>
+                  <div class="form-attached-file left-float left">20150420_행복중개사무소 사업자등록증.pdf</div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="homepage">홈페이지</label>
+                </th>
+                <td>
+                  <input id="homepage" class="input double" type="text">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="self-intro">간단소개</label>
+                </th>
+                <td>
+                  <input id="self-intro" class="input double" type="text">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </section>
+
+      <section class="contents-part">
+
+        <div class="part-top">
+          <h3 class="part-title">담당자정보 입력</h3>
+          <ul class="list-description">
+            <li class="list-item">프리미엄 기업회원으로 가입하시면, 부동산플래닛 사이트의 서비스를 일정기간 이용하실 수 있습니다.</li>
+            <li class="list-item">사용기간이 끝나면 회원정보-&gt;상품/이용권 정보에서 재연장 하실 수 있습니다.</li>
+            <li class="list-item"><strong class="em-blue">부동산관련업 종사자(건설, 시행, 분양, 인테리어, AMC, PMC, 컨설팅 등) 는 프리미엄 기업회원으로 가입하실 수 없습니다.</strong></li>
+          </ul>
+        </div>
+
+        <div class="part-mid">
+
+          <table class="hr-table">
+
+            <caption class="hide">담당자정보 입력</caption>
+
+            <colgroup>
+              <col style="width:185px;">
+              <col style="width:auto;">
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <label for="part">담당부서</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <input id="part" class="input" type="text">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="position">직책/직급</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <input id="position" class="input" type="text">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="job">담당업무</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <input id="job" class="input" type="text">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="place">근무처</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+                  <input id="place" class="input" value="ex. 본사(서울)" type="text">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="phone">사무실 직통번호</label>
+                </th>
+                <td>
+
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">02</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">02</li>
+                      <li>02</li>
+                      <li>02</li>
+                    </ul>
+                  </div>
+
+                  <input class="input half-width left-float left" title="직통번호 가운데자리" type="text">
+
+                  <input class="input half-width left-float left" title="직통번호 끝자리" type="text">
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="email">이메일 추가</label>
+                </th>
+                <td>
+                  <input id="email" class="input left-float left" type="text">
+                  <p class="form-msg left-float">기업에서 사용하시는 이메일(회사 도메인)을 추가하실 수 있습니다.</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="phone">가입목적</label> <span class="em-blue">*</span>
+                </th>
+                <td>
+
+                  <div class="check-wrap left middle">
+                    <input id="check-1" class="check-box" type="checkbox">
+                    <label for="check-1" class="check-label">주변임대시세 확인</label>
+                  </div>
+
+                  <div class="check-wrap left middle">
+                    <input id="check-2" class="check-box" type="checkbox">
+                    <label for="check-2" class="check-label">사무실 이전 이슈</label>
+                  </div>
+
+                  <div class="check-wrap left middle">
+                    <input id="check-3" class="check-box" type="checkbox">
+                    <label for="check-3" class="check-label">빌딩 매입 이슈</label>
+                  </div>
+
+                  <div class="check-wrap left middle">
+                    <input id="check-4" class="check-box" type="checkbox">
+                    <label for="check-4" class="check-label">기타</label>
+                  </div>
+
+                  <div class="input-wrap middle">
+                    <label for="reason" class="label-on-input">기타를 선택 하신 분은 가입목적을 직접 입력해 주세요.</label>
+                    <input id="reason" class="input join-reason js-label-toggle" type="text">
+                  </div>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="last">
+                  <label for="email">서비스 이용기간</label> <span class="em-blue">*</span>
+                </th>
+                <td class="td-padding last">
+
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">02</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">02</li>
+                      <li>02</li>
+                      <li>02</li>
+                    </ul>
+                  </div>
+
+                  <div class="form-msg left-float left group">개월</div>
+
+                  <div class="calendar left-float left js-cal">
+                    <input type="text" class="input calendar-input" title="서비스 이용시작 날짜" />
+                    <button class="calendar-btn">달력열기</button>
+                  </div>
+
+                  <div class="form-msg left-float left">~</div>
+
+                  <div class="calendar left-float js-cal">
+                    <input type="text" class="input calendar-input" title="서비스 이용종료 날짜" />
+                    <button class="calendar-btn">달력열기</button>
+                  </div>
+
+                  <p class="form-info-msg">서비스 최대 이용 기간은 6개월 이며, 이용기간 이후 서비스를  계속 이용하시길  원하시면 회원정보-&gt;상품/이용권정보에서 재연장 하세요.</p>
+
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="part-bottom">
+          <input type="submit" class="btn-fill blue" value="회원정보 변경" />
+        </div>
+
+      </section>
+
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="wrapper">
+
+    <div class="footer-logo">
+      <img src="../../images/logo_footer.png" alt="부동산챔프" />
+    </div>
+
+    <div class="footer-content">
+
+      <ul class="footer-menu">
+        <li class="menu-item first"><a href="#" class="menu-link">회사소개</a></li>
+        <li class="menu-item"><a href="#" class="menu-link">광고</a></li>
+        <li class="menu-item"><a href="#" class="menu-link">제휴 약관 및 개인정보</a></li>
+        <li class="menu-item last"><a href="#" class="menu-link">취급방침</a></li>
+      </ul>
+
+      <address class="footer-address">
+        <div class="item">서울시 강남구 영동대로 702(청담동) 화천회관빌딩 4층 대표 정수민</div>
+        <div class="item">TEL. 02-752-2836</div>
+        <div class="item">FAX. 02-752-2838</div>
+        <div class="item last">MAIL. sc@ytp.co.kr</div>
+      </address>
+
+      <div class="footer-license">
+        <div class="item">사업자 등록번호 : 104-86-10347</div>
+        <div class="item">통신판매업 신고번호 : 제 0000-0000-000호</div>
+      </div>
+
+      <div class="footer-copyright">
+        @ <span class="co-name">YP Partners</span> 2001-2015
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>

@@ -614,6 +614,13 @@
     @include btn(37, 37, 13, $white, 34, 0, $dark-gray);
   }
 
+  &-print {
+    @include btn(88, 27, 13, $white, 25, 0, $main-blue);
+    padding:0;
+    padding-left:20px;
+    background:$main-blue url(../images/icon_print.png) no-repeat 15px 50%;
+  }
+
 }
 
 .check{
