@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko" class="map">
-<head>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
+include "header_top_map.html"
 
 <title>매물 | 부동산 챔프</title>
 
@@ -14,176 +9,18 @@
 <!-- 지도 API 로딩 -->
 <script type="text/javascript" src="http://apis.daum.net/maps/maps3.js?apikey=195b1ef32f1567715276a78e67930163"></script>
 
-<script src="../../js/lib/jquery-1.11.0.min.js"></script>
-<script src="../../js/lib/jquery-ui.min.js"></script>
-<script src="../../js/lib/jquery.slides.min.js"></script>
-<script src="../../js/lib/jquery.jcarousel.min.js"></script>
-<script src="../../js/lib/jquery.pikachoose.min.js"></script>
-<script src="../../js/function.js"></script>
-
-<!--[if lt IE 9]>
-<link rel="stylesheet" href="../../css/ie8.css" />
-<script src="../../js/lib/html5shiv.js"></script>
-<![endif]-->
-
-</head>
-<body>
-<header class="header">
-
-  <div class="wrapper">
-
-    <h1 class="header-logo"><a href="#"><img src="../../images/logo.png" alt="부동산챔프"></a></h1>
-
-    <ul class="header-gnb js-gnb">
-      <li class="gnb-item">
-        <a href="#" class="gnb-main-link js-main-link">매물</a>
-
-        <ul class="gnb-sub-wrap">
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">주거전체</a>
-          </li>
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">아파트 (단지)</a>
-          </li>
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">오피스텔 (단지)</a>
-          </li>
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">사무실</a>
-          </li>
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">상가.점포</a>
-          </li>
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">빌딩/건물</a>
-          </li>
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">공장/창고</a>
-          </li>
-          <li class="gnb-sub-item last">
-            <a href="#" class="gnb-sub-link">토지/기타</a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="gnb-item">
-        <a href="#" class="gnb-main-link js-main-link">중개회원</a>
-      </li>
-
-<!--
-      <li class="gnb-item">
-        <a href="#" class="gnb-main-link js-main-link">분양</a>
-
-        <ul class="gnb-sub-wrap narrow">
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">주거용</a>
-          </li>
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">상업용</a>
-          </li>
-          <li class="gnb-sub-item last">
-            <a href="#" class="gnb-sub-link">업무용</a>
-          </li>
-        </ul>
-      </li>
--->
-      <li class="gnb-item">
-        <a href="#" class="gnb-main-link js-main-link">실거래가</a>
-
-        <ul class="gnb-sub-wrap">
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">대출금리비교</a>
-          </li>
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">매매VS임대비교</a>
-          </li>
-          <li class="gnb-sub-item last">
-            <a href="#" class="gnb-sub-link">대출금계산기</a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="gnb-item">
-        <a href="#" class="gnb-main-link js-main-link">프리미엄전용관</a>
-
-        <ul class="gnb-sub-wrap">
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">홈페이지 관리</a>
-          </li>
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">공동중개 의뢰</a>
-          </li>
-          <li class="gnb-sub-item">
-            <a href="#" class="gnb-sub-link">자동 매칭</a>
-          </li>
-          <li class="gnb-sub-item last">
-            <a href="#" class="gnb-sub-link">수동 매칭</a>
-          </li>
-        </ul>
-      </li>
-
-    </ul>
-
-    <ul class="header-util">
-      <li class="util-item"><a href="#" class="util-link">회원가입</a></li>
-      <li class="util-item"><a href="#" class="util-link">로그인</a></li>
-      <li class="util-item"><a href="#" class="util-link">인테리어</a></li>
-      <!--
-      <li class="util-item"><a href="#" class="util-link">중개회원</a></li>
-      -->
-      <li class="util-item last"><a href="#" class="util-link">고객센터</a></li>
-    </ul>
-
-    <dl class="header-my">
-
-      <dt><a href="#" class="header-my-title js-my"><span class="typo">MY챔프</span></a></dt>
-
-      <dd class="header-my-sub">
-
-        <div class="header-my-member">
-          <div class="member-name"><span class="em-blue">부동산챔프</span>님</div>
-          <!-- note 1) for Dev -->
-          <button type="button" class="member logout">로그아웃</button>
-          <!--<div class="member login">로그인</div>-->
-          <!--/ note 1) for Dev -->
-        </div>
-
-        <ul class="header-my-info">
-          <li class="info-list"><a href="#" class="info-link info-modify">회원정보수정</a></li>
-          <li class="info-list"><a href="#" class="info-link info-goods">상품/이용권정보</a></li>
-          <li class="info-list"><a href="#" class="info-link info-payment">결제정보</a></li>
-          <li class="info-list last"><a href="#" class="info-link info-usage">이용안내</a></li>
-        </ul>
-
-        <ul class="header-my-history">
-          <li class="history-list odd"><a href="#" class="history-link notice">알림판</a></li>
-          <li class="history-list"><a href="#" class="history-link for-sale">매물</a></li>
-          <li class="history-list odd"><a href="#" class="history-link for-sale-current">최근 본 매물</a></li>
-          <li class="history-list"><a href="#" class="history-link for-sale-favorite">관심매물</a></li>
-          <li class="history-list odd"><a href="#" class="history-link search-current">최근검색</a></li>
-          <li class="history-list"><a href="#" class="history-link search-call">검색 불러오기</a></li>
-          <li class="history-list odd"><a href="#" class="history-link mediation">중개의뢰</a></li>
-          <li class="history-list"><a href="#" class="history-link inquiry">문의내역</a></li>
-        </ul>
-
-      </dd>
-
-    </dl>
-
-  </div>
-
-</header>
+include "header_bottom.html"
 
 <nav class="lnb">
   <div class="wrapper">
     <ul class="lnb-list">
-      <li class="lnb-item"><a href="#" class="lnb-link on">주거전체</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">주거전체</a></li>
       <li class="lnb-item"><a href="#" class="lnb-link">아파트(단지)</a></li>
       <li class="lnb-item"><a href="#" class="lnb-link">오피스텔(단지)</a></li>
       <li class="lnb-item"><a href="#" class="lnb-link">사무실</a></li>
       <li class="lnb-item"><a href="#" class="lnb-link">상가.점포</a></li>
       <li class="lnb-item"><a href="#" class="lnb-link">건물</a></li>
-      <li class="lnb-item"><a href="#" class="lnb-link">공장/창고</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link on">공장/창고</a></li>
       <li class="lnb-item"><a href="#" class="lnb-link">토지/기타</a></li>
     </ul>
     <div class="lnb-util">
@@ -847,288 +684,90 @@
 
                             <div class="sort-detail-wrap">
 
-                              <div class="sort-detail-label">매물/개발 유형</div>
+                              <div class="sort-detail-label">역세권</div>
 
-                              <div class="sort-detail-item">
-                                <div class="select-wrapper sort-wide left-float left">
-                                  <div class="select">
-                                    <p class="label">매물유형</p>
-                                    <b class="button">▾</b>
-                                  </div>
-                                  <ul class="select-items">
-                                    <li class="selected">매물유형</li>
-                                    <li>매물유형</li>
-                                  </ul>
+                              <div class="select-wrapper sort-med left-float left">
+                                <div class="select">
+                                  <p class="label">지하철 도보 15분이내</p>
+                                  <b class="button">▾</b>
                                 </div>
-                                <div class="select-wrapper sort-wide left-float">
-                                  <div class="select">
-                                    <p class="label">매물유형</p>
-                                    <b class="button">▾</b>
-                                  </div>
-                                  <ul class="select-items">
-                                    <li class="selected">매물유형</li>
-                                    <li>매물유형</li>
-                                  </ul>
+                                <ul class="select-items">
+                                  <li class="selected">지하철 도보 15분이내</li>
+                                  <li>지하철 도보 15분이내</li>
+                                </ul>
+                              </div>
+
+                              <div class="sort-detail-label">수익률(매매시)</div>
+
+                              <div class="select-wrapper sort-med left-float">
+                                <div class="select">
+                                  <p class="label">1% 이상</p>
+                                  <b class="button">▾</b>
                                 </div>
+                                <ul class="select-items">
+                                  <li class="selected">1% 이상</li>
+                                  <li>1% 이상</li>
+                                </ul>
                               </div>
 
                             </div>
 
                             <div class="sort-detail-wrap">
 
-                              <div class="sort-detail-label">입지정보</div>
+                              <div class="sort-detail-label">국토이용</div>
 
-                              <div class="sort-detail-item">
-                                <div class="select-wrapper sort-wide left-float left">
-                                  <div class="select">
-                                    <p class="label">역세권(지하철)</p>
-                                    <b class="button">▾</b>
-                                  </div>
-                                  <ul class="select-items">
-                                    <li class="selected">역세권(지하철)</li>
-                                    <li>역세권(지하철)</li>
-                                  </ul>
+                              <div class="select-wrapper sort-med left-float left">
+                                <div class="select">
+                                  <p class="label">3년 이내</p>
+                                  <b class="button">▾</b>
                                 </div>
-                                <div class="select-wrapper sort-wide left-float">
-                                  <div class="select">
-                                    <p class="label">역세권(지하철)</p>
-                                    <b class="button">▾</b>
-                                  </div>
-                                  <ul class="select-items">
-                                    <li class="selected">역세권(지하철)</li>
-                                    <li>역세권(지하철)</li>
-                                  </ul>
+                                <ul class="select-items">
+                                  <li class="selected">3년 이내</li>
+                                  <li>3년 이내</li>
+                                </ul>
+                              </div>
+
+                              <div class="sort-detail-label">도시계획</div>
+
+                              <div class="select-wrapper sort-med left-float">
+                                <div class="select">
+                                  <p class="label">업무시설</p>
+                                  <b class="button">▾</b>
                                 </div>
+                                <ul class="select-items">
+                                  <li class="selected">업무시설</li>
+                                  <li>업무시설</li>
+                                </ul>
                               </div>
 
                             </div>
 
                             <div class="sort-detail-wrap">
 
-                              <div class="sort-detail-label">건물정보</div>
+                              <div class="sort-detail-label">건축허가</div>
 
-                              <div class="sort-detail-item">
-                                <div class="select-wrapper sort-normal left-float left">
-                                  <div class="select">
-                                    <p class="label">총 세대수</p>
-                                    <b class="button">▾</b>
-                                  </div>
-                                  <ul class="select-items">
-                                    <li class="selected">총 세대수</li>
-                                    <li>총 세대수</li>
-                                  </ul>
+                              <div class="select-wrapper sort-med left-float left">
+                                <div class="select">
+                                  <p class="label">유</p>
+                                  <b class="button">▾</b>
                                 </div>
-                                <div class="select-wrapper sort-normal left-float left">
-                                  <div class="select">
-                                    <p class="label">방향</p>
-                                    <b class="button">▾</b>
-                                  </div>
-                                  <ul class="select-items">
-                                    <li class="selected">방향</li>
-                                    <li>방향</li>
-                                  </ul>
-                                </div>
-                                <div class="select-wrapper sort-normal left-float">
-                                  <div class="select">
-                                    <p class="label">준공시기</p>
-                                    <b class="button">▾</b>
-                                  </div>
-                                  <ul class="select-items">
-                                    <li class="selected">준공시기</li>
-                                    <li>준공시기</li>
-                                  </ul>
-                                </div>
+                                <ul class="select-items">
+                                  <li class="selected">유</li>
+                                  <li>유</li>
+                                </ul>
                               </div>
 
-                            </div>
+                              <div class="sort-detail-label">토지거래허가구역</div>
 
-                            <div class="sort-detail-wrap">
-
-                              <div class="sort-detail-label">건물구조</div>
-
-                              <div class="sort-detail-item">
-                                <div class="select-wrapper sort-normal left-float left">
-                                  <div class="select">
-                                    <p class="label">현관구조</p>
-                                    <b class="button">▾</b>
-                                  </div>
-                                  <ul class="select-items">
-                                    <li class="selected">현관구조</li>
-                                    <li>현관구조</li>
-                                  </ul>
+                              <div class="select-wrapper sort-med left-float">
+                                <div class="select">
+                                  <p class="label">유</p>
+                                  <b class="button">▾</b>
                                 </div>
-                                <div class="select-wrapper sort-normal left-float left">
-                                  <div class="select">
-                                    <p class="label">내부구조</p>
-                                    <b class="button">▾</b>
-                                  </div>
-                                  <ul class="select-items">
-                                    <li class="selected">내부구조</li>
-                                    <li>내부구조</li>
-                                  </ul>
-                                </div>
-                                <div class="select-wrapper sort-normal left-float">
-                                  <div class="select">
-                                    <p class="label">원룸구조</p>
-                                    <b class="button">▾</b>
-                                  </div>
-                                  <ul class="select-items">
-                                    <li class="selected">원룸구조</li>
-                                    <li>원룸구조</li>
-                                  </ul>
-                                </div>
-                              </div>
-
-                            </div>
-
-                            <div class="sort-detail-wrap">
-
-                              <div class="sort-detail-label">매물정보</div>
-
-                              <div class="sort-detail-item">
-                                <div class="select-wrapper sort-normal left-float left">
-                                  <div class="select">
-                                    <p class="label">매물층수</p>
-                                    <b class="button">▾</b>
-                                  </div>
-                                  <ul class="select-items">
-                                    <li class="selected">매물층수</li>
-                                    <li>매물층수</li>
-                                  </ul>
-                                </div>
-                                <div class="select-wrapper sort-normal left-float left">
-                                  <div class="select">
-                                    <p class="label">세대주차대수</p>
-                                    <b class="button">▾</b>
-                                  </div>
-                                  <ul class="select-items">
-                                    <li class="selected">세대주차대수</li>
-                                    <li>세대주차대수</li>
-                                  </ul>
-                                </div>
-                                <div class="select-wrapper sort-normal left-float">
-                                  <div class="select">
-                                    <p class="label">입주가능일</p>
-                                    <b class="button">▾</b>
-                                  </div>
-                                  <ul class="select-items">
-                                    <li class="selected">입주가능일</li>
-                                    <li>입주가능일</li>
-                                  </ul>
-                                </div>
-                              </div>
-
-                            </div>
-
-                            <div class="sort-detail-wrap">
-
-                              <div class="sort-detail-label">시설정보</div>
-
-                              <div class="sort-detail-item">
-                                <div class="select-wrapper sort-normal left-float left">
-                                  <div class="select">
-                                    <p class="label">난방시설</p>
-                                    <b class="button">▾</b>
-                                  </div>
-                                  <ul class="select-items">
-                                    <li class="selected">난방시설</li>
-                                    <li>난방시설</li>
-                                  </ul>
-                                </div>
-                                <div class="select-wrapper sort-normal left-float left">
-                                  <div class="select">
-                                    <p class="label">난방연료</p>
-                                    <b class="button">▾</b>
-                                  </div>
-                                  <ul class="select-items">
-                                    <li class="selected">난방연료</li>
-                                    <li>난방연료</li>
-                                  </ul>
-                                </div>
-                                <div class="select-wrapper sort-normal left-float">
-                                  <div class="select">
-                                    <p class="label">엘리베이터</p>
-                                    <b class="button">▾</b>
-                                  </div>
-                                  <ul class="select-items">
-                                    <li class="selected">엘리베이터</li>
-                                    <li>엘리베이터</li>
-                                  </ul>
-                                </div>
-                              </div>
-
-                            </div>
-
-                            <div class="sort-detail-wrap">
-
-                              <div class="sort-detail-label">대지면적(대지지분)</div>
-
-                              <div class="sort-detail-item">
-                                <input class="input sort-detail-fromto left-float" type="text">
-                                <div class="sort-detail-unit">㎡</div>
-                                <div class="div-item">~</div>
-                                <input class="input sort-detail-fromto left-float" type="text">
-                                <div class="sort-detail-unit">㎡</div>
-                              </div>
-
-                            </div>
-
-                          </div>
-
-                          <div class="sort-detail-default-section">
-
-                            <div class="sort-detail-wrap">
-
-                              <div class="sort-detail-label">관리비</div>
-
-                              <div class="sort-detail-item">
-                                <div class="select-wrapper sort-wide left-float left">
-                                  <div class="select">
-                                    <p class="label">20만원~25만원</p>
-                                    <b class="button">▾</b>
-                                  </div>
-                                  <ul class="select-items">
-                                    <li class="selected">20만원~25만원</li>
-                                    <li>20만원~25만원</li>
-                                  </ul>
-                                </div>
-                              </div>
-
-                            </div>
-
-                            <div class="sort-detail-wrap">
-
-                              <div class="sort-detail-label">관리비포함 항목</div>
-
-                              <div class="sort-detail-item">
-                                <div class="check-wrap left-float left group">
-                                  <input id="check-1" class="check-box" type="checkbox">
-                                  <label for="check-1" class="check-label">전기</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check-2" class="check-box" type="checkbox">
-                                  <label for="check-2" class="check-label">가스</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check-3" class="check-box" type="checkbox">
-                                  <label for="check-3" class="check-label">수도</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check-4" class="check-box" type="checkbox">
-                                  <label for="check-4" class="check-label">인터넷</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check-5" class="check-box" type="checkbox">
-                                  <label for="check-5" class="check-label">TV</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check-6" class="check-box" type="checkbox">
-                                  <label for="check-6" class="check-label">청소비</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check-7" class="check-box" type="checkbox">
-                                  <label for="check-7" class="check-label">기타</label>
-                                </div>
+                                <ul class="select-items">
+                                  <li class="selected">유</li>
+                                  <li>유</li>
+                                </ul>
                               </div>
 
                             </div>
@@ -1137,263 +776,6 @@
 
                         </div>
 
-                        <div class="sort-detail-option">
-
-                          <div class="sort-detail-option-title">옵션 더보기</div>
-
-                          <div class="sort-detail-option-section">
-
-                            <div class="sort-detail-option-wrap js-detail-toggle">
-                              <div class="sort-detail-option-label">쉐어하우스</div>
-                              <div class="sort-detail-option-item">
-                                <div class="radio-wrap left-float left group">
-                                  <input id="radio-option1-1" class="radio js-condition-item" type="radio" name="share">
-                                  <label class="radio-label" for="radio-option1-1">가능</label>
-                                </div>
-                                <div class="radio-wrap left-float left group">
-                                  <input id="radio-option1-2" class="radio js-condition-item" type="radio" name="share">
-                                  <label class="radio-label" for="radio-option1-2">불가능</label>
-                                </div>
-                              </div>
-                            </div>
-
-                            <!-- [D] 처음에 보여질 항목이 두줄이면 default-row2 클래스 추가, 세줄일경우 default-row3, ~5까지 -->
-                            <div class="sort-detail-option-wrap default-row2 js-detail-toggle">
-                              <div class="sort-detail-option-label">가구</div>
-                              <div class="sort-detail-option-item">
-                                <div class="check-wrap left-float left group">
-                                  <input id="check1-1" class="check-box" type="checkbox">
-                                  <label for="check1-1" class="check-label">드레스룸</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check1-2" class="check-box" type="checkbox">
-                                  <label for="check1-2" class="check-label">붙박이장</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check1-3" class="check-box" type="checkbox">
-                                  <label for="check1-3" class="check-label">신발장</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check1-4" class="check-box" type="checkbox">
-                                  <label for="check1-4" class="check-label">드레스룸</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check1-5" class="check-box" type="checkbox">
-                                  <label for="check1-5" class="check-label">붙박이장</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check1-6" class="check-box" type="checkbox">
-                                  <label for="check1-6" class="check-label">신발장</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check1-7" class="check-box" type="checkbox">
-                                  <label for="check1-7" class="check-label">드레스룸</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check1-8" class="check-box" type="checkbox">
-                                  <label for="check1-8" class="check-label">붙박이장</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check1-9" class="check-box" type="checkbox">
-                                  <label for="check1-9" class="check-label">신발장</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check1-10" class="check-box" type="checkbox">
-                                  <label for="check1-10" class="check-label">드레스룸</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check1-11" class="check-box" type="checkbox">
-                                  <label for="check1-11" class="check-label">붙박이장</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check1-12" class="check-box" type="checkbox">
-                                  <label for="check1-12" class="check-label">신발장</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check1-13" class="check-box" type="checkbox">
-                                  <label for="check1-13" class="check-label">드레스룸</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check1-14" class="check-box" type="checkbox">
-                                  <label for="check1-14" class="check-label">붙박이장</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check1-15" class="check-box" type="checkbox">
-                                  <label for="check1-15" class="check-label">신발장</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check1-16" class="check-box" type="checkbox">
-                                  <label for="check1-16" class="check-label">드레스룸</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check1-17" class="check-box" type="checkbox">
-                                  <label for="check1-17" class="check-label">붙박이장</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check1-18" class="check-box" type="checkbox">
-                                  <label for="check1-18" class="check-label">신발장</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check1-19" class="check-box" type="checkbox">
-                                  <label for="check1-19" class="check-label">드레스룸</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check1-20" class="check-box" type="checkbox">
-                                  <label for="check1-20" class="check-label">붙박이장</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check1-21" class="check-box" type="checkbox">
-                                  <label for="check1-21" class="check-label">신발장</label>
-                                </div>
-                              </div>
-                              <div class="sort-detail-option-btn">
-                                <button type="button" class="sort-detail-btn-toggle js-detail-toggle-btn">펼쳐보기</button>
-                              </div>
-                            </div>
-
-                            <div class="sort-detail-option-wrap js-detail-toggle">
-                              <div class="sort-detail-option-label">가전</div>
-                              <div class="sort-detail-option-item">
-                                <div class="check-wrap left-float left group">
-                                  <input id="check2-1" class="check-box" type="checkbox">
-                                  <label for="check2-1" class="check-label">에어컨</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check2-2" class="check-box" type="checkbox">
-                                  <label for="check2-2" class="check-label">냉장고</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check2-3" class="check-box" type="checkbox">
-                                  <label for="check2-3" class="check-label">신발장</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check2-4" class="check-box" type="checkbox">
-                                  <label for="check2-4" class="check-label">에어컨</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check2-5" class="check-box" type="checkbox">
-                                  <label for="check2-5" class="check-label">냉장고</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check2-6" class="check-box" type="checkbox">
-                                  <label for="check2-6" class="check-label">신발장</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check2-7" class="check-box" type="checkbox">
-                                  <label for="check2-7" class="check-label">에어컨</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check2-8" class="check-box" type="checkbox">
-                                  <label for="check2-8" class="check-label">냉장고</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check2-9" class="check-box" type="checkbox">
-                                  <label for="check2-9" class="check-label">신발장</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check2-10" class="check-box" type="checkbox">
-                                  <label for="check2-10" class="check-label">에어컨</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check2-11" class="check-box" type="checkbox">
-                                  <label for="check2-11" class="check-label">냉장고</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check2-12" class="check-box" type="checkbox">
-                                  <label for="check2-12" class="check-label">신발장</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check2-13" class="check-box" type="checkbox">
-                                  <label for="check2-13" class="check-label">에어컨</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check2-14" class="check-box" type="checkbox">
-                                  <label for="check2-14" class="check-label">냉장고</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check2-15" class="check-box" type="checkbox">
-                                  <label for="check2-15" class="check-label">신발장</label>
-                                </div>
-                              </div>
-                              <div class="sort-detail-option-btn">
-                                <button type="button" class="sort-detail-btn-toggle js-detail-toggle-btn">펼쳐보기</button>
-                              </div>
-                            </div>
-
-                            <div class="sort-detail-option-wrap js-detail-toggle">
-                              <div class="sort-detail-option-label">주방</div>
-                              <div class="sort-detail-option-item">
-                                <div class="check-wrap left-float left group">
-                                  <input id="check3-1" class="check-box" type="checkbox">
-                                  <label for="check3-1" class="check-label">싱크대</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check3-2" class="check-box" type="checkbox">
-                                  <label for="check3-2" class="check-label">가스오븐</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check3-3" class="check-box" type="checkbox">
-                                  <label for="check3-3" class="check-label">가스레인지</label>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="sort-detail-option-wrap js-detail-toggle">
-                              <div class="sort-detail-option-label">가구</div>
-                              <div class="sort-detail-option-item">
-                                <div class="check-wrap left-float left group">
-                                  <input id="check4-1" class="check-box" type="checkbox">
-                                  <label for="check4-1" class="check-label">드레스룸</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check4-2" class="check-box" type="checkbox">
-                                  <label for="check4-2" class="check-label">붙박이장</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check4-3" class="check-box" type="checkbox">
-                                  <label for="check4-3" class="check-label">신발장</label>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="sort-detail-option-wrap js-detail-toggle">
-                              <div class="sort-detail-option-label">가전</div>
-                              <div class="sort-detail-option-item">
-                                <div class="check-wrap left-float left group">
-                                  <input id="check5-1" class="check-box" type="checkbox">
-                                  <label for="check5-1" class="check-label">에어컨</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check5-2" class="check-box" type="checkbox">
-                                  <label for="check5-2" class="check-label">냉장고</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check5-3" class="check-box" type="checkbox">
-                                  <label for="check5-3" class="check-label">신발장</label>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="sort-detail-option-wrap js-detail-toggle">
-                              <div class="sort-detail-option-label">주방</div>
-                              <div class="sort-detail-option-item">
-                                <div class="check-wrap left-float left group">
-                                  <input id="check6-1" class="check-box" type="checkbox">
-                                  <label for="check6-1" class="check-label">싱크대</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check6-2" class="check-box" type="checkbox">
-                                  <label for="check6-2" class="check-label">가스오븐</label>
-                                </div>
-                                <div class="check-wrap left-float left group">
-                                  <input id="check6-3" class="check-box" type="checkbox">
-                                  <label for="check6-3" class="check-label">가스레인지</label>
-                                </div>
-                              </div>
-                            </div>
-
-                          </div>
-                        </div>
                       </div>
 
                       <div class="sort-detail-submit">
@@ -1621,13 +1003,13 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
 
               </div>
               <div class="list-item price">
-                <div class="list-item-price js-show-tooltip">전세 21,500</div>
+                <div class="list-item-price js-show-tooltip">월세 300,000/5000</div>
 
                 <div class="tooltip price">
                   <div class="tooltip-wrap">
@@ -1717,13 +1099,13 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
 
               </div>
               <div class="list-item price">
-                <div class="list-item-price js-show-tooltip">전세 21,500</div>
+                <div class="list-item-price js-show-tooltip">월세 300,000/5000</div>
 
                 <div class="tooltip price">
                   <div class="tooltip-wrap">
@@ -1826,13 +1208,13 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
 
               </div>
               <div class="list-item price">
-                <div class="list-item-price js-show-tooltip">전세 21,500</div>
+                <div class="list-item-price js-show-tooltip">월세 300,000/5000</div>
 
                 <div class="tooltip price">
                   <div class="tooltip-wrap">
@@ -1922,13 +1304,13 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
 
               </div>
               <div class="list-item price">
-                <div class="list-item-price js-show-tooltip">전세 21,500</div>
+                <div class="list-item-price js-show-tooltip">월세 300,000/5000</div>
 
                 <div class="tooltip price">
                   <div class="tooltip-wrap">
@@ -2031,13 +1413,13 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
 
               </div>
               <div class="list-item price">
-                <div class="list-item-price js-show-tooltip">전세 21,500</div>
+                <div class="list-item-price js-show-tooltip">월세 300,000/5000</div>
 
                 <div class="tooltip price">
                   <div class="tooltip-wrap">
@@ -2127,13 +1509,13 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
 
               </div>
               <div class="list-item price">
-                <div class="list-item-price js-show-tooltip">전세 21,500</div>
+                <div class="list-item-price js-show-tooltip">월세 300,000/5000</div>
 
                 <div class="tooltip price">
                   <div class="tooltip-wrap">
@@ -2236,13 +1618,13 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
 
               </div>
               <div class="list-item price">
-                <div class="list-item-price js-show-tooltip">전세 21,500</div>
+                <div class="list-item-price js-show-tooltip">월세 300,000/5000</div>
 
                 <div class="tooltip price">
                   <div class="tooltip-wrap">
@@ -2332,13 +1714,13 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
 
               </div>
               <div class="list-item price">
-                <div class="list-item-price js-show-tooltip">전세 21,500</div>
+                <div class="list-item-price js-show-tooltip">월세 300,000/5000</div>
 
                 <div class="tooltip price">
                   <div class="tooltip-wrap">
@@ -2430,13 +1812,13 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
 
               </div>
               <div class="list-item price">
-                <div class="list-item-price js-show-tooltip">전세 21,500</div>
+                <div class="list-item-price js-show-tooltip">월세 300,000/5000</div>
 
                 <div class="tooltip price">
                   <div class="tooltip-wrap">
@@ -2526,13 +1908,13 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
 
               </div>
               <div class="list-item price">
-                <div class="list-item-price js-show-tooltip">전세 21,500</div>
+                <div class="list-item-price js-show-tooltip">월세 300,000/5000</div>
 
                 <div class="tooltip price">
                   <div class="tooltip-wrap">
@@ -2622,13 +2004,13 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
 
               </div>
               <div class="list-item price">
-                <div class="list-item-price js-show-tooltip">전세 21,500</div>
+                <div class="list-item-price js-show-tooltip">월세 300,000/5000</div>
 
                 <div class="tooltip price">
                   <div class="tooltip-wrap">
@@ -2737,12 +2119,12 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
               </div>
               <div class="list-item price">
-                <div class="list-item-price">전세 21,500</div>
+                <div class="list-item-price">월세 300,000/5000</div>
               </div>
             </div>
 
@@ -2762,12 +2144,12 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
               </div>
               <div class="list-item price">
-                <div class="list-item-price">전세 21,500</div>
+                <div class="list-item-price">월세 300,000/5000</div>
               </div>
             </div>
 
@@ -2806,12 +2188,12 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
               </div>
               <div class="list-item price">
-                <div class="list-item-price">전세 21,500</div>
+                <div class="list-item-price">월세 300,000/5000</div>
               </div>
             </div>
 
@@ -2831,12 +2213,12 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
               </div>
               <div class="list-item price">
-                <div class="list-item-price">전세 21,500</div>
+                <div class="list-item-price">월세 300,000/5000</div>
               </div>
             </div>
 
@@ -2875,12 +2257,12 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
               </div>
               <div class="list-item price">
-                <div class="list-item-price">전세 21,500</div>
+                <div class="list-item-price">월세 300,000/5000</div>
               </div>
             </div>
 
@@ -2900,12 +2282,12 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
               </div>
               <div class="list-item price">
-                <div class="list-item-price">전세 21,500</div>
+                <div class="list-item-price">월세 300,000/5000</div>
               </div>
             </div>
 
@@ -2944,12 +2326,12 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
               </div>
               <div class="list-item price">
-                <div class="list-item-price">전세 21,500</div>
+                <div class="list-item-price">월세 300,000/5000</div>
               </div>
             </div>
 
@@ -2969,12 +2351,12 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
               </div>
               <div class="list-item price">
-                <div class="list-item-price">전세 21,500</div>
+                <div class="list-item-price">월세 300,000/5000</div>
               </div>
             </div>
 
@@ -2996,12 +2378,12 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
               </div>
               <div class="list-item price">
-                <div class="list-item-price">전세 21,500</div>
+                <div class="list-item-price">월세 300,000/5000</div>
               </div>
             </div>
 
@@ -3021,12 +2403,12 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
               </div>
               <div class="list-item price">
-                <div class="list-item-price">전세 21,500</div>
+                <div class="list-item-price">월세 300,000/5000</div>
               </div>
             </div>
 
@@ -3046,12 +2428,12 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
               </div>
               <div class="list-item price">
-                <div class="list-item-price">전세 21,500</div>
+                <div class="list-item-price">월세 300,000/5000</div>
               </div>
             </div>
 
@@ -3116,13 +2498,13 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
 
               </div>
               <div class="list-item price">
-                <div class="list-item-price js-show-tooltip">전세 21,500</div>
+                <div class="list-item-price js-show-tooltip">월세 300,000/5000</div>
 
                 <div class="tooltip price">
                   <div class="tooltip-wrap">
@@ -3228,13 +2610,13 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
 
               </div>
               <div class="list-item price">
-                <div class="list-item-price js-show-tooltip">전세 21,500</div>
+                <div class="list-item-price js-show-tooltip">월세 300,000/5000</div>
 
                 <div class="tooltip price">
                   <div class="tooltip-wrap">
@@ -3381,13 +2763,13 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
 
               </div>
               <div class="list-item price">
-                <div class="list-item-price js-show-tooltip">전세 21,500</div>
+                <div class="list-item-price js-show-tooltip">월세 300,000/5000</div>
 
                 <div class="tooltip price">
                   <div class="tooltip-wrap">
@@ -3492,13 +2874,13 @@
 
             <div class="right-col js-view-detail-popup">
               <div class="list-item description">
-                <div class="list-item-type red">연립/빌라</div>
+                <div class="list-item-type green">대형빌딩</div>
                 <div class="list-item-name">삼성동 힐스테이트</div>
                 <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
 
               </div>
               <div class="list-item price">
-                <div class="list-item-price js-show-tooltip">전세 21,500</div>
+                <div class="list-item-price js-show-tooltip">월세 300,000/5000</div>
 
                 <div class="tooltip price">
                   <div class="tooltip-wrap">
@@ -4291,7 +3673,7 @@
                   <section class="complex-view">
                     <div class="complex-header">
                       <h1 class="complex-title">
-                        <span class="complex-title-type red">연립/빌라</span>
+                        <span class="complex-title-type green">대형빌딩</span>
                         <span class="complex-title-name">삼성힐스테이트 2단지</span>
                       </h1>
                       <div class="complex-addr">서울시 강남구 청담동 134-21(서울시 강남구 영동대로 142길 16)</div>
@@ -4590,13 +3972,13 @@
 
                           <div class="right-col">
                             <div class="list-item description">
-                              <div class="list-item-type red">연립/빌라</div>
+                              <div class="list-item-type green">대형빌딩</div>
                               <div class="list-item-name">삼성동 힐스테이트</div>
                               <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
                             </div>
 
                             <div class="list-item price">
-                              <div class="list-item-price">전세 21,500</div>
+                              <div class="list-item-price">월세 300,000/5000</div>
                             </div>
                           </div>
                         </a>
@@ -4611,13 +3993,13 @@
 
                           <div class="right-col">
                             <div class="list-item description">
-                              <div class="list-item-type red">연립/빌라</div>
+                              <div class="list-item-type green">대형빌딩</div>
                               <div class="list-item-name">삼성동 힐스테이트</div>
                               <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
                             </div>
 
                             <div class="list-item price">
-                              <div class="list-item-price">전세 21,500</div>
+                              <div class="list-item-price">월세 300,000/5000</div>
                             </div>
                           </div>
                         </a>
@@ -4632,13 +4014,13 @@
 
                           <div class="right-col">
                             <div class="list-item description">
-                              <div class="list-item-type red">연립/빌라</div>
+                              <div class="list-item-type green">대형빌딩</div>
                               <div class="list-item-name">삼성동 힐스테이트</div>
                               <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
                             </div>
 
                             <div class="list-item price">
-                              <div class="list-item-price">전세 21,500</div>
+                              <div class="list-item-price">월세 300,000/5000</div>
                             </div>
                           </div>
                         </a>
@@ -4653,13 +4035,13 @@
 
                           <div class="right-col">
                             <div class="list-item description">
-                              <div class="list-item-type red">연립/빌라</div>
+                              <div class="list-item-type green">대형빌딩</div>
                               <div class="list-item-name">삼성동 힐스테이트</div>
                               <div class="list-item-detail">학군좋은 역세권 아파트, 남향, 저층</div>
                             </div>
 
                             <div class="list-item price">
-                              <div class="list-item-price">전세 21,500</div>
+                              <div class="list-item-price">월세 300,000/5000</div>
                             </div>
                           </div>
                         </a>
