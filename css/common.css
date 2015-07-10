@@ -1127,8 +1127,8 @@ html.map .footer-content {
   color: #7030a0;
 }
 .list-item-type.green {
-  border: 1px solid #92d050;
-  color: #92d050;
+  border: 1px solid #18b70b;
+  color: #18b70b;
 }
 .list-item-name {
   margin-top: 10px;
@@ -1359,6 +1359,9 @@ html.map .footer-content {
   width: 135px;
   text-align: right;
 }
+.input.sort-detail-fromto.long-unit {
+  width: 125px;
+}
 .input.search-interior-normal {
   width: 130px;
 }
@@ -1388,6 +1391,9 @@ html.map .footer-content {
 }
 .select-wrapper.sort-wide {
   width: 164px;
+}
+.select-wrapper.sort-med {
+  width: 150px;
 }
 .select-wrapper.sort-normal {
   width: 106px;
@@ -3130,7 +3136,7 @@ html.map .footer-content {
 .div-item {
   float: left;
   width: 20px;
-  line-height: 37px;
+  line-height: 27px;
   text-align: center;
 }
 
