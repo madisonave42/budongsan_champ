@@ -77,6 +77,10 @@
     padding-right:5px;
     width:135px;
     text-align:right;
+
+    &.long-unit{
+      width:125px;
+    }
   }
 
   &.search-interior-normal {
@@ -113,6 +117,10 @@
 
     &.sort-wide {
       width:164px;
+    }
+
+    &.sort-med{
+      width:150px;
     }
 
     &.sort-normal {

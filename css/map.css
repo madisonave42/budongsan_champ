@@ -146,6 +146,9 @@
 .sort-menu-item.on .sort-menu-sub {
   display: block;
 }
+.sort-menu-item.detail {
+  float: right;
+}
 .sort-menu-btn {
   padding: 0 10px 0 11px;
   height: 39px;
@@ -165,7 +168,6 @@
   background: #323a49;
 }
 .sort-menu-sub {
-  display: none;
   position: absolute;
   top: 39px;
   left: 0;
@@ -435,7 +437,8 @@
 }
 .sort-detail-scroll {
   height: 570px;
-  overflow: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .sort-detail-top {
   padding: 20px;
@@ -548,9 +551,13 @@
 .sort-detail-unit {
   float: left;
   padding-left: 5px;
-  width: 20px;
+  width: 15px;
   height: 27px;
   line-height: 27px;
+  text-align: right;
+}
+.sort-detail-unit.long-unit {
+  width: 25px;
 }
 .sort-detail-option {
   padding: 0 20px 20px;
@@ -571,6 +578,9 @@
 .sort-detail-option-section {
   border-top: 1px solid #222;
   background: url(../images/bg_sort_detail_option.png) repeat-y;
+}
+.sort-detail-option-section.no-title {
+  background: none;
 }
 .sort-detail-option-wrap {
   height: 40px;
@@ -614,6 +624,9 @@
 .sort-detail-option-item .radio-wrap,
 .sort-detail-option-item .check-wrap {
   margin: 10px 0;
+}
+.sort-detail-option-item.no-title {
+  width: 493px;
 }
 .sort-detail-option-btn {
   float: left;
@@ -1468,8 +1481,8 @@
   color: #7030a0;
 }
 .sale .list-item-type.green {
-  border: 1px solid #92d050;
-  color: #92d050;
+  border: 1px solid #18b70b;
+  color: #18b70b;
 }
 .sale .list-item-name {
   margin-top: 10px;
@@ -1714,8 +1727,8 @@
   color: #7030a0;
 }
 .sale-simple .list-item-type.green {
-  border: 1px solid #92d050;
-  color: #92d050;
+  border: 1px solid #18b70b;
+  color: #18b70b;
 }
 .sale-simple .list-item-name {
   margin-top: 8px;

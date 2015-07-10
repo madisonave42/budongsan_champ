@@ -862,6 +862,7 @@
 		color:$dark;
 
 		&-type {
+			display:inline-block;
 			width:58px;
 			height:16px;
 			line-height:14px;
@@ -1065,7 +1066,7 @@
 		}
 
 		.scroll-table-tr:hover .complex-btn-detail-view {
-			background-position:0 -18px;
+			background-position:0 -19px;
 		}
 
 	}
