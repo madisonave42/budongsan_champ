@@ -1,0 +1,226 @@
+include "header_top.html"
+
+<title>MY챔프 | 부동산 챔프</title>
+
+<link rel="stylesheet" href="../../css/common.css" />
+<!-- 회원가입 style -->
+<link rel="stylesheet" href="../../css/my_champ.css" />
+<link rel="stylesheet" href="../../css/popup.css" />
+
+include "header_bottom.html"
+
+<nav class="lnb">
+  <div class="wrapper">
+    <ul class="lnb-list">
+      <li class="lnb-item"><a href="#" class="lnb-link">My홈</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">My매물</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">최근본매물</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">관심매물</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link on">최근검색</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">검색저장</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">1:1 문의</a></li>
+      <li class="lnb-item"><a href="#" class="lnb-link">이용안내</a></li>
+    </ul>
+    <div class="lnb-util">
+      <div class="lnb-util-btns">
+        <button type="button" class="btn-med gray icon-plus">매물등록</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="contents">
+  <div class="wrapper">
+
+    <div class="contents-top">
+      <h2 class="contents-title">최근검색</h2>
+      <div class="contents-top-util">
+        <button class="btn-function fix-width left-float right">저장</button>
+        <button class="btn-function fix-width left-float right">삭제</button>
+      </div>
+
+    </div>
+
+    <div class="contents-mid has-bottom">
+
+      <section class="contents-part">
+
+        <div class="part-mid">
+
+          <table class="vt-table">
+
+            <caption class="hide">My 매물 목록</caption>
+
+            <colgroup>
+              <col style="width:30px;" />
+              <col style="width:140px;" />
+              <col style="width:auto;" />
+              <col style="width:90px;" />
+              <col style="width:90px;" />
+              <col style="width:100px;" />
+              <col style="width:200px;" />
+              <col style="width:100px;" />
+              <col style="width:90px;" />
+            </colgroup>
+
+            <thead>
+              <th scope="col">
+                <div class="check-wrap left middle">
+                  <input id="check-1" class="check-box" type="checkbox">
+                  <label for="check-1" class="check-label blind">전체선택</label>
+                </div>
+              </th>
+              <th scope="col">지역/위치</th>
+              <th scope="col">매물종류</th>
+              <th scope="col">거래종류</th>
+              <th scope="col">면적(㎡)</th>
+              <th scope="col">가격(만원)</th>
+              <th scope="col">상세필터</th>
+              <th scope="col">검색일</th>
+              <th scope="col">저장/삭제</th>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td scope="col">
+                  <div class="check-wrap left middle">
+                    <input id="check-2" class="check-box" type="checkbox">
+                    <label for="check-2" class="check-label blind">현재 매물선택</label>
+                  </div>
+                </td>
+                <td class="center">
+                  <a href="#" class="em-blue-bold em-link">
+                    <div class="td-inner">서울 강남구 청담동</div>
+                    <div class="td-inner">삼성동 힐스테이트</div>
+                  </a>
+                </td>
+                <td class="center">
+                  아파트, 주상복합...
+                </td>
+                <td class="center">
+                  매매
+                </td>
+                <td class="center">
+                  25~30
+                </td>
+                <td class="center">
+                  50,000<br />~80,000
+                </td>
+                <td class="center">
+                  <div class="td-inner em-yellow-bold">거래형태 전체,  입주시기 전체,</div>
+                  <div class="td-inner em-yellow-bold">방전체, 에어컨, 애완동물,</div>
+                  <div class="td-inner em-yellow-bold">관리비 25~30</div>
+                </td>
+                <td class="center">
+                  2015.06.10
+                </td>
+                <td class="center">
+                  <button class="btn-table-btn">저장</button>
+                  <button class="btn-table-btn">삭제</button>
+                </td>
+              </tr>
+              <tr>
+                <td scope="col">
+                  <div class="check-wrap left middle">
+                    <input id="check-2" class="check-box" type="checkbox">
+                    <label for="check-2" class="check-label blind">현재 매물선택</label>
+                  </div>
+                </td>
+                <td class="center">
+                  <a href="#" class="em-blue-bold em-link">
+                    <div class="td-inner">서울 강남구 청담동</div>
+                    <div class="td-inner">삼성동 힐스테이트</div>
+                  </a>
+                </td>
+                <td class="center">
+                  아파트, 주상복합...
+                </td>
+                <td class="center">
+                  매매
+                </td>
+                <td class="center">
+                  25~30
+                </td>
+                <td class="center">
+                  50,000<br />~80,000
+                </td>
+                <td class="center">
+                  <div class="td-inner em-yellow-bold">거래형태 전체,  입주시기 전체,</div>
+                  <div class="td-inner em-yellow-bold">방전체, 에어컨, 애완동물,</div>
+                  <div class="td-inner em-yellow-bold">관리비 25~30</div>
+                </td>
+                <td class="center">
+                  2015.06.10
+                </td>
+                <td class="center">
+                  <button class="btn-table-btn">저장</button>
+                  <button class="btn-table-btn">삭제</button>
+                </td>
+              </tr>
+              <tr>
+                <td scope="col">
+                  <div class="check-wrap left middle">
+                    <input id="check-2" class="check-box" type="checkbox">
+                    <label for="check-2" class="check-label blind">현재 매물선택</label>
+                  </div>
+                </td>
+                <td class="center">
+                  <a href="#" class="em-blue-bold em-link">
+                    <div class="td-inner">서울 강남구 청담동</div>
+                    <div class="td-inner">삼성동 힐스테이트</div>
+                  </a>
+                </td>
+                <td class="center">
+                  아파트, 주상복합...
+                </td>
+                <td class="center">
+                  매매
+                </td>
+                <td class="center">
+                  25~30
+                </td>
+                <td class="center">
+                  50,000<br />~80,000
+                </td>
+                <td class="center">
+                  <div class="td-inner em-yellow-bold">거래형태 전체,  입주시기 전체,</div>
+                  <div class="td-inner em-yellow-bold">방전체, 에어컨, 애완동물,</div>
+                  <div class="td-inner em-yellow-bold">관리비 25~30</div>
+                </td>
+                <td class="center">
+                  2015.06.10
+                </td>
+                <td class="center">
+                  <button class="btn-table-btn">저장</button>
+                  <button class="btn-table-btn">삭제</button>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          <div class="page">
+            <a href="#" class="page-item prev">이전</a>
+            <a href="#" class="page-item on">1</a>
+            <a href="#" class="page-item">2</a>
+            <a href="#" class="page-item">3</a>
+            <a href="#" class="page-item">4</a>
+            <a href="#" class="page-item">5</a>
+            <a href="#" class="page-item">6</a>
+            <a href="#" class="page-item">7</a>
+            <a href="#" class="page-item">8</a>
+            <a href="#" class="page-item">9</a>
+            <a href="#" class="page-item">10</a>
+            <a href="#" class="page-item next">다음</a>
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </div>
+</section>
+
+include "footer.html"

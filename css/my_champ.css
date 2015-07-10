@@ -146,6 +146,9 @@
 .search-option {
   border: 1px solid #d8d8d8;
 }
+.search-option.has-top {
+  margin: 35px 0 0 0;
+}
 .search-option-detail {
   padding: 0 40px 25px 40px;
   background: #f9f9f9;
@@ -534,6 +537,68 @@
   width: 2px;
   height: 2px;
   background: #999;
+}
+
+.qna-tab {
+  margin: 0 0 30px 0;
+}
+.qna-tab:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.qna-tab-list {
+  width: 50%;
+  height: 170px;
+  position: relative;
+  float: left;
+}
+.qna-tab-list.on:after, .qna-tab-list:hover:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fcb040;
+}
+.qna-tab-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 125px 0 0 0;
+  font-size: 16px;
+  text-align: center;
+  color: #666;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+.qna-tab-link.on, .qna-tab-link:hover {
+  color: #fcb040;
+}
+.qna-tab-link:after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 65px;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  margin: 0 0 0 -35px;
+  background: url(../images/sprite_bg_qna_tab.png) no-repeat;
+}
+.qna-tab-link.general.on:after, .qna-tab-link.general:hover:after {
+  background-position: 0 -65px;
+}
+.qna-tab-link.item.on:after, .qna-tab-link.item:hover:after {
+  background-position: -75px -65px;
+}
+.qna-tab-link.item:after {
+  background-position: -75px 0;
 }
 
 /*# sourceMappingURL=my_champ.css.map */

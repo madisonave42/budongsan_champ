@@ -36,6 +36,7 @@
 
 				&.on {
 					color:$white;
+					background-color:$main-yellow;
 					background-position:32px -78px;
 				}
 			}
@@ -752,6 +753,7 @@
 
 .pick-loc {
 	@include clear();
+	display:none;
 	margin-top:30px;
 	border:1px solid $line-gray;
 	border-top:2px solid $dark;
@@ -760,22 +762,22 @@
 		float:left;
 
 		&.step01 {
-			width:189px;
+			width:203px;
 			border-right:1px solid $bg-light-gray;
 		}
 
 		&.step02 {
-			width:236px;
+			width:250px;
 			border-right:1px solid $bg-light-gray;
 		}
 
 		&.step03 {
-			width:236px;
+			width:250px;
 			border-right:1px solid $bg-light-gray;
 		}
 
 		&.step04 {
-			width:333px;
+			width:292px;
 		}
 
 		.check-wrap,
@@ -818,5 +820,502 @@
 		background:$bg-white-gray;
 		border-top:1px solid $bg-white-gray;
 	}
+
+}
+
+.pick-subway {
+	@include clear();
+	display:none;
+	margin-top:30px;
+	border:1px solid $line-gray;
+	border-top:2px solid $dark;
+
+	&.metro .pick-subway-line-metro,
+	&.metro .pick-subway-map-metro,
+	&.busan .pick-subway-line-busan,
+	&.busan .pick-subway-map-busan,
+	&.daegu .pick-subway-line-daegu,
+	&.daegu .pick-subway-map-daegu,
+	&.gwangju .pick-subway-line-gwangju,
+	&.gwangju .pick-subway-map-gwangju,
+	&.daejeon .pick-subway-line-daejeon,
+	&.daejeon .pick-subway-map-daejeon {
+		display:block;
+	}
+
+	&-map {
+		float:left;
+		width:705px;
+		height:557px;
+		border-right:1px solid $bg-light-gray;
+
+		&-metro,
+		&-busan,
+		&-daegu,
+		&-gwangju,
+		&-daejeon {
+			display:none;
+		}
+
+		&-section {
+			display:none;
+
+			&.on {
+				display:block;
+			}
+
+			&.metro-1 {
+				padding:30px 0 0 0;
+			}
+
+			&.metro-2 {
+				padding:60px 0 0 0;
+			}
+
+			&.metro-3 {
+				padding:85px 0 0 0;
+			}
+
+			&.metro-4 {
+				padding:75px 0 0 0;
+			}
+
+			&.metro-5 {
+				padding:70px 0 0 0;
+			}
+
+			&.metro-6 {
+				padding:70px 0 0 0;
+			}
+
+			&.metro-7 {
+				padding:50px 0 0 0;
+			}
+
+			&.metro-8 {
+				padding:75px 0 0 0;
+			}
+
+			&.metro-9 {
+				padding:70px 0 0 0;
+			}
+
+			&.metro-bundang {
+				padding:80px 0 0 0;
+			}
+
+			&.metro-incheon {
+				padding:125px 0 0 0;
+			}
+
+			&.metro-sinbundang {
+				padding:180px 0 0 0;
+			}
+
+			&.metro-gyeongui {
+				padding:70px 0 0 0;
+			}
+
+			&.metro-gyeongchun {
+				padding:90px 0 0 0;
+			}
+
+			&.metro-airport {
+				padding:180px 0 0 0;
+			}
+
+			&.metro-uijeongbu {
+				padding:70px 0 0 0;
+			}
+
+			&.metro-suin {
+				padding:140px 0 0 0;
+			}
+
+			&.metro-everline {
+				padding:120px 0 0 0;
+			}
+
+			&.metro-jungang {
+				padding:120px 0 0 0;
+			}
+
+			&.busan-1 {
+				padding:50px 0 0 0;
+			}
+
+			&.busan-2 {
+				padding:60px 0 0 0;
+			}
+
+			&.busan-3 {
+				padding:100px 0 0 0;
+			}
+
+			&.busan-4 {
+				padding:120px 0 0 0;
+			}
+
+			&.busan-gimhae {
+				padding:60px 0 0 0;
+			}
+
+			&.daegu-1 {
+				padding:100px 0 0 0;
+			}
+
+			&.daegu-2 {
+				padding:120px 0 0 0;
+			}
+
+			&.gwangju-1 {
+				padding:20px 0 0 0;
+			}
+
+			&.daejeon-1 {
+				padding:50px 0 0 0;
+			}
+
+		}
+	}
+
+	&-list {
+		float:left;
+		width:292px;
+	}
+
+	&-header {
+		height:66px;
+		line-height:66px;
+		background:$bg-white-gray;
+		border-bottom:1px solid $bg-white-gray;
+	}
+
+	&-line {
+
+		&-type {
+			margin:15px 0 0 10px;
+		}
+
+		&-list {
+			float:left;
+			margin:0 0 0 10px;
+			width:610px;
+		}
+
+		&-metro,
+		&-busan,
+		&-daegu,
+		&-gwangju,
+		&-daejeon {
+			display:none;
+		}
+
+		&-busan,
+		&-daegu,
+		&-gwangju,
+		&-daejeon {
+			margin:22px 0 0 0;
+		}
+
+		&-metro {
+			margin:10px 0 0 0;
+		}
+
+		&-item {
+			float:left;
+			margin:0 0 3px 3px;
+			line-height:1;
+			min-width:55px;
+		}
+
+		&-btn {
+			position:relative;
+			padding:2px 4px 2px 20px;
+			height:23px;
+			color:$dark;
+			font-weight:bold;
+			border:1px solid transparent;
+			background:none;
+			text-align:left;
+
+			&.on {
+				background:$white;
+				border:1px solid $gray-blue;
+				border-radius:3px;
+			}
+
+			&:after {
+				content:"";
+				position:absolute;
+				top:2px;
+				left:1px;
+				width:17px;
+				height:17px;
+				line-height:17px;
+				font-size:12px;
+				color:$white;
+				text-align:center;
+				background:url(../images/bg_subway_line.png) no-repeat;
+			}
+
+			&.metro-1:after {
+				content:"1";
+			}
+
+			&.metro-2:after {
+				content:"2";
+				background-position:0 -28px;
+			}
+
+			&.metro-3:after {
+				content:"3";
+				background-position:0 -56px;
+			}
+
+			&.metro-4:after {
+				content:"4";
+				background-position:0 -84px;
+			}
+
+			&.metro-5:after {
+				content:"5";
+				background-position:0 -112px;
+			}
+
+			&.metro-6:after {
+				content:"6";
+				background-position:0 -140px;
+			}
+
+			&.metro-7:after {
+				content:"7";
+				background-position:0 -168px;
+			}
+
+			&.metro-8:after {
+				content:"8";
+				background-position:0 -196px;
+			}
+
+			&.metro-9:after {
+				content:"9";
+				background-position:0 -224px;
+			}
+
+			&.metro-bundang:after {
+				background-position:0 -252px;
+			}
+
+			&.metro-incheon:after {
+				background-position:0 -280px;
+			}
+
+			&.metro-sinbundang:after {
+				background-position:0 -308px;
+			}
+
+			&.metro-gyeongui:after {
+				background-position:0 -336px;
+			}
+
+			&.metro-gyeongchun:after {
+				background-position:0 -364px;
+			}
+
+			&.metro-airport:after {
+				background-position:0 -392px;
+			}
+
+			&.metro-uijeongbu:after {
+				background-position:0 -420px;
+			}
+
+			&.metro-suin:after {
+				background-position:0 -448px;
+			}
+
+			&.metro-everline:after {
+				background-position:0 -476px;
+			}
+
+			&.metro-jungang:after {
+				background-position:0 -504px;
+			}
+
+			&.busan-1:after {
+				content:"1";
+				background-position:0 -420px;
+			}
+
+			&.busan-2:after {
+				content:"2";
+				background-position:0 -364px;
+			}
+
+			&.busan-3:after {
+				content:"3";
+				background-position:0 -224px;
+			}
+
+			&.busan-4:after {
+				content:"4";
+				background-position:0 -84px;
+			}
+
+			&.busan-gimhae:after {
+				background-position:0 -112px;
+			}
+
+			&.daegu-1:after {
+				content:"1";
+				background-position:0 -196px;
+			}
+
+			&.daegu-2:after {
+				content:"2";
+				background-position:0 -28px;
+			}
+
+			&.gwangju-1:after {
+				content:"1";
+				background-position:0 -476px;
+			}
+
+			&.daejeon-1:after {
+				content:"1";
+				background-position:0 -28px;
+			}
+
+		}
+	}
+
+}
+
+.group-bar {
+  height: 25px;
+  position:relative;
+
+  padding:0 0 0 40px;
+
+  line-height:23px;
+
+  color:$white;
+  font-weight:bold;
+
+  border-top: 1px solid #b0a899;
+  border-bottom: 1px solid #b0a899;
+  background:#b9b1a1;
+
+  box-sizing:border-box;
+
+  &:after{
+    content:"";
+    display:block;
+
+    width:14px;
+    height:14px;
+
+    position:absolute;
+    top:50%;
+    margin-top:-7px;
+    left:20px;
+
+    background:url(../images/icon_bullet_list_group.png) no-repeat;
+  }
+}
+
+.estate-agent{
+
+  &-ad{
+  	@include clear();
+    position:relative;
+    padding:20px;
+    background:#fffbea;
+  }
+
+  &-name{
+    @include font(18, bold, #fcb040 );
+  }
+
+  &-list{
+  	float:left;
+
+    margin:3px 0 0 0;
+
+    &:after{
+      content:"";
+      display:block;
+      clear:both;
+    }
+
+    &-item{
+      position:relative;
+      float:left;
+
+      margin:0 0 0 20px;
+
+      border-bottom:1px solid $gray;
+
+      font-size:12px;
+
+      &:after{
+        content:"";
+        display:block;
+
+        width:1px;
+        height:10px;
+
+        position:absolute;
+        top:3px;
+        left:-10px;
+
+        background:$gray;
+      }
+
+      &:first-child{
+
+        padding:0;
+        margin:0;
+
+        &:after{
+          display:none;
+        }
+
+      }
+
+    }
+
+  }
+
+  &-more{
+  	position:relative;
+    height:24px;
+
+    float:left;
+    margin:0 0 0 20px;
+    padding:0 20px 0 10px;
+
+    font-size:11px;
+    color:$white;
+
+    border:0;
+    border-radius:20px;
+    background:#f6b247;
+
+    &:after{
+      content:"";
+      display:block;
+
+      width:5px;
+      height:9px;
+
+      position:absolute;
+      top:7px;
+      right:8px;
+
+      background:url(../images/icon_ad_more.png) no-repeat;
+    }
+  }
 
 }

@@ -63,6 +63,10 @@
 			}
 		}
 
+		&.no-padding {
+			padding:0;
+		}
+
 	}
 
 	.td-inner {
@@ -240,6 +244,29 @@
 
 	.bg {
 		background:$bg-white-gray;
+	}
+
+}
+
+.qna {
+
+	&-table {
+
+		td {
+			font-weight:normal;
+			line-height:1.7;
+		}
+
+	}
+
+	&-answer-table {
+		margin:10px 0 0 0;
+
+		td {
+			font-weight:normal;
+			line-height:1.7;
+		}
+
 	}
 
 }
@@ -536,4 +563,21 @@
 .add-table-btns {
 	@include clear();
 	margin-top:10px;
+}
+
+.answer-state {
+	display:inline-block;
+	padding:0 8px;
+	height:16px;
+	line-height:15px;
+	font-size:12px;
+	font-weight:bold;
+	text-align:center;
+	color:$dark-gray;
+	border:1px solid $dark-gray;
+
+	&.red {
+		color:$main-red;
+		border:1px solid $main-red;
+	}
 }

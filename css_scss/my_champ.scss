@@ -160,6 +160,10 @@
 .search-option {
 	border:1px solid $line-gray;
 
+	&.has-top {
+		margin:35px 0 0 0;
+	}
+
 	&-detail {
 		@include clear();
 		padding:0 40px 25px 40px;
@@ -585,3 +589,100 @@
 	}
 
 }
+
+.qna{
+
+  &-tab{
+
+    @include clear();
+    margin:0 0 30px 0;
+
+    &-list{
+      width:50%;
+      height:170px;
+
+      position:relative;
+
+      float:left;
+
+      &.on, &:hover{
+        &:after{
+          content:"";
+          display:block;
+
+          width:100%;
+          height:4px;
+
+          position:absolute;
+          top:0;
+          left:0;
+
+          background:#fcb040;
+        }
+
+      }
+
+    }
+
+    &-link{
+      display:block;
+
+      width:100%;
+      height:100%;
+
+      padding:125px 0 0 0;
+
+      font-size:16px;
+      text-align:center;
+      color:$dark-gray;
+      font-weight:bold;
+
+      border:1px solid $bg-gray;
+      box-sizing:border-box;
+
+      &.on, &:hover{
+        color:#fcb040;
+      }
+
+      &:after{
+        content:"";
+        display:block;
+
+        width:75px;
+        height:65px;
+
+        position:absolute;
+        top:40px;
+        left:50%;
+        margin:0 0 0 -35px;
+
+        background:url(../images/sprite_bg_qna_tab.png) no-repeat;
+      }
+
+      &.general{
+
+        &.on, &:hover{
+          &:after{
+            background-position:0 -65px;
+          }
+        }
+
+      }
+
+      &.item{
+
+        &.on, &:hover{
+          &:after{
+            background-position:-75px -65px;
+          }
+        }
+
+        &:after{
+          background-position:-75px 0;
+        }
+      }
+
+    }
+
+  }
+ }

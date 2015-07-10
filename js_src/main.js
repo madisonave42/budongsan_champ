@@ -711,6 +711,80 @@ $(function(){
 
 	})();
 
+	// select subway line
+	(function() {
+		var subway = $('.js-select-subway-line'),
+			type;
+
+		if (subway.length > 0) {
+			type = subway.find('.subway-type li');
+			type.on('click', function() {
+				var target = $(this).attr('data-type');
+
+				subway.attr('class', 'pick-subway js-select-subway-line');
+				subway.addClass(target);
+				$('.pick-subway-line-' + target).find('.pick-subway-line-btn').eq(0).trigger('click');
+
+			});
+		}
+	})();
+
+	// toggle loc, subway
+	(function() {
+		var loc = $('.pick-loc'),
+			subway = $('.pick-subway');
+
+		if (loc.length > 0) {
+			$('.js-toggle-pick-loc').on('click', function(e) {
+				e.preventDefault();
+
+				subway.hide();
+				subway.data('open', false);
+				$('.js-toggle-pick-subway').removeClass('on');
+
+				if (loc.data('open') == true) {
+					loc.fadeOut('fast');
+					loc.data('open', false);
+					$(this).removeClass('on');
+				} else {
+					loc.fadeIn('fast');
+					loc.data('open', true);
+					$(this).addClass('on');
+				}
+			});
+
+			$('.js-toggle-pick-subway').on('click', function(e) {
+				e.preventDefault();
+
+				loc.hide();
+				loc.data('open', false);
+				$('.js-toggle-pick-loc').removeClass('on');
+
+				if (subway.data('open') == true) {
+					subway.fadeOut('fast');
+					subway.data('open', false);
+					$(this).removeClass('on');
+				} else {
+					subway.fadeIn('fast');
+					subway.data('open', true);
+					$(this).addClass('on');
+				}
+			});
+
+			$('.js-close-loc').on('click', function(e) {
+				e.preventDefault();
+
+				$('.js-toggle-pick-loc').trigger('click');
+			});
+
+			$('.js-close-subway').on('click', function(e) {
+				e.preventDefault();
+
+				$('.js-toggle-pick-subway').trigger('click');
+			});
+		}
+	})();
+
 	/*
 	 * detail
 	 */

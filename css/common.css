@@ -882,6 +882,9 @@ html.map .footer-content {
 .vt-table td .td-link:hover {
   text-decoration: underline;
 }
+.vt-table td.no-padding {
+  padding: 0;
+}
 .vt-table .td-inner {
   margin-top: 2px;
   line-height: 1.4;
@@ -1029,6 +1032,18 @@ html.map .footer-content {
 }
 .detail-table .bg {
   background: #f9f9f9;
+}
+
+.qna-table td {
+  font-weight: normal;
+  line-height: 1.7;
+}
+.qna-answer-table {
+  margin: 10px 0 0 0;
+}
+.qna-answer-table td {
+  font-weight: normal;
+  line-height: 1.7;
 }
 
 .thumb-mini {
@@ -1293,6 +1308,22 @@ html.map .footer-content {
   clear: both;
 }
 
+.answer-state {
+  display: inline-block;
+  padding: 0 8px;
+  height: 16px;
+  line-height: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  color: #666;
+  border: 1px solid #666;
+}
+.answer-state.red {
+  color: #ed1c24;
+  border: 1px solid #ed1c24;
+}
+
 /*
  * common form style
  */
@@ -1409,6 +1440,9 @@ html.map .footer-content {
 }
 .select-wrapper.search-interior-wide {
   width: 390px;
+}
+.select-wrapper.subway-type {
+  width: 75px;
 }
 .select .label {
   display: block;
@@ -1733,6 +1767,20 @@ html.map .footer-content {
   text-align: center;
   border: 0;
 }
+.btn-table-btn {
+  display: inline-block;
+  margin: 2px 0;
+  padding: 0;
+  width: 55px;
+  height: 16px;
+  line-height: 1;
+  color: #ffffff;
+  background: #999;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  border: 0;
+}
 .btn-function {
   padding: 0 2px;
   height: 26px;
@@ -1753,6 +1801,9 @@ html.map .footer-content {
 }
 .btn-function .right-float.right {
   margin-left: 5px;
+}
+.btn-function.fix-width {
+  width: 65px;
 }
 .btn-cal-term {
   float: left;
@@ -1888,6 +1939,22 @@ html.map .footer-content {
   padding: 0;
   padding-left: 20px;
   background: #25aae1 url(../images/icon_print.png) no-repeat 15px 50%;
+}
+.btn-map {
+  width: 112px;
+  height: 27px;
+  font-size: 13px;
+  color: #ffffff;
+  line-height: 25px;
+  border: 0;
+  background: #25aae1;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 0;
+  padding-left: 20px;
+  background: #25aae1 url(../images/icon_pin.png) no-repeat 10px -79px;
 }
 
 .check-wrap {
@@ -2090,6 +2157,17 @@ html.map .footer-content {
 }
 .middle.right.group {
   margin-left: 16px;
+}
+
+.box-gray {
+  display: inline-block;
+  width: 50px;
+  height: 18px;
+  line-height: 1;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  background: #a1b0b6;
 }
 
 /*
@@ -2489,6 +2567,7 @@ html.map .footer-content {
   border-bottom: 1px solid #d8d8d8;
 }
 .big-list-addr02 {
+  display: block;
   margin-top: 8px;
   font-size: 18px;
   font-weight: bold;
@@ -2681,6 +2760,7 @@ html.map .footer-content {
   overflow: hidden;
 }
 .slide-list-addr02 {
+  display: block;
   margin-top: 5px;
   font-size: 16px;
   font-weight: bold;
@@ -3100,7 +3180,7 @@ html.map .footer-content {
 }
 
 .em-gray {
-  color: #25aae1 !important;
+  color: #666 !important;
 }
 
 .em-blue {
@@ -3118,6 +3198,7 @@ html.map .footer-content {
 
 .em-yellow-bold {
   color: #fcb040 !important;
+  font-weight: bold;
 }
 
 .em-red {

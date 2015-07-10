@@ -28,6 +28,7 @@
 }
 .sort-option-other .icon-pin.on {
   color: #ffffff;
+  background-color: #fcb040;
   background-position: 32px -78px;
 }
 .sort-option-other .icon-subway {
@@ -644,6 +645,7 @@
 }
 
 .pick-loc {
+  display: none;
   margin-top: 30px;
   border: 1px solid #d8d8d8;
   border-top: 2px solid #222;
@@ -659,19 +661,19 @@
   float: left;
 }
 .pick-loc-wrap.step01 {
-  width: 189px;
+  width: 203px;
   border-right: 1px solid #ededed;
 }
 .pick-loc-wrap.step02 {
-  width: 236px;
+  width: 250px;
   border-right: 1px solid #ededed;
 }
 .pick-loc-wrap.step03 {
-  width: 236px;
+  width: 250px;
   border-right: 1px solid #ededed;
 }
 .pick-loc-wrap.step04 {
-  width: 333px;
+  width: 292px;
 }
 .pick-loc-wrap .check-wrap,
 .pick-loc-wrap .radio-wrap {
@@ -706,6 +708,381 @@
   text-align: center;
   background: #f9f9f9;
   border-top: 1px solid #f9f9f9;
+}
+
+.pick-subway {
+  display: none;
+  margin-top: 30px;
+  border: 1px solid #d8d8d8;
+  border-top: 2px solid #222;
+}
+.pick-subway:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.pick-subway.metro .pick-subway-line-metro, .pick-subway.metro .pick-subway-map-metro, .pick-subway.busan .pick-subway-line-busan, .pick-subway.busan .pick-subway-map-busan, .pick-subway.daegu .pick-subway-line-daegu, .pick-subway.daegu .pick-subway-map-daegu, .pick-subway.gwangju .pick-subway-line-gwangju, .pick-subway.gwangju .pick-subway-map-gwangju, .pick-subway.daejeon .pick-subway-line-daejeon, .pick-subway.daejeon .pick-subway-map-daejeon {
+  display: block;
+}
+.pick-subway-map {
+  float: left;
+  width: 705px;
+  height: 557px;
+  border-right: 1px solid #ededed;
+}
+.pick-subway-map-metro, .pick-subway-map-busan, .pick-subway-map-daegu, .pick-subway-map-gwangju, .pick-subway-map-daejeon {
+  display: none;
+}
+.pick-subway-map-section {
+  display: none;
+}
+.pick-subway-map-section.on {
+  display: block;
+}
+.pick-subway-map-section.metro-1 {
+  padding: 30px 0 0 0;
+}
+.pick-subway-map-section.metro-2 {
+  padding: 60px 0 0 0;
+}
+.pick-subway-map-section.metro-3 {
+  padding: 85px 0 0 0;
+}
+.pick-subway-map-section.metro-4 {
+  padding: 75px 0 0 0;
+}
+.pick-subway-map-section.metro-5 {
+  padding: 70px 0 0 0;
+}
+.pick-subway-map-section.metro-6 {
+  padding: 70px 0 0 0;
+}
+.pick-subway-map-section.metro-7 {
+  padding: 50px 0 0 0;
+}
+.pick-subway-map-section.metro-8 {
+  padding: 75px 0 0 0;
+}
+.pick-subway-map-section.metro-9 {
+  padding: 70px 0 0 0;
+}
+.pick-subway-map-section.metro-bundang {
+  padding: 80px 0 0 0;
+}
+.pick-subway-map-section.metro-incheon {
+  padding: 125px 0 0 0;
+}
+.pick-subway-map-section.metro-sinbundang {
+  padding: 180px 0 0 0;
+}
+.pick-subway-map-section.metro-gyeongui {
+  padding: 70px 0 0 0;
+}
+.pick-subway-map-section.metro-gyeongchun {
+  padding: 90px 0 0 0;
+}
+.pick-subway-map-section.metro-airport {
+  padding: 180px 0 0 0;
+}
+.pick-subway-map-section.metro-uijeongbu {
+  padding: 70px 0 0 0;
+}
+.pick-subway-map-section.metro-suin {
+  padding: 140px 0 0 0;
+}
+.pick-subway-map-section.metro-everline {
+  padding: 120px 0 0 0;
+}
+.pick-subway-map-section.metro-jungang {
+  padding: 120px 0 0 0;
+}
+.pick-subway-map-section.busan-1 {
+  padding: 50px 0 0 0;
+}
+.pick-subway-map-section.busan-2 {
+  padding: 60px 0 0 0;
+}
+.pick-subway-map-section.busan-3 {
+  padding: 100px 0 0 0;
+}
+.pick-subway-map-section.busan-4 {
+  padding: 120px 0 0 0;
+}
+.pick-subway-map-section.busan-gimhae {
+  padding: 60px 0 0 0;
+}
+.pick-subway-map-section.daegu-1 {
+  padding: 100px 0 0 0;
+}
+.pick-subway-map-section.daegu-2 {
+  padding: 120px 0 0 0;
+}
+.pick-subway-map-section.gwangju-1 {
+  padding: 20px 0 0 0;
+}
+.pick-subway-map-section.daejeon-1 {
+  padding: 50px 0 0 0;
+}
+.pick-subway-list {
+  float: left;
+  width: 292px;
+}
+.pick-subway-header {
+  height: 66px;
+  line-height: 66px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #f9f9f9;
+}
+.pick-subway-line-type {
+  margin: 15px 0 0 10px;
+}
+.pick-subway-line-list {
+  float: left;
+  margin: 0 0 0 10px;
+  width: 610px;
+}
+.pick-subway-line-metro, .pick-subway-line-busan, .pick-subway-line-daegu, .pick-subway-line-gwangju, .pick-subway-line-daejeon {
+  display: none;
+}
+.pick-subway-line-busan, .pick-subway-line-daegu, .pick-subway-line-gwangju, .pick-subway-line-daejeon {
+  margin: 22px 0 0 0;
+}
+.pick-subway-line-metro {
+  margin: 10px 0 0 0;
+}
+.pick-subway-line-item {
+  float: left;
+  margin: 0 0 3px 3px;
+  line-height: 1;
+  min-width: 55px;
+}
+.pick-subway-line-btn {
+  position: relative;
+  padding: 2px 4px 2px 20px;
+  height: 23px;
+  color: #222;
+  font-weight: bold;
+  border: 1px solid transparent;
+  background: none;
+  text-align: left;
+}
+.pick-subway-line-btn.on {
+  background: #ffffff;
+  border: 1px solid #a1b0b6;
+  border-radius: 3px;
+}
+.pick-subway-line-btn:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 1px;
+  width: 17px;
+  height: 17px;
+  line-height: 17px;
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
+  background: url(../images/bg_subway_line.png) no-repeat;
+}
+.pick-subway-line-btn.metro-1:after {
+  content: "1";
+}
+.pick-subway-line-btn.metro-2:after {
+  content: "2";
+  background-position: 0 -28px;
+}
+.pick-subway-line-btn.metro-3:after {
+  content: "3";
+  background-position: 0 -56px;
+}
+.pick-subway-line-btn.metro-4:after {
+  content: "4";
+  background-position: 0 -84px;
+}
+.pick-subway-line-btn.metro-5:after {
+  content: "5";
+  background-position: 0 -112px;
+}
+.pick-subway-line-btn.metro-6:after {
+  content: "6";
+  background-position: 0 -140px;
+}
+.pick-subway-line-btn.metro-7:after {
+  content: "7";
+  background-position: 0 -168px;
+}
+.pick-subway-line-btn.metro-8:after {
+  content: "8";
+  background-position: 0 -196px;
+}
+.pick-subway-line-btn.metro-9:after {
+  content: "9";
+  background-position: 0 -224px;
+}
+.pick-subway-line-btn.metro-bundang:after {
+  background-position: 0 -252px;
+}
+.pick-subway-line-btn.metro-incheon:after {
+  background-position: 0 -280px;
+}
+.pick-subway-line-btn.metro-sinbundang:after {
+  background-position: 0 -308px;
+}
+.pick-subway-line-btn.metro-gyeongui:after {
+  background-position: 0 -336px;
+}
+.pick-subway-line-btn.metro-gyeongchun:after {
+  background-position: 0 -364px;
+}
+.pick-subway-line-btn.metro-airport:after {
+  background-position: 0 -392px;
+}
+.pick-subway-line-btn.metro-uijeongbu:after {
+  background-position: 0 -420px;
+}
+.pick-subway-line-btn.metro-suin:after {
+  background-position: 0 -448px;
+}
+.pick-subway-line-btn.metro-everline:after {
+  background-position: 0 -476px;
+}
+.pick-subway-line-btn.metro-jungang:after {
+  background-position: 0 -504px;
+}
+.pick-subway-line-btn.busan-1:after {
+  content: "1";
+  background-position: 0 -420px;
+}
+.pick-subway-line-btn.busan-2:after {
+  content: "2";
+  background-position: 0 -364px;
+}
+.pick-subway-line-btn.busan-3:after {
+  content: "3";
+  background-position: 0 -224px;
+}
+.pick-subway-line-btn.busan-4:after {
+  content: "4";
+  background-position: 0 -84px;
+}
+.pick-subway-line-btn.busan-gimhae:after {
+  background-position: 0 -112px;
+}
+.pick-subway-line-btn.daegu-1:after {
+  content: "1";
+  background-position: 0 -196px;
+}
+.pick-subway-line-btn.daegu-2:after {
+  content: "2";
+  background-position: 0 -28px;
+}
+.pick-subway-line-btn.gwangju-1:after {
+  content: "1";
+  background-position: 0 -476px;
+}
+.pick-subway-line-btn.daejeon-1:after {
+  content: "1";
+  background-position: 0 -28px;
+}
+
+.group-bar {
+  height: 25px;
+  position: relative;
+  padding: 0 0 0 40px;
+  line-height: 23px;
+  color: #ffffff;
+  font-weight: bold;
+  border-top: 1px solid #b0a899;
+  border-bottom: 1px solid #b0a899;
+  background: #b9b1a1;
+  box-sizing: border-box;
+}
+.group-bar:after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 50%;
+  margin-top: -7px;
+  left: 20px;
+  background: url(../images/icon_bullet_list_group.png) no-repeat;
+}
+
+.estate-agent-ad {
+  position: relative;
+  padding: 20px;
+  background: #fffbea;
+}
+.estate-agent-ad:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.estate-agent-name {
+  font-family: "Nanum Gothic", "dotum", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fcb040;
+}
+.estate-agent-list {
+  float: left;
+  margin: 3px 0 0 0;
+}
+.estate-agent-list:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.estate-agent-list-item {
+  position: relative;
+  float: left;
+  margin: 0 0 0 20px;
+  border-bottom: 1px solid #999;
+  font-size: 12px;
+}
+.estate-agent-list-item:after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 10px;
+  position: absolute;
+  top: 3px;
+  left: -10px;
+  background: #999;
+}
+.estate-agent-list-item:first-child {
+  padding: 0;
+  margin: 0;
+}
+.estate-agent-list-item:first-child:after {
+  display: none;
+}
+.estate-agent-more {
+  position: relative;
+  height: 24px;
+  float: left;
+  margin: 0 0 0 20px;
+  padding: 0 20px 0 10px;
+  font-size: 11px;
+  color: #ffffff;
+  border: 0;
+  border-radius: 20px;
+  background: #f6b247;
+}
+.estate-agent-more:after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 9px;
+  position: absolute;
+  top: 7px;
+  right: 8px;
+  background: url(../images/icon_ad_more.png) no-repeat;
 }
 
 /*# sourceMappingURL=list.css.map */

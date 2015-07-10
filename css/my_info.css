@@ -54,9 +54,6 @@
 .my-info-tab-link.edit.on:after, .my-info-tab-link.edit:hover:after {
   background-position: 0 -65px;
 }
-.my-info-tab-link.edit:after {
-  background-position: 1px 0;
-}
 .my-info-tab-link.changepw.on:after, .my-info-tab-link.changepw:hover:after {
   background-position: -75px -65px;
 }
