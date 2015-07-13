@@ -194,7 +194,7 @@
             </ul>
           </div>
 
-          <div class="border-box gray fint-id">
+          <div class="border-box gray find-id js-tab-section on">
 
             <div class="find-idpw">
               <h3 class="find-idpw-title">회원 가입 시 입력하신 <span class="em-blue">이름, 성별, 생년월일</span>을 입력해 주세요.</h3>
@@ -209,7 +209,7 @@
               <dl class="find-idpw-input id-input">
                 <dt class="find-idpw-input-title">성별</dt>
                 <dd class="find-idpw-input-body">
-                  <div class="radio-wrap middle left">
+                  <div class="radio-wrap middle left group">
                     <input id="radio-1" type="radio" class="radio" name="gender" />
                     <label for="radio-1" class="radio-label">여자</label>
                   </div>
@@ -272,88 +272,71 @@
 
           </div>
 
-          <div class="border-box gray find-pw">
+          <div class="border-box gray find-pw js-tab-section">
 
             <div class="find-idpw">
               <h3 class="find-idpw-title">회원 가입 시 입력하신 <span class="em-blue">이메일, 이름, 핸드폰번호</span>를 입력해 주세요.</h3>
-              <dl class="find-idpw-input id-input">
+              <dl class="find-idpw-input">
                 <dt class="find-idpw-input-title">
-                  <label for="find-name">이름</label>
+                  <label for="find-id">아이디(이메일)</label>
                 </dt>
                 <dd class="find-idpw-input-body">
-                  <input type="text" id="find-name" class="input full-width" />
+                  <input type="text" id="find-id" class="input full-width" />
                 </dd>
               </dl>
-              <dl class="find-idpw-input id-input">
-                <dt class="find-idpw-input-title">성별</dt>
+              <dl class="find-idpw-input">
+                <dt class="find-idpw-input-title">
+                  <label for="find-name02">이름</label>
+                </dt>
                 <dd class="find-idpw-input-body">
-                  <div class="radio-wrap middle left">
-                    <input id="radio-1" type="radio" class="radio" name="gender" />
-                    <label for="radio-1" class="radio-label">여자</label>
-                  </div>
-
-                  <div class="radio-wrap middle">
-                    <input id="radio-2" type="radio" class="radio" name="gender" />
-                    <label for="radio-2" class="radio-label">남자</label>
-                  </div>
+                  <input type="text" id="find-name02" class="input full-width" />
                 </dd>
               </dl>
-              <dl class="find-idpw-input id-input">
-                <dt class="find-idpw-input-title">생년월일</dt>
+
+              <dl class="find-idpw-input">
+                <dt class="find-idpw-input-title">핸드폰 번호</dt>
                 <dd class="find-idpw-input-body">
                   <div class="select-wrapper half-width left-float left">
                     <div class="select">
-                      <p class="label">1990년</p>
+                      <p class="label">010</p>
                       <b class="button">▾</b>
                     </div>
                     <ul class="select-items">
-                      <li class="selected">1990년</li>
-                      <li>1991년</li>
-                      <li>1992년</li>
-                      <li>1991년</li>
-                      <li>1992년</li>
-                      <li>1991년</li>
-                      <li>1992년</li>
-                      <li>1991년</li>
-                      <li>1992년</li>
-                      <li>1991년</li>
-                      <li>1992년</li>
+                      <li class="selected">010</li>
+                      <li>010</li>
+                      <li>010</li>
                     </ul>
                   </div>
 
-                  <div class="select-wrapper half-width left-float left">
-                    <div class="select">
-                      <p class="label">1월</p>
-                      <b class="button">▾</b>
-                    </div>
-                    <ul class="select-items">
-                      <li class="selected">1월</li>
-                      <li>2월</li>
-                      <li>3월</li>
-                    </ul>
-                  </div>
+                  <input class="input half-width left-float left" title="핸드폰 가운데자리" type="text">
 
-                  <div class="select-wrapper half-width left-float">
-                    <div class="select">
-                      <p class="label">1일</p>
-                      <b class="button">▾</b>
-                    </div>
-                    <ul class="select-items">
-                      <li class="selected">1일</li>
-                      <li>2일</li>
-                      <li>3일</li>
-                    </ul>
-                  </div>
+                  <input class="input half-width left-float left" title="핸드폰 끝자리" type="text">
+
+                  <button type="button" class="btn-form left-float">인증번호</button>
                 </dd>
               </dl>
+
+              <dl class="find-idpw-input">
+                <dt class="find-idpw-input-title">인증번호</dt>
+                <dd class="find-idpw-input-body">
+                  <input id="phone-confirm" class="input left-float left" type="text">
+
+                  <button type="button" class="btn-form left-float">확인</button>
+                </dd>
+              </dl>
+
             </div>
 
           </div>
 
         </div>
 
-        <div class="part-bottom">
+        <div class="part-bottom js-tab-section find-id on">
           <input type="submit" class="btn-fill blue" value="아이디 찾기" />
+        </div>
+
+        <div class="part-bottom js-tab-section find-pw">
+          <input type="submit" class="btn-fill blue" value="비밀번호 찾기" />
         </div>
 
       </section>

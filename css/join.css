@@ -258,18 +258,14 @@
 
 .border-box {
   border: 1px solid #ddd;
-  border-top: 2px solid #ddd;
 }
 .border-box.gray {
   background: #f9f9f9;
 }
-
-.find-id,
-.find-pw {
+.border-box.find-id, .border-box.find-pw {
   display: none;
 }
-.find-id.on,
-.find-pw.on {
+.border-box.find-id.on, .border-box.find-pw.on {
   display: block;
 }
 
@@ -285,6 +281,7 @@
 }
 .find-idpw-input {
   margin: 20px auto 0;
+  width: 440px;
 }
 .find-idpw-input:after {
   content: ".";
@@ -295,12 +292,6 @@
 }
 .find-idpw-input:first-child {
   margin: 0;
-}
-.find-idpw-input.id-input {
-  width: 440px;
-}
-.find-idpw-input.pw-input {
-  width: 606px;
 }
 .find-idpw-input-title {
   float: left;
@@ -318,6 +309,23 @@
   line-height: 37px;
   font-size: 16px;
   font-weight: bold;
+}
+
+.find-pw .find-idpw-input {
+  width: 605px;
+}
+.find-pw .find-idpw-input-title {
+  width: 115px;
+}
+.find-pw .find-idpw-input-body {
+  width: 490px;
+}
+
+.part-bottom.find-id, .part-bottom.find-pw {
+  display: none;
+}
+.part-bottom.find-id.on, .part-bottom.find-pw.on {
+  display: block;
 }
 
 /*# sourceMappingURL=join.css.map */

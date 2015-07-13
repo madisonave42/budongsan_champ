@@ -328,20 +328,20 @@
 
 .border-box {
   border:1px solid $bg-gray;
-  border-top:2px solid $bg-gray;
 
   &.gray {
     background:$bg-white-gray;
   }
-}
 
-.find-id,
-.find-pw {
-  display:none;
+  &.find-id,
+  &.find-pw {
+    display:none;
 
-  &.on {
-    display:block;
+    &.on {
+      display:block;
+    }
   }
+
 }
 
 .find-idpw {
@@ -358,17 +358,10 @@
   &-input {
     @include clear();
     margin:20px auto 0;
+    width:440px;
 
     &:first-child {
       margin:0;
-    }
-
-    &.id-input {
-      width:440px;
-    }
-
-    &.pw-input {
-      width:606px;
     }
 
     &-title {
@@ -391,4 +384,34 @@
     }
 
   }
+}
+
+.find-pw .find-idpw {
+
+  &-input {
+    width:605px;
+
+    &-title {
+      width:115px;
+    }
+
+    &-body {
+      width:490px;
+    }
+
+  }
+
+}
+
+.part-bottom {
+
+  &.find-id,
+  &.find-pw {
+    display:none;
+
+    &.on {
+      display:block;
+    }
+  }
+
 }
