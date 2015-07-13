@@ -1,3 +1,29 @@
+.contents-mid.estate-register {
+  display: none;
+}
+.contents-mid.estate-register.on {
+  display: block;
+}
+.contents-mid.house-register {
+  display: none;
+}
+.contents-mid.house-register.on {
+  display: block;
+}
+
+.contents-bottom.estate-register {
+  display: none;
+}
+.contents-bottom.estate-register.on {
+  display: block;
+}
+.contents-bottom.house-register {
+  display: none;
+}
+.contents-bottom.house-register.on {
+  display: block;
+}
+
 .user-profile {
   position: relative;
   margin-top: 35px;
