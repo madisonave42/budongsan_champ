@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 
-<title>1:1 문의 | MY챔프 | 부동산 챔프</title>
+<title>아아디/비밀번호 찾기 | 부동산 챔프</title>
 
 <link rel="stylesheet" href="../../css/common.css" />
 <!-- 회원가입 style -->
-<link rel="stylesheet" href="../../css/my_champ.css" />
+<link rel="stylesheet" href="../../css/join.css" />
 <link rel="stylesheet" href="../../css/popup.css" />
 
 <script src="../../js/lib/jquery-1.11.0.min.js"></script>
@@ -172,42 +172,13 @@
 
 </header>
 
-<nav class="lnb">
-  <div class="wrapper">
-    <ul class="lnb-list">
-      <li class="lnb-item"><a href="#" class="lnb-link">My홈</a></li>
-      <li class="lnb-item"><a href="#" class="lnb-link">My매물</a></li>
-      <li class="lnb-item"><a href="#" class="lnb-link">최근본매물</a></li>
-      <li class="lnb-item"><a href="#" class="lnb-link">관심매물</a></li>
-      <li class="lnb-item"><a href="#" class="lnb-link">최근검색</a></li>
-      <li class="lnb-item"><a href="#" class="lnb-link">검색저장</a></li>
-      <li class="lnb-item"><a href="#" class="lnb-link on">1:1 문의</a></li>
-      <li class="lnb-item"><a href="#" class="lnb-link">이용안내</a></li>
-    </ul>
-    <div class="lnb-util">
-      <div class="lnb-util-btns">
-        <a href="#" class="btn-med gray icon-plus long-text">단지/주택등록</a>
-        <a href="#" class="btn-med gray icon-plus">매물등록</a>
-      </div>
-    </div>
-  </div>
-</nav>
-
-<section class="contents">
+<section class="contents top-border">
   <div class="wrapper">
 
     <div class="contents-top">
       <div class="contents-title-wrap">
-        <h2 class="contents-title has-description">1:1문의</h2>
-        <p class="contents-title-desc">고객님께서 문의하신 내역입니다.</p>
+        <h2 class="contents-title">아이디/비밀번호 찾기</h2>
       </div>
-
-      <!-- [D] 현재 탭 표시 할 때 class=on 추가 -->
-      <ul class="qna-tab">
-        <li class="qna-tab-list on"><a href="#" class="qna-tab-link general on">일반문의</a></li>
-        <li class="qna-tab-list"><a href="#" class="qna-tab-link item">매물문의</a></li>
-      </ul>
-
     </div>
 
     <div class="contents-mid">
@@ -216,102 +187,179 @@
 
         <div class="part-mid">
 
-          <table class="vt-table">
+          <div class="sort-tab half-tab js-tab">
+            <ul class="sort-tab-list">
+              <li class="sort-tab-list-item"><button type="button" class="sort-tab-list-link js-tab-link on" data-target="find-id">아이디 찾기</button></li>
+              <li class="sort-tab-list-item"><button type="button" class="sort-tab-list-link js-tab-link" data-target="find-pw">비밀번호 찾기</button></li>
+            </ul>
+          </div>
 
-            <colgroup>
-              <col style="width:65px;" />
-              <col style="width:100px;" />
-              <col style="width:auto;" />
-              <col style="width:100px;" />
-              <col style="width:100px;" />
-            </colgroup>
+          <div class="border-box gray fint-id">
 
-            <thead>
-              <tr>
-                <th scope="col">번호</th>
-                <th scope="col">분류</th>
-                <th scope="col">제목</th>
-                <th scope="col">등록일</th>
-                <th scope="col">상태</th>
-              </tr>
-            </thead>
+            <div class="find-idpw">
+              <h3 class="find-idpw-title">회원 가입 시 입력하신 <span class="em-blue">이름, 성별, 생년월일</span>을 입력해 주세요.</h3>
+              <dl class="find-idpw-input id-input">
+                <dt class="find-idpw-input-title">
+                  <label for="find-name">이름</label>
+                </dt>
+                <dd class="find-idpw-input-body">
+                  <input type="text" id="find-name" class="input full-width" />
+                </dd>
+              </dl>
+              <dl class="find-idpw-input id-input">
+                <dt class="find-idpw-input-title">성별</dt>
+                <dd class="find-idpw-input-body">
+                  <div class="radio-wrap middle left">
+                    <input id="radio-1" type="radio" class="radio" name="gender" />
+                    <label for="radio-1" class="radio-label">여자</label>
+                  </div>
 
-            <tbody>
-              <tr>
-                <td class="center">100</td>
-                <td class="center"><span class="em-blue-bold">공지사항</span></td>
-                <td class="over-cut">
-                  <a href="#" class="em-gray">매물번호 12345678  계약되었나요??매물번호 12345678  계약되었나요??매물번호 12345678  계약되었나요??매물번호 12345678  계약되었나요??매물번호 12345678  계약되었나요??</a>
-                </td>
-                <td class="center">2015.05.19</td>
-                <td class="center">
-                  <div class="answer-state red">답변대기</div>
-                </td>
-              </tr>
-              <tr>
-                <td class="center">100</td>
-                <td class="center"><span class="em-blue-bold">공지사항</span></td>
-                <td class="over-cut">
-                  <a href="#" class="em-gray">매물번호 12345678  계약되었나요??매물번호 12345678  계약되었나요??매물번호 12345678  계약되었나요??매물번호 12345678  계약되었나요??매물번호 12345678  계약되었나요??</a>
-                </td>
-                <td class="center">2015.05.19</td>
-                <td class="center">
-                  <div class="answer-state">답변완료</div>
-                </td>
-              </tr>
-              <tr>
-                <td class="center">100</td>
-                <td class="center"><span class="em-blue-bold">공지사항</span></td>
-                <td class="over-cut">
-                  <a href="#" class="em-gray">매물번호 12345678  계약되었나요??매물번호 12345678  계약되었나요??매물번호 12345678  계약되었나요??매물번호 12345678  계약되었나요??매물번호 12345678  계약되었나요??</a>
-                </td>
-                <td class="center">2015.05.19</td>
-                <td class="center">
-                  <div class="answer-state red">답변대기</div>
-                </td>
-              </tr>
-              <tr>
-                <td class="center">100</td>
-                <td class="center"><span class="em-blue-bold">공지사항</span></td>
-                <td class="over-cut">
-                  <a href="#" class="em-gray">매물번호 12345678  계약되었나요??매물번호 12345678  계약되었나요??매물번호 12345678  계약되었나요??매물번호 12345678  계약되었나요??매물번호 12345678  계약되었나요??</a>
-                </td>
-                <td class="center">2015.05.19</td>
-                <td class="center">
-                  <div class="answer-state">답변완료</div>
-                </td>
-              </tr>
-            </tbody>
+                  <div class="radio-wrap middle">
+                    <input id="radio-2" type="radio" class="radio" name="gender" />
+                    <label for="radio-2" class="radio-label">남자</label>
+                  </div>
+                </dd>
+              </dl>
+              <dl class="find-idpw-input id-input">
+                <dt class="find-idpw-input-title">생년월일</dt>
+                <dd class="find-idpw-input-body">
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">1990년</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">1990년</li>
+                      <li>1991년</li>
+                      <li>1992년</li>
+                      <li>1991년</li>
+                      <li>1992년</li>
+                      <li>1991년</li>
+                      <li>1992년</li>
+                      <li>1991년</li>
+                      <li>1992년</li>
+                      <li>1991년</li>
+                      <li>1992년</li>
+                    </ul>
+                  </div>
 
-          </table>
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">1월</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">1월</li>
+                      <li>2월</li>
+                      <li>3월</li>
+                    </ul>
+                  </div>
 
-          <div class="page">
-            <a href="#" class="page-item prev">이전</a>
-            <a href="#" class="page-item on">1</a>
-            <a href="#" class="page-item">2</a>
-            <a href="#" class="page-item">3</a>
-            <a href="#" class="page-item">4</a>
-            <a href="#" class="page-item">5</a>
-            <a href="#" class="page-item">6</a>
-            <a href="#" class="page-item">7</a>
-            <a href="#" class="page-item">8</a>
-            <a href="#" class="page-item">9</a>
-            <a href="#" class="page-item">10</a>
-            <a href="#" class="page-item next">다음</a>
+                  <div class="select-wrapper half-width left-float">
+                    <div class="select">
+                      <p class="label">1일</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">1일</li>
+                      <li>2일</li>
+                      <li>3일</li>
+                    </ul>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+
+          </div>
+
+          <div class="border-box gray find-pw">
+
+            <div class="find-idpw">
+              <h3 class="find-idpw-title">회원 가입 시 입력하신 <span class="em-blue">이메일, 이름, 핸드폰번호</span>를 입력해 주세요.</h3>
+              <dl class="find-idpw-input id-input">
+                <dt class="find-idpw-input-title">
+                  <label for="find-name">이름</label>
+                </dt>
+                <dd class="find-idpw-input-body">
+                  <input type="text" id="find-name" class="input full-width" />
+                </dd>
+              </dl>
+              <dl class="find-idpw-input id-input">
+                <dt class="find-idpw-input-title">성별</dt>
+                <dd class="find-idpw-input-body">
+                  <div class="radio-wrap middle left">
+                    <input id="radio-1" type="radio" class="radio" name="gender" />
+                    <label for="radio-1" class="radio-label">여자</label>
+                  </div>
+
+                  <div class="radio-wrap middle">
+                    <input id="radio-2" type="radio" class="radio" name="gender" />
+                    <label for="radio-2" class="radio-label">남자</label>
+                  </div>
+                </dd>
+              </dl>
+              <dl class="find-idpw-input id-input">
+                <dt class="find-idpw-input-title">생년월일</dt>
+                <dd class="find-idpw-input-body">
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">1990년</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">1990년</li>
+                      <li>1991년</li>
+                      <li>1992년</li>
+                      <li>1991년</li>
+                      <li>1992년</li>
+                      <li>1991년</li>
+                      <li>1992년</li>
+                      <li>1991년</li>
+                      <li>1992년</li>
+                      <li>1991년</li>
+                      <li>1992년</li>
+                    </ul>
+                  </div>
+
+                  <div class="select-wrapper half-width left-float left">
+                    <div class="select">
+                      <p class="label">1월</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">1월</li>
+                      <li>2월</li>
+                      <li>3월</li>
+                    </ul>
+                  </div>
+
+                  <div class="select-wrapper half-width left-float">
+                    <div class="select">
+                      <p class="label">1일</p>
+                      <b class="button">▾</b>
+                    </div>
+                    <ul class="select-items">
+                      <li class="selected">1일</li>
+                      <li>2일</li>
+                      <li>3일</li>
+                    </ul>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+
           </div>
 
         </div>
 
+        <div class="part-bottom">
+          <input type="submit" class="btn-fill blue" value="아이디 찾기" />
+        </div>
+
       </section>
 
-
     </div>
 
-    <div class="contents-bottom has-bottom">
-      <div class="submit-btns center">
-        <a href="#" class="btn-fill blue">문의하기</a>
-      </div>
-    </div>
   </div>
 </section>
 

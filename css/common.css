@@ -2425,6 +2425,7 @@ html.map .footer-content {
   position: relative;
   display: block;
   box-sizing: border-box;
+  padding: 0;
   width: 100%;
   height: 40px;
   line-height: 40px;
@@ -2433,7 +2434,10 @@ html.map .footer-content {
   font-weight: bold;
   text-align: center;
   border-top: 1px solid #d8d8d8;
+  border-bottom: 0;
   border-right: 1px solid #d8d8d8;
+  border-left: 0;
+  background: none;
 }
 .sort-tab-list-link.on {
   color: #25aae1;
@@ -2455,6 +2459,9 @@ html.map .footer-content {
 .sort-tab-list.yellow .sort-tab-list-link.on:after {
   border-color: #fcb040;
   background: #fcb040;
+}
+.sort-tab.half-tab .sort-tab-list-item {
+  width: 50%;
 }
 
 .calendar:after {
