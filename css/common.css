@@ -2117,10 +2117,10 @@ html.map .footer-content {
   display: inline-block;
 }
 .form-attached-file {
-  height: 37px;
-  line-height: 37px;
+  display: inline-block;
+  margin: 0 0 0 10px;
   color: #666;
-  text-decoration: underline;
+  border-bottom: 1px solid #666;
 }
 
 .label-on-input {
