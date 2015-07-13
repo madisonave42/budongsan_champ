@@ -256,4 +256,68 @@
   margin-top: 3px;
 }
 
+.border-box {
+  border: 1px solid #ddd;
+  border-top: 2px solid #ddd;
+}
+.border-box.gray {
+  background: #f9f9f9;
+}
+
+.find-id,
+.find-pw {
+  display: none;
+}
+.find-id.on,
+.find-pw.on {
+  display: block;
+}
+
+.find-idpw {
+  height: 369px;
+}
+.find-idpw-title {
+  margin: 60px 0 50px;
+  color: #222;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.find-idpw-input {
+  margin: 20px auto 0;
+}
+.find-idpw-input:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.find-idpw-input:first-child {
+  margin: 0;
+}
+.find-idpw-input.id-input {
+  width: 440px;
+}
+.find-idpw-input.pw-input {
+  width: 606px;
+}
+.find-idpw-input-title {
+  float: left;
+  width: 75px;
+  height: 37px;
+  line-height: 37px;
+  color: #222;
+  font-size: 16px;
+  font-weight: bold;
+}
+.find-idpw-input-body {
+  float: left;
+  width: 365px;
+  height: 37px;
+  line-height: 37px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 /*# sourceMappingURL=join.css.map */
