@@ -410,19 +410,93 @@
 }
 
 .img-reg-list {
-	@include clear();
 	margin-top:15px;
 	padding:10px;
 	border:1px solid $form-gray;
 
-	&-item {
-		float:left;
-		margin-left:10px;
-
-		&:first-child {
-			margin-left:0;
-		}
+	&-wrap {
+		@include clear();
+		padding:0 0 10px 0;
+		min-height:490px;
+		background:$bg-white-gray;
 	}
+
+	&-item {
+		position:relative;
+		float:left;
+		margin:10px 0 0 10px;
+		width:232px;
+		height:156px;
+		overflow:hidden;
+
+		&-img {
+			width:100%;
+		}
+
+		&-rep {
+			position:absolute;
+			top:0;
+			left:0;
+			width:56px;
+			height:22px;
+			line-height:22px;
+			text-align:center;
+			color:$white;
+			background:$main-yellow;
+		}
+
+		&-rotate {
+			position:absolute;
+			bottom:0;
+			left:0;
+			padding:0;
+			width:26px;
+			height:26px;
+			background:$dark url(../images/icon_rotate.png) no-repeat 50% 50%;
+			border:0;
+			text-indent:-9999px;
+		}
+
+		&-del {
+			position:absolute;
+			top:0;
+			right:0;
+			padding:0;
+			width:20px;
+			height:20px;
+			background:$dark url(../images/icon_close.png) no-repeat 50% 50%;
+			border:0;
+			text-indent:-9999px;
+		}
+
+		&-add {
+			float:left;
+			margin:10px 0 0 10px;
+			padding:70px 0 0 0;
+			width:232px;
+			height:156px;
+			color:$main-blue;
+			font-weight:bold;
+			background:url(../images/bg_reg_pic_btn.png) no-repeat;
+			border:0;
+		}
+
+	}
+
+	&-upload {
+		margin:0 auto;
+		padding:260px 0 0 0;
+		width:250px;
+		text-align:center;
+		line-height:1.5;
+		background:url(../images/img_reg_pic_gray.png) no-repeat 50% 140px;
+
+		.btn-fill {
+			margin:30px 0 0 0;
+		}
+
+	}
+
 }
 
 .tag-chk-list {
